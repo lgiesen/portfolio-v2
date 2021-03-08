@@ -18,7 +18,7 @@ export default new Vuetify({
                 // green
                 secondary: "#149C2D", 
                 
-                background: "#1C1A32",
+                background: "#9faabd",
                 black: "#212121",
                 accent: "#5ac8fa",
                 success: "#34c759",
