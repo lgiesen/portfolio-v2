@@ -20,14 +20,14 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
-    path: "/Projects",
+    path: "/projects",
     name: "Projects",
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
   },
   {
     path: "/playground",
-    name: "playground",
+    name: "Playground",
     component: () =>
       import(
         /* webpackChunkName: "playground" */ "../views/playground/Playground.vue"
@@ -54,6 +54,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  // linkExactActiveClass: "v-tab--active",
   mode: "history",
   base: process.env.BASE_URL,
   routes

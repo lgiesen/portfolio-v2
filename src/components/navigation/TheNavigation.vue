@@ -1,5 +1,22 @@
 <template lang="pug">
-v-card#nav
+v-app-bar(app color="background" dark)
+  div.d-flex.align-center
+    v-img(alt="Leo Giesen Logo"
+      class="shrink mr-2"
+      contain
+      src="@/assets/logo/logo-neon.svg"
+      transition="scale-transition"
+      width="40")
+  v-app-bar-title Leo Giesen
+  v-spacer
+  v-tabs(align-with-title='')
+    v-tab(
+      v-for="view in views" :key="view.to.name"
+      :to="view.to"
+      ) {{ view.tag }}  
+  v-btn(icon='')
+    v-icon(@click="toggleTheme") mdi-brightness-6
+//- v-card#nav
   template
     div.overflow-hidden
       v-app-bar(
@@ -33,31 +50,22 @@ import navItems from "./navItems.json";
 export default {
   name: "TheNavigation",
   data: () => ({
-    views: navItems,
+    views: navItems
   }),
-  computed : {
-  },
+  computed: {},
   methods: {
     toggleTheme() {
       // this.$vuetify.theme.themes.dark.anchor = "#fff"
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-    },
-  },
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-// $primary: #6238b4;
-#nav {
-  padding: 30px;
-  text-align: center;
-  width: 100vw;
-  a {
-    font-weight: bold;
-    
-    // &.router-link-exact-active {
-    //   color: $primary;
-    // }
-  }
-}
+// $primary: #2142B9;
+// .router-link-exact-active,
+// a.v-tab--active {
+//   color: $primary;
+// }
 </style>
