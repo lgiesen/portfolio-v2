@@ -18,6 +18,38 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/Projects",
+    name: "Projects",
+    component: () =>
+      import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
+  },
+  {
+    path: "/playground",
+    name: "playground",
+    component: () =>
+      import(
+        /* webpackChunkName: "playground" */ "../views/playground/Playground.vue"
+      )
+    // children: [
+    //   {
+    //     path: "user-dashboard",
+    //     name: "UserDashboard",
+    //     component: () =>
+    //     import("@/views/user/Dashboard.vue"),
+    //   },
+    // ]
+  },
+  // 404-page needs to be at the end so that the wildcard
+  // (*) does not get matched with any other URLs
+  {
+    path: "/*",
+    name: "Not Found",
+    component: () =>
+      import(
+        /* webpackChunkName: "404NotFound" */ "../views/errors/404NotFound.vue"
+      )
   }
 ];
 

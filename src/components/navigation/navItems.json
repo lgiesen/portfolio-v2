@@ -1,0 +1,26 @@
+[
+  {
+    "tag": "Home",
+    "to": {
+      "name": "Home"
+    }
+  },
+  {
+    "tag": "About",
+    "to": {
+      "name": "About"
+    }
+  },
+  {
+    "tag": "Projects",
+    "to": {
+      "name": "Projects"
+    }
+  },
+  {
+    "tag": "Playground",
+    "to": {
+      "name": "Playground"
+    }
+  }
+]

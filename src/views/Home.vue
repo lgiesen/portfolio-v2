@@ -1,8 +1,8 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  v-container.text-center
+    h3 Leo Giesen Portfolio Home
+    img(alt="Vue logo" src="../assets/logo.png")
+    HelloWorld(msg="Welcome to Your Vue.js App")
 </template>
 
 <script>
