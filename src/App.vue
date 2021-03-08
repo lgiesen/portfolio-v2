@@ -1,5 +1,7 @@
 <template lang="pug">
-  v-app
+  v-app#app
+    //- change color depending on the theme:
+    //- :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'"
     TheNavigation
     v-main
       router-view
@@ -23,3 +25,11 @@ export default {
   })
 };
 </script>
+<style lang="scss">
+// #app {
+//   word-break: normal !important;
+// }
+.hero {
+  height: calc(100vh - 20px) !important;
+}
+</style>
