@@ -17,14 +17,35 @@ div
             v-btn.pa-6(outlined
               @click="this.$router.push("/")"
               ) Other Visitors
-  section  
+  section
     v-container
       h3.text-center Title
-      ul Ideas:
-        li Empfehlungen von Schule, Uni (Friedrich), 
-          | move (Kunden), Mitgründer vivIT
-        li 
-      blockquote.font-italic "Lorem ipsum solor dolor"
+      p Ideas:
+      ol 
+        li Recommendations from school (ESG teachers, CIS), Uni (Friedrich), 
+          | move (customers), co-founders of vivIT -- use citations:
+          blockquote.font-italic "Lorem ipsum solor dolor"
+        li Link projects and blog with small preview
+        li General inspirational introduction text: why should anyone visit this website:
+          | What skills I bring to the table: three cards with icons and small description and animation.
+          br
+          | possible topics: Consulting, Project Management, Business/Process Analyst, Supply Chain Management
+          | and other IT topics like AI - Check reference 
+          a(href="http://assets.csom.umn.edu/assets/36237.pdf" target="_blank") here 
+          | [area of skill &rarr; learning outcomes &rarr; performance indicators, evidence]
+          br
+          | businesses: hire me and gain valuable ressource (what type of positions do I want to acquire? (cf. previouslink)) 
+          br
+          | students: get inspired by my code and website
+          br
+          | non-IT Lounge? Is there a target group for that?
+        li background video
+        li playground:
+          ul 
+            li introduce magic button: random action for user
+            li change color palette on the site itself 
+            li provide code and link to repo
+        li gradient overlay, moving/floating elements, great css animations
 </template>
 
 <script>

@@ -29,6 +29,9 @@ export default {
 #app {
   word-break: normal !important;
 }
+section {
+  margin-bottom: 20vh;
+}
 .hero {
   height: 100vh !important;
 }

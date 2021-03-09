@@ -168,9 +168,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  margin-bottom: 20vh;
-}
 v-parallax {
   height: 15vh;
 }
