@@ -1,6 +1,7 @@
 <template lang="pug">
-v-footer.primary.lighten-1(
-  color="background" dark padless)
+v-footer(padless
+  :class="isDarkTheme ? '' : 'background'")
+  //- if light theme: make background darker
   v-row(
     justify="center" no-gutters)
     v-btn.my-2(
@@ -54,6 +55,11 @@ export default {
       }
     ]
   }),
+  computed: {
+    isDarkTheme() {
+      return this.$vuetify.theme.dark;
+    }
+  },
   methods: {
     goTo(link) {
       // if the link is internal, the router should be used. Otherwise open a new page

@@ -1,5 +1,5 @@
 <template lang="pug">
-v-app-bar(app color="background" dark)
+v-app-bar(app)
   div.d-flex.align-center
     v-img(alt="Leo Giesen Logo"
       class="shrink mr-2"

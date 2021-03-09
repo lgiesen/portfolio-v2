@@ -30,7 +30,8 @@ export default new Vuetify({
                 // bordeaux red
                 triadicSecond: "#b92142",
 
-                background: "#9faabd",
+                text: "#3e3e3e",
+                background: "#cccccc",
 
                 success: "#34c759",
                 warning: "#ff954f",
