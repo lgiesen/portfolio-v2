@@ -37,13 +37,30 @@ export default new Vuetify({
                 */
             },
             dark: {
-                primary: "#00E1FD",
-                secondary: "#FC007A",
-                background: "#1C1A32",
-                black: "#212121",
-                anchor:  "#ffffff", 
-                // alternatively the anchor could be set in @/components/TheNavigation/TheNavigation.vue 
-                // in the toggleTheme method by using this.$vuetify.theme.themes.dark.anchor = "#fff"
+                // pink
+                primary: "#ff8cc6",
+                pLight: "#ffbef9",
+                pDark: "#ca5b95",
+                
+                // light blue
+                secondary: "#80fff6",
+                // orange
+                complementary: "#ffc68c",
+                sLight: "#b6ffff",
+                sDark: "#46cbc3",
+                
+                // yellow
+                triadicFirst: "#ffff8c",
+                // green
+                triadicSecond: "#8cff8c",
+                
+                // If colours above are used as background: black text, otherwise white
+
+                // as recommended by the Material Design Guidelines from Google
+                background: "#121212",
+                backgroundLight: "#383838",
+                backgroundSuperlight: "#7f7f7f"
+                // Access colours by: this.$vuetify.theme.themes.dark.primary = "#ffffff"
             }
         }
     },
