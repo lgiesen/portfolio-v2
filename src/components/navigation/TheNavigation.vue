@@ -7,7 +7,6 @@ v-app-bar(app)
       transition="scale-transition"
       :src="themespecificLogoSrc")
       //- Change icon depending on the theme
-  v-app-bar-title Leo Giesen
   v-spacer
   v-tabs(align-with-title)
     v-tab(to="/") Home
