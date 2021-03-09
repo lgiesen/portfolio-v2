@@ -1,12 +1,12 @@
+/* eslint-disable prettier/prettier */
 <template lang="pug">
 v-app-bar(app)
   div.d-flex.align-center
-    v-img(alt="Leo Giesen Logo"
-      class="shrink mr-2"
-      contain
-      src="@/assets/logo/logo-neon.svg"
+    v-img.shrink.mr-2(alt="Leo Giesen Logo"
+      contain width="40"
       transition="scale-transition"
-      width="40")
+      :src="themespecificLogoSrc")
+      //- Change icon depending on the theme
   v-app-bar-title Leo Giesen
   v-spacer
   v-tabs(align-with-title='')
@@ -14,7 +14,7 @@ v-app-bar(app)
       v-for="view in views" :key="view.to.name"
       :to="view.to"
       ) {{ view.tag }}  
-  v-btn(icon='')
+  v-btn(icon) 
     v-icon(@click="toggleTheme") mdi-brightness-6
 //- v-card#nav
   template
@@ -45,6 +45,8 @@ v-app-bar(app)
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 //import the items for the navbar
 import navItems from "./navItems.json";
 export default {
@@ -52,7 +54,18 @@ export default {
   data: () => ({
     views: navItems
   }),
-  computed: {},
+  computed: {
+    ...mapGetters(["isDarkTheme"]),
+    themespecificLogoSrc() {
+      if (this.isDarkTheme) {
+        console.log("Neon logo: " + this.isDarkTheme);
+        return require("@/assets/logo/logo-neon.svg");
+      } else {
+        console.log("Light logo: " + this.isDarkTheme);
+        return require("@/assets/logo/logo-green-blue.svg");
+      }
+    }
+  },
   methods: {
     toggleTheme() {
       // this.$vuetify.theme.themes.dark.anchor = "#fff"

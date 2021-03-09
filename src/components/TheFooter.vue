@@ -23,6 +23,7 @@ v-footer(padless
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "TheFooter",
   data: () => ({
@@ -56,9 +57,7 @@ export default {
     ]
   }),
   computed: {
-    isDarkTheme() {
-      return this.$vuetify.theme.dark;
-    }
+    ...mapGetters(["isDarkTheme"])
   },
   methods: {
     goTo(link) {
