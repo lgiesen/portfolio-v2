@@ -30,6 +30,6 @@ export default {
   word-break: normal !important;
 }
 .hero {
-  height: calc(100vh - 20px) !important;
+  height: 100vh !important;
 }
 </style>

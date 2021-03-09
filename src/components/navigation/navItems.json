@@ -1,11 +1,5 @@
 [
   {
-    "tag": "Home",
-    "to": {
-      "name": "Home"
-    }
-  },
-  {
     "tag": "About",
     "to": {
       "name": "About"

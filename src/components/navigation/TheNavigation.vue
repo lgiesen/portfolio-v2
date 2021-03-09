@@ -9,7 +9,8 @@ v-app-bar(app)
       //- Change icon depending on the theme
   v-app-bar-title Leo Giesen
   v-spacer
-  v-tabs(align-with-title='')
+  v-tabs(align-with-title)
+    v-tab(to="/") Home
     v-tab(
       v-for="view in views" :key="view.to.name"
       :to="view.to"
@@ -71,7 +72,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// $primary: #2142B9;
+// $primary: #2142b9;
 // .router-link-exact-active,
 // a.v-tab--active {
 //   color: $primary;
