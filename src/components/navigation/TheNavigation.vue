@@ -57,13 +57,8 @@ export default {
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themespecificLogoSrc() {
-      if (this.isDarkTheme) {
-        console.log("Neon logo: " + this.isDarkTheme);
-        return require("@/assets/logo/logo-neon.svg");
-      } else {
-        console.log("Light logo: " + this.isDarkTheme);
-        return require("@/assets/logo/logo-green-blue.svg");
-      }
+      if (this.isDarkTheme) return require("@/assets/logo/logo-neon.svg");
+      else return require("@/assets/logo/logo-green-blue.svg");
     }
   },
   methods: {
