@@ -15,7 +15,7 @@ v-footer.mt-12(padless
       v-btn.mx-4.primary--text(
         v-for="icon in icons"
         :key="icon.mdi"
-        icon
+        icon target="_blank"
         :href="icon.link")
         v-icon(size="24px") {{ icon.mdi }}
       p.mt-6 &copy; {{new Date().getFullYear()}} - 
@@ -43,12 +43,20 @@ export default {
     ],
     icons: [
       {
-        mdi: "mdi-gitlab",
-        link: "https://wiwi-gitlab.uni-muenster.de/l_gies10"
+        mdi: "mdi-linkedin",
+        link: " www.linkedin.com/in/leogiesen"
+      },
+      {
+        mdi: "mdi-xing",
+        link: "https://www.xing.com/profile/Leo_Giesen"
       },
       {
         mdi: "mdi-github",
         link: "https://github.com/lgiesen"
+      },
+      {
+        mdi: "mdi-gitlab",
+        link: "https://wiwi-gitlab.uni-muenster.de/l_gies10"
       },
       {
         mdi: "mdi-stack-overflow",

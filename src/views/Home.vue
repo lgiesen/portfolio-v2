@@ -26,19 +26,17 @@ div
           | move (customers), co-founders of vivIT -- use citations:
           blockquote.font-italic "Lorem ipsum solor dolor"
         li Link projects and blog with small preview
+        li blog: personal research (productivity rules etc.), essence/summary of books
         li General inspirational introduction text: why should anyone visit this website:
           | What skills I bring to the table: three cards with icons and small description and animation.
-          br
-          | possible topics: Consulting, Project Management, Business/Process Analyst, Supply Chain Management
-          | and other IT topics like AI - Check reference 
-          a(href="http://assets.csom.umn.edu/assets/36237.pdf" target="_blank") here 
-          | [area of skill &rarr; learning outcomes &rarr; performance indicators, evidence]
-          br
-          | businesses: hire me and gain valuable ressource (what type of positions do I want to acquire? (cf. previouslink)) 
-          br
-          | students: get inspired by my code and website
-          br
-          | non-IT Lounge? Is there a target group for that?
+          ul
+            li Possible topics: Consulting, Project Management, Business/Process Analyst, 
+              | Supply Chain Management and other IT topics like AI - Check reference 
+              a(href="http://assets.csom.umn.edu/assets/36237.pdf" target="_blank") here 
+            li [area of skill &rarr; learning outcomes &rarr; performance indicators, evidence]
+            li Businesses: hire me and gain valuable ressource (what type of positions do I want to acquire? (cf. previouslink)) 
+            li students: get inspired by my code and website
+            li Non-IT Lounge? Is there a target group for that?
         li background video
         li playground:
           ul 
@@ -46,6 +44,7 @@ div
             li change color palette on the site itself 
             li provide code and link to repo
         li gradient overlay, moving/floating elements, great css animations
+        li values: what is important in teamwork, political stances
 </template>
 
 <script>
