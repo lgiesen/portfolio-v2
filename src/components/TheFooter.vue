@@ -43,8 +43,12 @@ export default {
     ],
     icons: [
       {
+        mdi: "mdi-email-outline",
+        link: "mailto:leo.richard.giesen@gmail.com"
+      },
+      {
         mdi: "mdi-linkedin",
-        link: " www.linkedin.com/in/leogiesen"
+        link: "www.linkedin.com/in/leogiesen"
       },
       {
         mdi: "mdi-xing",
