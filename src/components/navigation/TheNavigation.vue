@@ -7,7 +7,6 @@ v-app-bar(app)
       transition="scale-transition"
       :src="themespecificLogoSrc")
       //- Change icon depending on the theme
-  v-spacer
   v-tabs(align-with-title)
     v-tab(to="/") Home
     v-tab(
@@ -37,7 +36,6 @@ export default {
   },
   methods: {
     toggleTheme() {
-      // this.$vuetify.theme.themes.dark.anchor = "#fff"
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     }
   }

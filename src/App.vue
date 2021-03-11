@@ -26,13 +26,45 @@ export default {
 };
 </script>
 <style lang="scss">
+// import of vuetify colours
+$primary: var(--v-primary-base);
+$secondary: var(--v-secondary-base);
+$btnColor: var(--v-btnColor-base);
+// $text: var(--v-text-base);
+
+// 1. General Style
+// 1.1 Word break
 #app {
   word-break: normal !important;
 }
+
+// 2. Sections
+// 2.1 Space between sections
 section {
   margin-bottom: 20vh;
 }
+// 2.2 Hero area
 .hero {
   height: 100vh !important;
+}
+
+// 3. Components
+// 3.1 Gradient Button
+.gradient-btn {
+  color: $btnColor !important;
+  transition: 0.5s;
+  background-size: 200% auto;
+  // text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 20px #eee;
+  background-image: linear-gradient(
+    to right,
+    $primary 0%,
+    $secondary 51%,
+    $primary 100%
+  );
+  &:hover {
+    // change the direction of the change here
+    background-position: right center;
+  }
 }
 </style>

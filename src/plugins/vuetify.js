@@ -31,7 +31,10 @@ export default new Vuetify({
                 triadicSecond: "#b92142",
 
                 text: "#3e3e3e",
-                background: "#cccccc",
+                background: "#fffff",
+                // alternatively e.g. #cccccc
+
+                btnColor: "#ffffff",
 
                 success: "#34c759",
                 warning: "#ff954f",
@@ -58,6 +61,7 @@ export default new Vuetify({
                 
                 // If colours above are used as background: black text, otherwise white
 
+                btnColor: "#121212",
                 // as recommended by the Material Design Guidelines from Google
                 background: "#121212",
                 backgroundLight: "#383838",
