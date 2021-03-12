@@ -1,40 +1,42 @@
 <template lang="pug">
-v-footer#footer.mt-12.pa-10(padless)
-  //- :class="isDarkTheme ? '' : 'background'")
-  //- if light theme: make background darker
-  v-row(
-    justify="center" no-gutters)
-    v-btn.my-2(
-      color="white"
-      @click="toggletShowContactDialog"
-      text) Contact
-    v-btn.my-2(
-      v-for="link in links"
-      :key="link.link"
-      color="white"
-      @click='goTo(link.link)'
-      text) {{ link.title }}
-    v-col.lighten-2.py-4.text-center.white--text(
-      cols="12")
-      v-btn.mx-4.primary--text(
-        v-for="icon in icons"
-        :key="icon.mdi"
-        icon target="_blank"
-        :href="icon.link")
-        v-icon(size="24px") {{ icon.mdi }}
-      p.mt-6 &copy; {{new Date().getFullYear()}} - 
-        span.secondary--text Leo Giesen
+div
+  //- Contact(v-if="this.$store.state.showContactDialog")
+  v-footer#footer.mt-12.pa-10(padless)
+    //- :class="isDarkTheme ? '' : 'background'")
+    //- if light theme: make background darker
+    v-row(justify="center" no-gutters)
+      v-btn.my-2(
+        color="white"
+        @click="showContactDialog()"
+        text) Contact
+      v-btn.my-2(
+        v-for="link in links"
+        :key="link.link"
+        color="white"
+        @click='goTo(link.link)'
+        text) {{ link.title }}
+      v-col.lighten-2.py-4.text-center.white--text(
+        cols="12")
+        v-btn.mx-4.primary--text(
+          v-for="icon in icons"
+          :key="icon.mdi"
+          icon target="_blank"
+          :href="icon.link")
+          v-icon(size="24px") {{ icon.mdi }}
+        p.mt-6 &copy; {{new Date().getFullYear()}} - 
+          span.secondary--text Leo Giesen
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import Contact from "@/components/Contact.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "TheFooter",
+  components: {
+    Contact
+  },
   data: () => ({
-    ...mapState({
-      showContactDialog: state => state.showContactDialog
-    }),
     links: [
       {
         title: "Contact",
@@ -85,8 +87,9 @@ export default {
       if (!link.includes("http")) this.$router.push("/" + link);
       else window.open("https://www.wi.uni-muenster.de/legal-notice", "_blank");
     },
-    toggletShowContactDialog() {
-      this.showContactDialog = true;
+    showContactDialog() {
+      this.$store.state.showContactDialog = !this.$store.state
+        .showContactDialog;
     }
   }
 };

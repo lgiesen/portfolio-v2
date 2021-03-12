@@ -1,7 +1,6 @@
 <template lang="pug">
   div.text-center.mb-6
     v-btn#heroScrollBtn(
-      v-scroll="onScroll"
       @click="scrollHero"
       fab text outlined color="primary") 
       v-icon mdi-chevron-down

@@ -3,7 +3,6 @@
     //- change color depending on the theme:
     //- :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'"
     TheNavigation#scroll-target
-    Contact(v-if="this.$store.state.showContactDialog")
     v-main
       router-view
     ScrollToTop
@@ -14,15 +13,13 @@
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
-import Contact from "@/components/Contact.vue";
 
 export default {
   name: "App",
   components: {
     TheNavigation,
     TheFooter,
-    ScrollToTop,
-    Contact
+    ScrollToTop
   },
   data: () => ({})
 };
