@@ -1,9 +1,10 @@
 <template lang="pug">
-  v-btn(
-    v-scroll="onScroll"
-    @click="scrollHero"
-    fab text) 
-    v-icon mdi-chevron-down
+  div.text-center.mb-6
+    v-btn(
+      v-scroll="onScroll"
+      @click="scrollHero"
+      fab text) 
+      v-icon mdi-chevron-down
 </template>
 
 <script>

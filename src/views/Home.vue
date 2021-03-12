@@ -17,7 +17,7 @@ div
             v-btn.pa-6(outlined
               @click="$router.push('/playground')"
               ) Other Visitors
-          ScrollHero
+      ScrollHero
   section#scroll
     v-container
       h3.text-center Title
