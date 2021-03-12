@@ -10,7 +10,18 @@ div
             | Passionate about Business and Computer Science
           h3.subheading
             | - Portfolio of Leo Giesen -
+
+
+          //- Sources:
+          //- Repo: https://github.com/biigpongsatorn/vue-svg-filler/blob/master/demo/App.vue
+          //- Documentation 1: https://www.npmjs.com/package/vue-svg-filler
+          //- Documentation 2: https://biigpongsatorn.github.io/#/vue-svg-filler
+          //- Example: https://vuejsexamples.com/vue-component-for-customize-your-svg-file/
+          //- Alternative: https://vuejs.org/v2/cookbook/editable-svg-icons.html
           svg-filler(path="static/bitcoin.svg")
+
+
+
           div.mt-10
             v-btn.pa-6.gradient-btn.ma-10(
               @click="$router.push('/about')"
