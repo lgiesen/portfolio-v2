@@ -1,9 +1,9 @@
 <template lang="pug">
   div.text-center.mb-6
-    v-btn(
+    v-btn#heroScrollBtn(
       v-scroll="onScroll"
       @click="scrollHero"
-      fab text) 
+      fab text outlined color="primary") 
       v-icon mdi-chevron-down
 </template>
 
@@ -18,4 +18,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+$primary: var(--v-primary-base);
+#heroScrollBtn {
+  border-color: $primary;
+}
+</style>

@@ -5,8 +5,7 @@
       outlined
       color="primary"
       fixed bottom right
-      @click="toTop"
-      style="opacity: 0.7;")
+      @click="toTop")
       v-icon mdi-chevron-up
 </template>
 
