@@ -81,7 +81,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#footer {
-  background: url(../assets/background/Subtle-Prism.svg) center center;
-}
+// #footer {
+//   background: url(../assets/background/Subtle-Prism.svg) center center;
+// }
 </style>

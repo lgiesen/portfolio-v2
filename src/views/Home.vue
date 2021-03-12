@@ -1,5 +1,6 @@
 <template lang="pug">
 div
+  svg-filler(path="static/bitcoin.svg" fill="#FF9900" width="300px" height="300")
   //- Hero Area
   section(style="height: 100vh;")
     v-parallax.hero.text-center(dark cover
@@ -24,9 +25,14 @@ div
 </template>
 
 <script>
+import SvgFiller from "vue-svg-filler";
+// import SvgFiller from "@/vue-svg-filler";
 import { mapGetters } from "vuex";
 export default {
   name: "Home",
+  components: {
+    SvgFiller
+  },
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themeSpecificHeroImage() {
