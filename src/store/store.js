@@ -6,7 +6,9 @@ import auth from "./modules/auth.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    showContactDialog: false
+  },
   mutations: {},
   actions: {},
   getters: {

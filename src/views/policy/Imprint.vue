@@ -1,11 +1,11 @@
 <template lang="pug">
 v-container.text-center
-  h3 Playground
+    h3 Imprint
 </template>
 
 <script>
 export default {
-  name: "Playground"
+  name: "Imprint"
 };
 </script>
 

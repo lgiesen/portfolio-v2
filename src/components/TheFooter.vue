@@ -5,6 +5,10 @@ v-footer#footer.mt-12.pa-10(padless)
   v-row(
     justify="center" no-gutters)
     v-btn.my-2(
+      color="white"
+      @click="toggletShowContactDialog"
+      text) Contact
+    v-btn.my-2(
       v-for="link in links"
       :key="link.link"
       color="white"
@@ -23,29 +27,33 @@ v-footer#footer.mt-12.pa-10(padless)
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapState, mapGetters } from "vuex";
+
 export default {
   name: "TheFooter",
   data: () => ({
+    ...mapState({
+      showContactDialog: state => state.showContactDialog
+    }),
     links: [
       {
         title: "Contact",
-        link: "https://www.wi.uni-muenster.de/de/impressum"
+        link: "/"
       },
       {
         title: "Imprint",
-        link: "https://www.wi.uni-muenster.de/legal-notice"
+        link: "imprint"
       },
       {
         title: "Privacy Policy",
-        link: "privacy"
+        link: "privacy-policy"
       }
     ],
     icons: [
-      {
-        mdi: "mdi-email-outline",
-        link: "mailto:leo.richard.giesen@gmail.com"
-      },
+      // {
+      //   mdi: "mdi-email-outline",
+      //   link: "mailto:leo.richard.giesen@gmail.com"
+      // },
       {
         mdi: "mdi-linkedin",
         link: "www.linkedin.com/in/leogiesen"
@@ -76,6 +84,9 @@ export default {
       // if the link is internal, the router should be used. Otherwise open a new page
       if (!link.includes("http")) this.$router.push("/" + link);
       else window.open("https://www.wi.uni-muenster.de/legal-notice", "_blank");
+    },
+    toggletShowContactDialog() {
+      this.showContactDialog = true;
     }
   }
 };

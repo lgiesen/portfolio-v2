@@ -41,6 +41,23 @@ const routes = [
     //   },
     // ]
   },
+
+  // Policy and other law-related pages
+  {
+    path: "/privacy-policy",
+    name: "PrivacyPolicy",
+    component: () =>
+      import(
+        /* webpackChunkName: "privacyPolicy" */ "../views/policy/PrivacyPolicy.vue"
+      )
+  },
+  {
+    path: "/Imprint",
+    name: "Imprint",
+    component: () =>
+      import(/* webpackChunkName: "imprint" */ "../views/policy/Imprint.vue")
+  },
+
   // 404-page needs to be at the end so that the wildcard
   // (*) does not get matched with any other URLs
   {
