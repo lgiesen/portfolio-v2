@@ -1,6 +1,5 @@
 <template lang="pug">
 div
-  svg-filler(path="static/bitcoin.svg" fill="#FF9900" width="300px" height="300")
   //- Hero Area
   section(style="height: 100vh;")
     v-parallax.hero.text-center(dark cover
@@ -11,6 +10,7 @@ div
             | Passionate about Business and Computer Science
           h3.subheading
             | - Portfolio of Leo Giesen -
+          svg-filler(path="static/bitcoin.svg")
           div.mt-10
             v-btn.pa-6.gradient-btn.ma-10(
               @click="$router.push('/about')"
@@ -25,8 +25,8 @@ div
 </template>
 
 <script>
-import SvgFiller from "vue-svg-filler";
-// import SvgFiller from "@/vue-svg-filler";
+// import SvgFiller from "vue-svg-filler";
+import SvgFiller from "../vue-svg-filler";
 import { mapGetters } from "vuex";
 export default {
   name: "Home",
