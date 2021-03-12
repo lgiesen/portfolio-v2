@@ -12,7 +12,7 @@
 <script>
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import ScrollToTop from "@/components/ScrollToTop.vue";
+import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
 
 export default {
   name: "App",
@@ -23,17 +23,7 @@ export default {
     ScrollToTop
   },
 
-  data: () => ({}),
-  methods: {
-    onScroll(e) {
-      if (typeof window === "undefined") return;
-      const top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > 20;
-    },
-    toTop() {
-      this.$vuetify.goTo(0);
-    }
-  }
+  data: () => ({})
 };
 </script>
 <style lang="scss">

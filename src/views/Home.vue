@@ -17,16 +17,20 @@ div
             v-btn.pa-6(outlined
               @click="$router.push('/playground')"
               ) Other Visitors
-  section
+          ScrollHero
+  section#scroll
     v-container
       h3.text-center Title
-      
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 export default {
   name: "Home",
+  components: {
+    ScrollHero
+  },
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themeSpecificHeroImage() {
