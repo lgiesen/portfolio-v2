@@ -1,5 +1,5 @@
 <template lang="pug">
-v-footer#footer.mt-12(padless)
+v-footer#footer.mt-12.pa-10(padless)
   //- :class="isDarkTheme ? '' : 'background'")
   //- if light theme: make background darker
   v-row(
