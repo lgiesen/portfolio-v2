@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //- Hero Area
-  section
+  section(style="height: 100vh;")
     v-parallax.hero.text-center(dark cover
       :src="themeSpecificHeroImage")
       v-row(align='center' justify='center')
@@ -11,12 +11,10 @@ div
           h3.subheading
             | - Portfolio of Leo Giesen -
           div.mt-10
-            //- .primary
-            v-btn.pa-6.mr-10.gradient-btn(
+            v-btn.pa-6.gradient-btn.ma-10(
               @click="$router.push('/about')"
               ) For Businesses
-            //- color="secondary"
-            v-btn.pa-6(outlined 
+            v-btn.pa-6(outlined
               @click="$router.push('/playground')"
               ) Other Visitors
   section

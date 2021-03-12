@@ -2,27 +2,38 @@
   v-app#app
     //- change color depending on the theme:
     //- :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'"
-    TheNavigation
+    TheNavigation#scroll-target
     v-main
       router-view
+    ScrollToTop
     TheFooter
 </template>
 
 <script>
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import ScrollToTop from "@/components/ScrollToTop.vue";
 
 export default {
   name: "App",
 
   components: {
     TheNavigation,
-    TheFooter
+    TheFooter,
+    ScrollToTop
   },
 
-  data: () => ({
-    //
-  })
+  data: () => ({}),
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -45,7 +56,7 @@ section {
 }
 // 2.2 Hero area
 .hero {
-  height: 100vh !important;
+  min-height: 80vh;
 }
 
 // 3. Components

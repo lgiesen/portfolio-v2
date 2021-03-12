@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-v-app-bar(app)
+v-app-bar(app style="opacity: 0.7;")
   div.d-flex.align-center
     v-img.shrink.mr-2(alt="Leo Giesen Logo"
       contain width="40"

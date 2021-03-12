@@ -1,6 +1,6 @@
 <template lang="pug">
-v-footer.mt-12(padless
-  :class="isDarkTheme ? '' : 'background'")
+v-footer#footer.mt-12(padless)
+  //- :class="isDarkTheme ? '' : 'background'")
   //- if light theme: make background darker
   v-row(
     justify="center" no-gutters)
@@ -80,4 +80,8 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#footer {
+  background: url(../assets/background/Subtle-Prism.svg) center center;
+}
+</style>

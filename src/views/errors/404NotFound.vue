@@ -11,6 +11,7 @@
         color="primary"
         :to="{ name: 'Home' }") 
           | Take me back home
+      v-img.mt-10.ma-auto(src="@/assets/errors/pulp-fiction.gif" width="600")
 </template>
 
 <script>

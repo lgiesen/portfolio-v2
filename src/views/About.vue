@@ -4,7 +4,7 @@ div
   section
     v-parallax.hero(dark='' cover
       src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80')
-      v-row(align='center' justify='center')
+      v-row(align="center" justify="center")
         v-col.text-center(cols='12')
           h1.display-1.font-weight-thin.mb-4
             | About Leo
@@ -14,7 +14,7 @@ div
   section
     v-container
       h1.text-center.ma-10 About
-      v-row
+      v-row(align="center")
         v-col(cols="6")
           p Leo has a huge passion for computer science and economics, which is why he 
             | studies Information Systems and ambitiously works on personal projects 
@@ -26,8 +26,13 @@ div
             | through intense group work. From those projects and his course of study, 
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
+          div.text-center.mt-10
+            v-btn.ma-auto.pa-6.gradient-btn(
+              href="/LeoGiesenCV.pdf")
+              v-icon mdi-download
+              | Download CV
         v-col(cols="6")
-          v-img(src="@/assets/work/Desk.jpg")
+          v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
   //- full-width parralax image
   section
@@ -48,7 +53,7 @@ div
         :key="work.position")
         //- card to frame the inner card
         v-card.pa-0(tile outlined)
-          v-card.pa-10.background.card-group
+          v-card.pa-10.card-group
             v-row(col="12")
               v-col(cols="3")
                 v-img(:src="work.imageSrc" cover)
@@ -79,7 +84,7 @@ div
         :key="item.title")
         //- card to frame the inner card
         v-card.pa-0(tile outlined)
-          v-card.pa-10.background.card-group
+          v-card.pa-10.card-group
             v-row(col="12")
               v-col(cols="3")
                 v-img(:src="item.imageSrc" cover)
