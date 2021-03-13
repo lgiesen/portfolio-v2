@@ -31,7 +31,7 @@ export default {
     links: [
       {
         title: "Contact",
-        link: "/contact"
+        link: "contact"
       },
       {
         title: "Imprint",

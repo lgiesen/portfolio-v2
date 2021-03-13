@@ -6,14 +6,31 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
     v-card-subtitle 
       h4.primary--text Subtitle
     v-card-text
-      v-form(
+      //- form#form(@submit.prevent="submit")
+      //-   .field
+      //-     label(for='name') name
+      //-     input#name(type='text' name='name')
+      //-   .field
+      //-     label(for='subject') subject
+      //-     input#subject(type='text' name='subject')
+      //-   .field
+      //-     label(for='email') email
+      //-     input#email(type='text' name='email')
+      //-   .field
+      //-     label(for='message') message
+      //-     input#message(type='text' name='message')
+      //-   input#button(type='submit' value='Send Email')
+
+    
+      v-form#form(
         ref="form"
         @submit.prevent="submit")
         v-row
           v-col
-            v-text-field(
+            v-text-field#name(
+              name="name"
               required
-              v-model="name"
+              v-model="form.name"
               :counter="20"
               :error-messages="nameErrors"
               @input="$v.name.$touch()"
@@ -21,9 +38,10 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               label="Name*"
               prepend-icon="mdi-account")
           v-col
-            v-text-field(
+            v-text-field#email(
+              name="email"
               required
-              v-model="email"
+              v-model="form.email"
               :error-messages="emailErrors"
               @input="$v.email.$touch()"
               @blur="$v.email.$touch()"
@@ -31,9 +49,10 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               prepend-icon="mdi-email")
         v-row
           v-col
-            v-text-field(
+            v-text-field#subject(
+              name="subject"
               required
-              v-model="subject"
+              v-model="form.subject"
               :error-messages="subjectErrors"
               @input="$v.subject.$touch()"
               @blur="$v.subject.$touch()"
@@ -41,9 +60,10 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               prepend-icon="mdi-message")
         v-row 
           v-col 
-            v-text-field(
+            v-text-field#message(
+              name="message"
               required
-              v-model="message"
+              v-model="form.message"
               :error-messages="messageErrors"
               @input="$v.message.$touch()"
               @blur="$v.message.$touch()"
@@ -52,25 +72,27 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
         v-divider
         v-card-actions
           v-btn(
-            @click="$router.push('/')"
             color="primary"
-            ) Go Back
+            @click="clear")
+            v-icon mdi-close-circle-outline
+            | Clear
           v-spacer
-          v-btn(
-            color="secondary"
-            @click="clear"
-            ) Reset Form
-          v-spacer
-          v-btn(
-            type="submit"
-            color="success"
-            ) Register
+          v-btn
+            v-icon mdi-send
+            input#button(
+              type="submit"
+              color="secondary"
+              value="Send Email") 
         
       p Dropdown: job offer, interaction, other &rarr; user may choose
       p modern background: blurred image
 </template>
-
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+></script>
 <script>
+emailjs.init("user_75cp2FduRtFFNEXJNEWrH");
 import { validationMixin } from "vuelidate";
 import {
   required,
@@ -78,6 +100,7 @@ import {
   maxLength,
   email
 } from "vuelidate/lib/validators";
+import emailjs from "emailjs-com";
 
 export default {
   name: "Contact",
@@ -89,10 +112,12 @@ export default {
     message: { required, minLength: minLength(20), maxLength: maxLength(2000) }
   },
   data: () => ({
-    name: null,
-    email: null,
-    subject: null,
-    message: null
+    form: {
+      name: "Testname",
+      email: "test@gmail.com",
+      subject: "This is a subject",
+      message: "This is a message - lorem ipsum solor dolor eris."
+    }
   }),
   computed: {
     nameErrors() {
@@ -137,7 +162,42 @@ export default {
     clear() {
       this.$refs.form.reset();
     },
-    submit() {}
+    submit() {
+      // try {
+      //   emailjs.sendForm(
+      //     "default_service",
+      //     "email_template",
+      //     "user_75cp2FduRtFFNEXJNEWrH",
+      //     this.form
+      //   );
+      // } catch (error) {
+      //   console.log(error);
+      // }
+      // this.clear();
+      const btn = document.getElementById("button");
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          btn.value = "Sending...";
+
+          const serviceID = "default_service";
+          const templateID = "email_template";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
+              alert("Sent!");
+            },
+            err => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    }
   }
 };
 </script>
