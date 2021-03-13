@@ -1,13 +1,14 @@
 <template lang="pug">
 div
-  //- Contact(v-if="this.$store.state.showContactDialog")
+  Contact(v-if="this.$store.state.showContactDialog")
+  p showContactDialog: {{ this.$store.state.showContactDialog }}
   v-footer#footer.mt-12.pa-10(padless)
     //- :class="isDarkTheme ? '' : 'background'")
     //- if light theme: make background darker
     v-row(justify="center" no-gutters)
       v-btn.my-2(
         color="white"
-        @click="showContactDialog()"
+        @click="toggleContactDialog()"
         text) Contact
       v-btn.my-2(
         v-for="link in links"
@@ -87,9 +88,8 @@ export default {
       if (!link.includes("http")) this.$router.push("/" + link);
       else window.open("https://www.wi.uni-muenster.de/legal-notice", "_blank");
     },
-    showContactDialog() {
-      this.$store.state.showContactDialog = !this.$store.state
-        .showContactDialog;
+    toggleContactDialog() {
+      this.$store.commit("ToggleShowContactDialog");
     }
   }
 };

@@ -9,7 +9,12 @@ export default new Vuex.Store({
   state: {
     showContactDialog: false
   },
-  mutations: {},
+  mutations: {
+    ToggleShowContactDialog(state) {
+      console.log("store: " + state.showContactDialog);
+      state.showContactDialog = !state.showContactDialog;
+    }
+  },
   actions: {},
   getters: {
     isDarkTheme() {
