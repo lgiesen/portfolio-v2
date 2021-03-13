@@ -30,7 +30,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-text-field#name(
               name="name"
               required
-              v-model="form.name"
+              v-model="name"
               :counter="20"
               :error-messages="nameErrors"
               @input="$v.name.$touch()"
@@ -41,7 +41,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-text-field#email(
               name="email"
               required
-              v-model="form.email"
+              v-model="email"
               :error-messages="emailErrors"
               @input="$v.email.$touch()"
               @blur="$v.email.$touch()"
@@ -52,7 +52,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-text-field#subject(
               name="subject"
               required
-              v-model="form.subject"
+              v-model="subject"
               :error-messages="subjectErrors"
               @input="$v.subject.$touch()"
               @blur="$v.subject.$touch()"
@@ -63,7 +63,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-text-field#message(
               name="message"
               required
-              v-model="form.message"
+              v-model="message"
               :error-messages="messageErrors"
               @input="$v.message.$touch()"
               @blur="$v.message.$touch()"
@@ -112,12 +112,10 @@ export default {
     message: { required, minLength: minLength(20), maxLength: maxLength(2000) }
   },
   data: () => ({
-    form: {
-      name: "Testname",
-      email: "test@gmail.com",
-      subject: "This is a subject",
-      message: "This is a message - lorem ipsum solor dolor eris."
-    }
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
   }),
   computed: {
     nameErrors() {
