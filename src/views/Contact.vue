@@ -38,7 +38,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               @input="$v.subject.$touch()"
               @blur="$v.subject.$touch()"
               label="Subject*" 
-              prepend-icon="mdi-email")
+              prepend-icon="mdi-message")
         v-row 
           v-col 
             v-text-field(
@@ -48,7 +48,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               @input="$v.message.$touch()"
               @blur="$v.message.$touch()"
               label="Message*" 
-              prepend-icon="mdi-email")
+              prepend-icon="mdi-text")
         v-divider
         v-card-actions
           v-btn(
@@ -136,7 +136,8 @@ export default {
   methods: {
     clear() {
       this.$refs.form.reset();
-    }
+    },
+    submit() {}
   }
 };
 </script>
