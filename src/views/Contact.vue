@@ -1,11 +1,10 @@
 <template lang="pug">
-v-dialog.mx-auto(width="80vw" height=" 80vh")
+v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
   v-card
     v-card-title
-      h2.secondary--text Contact
-    v-card-subtitle.text-start 
-      h1.primary--text.display-1(primary) Contact Me
-      h4.secondary--text Secondary Text - Subtite
+      h2.display-1 Contact Me
+    v-card-subtitle 
+      h4.primary--text Subtitle
     v-card-text
       v-form(
         ref="form"
@@ -81,13 +80,13 @@ import {
 } from "vuelidate/lib/validators";
 
 export default {
-  name: "Playground",
+  name: "Contact",
   mixins: [validationMixin],
   validations: {
     name: { required, minLength: minLength(3), maxLength: maxLength(20) },
     email: { required, email },
-    subject: { required, minLength: minLength(6) },
-    message: { required, minLength: minLength(20) }
+    subject: { required, minLength: minLength(6), maxLength: maxLength(150) },
+    message: { required, minLength: minLength(20), maxLength: maxLength(2000) }
   },
   data: () => ({
     name: null,
@@ -98,19 +97,39 @@ export default {
   computed: {
     nameErrors() {
       const errors = [];
-      if (!this.$v.first_name.$dirty) return errors;
-      !this.$v.first_name.minLength &&
-        errors.push("First name must be at least 3 characters long");
-      !this.$v.first_name.maxLength &&
-        errors.push("First name must be at most 15 characters long");
-      !this.$v.first_name.required && errors.push("First name is required.");
+      if (!this.$v.name.$dirty) return errors;
+      !this.$v.name.minLength &&
+        errors.push("Your name must be at least 3 characters long");
+      !this.$v.name.maxLength &&
+        errors.push("Your name should not exceed 20 characters");
+      !this.$v.name.required && errors.push("Your name is required.");
       return errors;
     },
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
-      !this.$v.email.email && errors.push("Must be valid e-mail");
+      !this.$v.email.email && errors.push("Your e-mail must be valid");
       !this.$v.email.required && errors.push("E-mail is required");
+      return errors;
+    },
+    subjectErrors() {
+      const errors = [];
+      if (!this.$v.subject.$dirty) return errors;
+      !this.$v.subject.minLength &&
+        errors.push("The subject must be at least 6 characters long");
+      !this.$v.subject.maxLength &&
+        errors.push("The subject should not exceed 150 characters");
+      !this.$v.subject.required && errors.push("The subject is required.");
+      return errors;
+    },
+    messageErrors() {
+      const errors = [];
+      if (!this.$v.message.$dirty) return errors;
+      !this.$v.message.minLength &&
+        errors.push("The message must be at least 20 characters long");
+      !this.$v.message.maxLength &&
+        errors.push("The message should not exceed 2000 characters");
+      !this.$v.message.required && errors.push("The message is required.");
       return errors;
     }
   },

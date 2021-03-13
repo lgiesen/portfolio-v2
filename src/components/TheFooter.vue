@@ -1,15 +1,9 @@
 <template lang="pug">
 div
-  Contact(v-if="this.$store.state.showContactDialog")
-  p showContactDialog: {{ this.$store.state.showContactDialog }}
   v-footer#footer.mt-12.pa-10(padless)
     //- :class="isDarkTheme ? '' : 'background'")
     //- if light theme: make background darker
     v-row(justify="center" no-gutters)
-      v-btn.my-2(
-        color="white"
-        @click="toggleContactDialog()"
-        text) Contact
       v-btn.my-2(
         v-for="link in links"
         :key="link.link"
@@ -29,19 +23,15 @@ div
 </template>
 
 <script>
-import Contact from "@/components/Contact.vue";
 import { mapGetters } from "vuex";
 
 export default {
   name: "TheFooter",
-  components: {
-    Contact
-  },
   data: () => ({
     links: [
       {
         title: "Contact",
-        link: "/"
+        link: "/contact"
       },
       {
         title: "Imprint",
@@ -87,9 +77,6 @@ export default {
       // if the link is internal, the router should be used. Otherwise open a new page
       if (!link.includes("http")) this.$router.push("/" + link);
       else window.open("https://www.wi.uni-muenster.de/legal-notice", "_blank");
-    },
-    toggleContactDialog() {
-      this.$store.commit("ToggleShowContactDialog");
     }
   }
 };

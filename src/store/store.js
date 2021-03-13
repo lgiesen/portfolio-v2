@@ -11,7 +11,6 @@ export default new Vuex.Store({
   },
   mutations: {
     ToggleShowContactDialog(state) {
-      console.log("store: " + state.showContactDialog);
       state.showContactDialog = !state.showContactDialog;
     }
   },
@@ -19,7 +18,8 @@ export default new Vuex.Store({
   getters: {
     isDarkTheme() {
       return Vuetify.framework.theme.dark;
-    }
+    },
+    GetShowContactDialog: state => state.showContactDialog
   },
   modules: {
     auth

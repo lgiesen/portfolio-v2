@@ -21,11 +21,13 @@ div
   section#scroll
     v-container
       h3.text-center Title
+      p showContactDialog: {{ this.$store.state.showContactDialog }}
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
+
 export default {
   name: "Home",
   components: {

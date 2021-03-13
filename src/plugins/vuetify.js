@@ -9,7 +9,7 @@ export default new Vuetify({
         options: {
           customProperties: true
         },
-        dark: true,
+        dark: false,
         themes: {
             light: {
                 // corporate design
@@ -31,7 +31,7 @@ export default new Vuetify({
                 triadicSecond: "#b92142",
 
                 text: "#3e3e3e",
-                background: "#fffff",
+                background: "#ffffff",
                 // alternatively e.g. #cccccc
 
                 btnColor: "#ffffff",
