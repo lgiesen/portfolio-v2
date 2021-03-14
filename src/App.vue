@@ -35,6 +35,20 @@ $btnColor: var(--v-btnColor-base);
 // 1.1 Word break
 #app {
   word-break: normal !important;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+// 1.2 Link animation
+a:not(a.v-tab) {
+  text-decoration: none;
+  cursor: pointer;
+  color: $primary;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // 2. Sections
