@@ -21,7 +21,6 @@ div
   section#scroll
     v-container
       h3.text-center Title
-      p showContactDialog: {{ this.$store.state.showContactDialog }}
 </template>
 
 <script>
