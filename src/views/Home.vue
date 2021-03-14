@@ -12,15 +12,6 @@ div
             | - Portfolio of Leo Giesen -
 
 
-          //- Sources:
-          //- Repo: https://github.com/biigpongsatorn/vue-svg-filler/blob/master/demo/App.vue
-          //- Documentation 1: https://www.npmjs.com/package/vue-svg-filler
-          //- Documentation 2: https://biigpongsatorn.github.io/#/vue-svg-filler
-          //- Example: https://vuejsexamples.com/vue-component-for-customize-your-svg-file/
-          //- Alternative: https://vuejs.org/v2/cookbook/editable-svg-icons.html
-          svg-filler(path="static/bitcoin.svg")
-
-
 
           div.mt-10
             v-btn.pa-6.gradient-btn.ma-10(
@@ -32,6 +23,16 @@ div
   section
     v-container
       h3.text-center Title
+      div.text-center.mx-auto(justify="center" align="center")
+        p svg start
+        //- convert so that the svg contains path property 
+        //- instead of e.g. polygon --> the svg-filler need that
+        //- convert here: https://codepen.io/jakealbaugh/pen/GZwgzV
+        svg-filler(path="/svg/bitcoin.svg" fill="#FF9900" 
+        width="50px" height="50px" hover-color="#35495e")
+        //- SVG Filler only fills the first path and does not display more than that. So get rid of the idea
+        svg-filler(path="/svg/background/light/large-triangles.svg" width="100px" height="100px")
+        p svg end
       
 </template>
 
