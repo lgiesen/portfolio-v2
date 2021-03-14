@@ -10,8 +10,9 @@ div
             | About Leo
           h4.subheading
             | I love to learn and apply my knowledge!
+      ScrollHero
   //- Introduction
-  section
+  section#scroll
     v-container
       h1.text-center.ma-10 About
       v-row(align="center")
@@ -98,7 +99,13 @@ div
 </template>
 
 <script>
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
+
 export default {
+  name: "About",
+  components: {
+    ScrollHero
+  },
   data: () => ({
     employment: [
       {
