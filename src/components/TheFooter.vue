@@ -1,8 +1,6 @@
 <template lang="pug">
 div
   v-footer#footer.mt-12.pa-10(padless)
-    //- :class="isDarkTheme ? '' : 'background'")
-    //- if light theme: make background darker
     v-row(justify="center" no-gutters)
       v-btn.my-2(
         v-for="link in links"
@@ -12,7 +10,7 @@ div
         text) {{ link.title }}
       v-col.lighten-2.py-4.text-center.white--text(
         cols="12")
-        v-btn.mx-4.primary--text(
+        v-btn.mx-4.white--text(
           v-for="icon in icons"
           :key="icon.mdi"
           icon target="_blank"
@@ -83,6 +81,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #footer {
-  background: url(../assets/background/Subtle-Prism.svg) center center;
+  // background: url(../assets/background/light/largeTriangles.svg) center center;
+  background: url(../assets/background/light/subtlePrism.svg) center center;
 }
 </style>

@@ -42,7 +42,7 @@ $btnColor: var(--v-btnColor-base);
   }
 }
 // 1.2 Link animation
-a:not(a.v-tab) {
+a:not(a.v-tab, .v-btn) {
   text-decoration: none;
   cursor: pointer;
   color: $primary;
