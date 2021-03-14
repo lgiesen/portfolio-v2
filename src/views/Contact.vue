@@ -6,22 +6,6 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
     v-card-subtitle 
       h4.primary--text Subtitle
     v-card-text
-      //- form#form(@submit.prevent="submit")
-      //-   .field
-      //-     label(for='name') name
-      //-     input#name(type='text' name='name')
-      //-   .field
-      //-     label(for='subject') subject
-      //-     input#subject(type='text' name='subject')
-      //-   .field
-      //-     label(for='email') email
-      //-     input#email(type='text' name='email')
-      //-   .field
-      //-     label(for='message') message
-      //-     input#message(type='text' name='message')
-      //-   input#button(type='submit' value='Send Email')
-
-    
       v-form#form(
         ref="form"
         @submit.prevent="submit")
@@ -60,7 +44,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
               prepend-icon="mdi-message")
         v-row 
           v-col 
-            v-text-field#message(
+            v-textarea#message(
               name="message"
               required
               v-model="message"
@@ -77,7 +61,7 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-icon mdi-close-circle-outline
             | Clear
           v-spacer
-          v-btn
+          v-btn(:disabled="!this.isMounted")
             v-icon mdi-send
             input#button(
               type="submit"
@@ -109,9 +93,10 @@ export default {
     name: { required, minLength: minLength(3), maxLength: maxLength(20) },
     email: { required, email },
     subject: { required, minLength: minLength(6), maxLength: maxLength(150) },
-    message: { required, minLength: minLength(20), maxLength: maxLength(2000) }
+    message: { required, minLength: minLength(5), maxLength: maxLength(2000) }
   },
   data: () => ({
+    isMounted: false,
     name: "",
     email: "",
     subject: "",
@@ -149,7 +134,7 @@ export default {
       const errors = [];
       if (!this.$v.message.$dirty) return errors;
       !this.$v.message.minLength &&
-        errors.push("The message must be at least 20 characters long");
+        errors.push("The message must be at least 5 characters long");
       !this.$v.message.maxLength &&
         errors.push("The message should not exceed 2000 characters");
       !this.$v.message.required && errors.push("The message is required.");
@@ -161,41 +146,39 @@ export default {
       this.$refs.form.reset();
     },
     submit() {
-      // try {
-      //   emailjs.sendForm(
-      //     "default_service",
-      //     "email_template",
-      //     "user_75cp2FduRtFFNEXJNEWrH",
-      //     this.form
-      //   );
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      try {
+        const btn = document.getElementById("button");
+
+        document
+          .getElementById("form")
+          .addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            btn.value = "Sending...";
+
+            const serviceID = "default_service";
+            const templateID = "email_template";
+            // console.log("this");
+            // console.log(this);
+            emailjs.sendForm(serviceID, templateID, this).then(
+              () => {
+                btn.value = "Send Email";
+                alert("Sent!");
+              },
+              err => {
+                btn.value = "Send Email";
+                alert(JSON.stringify(err));
+              }
+            );
+          });
+      } catch (error) {
+        console.log(error);
+      }
       // this.clear();
-      const btn = document.getElementById("button");
-
-      document
-        .getElementById("form")
-        .addEventListener("submit", function(event) {
-          event.preventDefault();
-
-          btn.value = "Sending...";
-
-          const serviceID = "default_service";
-          const templateID = "email_template";
-
-          emailjs.sendForm(serviceID, templateID, this).then(
-            () => {
-              btn.value = "Send Email";
-              alert("Sent!");
-            },
-            err => {
-              btn.value = "Send Email";
-              alert(JSON.stringify(err));
-            }
-          );
-        });
     }
+  },
+  mounted() {
+    this.isMounted = true;
   }
 };
 </script>
