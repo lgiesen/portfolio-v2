@@ -2,7 +2,7 @@
   div.text-center.mb-6
     v-btn#heroScrollBtn(
       @click="scrollHero"
-      fab text outlined color="primary") 
+      fab text outlined color="white") 
       v-icon mdi-chevron-down
 </template>
 
@@ -18,8 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-$primary: var(--v-primary-base);
 #heroScrollBtn {
-  border-color: $primary;
+  border-color: white;
 }
 </style>

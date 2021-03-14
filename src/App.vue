@@ -58,7 +58,7 @@ section {
 }
 // 2.2 Hero area
 .hero {
-  min-height: 80vh;
+  height: calc(100vh - 60px) !important;
 }
 
 // 3. Components
