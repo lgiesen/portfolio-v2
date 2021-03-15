@@ -27,6 +27,8 @@ export default {
 <style lang="scss">
 // import of vuetify colours
 $primary: var(--v-primary-base);
+$primaryLight: var(--v-primaryLight-base);
+$primaryDark: var(--v-primaryDark-base);
 $secondary: var(--v-secondary-base);
 $btnColor: var(--v-btnColor-base);
 // $text: var(--v-text-base);
@@ -71,9 +73,9 @@ section {
   // box-shadow: 0 0 20px #eee;
   background-image: linear-gradient(
     to right,
-    $primary 0%,
-    $secondary 51%,
-    $primary 100%
+    $primaryLight 0%,
+    $primaryDark 51%,
+    $primaryLight 100%
   );
   &:hover {
     // change the direction of the change here

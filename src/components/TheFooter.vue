@@ -10,7 +10,7 @@ div
         text) {{ link.title }}
       v-col.lighten-2.py-4.text-center.white--text(
         cols="12")
-        v-btn.mx-4.white--text(
+        v-btn.mx-4.secondary--text(
           v-for="icon in icons"
           :key="icon.mdi"
           icon target="_blank"

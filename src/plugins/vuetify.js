@@ -11,8 +11,10 @@ export default new Vuetify({
         },
         dark: false,
         themes: {
+            // Choose colours
+            // https://material.io/design/color/the-color-system.html#tools-for-picking-colors
             light: {
-                // corporate design
+                // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=3949AB&secondary.color=F4511E
                 // blue
                 primary: "#3949ab", 
                 primaryLight: "#6f74dd",
@@ -41,6 +43,7 @@ export default new Vuetify({
                 error: "#ff3a30",
             },
             dark: {
+                // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=9FA8DA&secondary.color=FFAB91
                 // pink
                 primary: "#9fa8da",
                 primaryLight: "#d1d9ff",

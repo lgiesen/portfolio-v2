@@ -30,8 +30,8 @@ export default {
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themespecificLogoSrc() {
-      if (this.isDarkTheme) return require("@/assets/logo/logo-neon.svg");
-      else return require("@/assets/logo/logo-green-blue.svg");
+      if (this.isDarkTheme) return require("@/assets/logo/dark/logo.svg");
+      else return require("@/assets/logo/light/logo.svg");
     }
   },
   methods: {
