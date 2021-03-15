@@ -2,7 +2,7 @@
 div
   //- Hero Area
   section
-    v-parallax.hero.text-center(dark :src="themeSpecificHeroImage")
+    v-parallax.hero.text-center(:src="themeSpecificHeroImage")
       v-row(align="center" justify="center")
         v-col(cols="12")
           h1.display-1.mb-4.font-weight-thin Passionate about Business and Computer Science
