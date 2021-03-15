@@ -44,16 +44,18 @@ $btnColor: var(--v-btnColor-base);
   &::after {
     box-sizing: border-box;
   }
+  // Check out cool fonts: https://visme.co/blog/modern-fonts/
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Montserrat", "Prata", sans-serif !important;
   }
-  p {
-    font-family: "PT Sans", sans-serif !important;
+  p,
+  v-btn {
+    font-family: "Roboto", "PT Sans", sans-serif !important;
   }
 }
 // 1.2 Link animation
