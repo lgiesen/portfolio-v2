@@ -14,21 +14,21 @@ export default new Vuetify({
             light: {
                 // corporate design
                 // blue
-                primary: "#2142B9", 
-                primaryLight: "#636dec",
-                primaryDark: "#001c88",
+                primary: "#3949ab", 
+                primaryLight: "#6f74dd",
+                primaryDark: "#00227b",
                 // green
-                secondary: "#149C2D",
-                secondaryLight: "#58ce5c",
-                secondaryDark: "#006c00", 
+                secondary: "#f4511e",
+                secondaryLight: "#ff844c",
+                secondaryDark: "#b91400", 
                 
                 // sand (looks bad)
                 complementary: "#b99821",
                 
                 // purple
-                triadicFirst: "#9821b9",
+                triadicFirst: "#9c39ab",
                 // bordeaux red
-                triadicSecond: "#b92142",
+                triadicSecond: "#ab3948",
 
                 text: "#3e3e3e",
                 background: "#ffffff",
@@ -42,22 +42,19 @@ export default new Vuetify({
             },
             dark: {
                 // pink
-                primary: "#ff8cc6",
-                primaryLight: "#ffbef9",
-                primaryDark: "#ca5b95",
+                primary: "#9fa8da",
+                primaryLight: "#d1d9ff",
+                primaryDark: "#6f79a8",
                 
                 // light blue
-                secondary: "#80fff6",
-                secondaryLight: "#b6ffff",
-                secondaryDark: "#46cbc3",
+                secondary: "#ffab91",
+                secondaryLight: "#ffddc1",
+                secondaryDark: "#c97b63",
                 
-                // orange
-                complementary: "#ffc68c",
-                
-                // yellow
-                triadicFirst: "#ffff8c",
-                // green
-                triadicSecond: "#8cff8c",
+                // light purple
+                triadicFirst: "#d19fda",
+                // light bordeaux red
+                triadicSecond: "#da9fa8",
                 
                 // If colours above are used as background: black text, otherwise white
 

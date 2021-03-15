@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  v-footer#footer.mt-12.pa-10(padless)
+  v-footer#footer.mt-12.pa-10(padless :class="isDarkTheme ? 'darkFooterBg' : 'lightFooterBg'")
     v-row(justify="center" no-gutters)
       v-btn.my-2(
         v-for="link in links"
@@ -80,8 +80,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#footer {
+.lightFooterBg {
   // background: url(../assets/background/light/largeTriangles.svg) center center;
   background: url(../assets/background/light/subtlePrism.svg) center center;
+}
+.darkFooterBg {
+  // background: url(../assets/background/dark/largeTriangles.svg) center center;
+  background: url(../assets/background/dark/subtlePrism.svg) center center;
 }
 </style>
