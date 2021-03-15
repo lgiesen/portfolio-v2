@@ -36,11 +36,24 @@ $btnColor: var(--v-btnColor-base);
 // 1. General Style
 // 1.1 Word break
 #app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   word-break: normal !important;
   box-sizing: border-box;
   &::before,
   &::after {
     box-sizing: border-box;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif !important;
+  }
+  p {
+    font-family: "PT Sans", sans-serif !important;
   }
 }
 // 1.2 Link animation
@@ -60,7 +73,8 @@ section {
 }
 // 2.2 Hero area
 .hero {
-  height: calc(100vh - 60px) !important;
+  min-height: calc(100vh - 60px);
+  width: 100vw;
 }
 
 // 3. Components
