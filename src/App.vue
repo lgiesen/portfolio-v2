@@ -98,4 +98,7 @@ section {
     background-position: right center;
   }
 }
+.vue-video-section-wrapper {
+  z-index: 0;
+}
 </style>

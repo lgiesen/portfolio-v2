@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-v-app-bar#nav(app)
+v-app-bar(app style="opacity: 0.7; backdrop-filter: blur(8px);")
+  //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
   div.d-flex.align-center
     v-img.shrink.mr-2(alt="Leo Giesen Logo"
       contain width="40"
@@ -43,13 +44,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#appBar {
+  opacity: 0.7 !important;
+  z-index: 9999999 !important;
+  backdrop-filter: blur(8px) !important;
+}
 // $primary: #2142b9;
 // .router-link-exact-active,
 // a.v-tab--active {
 //   color: $primary;
 // }
-#nav {
-  opacity: 0.7;
-  z-index: 9999999;
-}
 </style>
