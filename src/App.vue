@@ -54,6 +54,8 @@ $btnColor: var(--v-btnColor-base);
   h5,
   h6 {
     font-family: "Montserrat", "Prata", sans-serif !important;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   p,
   v-btn {

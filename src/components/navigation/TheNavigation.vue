@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-v-app-bar(app style="opacity: 0.7; backdrop-filter: blur(8px);")
+v-app-bar(app style="opacity: 0.9; backdrop-filter: blur(8px);")
   //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
   div.d-flex
     a(href="/")
@@ -12,8 +12,8 @@ v-app-bar(app style="opacity: 0.7; backdrop-filter: blur(8px);")
   v-tabs(align-with-title)
     v-tab(to="/") 
       v-icon mdi-home-outline
-    v-tab.ma-2(v-for="view in views" :key="view.to.name" :to="view.to") 
-      v-icon.mr-3 mdi-{{ view.icon }}
+    v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
+      //- v-icon.mr-3 mdi-{{ view.icon }}
       | {{ view.tag }}
   v-btn(icon) 
     v-icon(@click="toggleTheme") mdi-brightness-6
@@ -49,6 +49,9 @@ export default {
   opacity: 0.7 !important;
   z-index: 9999999 !important;
   backdrop-filter: blur(8px) !important;
+}
+a.v-tab {
+  font-family: "Montserrat", "Prata", sans-serif !important;
 }
 // $primary: #2142b9;
 // .router-link-exact-active,

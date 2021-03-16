@@ -6,15 +6,13 @@ div
       src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
       v-row(align="center" justify="center")
         v-col.text-center(cols='12')
-          h1.display-1.font-weight-thin.mb-4
-            | About Leo
-          h4.subheading
-            | I love to learn and apply my knowledge!
+          h1.display-3.font-weight-thin.mb-4 About Leo
+          h4.subheading I love to learn and apply my knowledge!
       ScrollHero
   //- Introduction
   section#scroll
     v-container
-      h1.text-center.ma-10 About
+      h1.display-2.font-weight-thin.text-center.ma-10 About
       v-row(align="center")
         v-col(cols="6")
           p Leo has a huge passion for computer science and economics, which is why he 
@@ -28,8 +26,7 @@ div
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
           div.text-center.mt-10
-            v-btn.ma-auto.pa-6.gradient-btn(
-              href="/LeoGiesenCV.pdf")
+            v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
               v-icon mdi-download
               | Download CV
         v-col(cols="6")

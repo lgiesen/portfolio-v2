@@ -5,8 +5,8 @@ div
     v-parallax.hero.text-center(:src="themeSpecificHeroImage")
       v-row(align="center" justify="center")
         v-col(cols="12")
-          h1.display-1.mb-4.font-weight-thin Passionate about Business and Computer Science
-          h3 - Portfolio of Leo Giesen -
+          h1.display-2.mb-4.font-weight-thin Passionate about Business and Computer Science
+          h3.subtitle-1 - Portfolio of Leo Giesen -
           div.mt-10
             v-btn.pa-6.gradient-btn.ma-10(
               @click="$router.push('/experience')"
@@ -25,7 +25,7 @@ div
       v-container(fill-height fluid slot="overlay-content")
         v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
           v-col.white--text(cols="12")
-            h1.display-1.mb-4.font-weight-thin Passionate about Business and Computer Science
+            h1.display-2.mb-4.font-weight-thin Passionate about Business and Computer Science
             h3 - Portfolio of Leo Giesen -
             div.mt-10
               v-btn.pa-6.gradient-btn.ma-10(
@@ -38,7 +38,7 @@ div
 
   section#scroll
     v-container
-      h2.text-center.mb-12 Title  
+      h2.display-2.font-weight-thin.text-center.mb-12 Title  
       div.d-flex.flex-wrap.justify-space-between
         v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
           v-card-title Card {{ i }}
