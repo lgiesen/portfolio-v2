@@ -20,18 +20,16 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
+    path: "/experience",
+    name: "Experience",
+    component: () =>
+      import(/* webpackChunkName: "experience" */ "../views/Experience.vue")
+  },
+  {
     path: "/projects",
     name: "Projects",
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
-  },
-  {
-    path: "/playground",
-    name: "Playground",
-    component: () =>
-      import(
-        /* webpackChunkName: "playground" */ "../views/playground/Playground.vue"
-      )
     // children: [
     //   {
     //     path: "user-dashboard",

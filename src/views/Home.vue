@@ -9,10 +9,10 @@ div
           h3 - Portfolio of Leo Giesen -
           div.mt-10
             v-btn.pa-6.gradient-btn.ma-10(
-              @click="$router.push('/about')"
+              @click="$router.push('/experience')"
               ) For Businesses
             v-btn.pa-6(outlined color="secondary"
-              @click="$router.push('/playground')"
+              @click="$router.push('/projects')"
               ) Other Visitors
       ScrollHero
   section
@@ -32,7 +32,9 @@ div
                 @click="$router.push('/about')") For Businesses
               v-btn.pa-6(outlined color="secondary"
                 @click="$router.push('/playground')" ) Other Visitors
-        ScrollHero
+        v-row.text-center(align="center" justify="center" fill-height fluid)
+          v-col(cols="12")
+            ScrollHero
 
   section#scroll
     v-container
@@ -40,7 +42,10 @@ div
       div.d-flex.flex-wrap.justify-space-between
         v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
           v-card-title Card {{ i }}
-          v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do voluptate elit amet.
+          v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+            | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+            | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+            | voluptate elit amet.
 </template>
 
 <script>

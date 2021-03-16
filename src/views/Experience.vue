@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container.text-center
-  h3 Playground
+  h3 Experience
   v-card
     v-card-title Special Link animation
     p This is a paragraph - 
@@ -12,7 +12,7 @@ v-container.text-center
 
 <script>
 export default {
-  name: "Playground"
+  name: "Experience"
 };
 </script>
 
