@@ -22,18 +22,19 @@ div
       :elementId="'coast'" :desktopHeight="800"
       :mp4Source="require('../assets/background/video/coast.mp4')"
       :posterSource="require('../assets/background/nature.jpg')")
-      v-row.pa-12(slot="overlay-content")
-        v-col.white--text.text-center(cols="12")
-          h1.display-1.mb-4.font-weight-thin Passionate about Business and Computer Science
-          h3 - Portfolio of Leo Giesen -
-          div.mt-10
-            v-btn.pa-6.gradient-btn.ma-10(
-              @click="$router.push('/about')"
-              ) For Businesses
-            v-btn.pa-6(outlined color="secondary"
-              @click="$router.push('/playground')"
-              ) Other Visitors
-      ScrollHero
+      v-container(fill-height fluid slot="overlay-content")
+        v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
+          v-col.white--text(cols="12")
+            h1.display-1.mb-4.font-weight-thin Passionate about Business and Computer Science
+            h3 - Portfolio of Leo Giesen -
+            div.mt-10
+              v-btn.pa-6.gradient-btn.ma-10(
+                @click="$router.push('/about')"
+                ) For Businesses
+              v-btn.pa-6(outlined color="secondary"
+                @click="$router.push('/playground')"
+                ) Other Visitors
+            ScrollHero
 </template>
 
 <script>

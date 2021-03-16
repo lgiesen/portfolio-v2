@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-v-app-bar(app style="opacity: 0.7;")
+v-app-bar#nav(app)
   div.d-flex.align-center
     v-img.shrink.mr-2(alt="Leo Giesen Logo"
       contain width="40"
@@ -48,4 +48,8 @@ export default {
 // a.v-tab--active {
 //   color: $primary;
 // }
+#nav {
+  opacity: 0.7;
+  z-index: 9999999;
+}
 </style>
