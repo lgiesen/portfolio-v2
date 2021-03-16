@@ -15,7 +15,7 @@ div
               @click="$router.push('/playground')"
               ) Other Visitors
       ScrollHero
-  section#scroll
+  section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
     vue-video-section(
@@ -34,7 +34,15 @@ div
               v-btn.pa-6(outlined color="secondary"
                 @click="$router.push('/playground')"
                 ) Other Visitors
-            ScrollHero
+        ScrollHero
+
+  section#scroll
+    v-container
+      h2.text-center Title  
+      div.d-flex.flex-wrap.justify-space-between
+        v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
+          v-card-title Card {{ i }}
+          v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do voluptate elit amet.
 </template>
 
 <script>
