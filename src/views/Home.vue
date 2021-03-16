@@ -29,16 +29,14 @@ div
             h3 - Portfolio of Leo Giesen -
             div.mt-10
               v-btn.pa-6.gradient-btn.ma-10(
-                @click="$router.push('/about')"
-                ) For Businesses
+                @click="$router.push('/about')") For Businesses
               v-btn.pa-6(outlined color="secondary"
-                @click="$router.push('/playground')"
-                ) Other Visitors
+                @click="$router.push('/playground')" ) Other Visitors
         ScrollHero
 
   section#scroll
     v-container
-      h2.text-center Title  
+      h2.text-center.mb-12 Title  
       div.d-flex.flex-wrap.justify-space-between
         v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
           v-card-title Card {{ i }}

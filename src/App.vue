@@ -30,6 +30,8 @@ $primary: var(--v-primary-base);
 $primaryLight: var(--v-primaryLight-base);
 $primaryDark: var(--v-primaryDark-base);
 $secondary: var(--v-secondary-base);
+$secondaryLight: var(--v-secondaryLight-base);
+$secondaryDark: var(--v-secondaryDark-base);
 $btnColor: var(--v-btnColor-base);
 // $text: var(--v-text-base);
 
@@ -92,6 +94,23 @@ section {
     $primaryLight 0%,
     $primaryDark 51%,
     $primaryLight 100%
+  );
+  &:hover {
+    // change the direction of the change here
+    background-position: right center;
+  }
+}
+.gradient-btn-secondary {
+  color: $btnColor !important;
+  transition: 0.5s;
+  background-size: 200% auto;
+  // text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 20px #eee;
+  background-image: linear-gradient(
+    to right,
+    $secondaryLight 0%,
+    $secondaryDark 51%,
+    $secondaryLight 100%
   );
   &:hover {
     // change the direction of the change here
