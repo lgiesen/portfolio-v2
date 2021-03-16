@@ -97,13 +97,8 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
-
 export default {
   name: "Experience",
-  components: {
-    ScrollHero
-  },
   data: () => ({
     employment: [
       {

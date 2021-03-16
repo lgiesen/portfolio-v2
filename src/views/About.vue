@@ -35,13 +35,8 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
-
 export default {
-  name: "About",
-  components: {
-    ScrollHero
-  }
+  name: "About"
 };
 </script>
 
