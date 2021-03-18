@@ -9,10 +9,10 @@ div
           h1.display-3.font-weight-thin.mb-4 Experience
           h4.subheading I love to learn and apply my knowledge!
       ScrollHero
-
+  
   section#scroll
     v-container
-      h1.display-2.font-weight-thin.text-center Experience
+      h1.display-2.font-weight-thin.text-center.ma-10 Experience
       v-row(align="center")
         v-col(cols="6")
           p Leo has a huge passion for computer science and economics, which is why he 
@@ -25,7 +25,7 @@ div
             | through intense group work. From those projects and his course of study, 
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
-          div.text-center.mt-12
+          div.text-center.mt-10
             v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
               v-icon mdi-download
               | Download CV
@@ -185,30 +185,4 @@ voluptate elit amet.`
 };
 </script>
 
-<style lang="scss" scoped>
-v-parallax {
-  height: 15vh;
-}
-.card-group {
-  height: 40vh;
-}
-a {
-  text-decoration: none !important;
-  cursor: pointer;
-  title: relative;
-  transition: clip-path 275ms ease;
-  &:hover span::before,
-  &:focus span::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-span {
-  &::before {
-    title: absolute;
-    content: attr(data-content);
-    text-decoration: underline;
-    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-    transition: clip-path 275ms ease;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

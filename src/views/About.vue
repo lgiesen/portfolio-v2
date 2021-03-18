@@ -5,7 +5,7 @@ div
     v-parallax.hero(dark
       src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
       v-row(align="center" justify="center")
-        v-col.text-center(cols='12')
+        v-col.text-center(cols="12")
           h1.display-3.font-weight-thin.mb-4 About Leo
           h4.subheading I love to learn and apply my knowledge!
       ScrollHero
@@ -31,11 +31,51 @@ div
               | Download CV
         v-col(cols="6")
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
+  
+  section.d-flex.flex-wrap
+    v-img(
+      v-for="(image, index) in imageGallery" :key="index" 
+      :width="$vuetify.breakpoint.mobile ? '40vw' : '25vw'"
+      :height="$vuetify.breakpoint.mobile ? '40vw' : '25vw'"
+      :src="image.src")
 </template>
 
 <script>
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
+
 export default {
-  name: "About"
+  name: "About",
+  components: {
+    ScrollHero
+  },
+  data: () => ({
+    imageGallery: [
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      },
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      },
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      },
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      },
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      },
+      {
+        src:
+          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+      }
+    ]
+  })
 };
 </script>
 
