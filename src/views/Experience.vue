@@ -44,13 +44,13 @@ div
 
   section
     v-container 
-      h1.display-3.font-weight-thin.mb-12.text-center Recommendations
+      h1.display-2.font-weight-thin.mb-12.text-center Recommendations
       v-carousel
         v-carousel-item(v-for="(recommendation, index) in recommendations" :key="index" :src="recommendation.src" 
           reverse-transition="fade-transition" transition="fade-transition")
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
-              h1.display-3 {{ recommendation.title }}
+              h1.display-1 {{ recommendation.title }}
               p {{ recommendation.description }}
 
 </template>
