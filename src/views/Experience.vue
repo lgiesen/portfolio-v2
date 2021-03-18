@@ -38,7 +38,7 @@ div
   
   v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
     //- CV: work experience
-    CardGroup(sectionTitle="Education" :iterableObject="employment")
+    CardGroup(sectionTitle="Work Experience" :iterableObject="employment")
     //- Education
     CardGroup(sectionTitle="Education" :iterableObject="education")
 

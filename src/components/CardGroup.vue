@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h1.display-1.font-weight-thin.mb-12.text-center {{ this.sectionTitle }}
+  h1.display-2.font-weight-thin.mb-12.text-center {{ this.sectionTitle }}
   v-container.d-flex.flex-wrap.justify-space-between
     v-card.mb-12.pa-7(elevation="6" v-for="item in iterableObject" :key="item.title" 
       :width="$vuetify.breakpoint.mobile ? '100vw' : '38vw'")
