@@ -44,19 +44,6 @@ div
   
   //- CV: work experience
   CardGroup(sectionTitle="Education" :iterableObject="employment")
-  //- section
-  //-   h1.display-1.font-weight-thin.mb-4.text-center Work Experience
-  //-   v-container.alternatingBoxes(v-for="(work, index) in employment" :key="index" 
-  //-     :class="floatDirection(index)")
-  //-     v-card.pa-10(elevation="6")
-  //-       v-row
-  //-         v-col(cols="3")
-  //-           v-img(:src="work.imageSrc" cover)
-  //-         v-card-title {{ work.title }} 
-  //-           span @
-  //-             a(:href="work.link" target="_blank"
-  //-             ) {{ work.institution }}, {{ work.location }}
-  //-       p {{ work.description }}
 
   //- full-width parralax image
   section.clear-both
@@ -69,23 +56,6 @@ div
   
   CardGroup(sectionTitle="Education" :iterableObject="education")
 
-//- CV: Education
-  section
-    h1.display-1.font-weight-thin.mb-12.text-center Education
-    v-container.d-flex.flex-wrap.justify-space-between
-      v-card.mb-9.pa-7(elevation="6" v-for="item in education" :key="item.title" 
-        :width="$vuetify.breakpoint.mobile ? '100vw' : '38vw'")
-        //- if desktop use two columns (38vw)
-        //- else use full width (100vw)
-        v-row
-          v-col(align="center" justify="center")
-            v-img(:src="item.imageSrc" width="20vw")
-        v-row
-          v-col
-            v-card-title.justify-center {{ item.title }} 
-            v-card-subtitle.text-center @
-              a(:href="item.link" target="_blank"
-                ) {{ item.institution }}, {{ item.location }}
 </template>
 
 <script>
