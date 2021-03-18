@@ -31,7 +31,6 @@ div
               | Download CV
         v-col(cols="6")
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
-  
 </template>
 
 <script>

@@ -70,7 +70,7 @@ a:not(a.v-tab, .v-btn) {
   cursor: pointer;
   color: $primary;
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
 }
 
@@ -121,7 +121,25 @@ section {
     background-position: right center;
   }
 }
+
 .vue-video-section-wrapper {
   z-index: 0;
+}
+
+.alternatingBoxes {
+  // border: 1px solid $primaryLight;
+  margin: 5rem 0;
+  padding: 0;
+}
+
+// Clear counteracts floats
+.clear-both {
+  clear: both;
+}
+.clear-left {
+  clear: left;
+}
+.clear-right {
+  clear: right;
 }
 </style>
