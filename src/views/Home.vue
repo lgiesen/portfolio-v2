@@ -50,9 +50,13 @@ div
 
 <script>
 import { mapGetters } from "vuex";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 
 export default {
   name: "Home",
+  components: {
+    ScrollHero
+  },
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themeSpecificHeroImage() {

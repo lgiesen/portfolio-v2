@@ -36,7 +36,7 @@ div
     sectionSubtitle="I have gained a large variety of work experience and in-depth knowledge"
     imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
   
-  v-img(src="@/assets/background/rectangle.svg")
+  v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
     //- CV: work experience
     CardGroup(sectionTitle="Education" :iterableObject="employment")
     //- Education
@@ -56,6 +56,7 @@ div
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import CardGroup from "@/components/CardGroup.vue";
 import ParallaxDivider from "@/components/ParallaxDivider.vue";
@@ -171,6 +172,9 @@ voluptate elit amet.`
       }
     ]
   }),
+  computed: {
+    ...mapGetters(["ActiveTheme"])
+  },
   methods: {
     floatDirection(index) {
       // on medium sized viewports float
