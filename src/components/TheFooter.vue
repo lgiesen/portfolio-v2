@@ -11,12 +11,11 @@ div
       v-col.lighten-2.py-4.text-center.white--text(
         cols="12")
         v-btn.mx-4.secondary--text(
-          elevation="15"
           v-for="icon in icons"
           :key="icon.mdi"
           icon target="_blank"
           :href="icon.link")
-          v-icon(size="24px") {{ icon.mdi }}
+          v-icon(elevation="15" size="24px") {{ icon.mdi }}
         p.mt-6 &copy; {{new Date().getFullYear()}} - 
           span.secondary--text Leo Giesen
 </template>

@@ -42,6 +42,16 @@ div
     //- Education
     CardGroup(sectionTitle="Education" :iterableObject="education")
 
+  section
+    v-container 
+      v-carousel
+        v-carousel-item(v-for='(recommendation, index) in recommendations' :key='index' :src='recommendation.src' 
+          reverse-transition='fade-transition' transition='fade-transition')
+          v-row.fill-height(align="center")
+            v-col.text-center.pa-12
+              h1.display-3 Recommendation {{ index + 1}}
+              p {{ recommendation.description }}
+
 </template>
 
 <script>
@@ -123,6 +133,36 @@ export default {
         startDate: "2016-06",
         endDate: "2018-06",
         description: ""
+      }
+    ],
+    recommendations: [
+      {
+        src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+        description: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      },
+      {
+        src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+        description: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      },
+      {
+        src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+        description: `3 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      },
+      {
+        src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+        description: `4 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
       }
     ]
   }),
