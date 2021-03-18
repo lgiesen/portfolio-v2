@@ -32,27 +32,12 @@ div
         v-col(cols="6")
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
-
-  //- full-width parralax image
-  section
-    v-parallax(dark height="300"
-      src='https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
-      v-row(align='center' justify='center')
-        v-col.text-center(cols='12')
-          h1.display-1.font-weight-thin.mb-4 Work Experience
-          h4.subheading Build your application today!
+    ParallaxDivider(sectionTitle="Work Experience and Education" 
+      sectionSubtitle="I have gained a large variety of work experience and in-depth knowledge"
+      imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
   
   //- CV: work experience
   CardGroup(sectionTitle="Education" :iterableObject="employment")
-
-  //- full-width parralax image
-  section.clear-both
-    v-parallax(dark height="300"
-      src='https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
-      v-row(align='center' justify='center')
-        v-col.text-center(cols='12')
-          h1.display-1.font-weight-thin.mb-4 Education
-          h4.subheading Build your application today!
   
   CardGroup(sectionTitle="Education" :iterableObject="education")
 
@@ -61,12 +46,14 @@ div
 <script>
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import CardGroup from "@/components/CardGroup.vue";
+import ParallaxDivider from "@/components/ParallaxDivider.vue";
 
 export default {
   name: "Experience",
   components: {
     ScrollHero,
-    CardGroup
+    CardGroup,
+    ParallaxDivider
   },
   data: () => ({
     employment: [
