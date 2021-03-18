@@ -1,16 +1,17 @@
 /* eslint-disable */
 <template lang="pug">
-  v-parallax(dark src="@/assets/errors/404.jpg" height="800")
-    v-container.text-center(fluid)
-      h1.display-3.primary--text.font-weight-bold
-        | 404 - Page not found
-      h2.mt-4 You got lost on the search for Game of Competences! 
-      h2 Unfortunatly, this page does not exist. 
-      h2 Luckily, someone offers you a way out of this situation.
-      v-btn.mt-5(
-        color="primary"
-        :to="{ name: 'Home' }") 
-          | Take me back home
+  v-container
+    v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
+      h4.ma-10.display-2.primary--text.font-weight-bold 
+        span.secondary--text 404 
+        | - Page not found
+      v-card(width="60vw")
+        v-img(src="@/assets/errors/pulp-fiction.gif"
+          gradient="rgba(255,255,255,.6), rgba(255,255,255,.6)")
+          v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
+            v-col.pa-12(cols="12")
+              h2.ma-12.black--text Unfortunatly, this page does not exist. 
+              v-btn.gradient-btn-secondary(to="/") Take me back home
 </template>
 
 <script>

@@ -9,41 +9,64 @@ export default new Vuetify({
         options: {
           customProperties: true
         },
-        dark: true,
+        dark: false,
         themes: {
+            // Choose colours
+            // https://material.io/design/color/the-color-system.html#tools-for-picking-colors
             light: {
-                // corporate design
+                // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=3949AB&secondary.color=F4511E
                 // blue
-                primary: "#2142B9", 
+                primary: "#3949ab", 
+                primaryLight: "#6f74dd",
+                primaryDark: "#00227b",
                 // green
-                secondary: "#149C2D", 
+                secondary: "#f4511e",
+                secondaryLight: "#ff844c",
+                secondaryDark: "#b91400", 
                 
-                background: "#9faabd",
-                black: "#212121",
-                accent: "#5ac8fa",
+                // sand (looks bad)
+                complementary: "#b99821",
+                
+                // purple
+                triadicFirst: "#9c39ab",
+                // bordeaux red
+                triadicSecond: "#ab3948",
+
+                text: "#3e3e3e",
+                background: "#ffffff",
+                // alternatively e.g. #cccccc
+
+                btnColor: "#ffffff",
+
                 success: "#34c759",
                 warning: "#ff954f",
                 error: "#ff3a30",
-                /*
-                blue: "#FFEEFF",
-                green: "#34c759",
-                orange: "#ff954f",
-                indigo: "#5856d6",
-                pink: "#ff2d55",
-                purple: "#af52de",
-                red: "#ff3a30",
-                teal: "#5ac8fa",
-                yellow: "#ffcc00",
-                */
             },
             dark: {
-                primary: "#00E1FD",
-                secondary: "#FC007A",
-                background: "#1C1A32",
-                black: "#212121",
-                anchor:  "#ffffff", 
-                // alternatively the anchor could be set in @/components/TheNavigation/TheNavigation.vue 
-                // in the toggleTheme method by using this.$vuetify.theme.themes.dark.anchor = "#fff"
+                // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=9FA8DA&secondary.color=FFAB91
+                // pink
+                primary: "#9fa8da",
+                primaryLight: "#d1d9ff",
+                primaryDark: "#6f79a8",
+                
+                // light blue
+                secondary: "#ffab91",
+                secondaryLight: "#ffddc1",
+                secondaryDark: "#c97b63",
+                
+                // light purple
+                triadicFirst: "#d19fda",
+                // light bordeaux red
+                triadicSecond: "#da9fa8",
+                
+                // If colours above are used as background: black text, otherwise white
+
+                btnColor: "#121212",
+                // as recommended by the Material Design Guidelines from Google
+                background: "#121212",
+                backgroundLight: "#383838",
+                backgroundSuperLight: "#7f7f7f"
+                // Access colours by: this.$vuetify.theme.themes.dark.primary = "#ffffff"
             }
         }
     },

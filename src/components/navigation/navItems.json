@@ -1,26 +1,23 @@
 [
   {
-    "tag": "Home",
-    "to": {
-      "name": "Home"
-    }
-  },
-  {
     "tag": "About",
     "to": {
       "name": "About"
-    }
+    },
+    "icon": "information-outline"
+  },
+  {
+    "tag": "Experience",
+    "to": {
+      "name": "Experience"
+    },
+    "icon": "briefcase-outline"
   },
   {
     "tag": "Projects",
     "to": {
       "name": "Projects"
-    }
-  },
-  {
-    "tag": "Playground",
-    "to": {
-      "name": "Playground"
-    }
+    },
+    "icon": "code-tags"
   }
 ]
