@@ -15,6 +15,7 @@ div
             v-card-subtitle.text-center @
               a(:href="item.link" target="_blank"
                 ) {{ item.institution }}, {{ item.location }}
+            v-card-text.mt-7 {{ item.description }}
 </template>
 
 <script>
