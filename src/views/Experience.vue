@@ -50,8 +50,9 @@ div
           reverse-transition="fade-transition" transition="fade-transition")
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
-              h1.display-1 {{ recommendation.title }}
-              p.font-italic.text-start.text-justify "{{ recommendation.description }}"
+              h1.mb-5.display-1 {{ recommendation.title }}
+              h3.ma-5.overline {{ recommendation.location }}
+              p.mt-10.font-italic.text-start.text-justify "{{ recommendation.description }}"
 
 </template>
 
@@ -140,6 +141,7 @@ export default {
     recommendations: [
       {
         title: "Prof. Dr. Friedrich Chasin",
+        location: "Münster",
         src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
         description: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
 do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
@@ -148,6 +150,7 @@ voluptate elit amet.`
       },
       {
         title: "Jason Haak - IT Ressortleiter und Vorstand bei move e. V.",
+        location: "Münster",
         src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
         description: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
 do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
@@ -155,7 +158,8 @@ nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do
 voluptate elit amet.`
       },
       {
-        title: "Thespina Coombe - Teacher at CIS",
+        title: "Thespina Coombe - Teacher at Cambridge International School",
+        location: "Cambridge (UK)",
         src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
         description: `Leo has an exceptionally polite and mature manner. He is enthusiastic and 
         a pleasure to teach. He has shown an interest and aptitude in all the subjects he has 
@@ -166,7 +170,8 @@ voluptate elit amet.`
         curious and always focused in class.`
       },
       {
-        title: "Title",
+        title: "Lehrer Recommendation",
+        location: "Gütersloh",
         src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
         description: `4 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
 do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
