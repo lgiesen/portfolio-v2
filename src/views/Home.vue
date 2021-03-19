@@ -81,9 +81,6 @@ export default {
       // education
       {
         imageSrc: require("@/assets/employmentAndEducation/WWU.png")
-      },
-      {
-        imageSrc: require("@/assets/employmentAndEducation/ESG.png")
       }
     ]
   }),
