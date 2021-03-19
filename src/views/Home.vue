@@ -50,7 +50,7 @@ div
   
   section.d-flex.flex-wrap.justify-space-between
     v-img(v-for="(image, index) in associations" :key="index" 
-      :src="image.imageSrc" max-height="10vh" width="15vw" contain
+      :src="associations[index]" max-height="10vh" width="15vw" contain
       )
 </template>
 
@@ -66,22 +66,12 @@ export default {
   data: () => ({
     associations: [
       // employers
-      {
-        imageSrc: require("@/assets/employmentAndEducation/ERCIS.png")
-      },
-      {
-        imageSrc: require("@/assets/employmentAndEducation/move.png")
-      },
-      {
-        imageSrc: require("@/assets/employmentAndEducation/SEPAone.png")
-      },
-      {
-        imageSrc: require("@/assets/employmentAndEducation/BRL.png")
-      },
+      require("@/assets/employmentAndEducation/ERCIS.png"),
+      require("@/assets/employmentAndEducation/move.png"),
+      require("@/assets/employmentAndEducation/SEPAone.png"),
+      require("@/assets/employmentAndEducation/BRL.png"),
       // education
-      {
-        imageSrc: require("@/assets/employmentAndEducation/WWU.png")
-      }
+      require("@/assets/employmentAndEducation/WWU.png")
     ]
   }),
   computed: {
