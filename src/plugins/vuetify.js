@@ -9,7 +9,7 @@ export default new Vuetify({
         options: {
           customProperties: true
         },
-        dark: true,
+        dark: false,
         themes: {
             // Choose colours
             // https://material.io/design/color/the-color-system.html#tools-for-picking-colors

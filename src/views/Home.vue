@@ -40,7 +40,7 @@ div
     v-container
       h2.display-2.font-weight-thin.text-center.mb-12 Title  
       div.d-flex.flex-wrap.justify-space-between
-        v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
+        v-card.mb-9(v-for="i in 9" :key="i" width="33vw")
           v-card-title Card {{ i }}
           v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
             | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
