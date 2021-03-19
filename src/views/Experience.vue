@@ -9,10 +9,10 @@ div
           h1.display-3.font-weight-thin.mb-4 Experience
           h4.subheading I love to learn and apply my knowledge!
       ScrollHero
-
+  
   section#scroll
     v-container
-      h1.display-2.font-weight-thin.text-center Experience
+      h1.display-2.font-weight-thin.text-center.ma-10 Experience
       v-row(align="center")
         v-col(cols="6")
           p Leo has a huge passion for computer science and economics, which is why he 
@@ -25,26 +25,39 @@ div
             | through intense group work. From those projects and his course of study, 
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
-          div.text-center.mt-12
+          div.text-center.mt-10
             v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
               v-icon mdi-download
               | Download CV
         v-col(cols="6")
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
-    ParallaxDivider(sectionTitle="Work Experience and Education" 
-      sectionSubtitle="I have gained a large variety of work experience and in-depth knowledge"
-      imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+  ParallaxDivider(sectionTitle="Work Experience and Education" 
+    sectionSubtitle="I have gained a large variety of work experience and in-depth knowledge"
+    imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
   
-  v-img(src="@/assets/background/rectangle.svg")
+  v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
     //- CV: work experience
-    CardGroup(sectionTitle="Education" :iterableObject="employment")
+    CardGroup(sectionTitle="Work Experience" :iterableObject="employment")
     //- Education
     CardGroup(sectionTitle="Education" :iterableObject="education")
+
+  section
+    v-container 
+      h1.display-2.font-weight-thin.mb-12.text-center Recommendations
+      v-carousel
+        v-carousel-item(v-for="(recommendation, index) in recommendations" :key="index" :src="recommendation.src" 
+          reverse-transition="fade-transition" transition="fade-transition")
+          v-row.fill-height(align="center")
+            v-col.text-center.pa-12
+              h1.mb-5.display-1 {{ recommendation.title }}
+              h3.ma-5.overline {{ recommendation.location }}
+              p.mt-10.font-italic.text-start.text-justify "{{ recommendation.description }}"
 
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import CardGroup from "@/components/CardGroup.vue";
 import ParallaxDivider from "@/components/ParallaxDivider.vue";
@@ -124,8 +137,52 @@ export default {
         endDate: "2018-06",
         description: ""
       }
+    ],
+    recommendations: [
+      {
+        title: "Prof. Dr. Friedrich Chasin",
+        location: "Münster",
+        src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+        description: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      },
+      {
+        title: "Jason Haak - IT Ressortleiter und Vorstand bei move e. V.",
+        location: "Münster",
+        src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+        description: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      },
+      {
+        title: "Thespina Coombe - Teacher at Cambridge International School",
+        location: "Cambridge (UK)",
+        src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+        description: `Leo has an exceptionally polite and mature manner. He is enthusiastic and 
+        a pleasure to teach. He has shown an interest and aptitude in all the subjects he has 
+        studied, including Chemistry, Maths and History. He has contributed to many interesting 
+        discussions in English Literature lessons where Leo has had no reservations in joining 
+        in confidently. He is an asset to any classroom to inspire and challenge other students; 
+        he is a positive influence. All the subject teachers speak highly of Leo because he is 
+        curious and always focused in class.`
+      },
+      {
+        title: "Lehrer Recommendation",
+        location: "Gütersloh",
+        src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+        description: `4 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+voluptate elit amet.`
+      }
     ]
   }),
+  computed: {
+    ...mapGetters(["ActiveTheme"])
+  },
   methods: {
     floatDirection(index) {
       // on medium sized viewports float
@@ -136,30 +193,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-v-parallax {
-  height: 15vh;
-}
-.card-group {
-  height: 40vh;
-}
-a {
-  text-decoration: none !important;
-  cursor: pointer;
-  title: relative;
-  transition: clip-path 275ms ease;
-  &:hover span::before,
-  &:focus span::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-span {
-  &::before {
-    title: absolute;
-    content: attr(data-content);
-    text-decoration: underline;
-    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-    transition: clip-path 275ms ease;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

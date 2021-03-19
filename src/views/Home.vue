@@ -15,6 +15,7 @@ div
               @click="$router.push('/projects')"
               ) Other Visitors
       ScrollHero
+  
   section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
@@ -39,20 +40,40 @@ div
   section#scroll
     v-container
       h2.display-2.font-weight-thin.text-center.mb-12 Title  
-      div.d-flex.flex-wrap.justify-space-between
-        v-card.mb-9(v-for="i in 9" :key="i" width="25vw")
-          v-card-title Card {{ i }}
-          v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-            | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-            | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-            | voluptate elit amet.
+      v-row.d-flex.flex-wrap.justify-space-between
+        v-col.col-12.col-sm-6(v-for="i in 9" :key="i")
+          v-card.mb-9
+            v-card-title Card {{ i }}
+            v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+              | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+              | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+              | voluptate elit amet.
+  
+  section.d-flex.flex-wrap.justify-space-between
+    v-img(v-for="(image, index) in associations" :key="index" 
+      :src="associations[index]" max-height="10vh" width="15vw" contain)
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 
 export default {
   name: "Home",
+  components: {
+    ScrollHero
+  },
+  data: () => ({
+    associations: [
+      // employers
+      require("@/assets/employmentAndEducation/ERCIS.png"),
+      require("@/assets/employmentAndEducation/move.png"),
+      require("@/assets/employmentAndEducation/SEPAone.png"),
+      require("@/assets/employmentAndEducation/BRL.png"),
+      // education
+      require("@/assets/employmentAndEducation/WWU.png")
+    ]
+  }),
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themeSpecificHeroImage() {

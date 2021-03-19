@@ -15,7 +15,7 @@ div
           :key="icon.mdi"
           icon target="_blank"
           :href="icon.link")
-          v-icon(size="24px") {{ icon.mdi }}
+          v-icon(elevation="15" size="24px") {{ icon.mdi }}
         p.mt-6 &copy; {{new Date().getFullYear()}} - 
           span.secondary--text Leo Giesen
 </template>

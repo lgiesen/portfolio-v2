@@ -12,7 +12,6 @@
 <script>
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import ScrollHero from "@/components/scroll/ScrollHero.vue"; // auto-inject scroll-component because used in almost every view
 import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
 
 export default {
@@ -20,7 +19,6 @@ export default {
   components: {
     TheNavigation,
     TheFooter,
-    ScrollHero,
     ScrollToTop
   },
   data: () => ({})

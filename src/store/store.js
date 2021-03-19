@@ -19,6 +19,11 @@ export default new Vuex.Store({
     isDarkTheme() {
       return Vuetify.framework.theme.dark;
     },
+    ActiveTheme() {
+      if (Vuetify.framework.theme.dark == undefined) return;
+      else if (Vuetify.framework.theme.dark) return "dark";
+      else return "light";
+    },
     GetShowContactDialog: state => state.showContactDialog
   },
   modules: {
