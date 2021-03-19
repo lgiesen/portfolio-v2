@@ -1,5 +1,7 @@
 # Portfolio (v2)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
+
 [Portfiolio (v1)](https://github.com/lgiesen/portfolio-v1)
 
 ## Project Setup
