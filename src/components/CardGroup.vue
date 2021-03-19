@@ -2,7 +2,7 @@
 div
   h1.display-2.font-weight-thin.mb-12.text-center {{ this.sectionTitle }}
   v-container.d-flex.flex-wrap.justify-space-between
-    v-card.mb-12.pa-7(elevation="6" v-for="item in iterableObject" :key="item.title" 
+    v-card.mb-12.pa-7.cardElem(elevation="6" v-for="item in iterableObject" :key="item.title"
       :width="$vuetify.breakpoint.mobile ? '100vw' : '33vw'")
       //- if desktop use two columns (38vw)
       //- else use full width (100vw)
@@ -25,4 +25,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+v-card.cardElem:hover {
+  elavation: 25;
+}
+</style>
