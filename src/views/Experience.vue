@@ -51,7 +51,7 @@ div
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
               h1.display-1 {{ recommendation.title }}
-              p {{ recommendation.description }}
+              p.font-italic.text-start.text-justify "{{ recommendation.description }}"
 
 </template>
 
@@ -139,7 +139,7 @@ export default {
     ],
     recommendations: [
       {
-        title: "Title",
+        title: "Prof. Dr. Friedrich Chasin",
         src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
         description: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
 do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
@@ -147,7 +147,7 @@ nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do
 voluptate elit amet.`
       },
       {
-        title: "Title",
+        title: "Jason Haak - IT Ressortleiter und Vorstand bei move e. V.",
         src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
         description: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
 do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
@@ -155,12 +155,15 @@ nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do
 voluptate elit amet.`
       },
       {
-        title: "Title",
+        title: "Thespina Coombe - Teacher at CIS",
         src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        description: `3 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-voluptate elit amet.`
+        description: `Leo has an exceptionally polite and mature manner. He is enthusiastic and 
+        a pleasure to teach. He has shown an interest and aptitude in all the subjects he has 
+        studied, including Chemistry, Maths and History. He has contributed to many interesting 
+        discussions in English Literature lessons where Leo has had no reservations in joining 
+        in confidently. He is an asset to any classroom to inspire and challenge other students; 
+        he is a positive influence. All the subject teachers speak highly of Leo because he is 
+        curious and always focused in class.`
       },
       {
         title: "Title",
