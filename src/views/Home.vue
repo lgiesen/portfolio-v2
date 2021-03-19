@@ -15,6 +15,7 @@ div
               @click="$router.push('/projects')"
               ) Other Visitors
       ScrollHero
+  
   section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
@@ -46,6 +47,11 @@ div
             | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
             | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
             | voluptate elit amet.
+  
+  section.d-flex.flex-wrap.justify-space-between
+    v-img(v-for="(image, index) in associations" :key="index" 
+      :src="image.imageSrc" max-height="10vh" width="15vw" contain
+      )
 </template>
 
 <script>
@@ -57,6 +63,30 @@ export default {
   components: {
     ScrollHero
   },
+  data: () => ({
+    associations: [
+      // employers
+      {
+        imageSrc: require("@/assets/employmentAndEducation/ERCIS.png")
+      },
+      {
+        imageSrc: require("@/assets/employmentAndEducation/move.png")
+      },
+      {
+        imageSrc: require("@/assets/employmentAndEducation/SEPAone.png")
+      },
+      {
+        imageSrc: require("@/assets/employmentAndEducation/BRL.png")
+      },
+      // education
+      {
+        imageSrc: require("@/assets/employmentAndEducation/WWU.png")
+      },
+      {
+        imageSrc: require("@/assets/employmentAndEducation/ESG.png")
+      }
+    ]
+  }),
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themeSpecificHeroImage() {
