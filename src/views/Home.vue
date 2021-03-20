@@ -2,28 +2,13 @@
 div
   //- Hero Area
   section
-    v-parallax.hero.text-center(:src="themeSpecificHeroImage")
-      v-row(align="center" justify="center")
-        v-col(cols="12")
-          h1.display-2.mb-4.font-weight-thin Passionate about Business and Computer Science
-          h3.subtitle-1 - Portfolio of Leo Giesen -
-          div.mt-10
-            v-btn.pa-6.gradient-btn.ma-10(
-              @click="$router.push('/experience')"
-              ) For Businesses
-            v-btn.pa-6(outlined color="secondary"
-              @click="$router.push('/projects')"
-              ) Other Visitors
-      ScrollHero
-  
-  section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
     vue-video-section(
-      :elementId="'coast'" :desktopHeight="800"
+      :elementId="'coast'" :desktopHeight="750" :mobileHeight="680"
       :mp4Source="require('../assets/background/video/coast.mp4')"
       :posterSource="require('../assets/background/nature.jpg')")
-      v-container(fill-height fluid slot="overlay-content")
+      v-container(slot="overlay-content")
         v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
           v-col.white--text(cols="12")
             h1.display-2.mb-4.font-weight-thin Passionate about Business and Computer Science
