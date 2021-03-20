@@ -45,12 +45,32 @@ div
 <script>
 import { mapGetters } from "vuex";
 
-//import the items for the navbar
-import navItems from "./navItems.json";
 export default {
   name: "TheNavigation",
   data: () => ({
-    views: navItems,
+    views: [
+      {
+        tag: "About",
+        to: {
+          name: "About"
+        },
+        icon: "information-outline"
+      },
+      {
+        tag: "Experience",
+        to: {
+          name: "Experience"
+        },
+        icon: "briefcase-outline"
+      },
+      {
+        tag: "Projects",
+        to: {
+          name: "Projects"
+        },
+        icon: "code-tags"
+      }
+    ],
     drawer: false,
     group: null
   }),
