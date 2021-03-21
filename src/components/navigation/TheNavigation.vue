@@ -32,8 +32,8 @@ div
       v-list(nav dense)
         v-list-item-group.mt-6(v-model="group")
           //- active-class="deep-purple--text text--accent-4")
-          v-list-item.mt-3
-            v-list-item-title(to="/") 
+          v-list-item.mt-3(to="/")
+            v-list-item-title 
               v-icon.mr-3 mdi-home-outline
               | Home
           v-list-item.mt-3(v-for="view in views" :key="view.to.name" :to="view.to") 
@@ -51,23 +51,17 @@ export default {
     views: [
       {
         tag: "About",
-        to: {
-          name: "About"
-        },
+        to: { name: "About" },
         icon: "information-outline"
       },
       {
         tag: "Experience",
-        to: {
-          name: "Experience"
-        },
+        to: { name: "Experience" },
         icon: "briefcase-outline"
       },
       {
         tag: "Projects",
-        to: {
-          name: "Projects"
-        },
+        to: { name: "Projects" },
         icon: "code-tags"
       }
     ],

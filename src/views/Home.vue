@@ -11,8 +11,8 @@ div
       v-container(slot="overlay-content")
         v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
           v-col.white--text(cols="12")
-            h1.display-2.mb-4.font-weight-thin Passionate about Business and Computer Science
-            h3 - Portfolio of Leo Giesen -
+            h1.display-2.mb-4.font-weight-thin - Portfolio of Leo Giesen -
+            h1.subtitle-1 Passionate about Business and Computer Science
             div.mt-10
               v-btn.pa-6.gradient-btn.ma-10(
                 @click="$router.push('/about')") For Businesses
