@@ -26,19 +26,34 @@ div
     v-app-bar(app)
       v-app-bar-nav-icon(@click.stop="drawer = !drawer")
       v-spacer
+      div.d-flex
+        a(href="/")
+          v-img.shrink.mr-2(alt="Leo Giesen Logo"
+            contain width="40"
+            transition="scale-transition"
+            :src="themespecificLogoSrc")
+            //- Change icon depending on the theme
+      v-spacer
       v-btn(icon) 
         v-icon(@click="toggleTheme") mdi-brightness-6
     v-navigation-drawer(v-model="drawer" absolute temporary)
       v-list(nav dense)
         v-list-item-group.mt-6(v-model="group")
+          v-list-item.justify-center
+            a(href="/")
+              v-img.shrink(alt="Leo Giesen Logo"
+                contain width="40"
+                transition="scale-transition"
+                :src="themespecificLogoSrc")
+                //- Change icon depending on the theme
           //- active-class="deep-purple--text text--accent-4")
-          v-list-item.mt-3(to="/")
+          v-list-item(to="/")
             v-list-item-title 
-              v-icon.mr-3(color="primary") mdi-home-outline
+              v-icon(color="primary") mdi-home-outline
               | Home
-          v-list-item.mt-3(v-for="view in views" :key="view.to.name" :to="view.to") 
+          v-list-item(v-for="view in views" :key="view.to.name" :to="view.to") 
             v-list-item-title 
-              v-icon.mr-3(color="primary") mdi-{{ view.icon }}
+              v-icon(color="primary") mdi-{{ view.icon }}
               | {{ view.tag }}
 </template>
 
@@ -65,7 +80,7 @@ export default {
         icon: "code-tags"
       }
     ],
-    drawer: false,
+    drawer: true,
     group: null
   }),
   watch: {
@@ -105,4 +120,18 @@ div.v-list-item__title {
 // a.v-tab--active {
 //   color: $primary;
 // }
+
+// Mobile navigation
+// items in mobile nav
+a.v-list-item {
+  // = .mt-3
+  // https://vuetifyjs.com/en/styles/spacing/#how-it-works
+  margin-top: 12px;
+}
+// Icons in items in mobile nav
+i.v-icon {
+  // = .mr-3
+  // https://vuetifyjs.com/en/styles/spacing/#how-it-works
+  margin-right: 12px;
+}
 </style>
