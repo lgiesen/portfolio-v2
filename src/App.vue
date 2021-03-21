@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TheNavigation from "@/components/navigation/TheNavigation.vue";
+import TheNavigation from "@/components/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
 

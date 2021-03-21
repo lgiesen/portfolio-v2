@@ -34,11 +34,11 @@ div
           //- active-class="deep-purple--text text--accent-4")
           v-list-item.mt-3(to="/")
             v-list-item-title 
-              v-icon.mr-3 mdi-home-outline
+              v-icon.mr-3(color="primary") mdi-home-outline
               | Home
           v-list-item.mt-3(v-for="view in views" :key="view.to.name" :to="view.to") 
             v-list-item-title 
-              v-icon.mr-3 mdi-{{ view.icon }}
+              v-icon.mr-3(color="primary") mdi-{{ view.icon }}
               | {{ view.tag }}
 </template>
 
