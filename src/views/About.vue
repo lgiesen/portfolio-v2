@@ -14,7 +14,7 @@ div
     v-container
       h1.display-2.font-weight-thin.text-center.ma-10 About
       v-row(align="center")
-        v-col(cols="6")
+        v-col.col-12.col-sm-6
           p Leo has a huge passion for computer science and economics, which is why he 
             | studies Information Systems and ambitiously works on personal projects 
             | in his free time like his website.
@@ -29,7 +29,7 @@ div
             v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
               v-icon mdi-download
               | Download CV
-        v-col(cols="6")
+        v-col.col-12.col-sm-6
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
   section.d-flex.flex-wrap
