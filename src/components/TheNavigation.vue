@@ -18,6 +18,7 @@ div
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ view.tag }}
+    LanguageSwitcher
     v-btn(icon) 
       v-icon(@click="toggleTheme") mdi-brightness-6
   
@@ -34,7 +35,6 @@ div
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
       v-spacer
-      LanguageSwitcher
       v-btn(icon) 
         v-icon(@click="toggleTheme") mdi-brightness-6
     v-navigation-drawer(v-model="drawer" absolute temporary)
@@ -56,6 +56,8 @@ div
             v-list-item-title 
               v-icon(color="primary") mdi-{{ view.icon }}
               | {{ view.tag }}
+          v-list-item
+            LanguageSwitcher
 </template>
 
 <script>
