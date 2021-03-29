@@ -36,6 +36,10 @@ div
       h2 {{ $t("introHeader") }}
       p {{ $t("friendsAndFamily") }}
       p(v-html="$t('career')")
+      v-row
+        v-col.col-12.col-sm-6
+        v-col.col-12.col-sm-6
+          p(v-html="$t('sport')")
 
   section.d-flex.flex-wrap
     v-img(
@@ -104,9 +108,22 @@ export default {
           andere Projekte finden Sie auf dem Blog (derzeit im Aufbau) und in der 
             <a href="/projects">Projekt-</a> 
           bzw. 
-            <a href="/experience">Erfahrungsübersicht</a>
-          .
-        </p>`
+            <a href="/experience">Erfahrungsübersicht</a>.
+        </p>`,
+        sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, 
+        denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein 
+        Laufen zu verbessern, da ich im Alter von 16 Jahren einen Halbmarathon gelaufen bin und ich mich damit begnüge, etwa 
+        4 min/km auf meiner üblichen Strecke rund um den Aasee und die Promenade in Münster zu laufen 
+          <span class="hidden-md-and-up">
+            (sehen Sie sich meinen Fortschritt 
+            <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">hier</a>
+            an)</span>. 
+        Als Ausblick würde ich gerne einen 
+        Marathon absolvieren, wenn ich genügend Zeit finde, mich darauf vorzubereiten. 
+        Früher habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Regionalliga beweisen. 
+        Es ist jedoch schwierig für mich, die Zeit zu finden, um mich auf einem hohen Niveau 
+        hohem Niveau zu spielen. Trotzdem ist es mein Lieblingssport und ich liebe es, ihn zu spielen, egal 
+        ob entspannt mit Familie und Freunden oder wettkampfmäßig in einer Fußballmannschaft`
       },
       en: {
         introHeader: "What is most important to you?",
@@ -129,6 +146,23 @@ export default {
           or 
             <a href="/experience">work experience</a>
           overview.
+        </p>`,
+        sport: `
+        <p>
+          Apart from work and my private life, I am also very ambitious about sports, 
+          because I want to push my limits in various ways: For example, I try to improve my 
+          running as I have run a half-marathon at the age of 16 and I am content to run about 
+          4 min/km on my usual route around the Aasee and Promenade in Münster 
+            <span class="hidden-md-and-up">
+              (check out my progress 
+              <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">here</a>
+              )</span>. 
+          As an outlook, I would like to complete a 
+          marathon in the near future, if I find sufficient time to prepare for it. 
+          I used to play football for a decade and managed to prove myself in the regional league. 
+          However, it is difficult for me to find the time to commit properly to playing at a 
+          high level. Nevertheless, it is my favourite sport and I love playing it, regardless 
+          if it is relaxed with family or friends or competitive in a football team.
         </p>`
       }
     }
