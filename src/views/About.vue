@@ -31,13 +31,22 @@ div
               | Download CV
         v-col.col-12.col-sm-6
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
-  section
+  section.text-justify
     v-container
       h2 {{ $t("introHeader") }}
-      p {{ $t("friendsAndFamily") }}
-      p(v-html="$t('career')")
       v-row
         v-col.col-12.col-sm-6
+          v-img(src="@/assets/about/Familie_Aegina.jpg")
+        v-col.col-12.col-sm-6
+          p {{ $t("friendsAndFamily") }}
+      v-row
+        v-col.col-12.col-sm-6
+          p(v-html="$t('career')")
+        v-col.col-12.col-sm-6
+          v-img(src="@/assets/work/Programming.jpg")
+      v-row
+        v-col.col-12.col-sm-6
+          v-img(src="@/assets/about/FCG.jpg")
         v-col.col-12.col-sm-6
           p(v-html="$t('sport')")
 
@@ -113,8 +122,7 @@ export default {
         sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, 
         denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein 
         Laufen zu verbessern, da ich im Alter von 16 Jahren einen Halbmarathon gelaufen bin und ich mich damit begnüge, etwa 
-        4 min/km auf meiner üblichen Strecke rund um den Aasee und die Promenade in Münster zu laufen 
-          <span class="hidden-md-and-up">
+        4 min/km auf meiner üblichen Strecke rund um den Aasee und die Promenade in Münster zu laufen<span class="hidden-md-and-up">
             (sehen Sie sich meinen Fortschritt 
             <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">hier</a>
             an)</span>. 
@@ -152,8 +160,7 @@ export default {
           Apart from work and my private life, I am also very ambitious about sports, 
           because I want to push my limits in various ways: For example, I try to improve my 
           running as I have run a half-marathon at the age of 16 and I am content to run about 
-          4 min/km on my usual route around the Aasee and Promenade in Münster 
-            <span class="hidden-md-and-up">
+          4 min/km on my usual route around the Aasee and Promenade in Münster<span class="hidden-md-and-up">
               (check out my progress 
               <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">here</a>
               )</span>. 
