@@ -34,8 +34,8 @@ div
   section
     v-container
       h2 {{ $t("introHeader") }}
-      p {{ $t("intro") }}
-      //- p(v-html="$t('message.hello')")
+      p {{ $t("friendsAndFamily") }}
+      p(v-html="$t('career')")
 
   section.d-flex.flex-wrap
     v-img(
@@ -85,25 +85,51 @@ export default {
     messages: {
       de: {
         introHeader: "Was ist für Dich am wichtigsten?",
-        intro: `Für mich haben meine Familie, Freunde und meine Karriere die 
-        höchste Priorität, denn ohne ein tolles soziales Leben als Fundament 
+        friendsAndFamily: `Für mich haben meine Familie, Freunde und meine Karriere 
+        die höchste Priorität, denn ohne ein tolles soziales Leben als Fundament 
         kann man leicht ausbrennen und den Blick für das Wesentliche im Leben 
         verlieren.
         So hege ich mit meiner Familie und meinen Freunden tolle Erinnerungen 
         an faszinierende Ausflüge und tolle Partys, z. B. unsere jährlichen 
         Skiausflüge oder Karneval mit einer Gruppe von Freunden und meiner 
-        Familie in Köln. 
-`
+        Familie in Köln.`,
+        career: `
+        <p>
+          Neben meinem Privatleben investiere ich viel Energie in meine Arbeit und Karriere 
+          da ich eine unglaubliche Leidenschaft für verschiedene Geschäfts- und IT-Bereiche habe. Zum Beispiel, 
+          hatte ich die Möglichkeit, mir ein breites Skillset durch zwei fruchtbare Consulting 
+          Projekten bei 
+            <a href="https://move-ev.de/" target="_blank"> @move e. V.</a> 
+          zum Thema Web-Konzeptionierung zu erwerben. Weitere Einblicke in diese und 
+          andere Projekte finden Sie auf dem Blog (derzeit im Aufbau) und in der 
+            <a href="/projects">Projekt-</a> 
+          bzw. 
+            <a href="/experience">Erfahrungsübersicht</a>
+          .
+        </p>`
       },
       en: {
         introHeader: "What is most important to you?",
-        intro: `For me, my family, friends and my career have the highest priority, 
-        because, without a great social life as a foundation, you can easily burn 
-        out and lose sight of what is important in life.
+        friendsAndFamily: `For me, my family, friends and my career have the highest 
+        priority, because, without a great social life as a foundation, you can easily 
+        burn out and lose sight of what is important in life.
         For instance, I cherish great memories with my family and friends from 
         fascinating trips and amazing parties, e.g. our yearly skiing trips or 
-        Carnival with a group of friends and my family in Cologne. 
-`
+        Carnival with a group of friends and my family in Cologne.`,
+        career: `
+        <p>
+          Besides my private life, I spend a lot of energy on my work and career 
+          as I am incredibly passionate about various business and IT fields. For example, 
+          I had the opportunity to acquire a wide-range skillset from two fruitful consulting 
+          projects 
+            <a href="https://move-ev.de/" target="_blank"> @move e. V.</a> 
+          concerning web conceptualisation. Further insights into these and 
+          other projects can be found on the blog (currently in development) and in the 
+            <a href="/projects">project</a> 
+          or 
+            <a href="/experience">work experience</a>
+          overview.
+        </p>`
       }
     }
   }
