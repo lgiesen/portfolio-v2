@@ -31,7 +31,12 @@ div
               | Download CV
         v-col.col-12.col-sm-6
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
-  
+  section
+    v-container
+      h2 {{ $t("introHeader") }}
+      p {{ $t("intro") }}
+      //- p(v-html="$t('message.hello')")
+
   section.d-flex.flex-wrap
     v-img(
       v-for="(image, index) in imageGallery" :key="index" 
@@ -75,7 +80,33 @@ export default {
           "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
       }
     ]
-  })
+  }),
+  i18n: {
+    messages: {
+      de: {
+        introHeader: "Was ist für Dich am wichtigsten?",
+        intro: `Für mich haben meine Familie, Freunde und meine Karriere die 
+        höchste Priorität, denn ohne ein tolles soziales Leben als Fundament 
+        kann man leicht ausbrennen und den Blick für das Wesentliche im Leben 
+        verlieren.
+        So hege ich mit meiner Familie und meinen Freunden tolle Erinnerungen 
+        an faszinierende Ausflüge und tolle Partys, z. B. unsere jährlichen 
+        Skiausflüge oder Karneval mit einer Gruppe von Freunden und meiner 
+        Familie in Köln. 
+`
+      },
+      en: {
+        introHeader: "What is most important to you?",
+        intro: `For me, my family, friends and my career have the highest priority, 
+        because, without a great social life as a foundation, you can easily burn 
+        out and lose sight of what is important in life.
+        For instance, I cherish great memories with my family and friends from 
+        fascinating trips and amazing parties, e.g. our yearly skiing trips or 
+        Carnival with a group of friends and my family in Cologne. 
+`
+      }
+    }
+  }
 };
 </script>
 
