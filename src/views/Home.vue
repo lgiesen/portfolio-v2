@@ -51,12 +51,12 @@ export default {
   data: () => ({
     associations: [
       // employers
-      require("@/assets/employmentAndEducation/ERCIS.png"),
-      require("@/assets/employmentAndEducation/move.png"),
-      require("@/assets/employmentAndEducation/SEPAone.png"),
-      require("@/assets/employmentAndEducation/BRL.png"),
+      require("@/assets/workExperience/ERCIS.png"),
+      require("@/assets/workExperience/move.png"),
+      require("@/assets/workExperience/SEPAone.png"),
+      require("@/assets/workExperience/BRL.png"),
       // education
-      require("@/assets/employmentAndEducation/WWU.png")
+      require("@/assets/workExperience/WWU.png")
     ]
   }),
   computed: {

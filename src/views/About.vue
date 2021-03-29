@@ -34,16 +34,21 @@ div
   section.text-justify
     v-container
       h2 {{ $t("introHeader") }}
+      //- friends and family
       v-row
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/Familie_Aegina.jpg")
         v-col.col-12.col-sm-6
           p {{ $t("friendsAndFamily") }}
+
+      //- career
       v-row
         v-col.col-12.col-sm-6
           p(v-html="$t('career')")
         v-col.col-12.col-sm-6
           v-img(src="@/assets/work/Programming.jpg")
+
+      //- sport
       v-row
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/FCG.jpg")
