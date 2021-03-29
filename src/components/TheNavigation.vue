@@ -34,6 +34,7 @@ div
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
       v-spacer
+      LanguageSwitcher
       v-btn(icon) 
         v-icon(@click="toggleTheme") mdi-brightness-6
     v-navigation-drawer(v-model="drawer" absolute temporary)
@@ -59,9 +60,13 @@ div
 
 <script>
 import { mapGetters } from "vuex";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
 export default {
   name: "TheNavigation",
+  components: {
+    LanguageSwitcher
+  },
   data: () => ({
     views: [
       {
