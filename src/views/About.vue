@@ -60,7 +60,12 @@ div
         v-col.col-12.col-sm-6    
           v-img(src="@/assets/about/Ski_HSP.jpeg")
           //- v-img(src="@/assets/about/Ski_Familie.jpg")
-
+      //- travel
+      v-row
+        v-col.col-12.col-sm-6
+          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
+        v-col.col-12.col-sm-6
+          p(v-html="$t('travel')")
   section.d-flex.flex-wrap
     v-img(
       v-for="(image, index) in imageGallery" :key="index" 
@@ -152,14 +157,26 @@ export default {
           wenn man in einer sportlichen und dynamischen Gruppe abseits der Piste fährt, wo es keine oder nur wenige 
           Spuren der vorherigen Skifahrer gibt. Denn man spürt, wie man den weichen Schnee formt, der auch 
           die Sonnenstrahlen reflektiert.
-          Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach Warth/Lech in Österreich. 
-          Gelegentlich habe ich auch die Gelegenheit zum Skifahren in Portes du Soleil, Schweiz 
-          mit der Hochschule (HSP) zu fahren, was immer ein ereignisreiches und spannendes Erlebnis ist, 
+          Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach 
+            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech in Österreich</a>. 
+          Gelegentlich habe ich auch die Gelegenheit zum Skifahren in 
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil, Schweiz</a> 
+          mit der Hochschule
+            (<a href="https://www.uni-muenster.de/Hochschulsport/" target="_blank">HSP</a>) zu fahren, was 
+          immer ein ereignisreiches und spannendes Erlebnis ist, 
           denn man lernt neue gleichgesinnte Snowboarder und Skifahrer kennen, lebt, feiert und fährt mit ihnen. 
           Es wäre toll, in den Bergen Fallschirmspringen zu gehen, mit einer tollen Aussicht 
           denn das könnte ein ähnliches Gefühl von Adrenalin gepaart mit Freiheit und Lebenslust auslösen 
           für das Leben. Daher freue ich mich sehr darauf, das eines Tages zu tun!
-        </p>`
+        </p>`,
+        travel: `
+        <p>
+          Außerdem möchte ich gerne neue Orte erkunden und verschiedene Kulturen kennenlernen, z.B. 
+          Asien und Süd- oder Mittelamerika. Konkret würde ich gerne nach Japan und Argentinien reisen, 
+          Chile oder Nicaragua. Außerdem könnte ich mir vorstellen, für längere Zeit in Kanada zu bleiben und dort zu arbeiten, da 
+          ich tolle Landschaften mag und es nach allem, was ich gehört habe, viel zu bieten hat.
+        </p>
+        `
       },
       en: {
         introHeader: "What is most important to you?",
@@ -208,13 +225,24 @@ export default {
           when you ski off-slope in a sporty and dynamic group, where there are no or only a few 
           tracks of previous skiers. Because you can feel how you shape the soft snow, which also 
           reflects the sun rays.
-          That is why I go on a yearly skiing trip with my family to Warth/Lech, Austria. 
-          Occasionally, I also have the opportunity to ski in Portes du Soleil, Switzerland 
-          with the university (HSP), which is always an eventful and thrilling experience, 
+          That is why I go on a yearly skiing trip with my family to
+            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech, Austria</a>.
+          Occasionally, I also have the opportunity to ski in 
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil, Switzerland</a>
+          with the university 
+            (<a href="https://www.uni-muenster.de/Hochschulsport/" target="_blank">HSP</a>), which is 
+          always an eventful and thrilling experience, 
           because you get to know, live, party and ski with new like-minded snowboarders and skiers. 
           It would be awesome to go skydiving and parachuting in the mountains with a great view 
           because that might spark a similar feeling of adrenalin combined with freedom and lust 
           for life. Consequently, I am thrilled to do that one day!
+        </p>`,
+        travel: `
+        <p>
+          What is more, I would like to explore new places and get to know different cultures, e.g. 
+          Asia and South or Central America. Specifically, I would like to travel to Japan and Argentina, 
+          Chile or Nicaragua. Additionally, I could imagine staying a long time in Canada and working there as 
+          I enjoy great landscapes and from what I have heard, it has a lot to offer.
         </p>`
       }
     }
