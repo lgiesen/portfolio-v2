@@ -54,6 +54,12 @@ div
           v-img(src="@/assets/about/FCG.jpg")
         v-col.col-12.col-sm-6
           p(v-html="$t('sport')")
+      v-row
+        v-col.col-12.col-sm-6
+          p(v-html="$t('tennisAndSkiing')")
+        v-col.col-12.col-sm-6    
+          v-img(src="@/assets/about/Ski_HSP.jpeg")
+          //- v-img(src="@/assets/about/Ski_Familie.jpg")
 
   section.d-flex.flex-wrap
     v-img(
@@ -136,7 +142,24 @@ export default {
         Früher habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Regionalliga beweisen. 
         Es ist jedoch schwierig für mich, die Zeit zu finden, um mich auf einem hohen Niveau 
         hohem Niveau zu spielen. Trotzdem ist es mein Lieblingssport und ich liebe es, ihn zu spielen, egal 
-        ob entspannt mit Familie und Freunden oder wettkampfmäßig in einer Fußballmannschaft`
+        ob entspannt mit Familie und Freunden oder wettkampfmäßig in einer Fußballmannschaft`,
+        tennisAndSkiing: `
+        <p>
+          Außerdem spiele ich gerne Tennis mit Freunden, weil es mir leichter fällt, eine 
+          eine starke Bindung zu Menschen aufzubauen, während ich Sport treibe. 
+          Außerdem liebe ich das unglaubliche Gefühl beim Skifahren wegen des schnellen Gleitens im Schnee 
+          und die tolle Aussicht, während man sich schnell aber elegant den Berg hinunter bewegt. Dieses Gefühl gipfelt 
+          wenn man in einer sportlichen und dynamischen Gruppe abseits der Piste fährt, wo es keine oder nur wenige 
+          Spuren der vorherigen Skifahrer gibt. Denn man spürt, wie man den weichen Schnee formt, der auch 
+          die Sonnenstrahlen reflektiert.
+          Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach Warth/Lech in Österreich. 
+          Gelegentlich habe ich auch die Gelegenheit zum Skifahren in Portes du Soleil, Schweiz 
+          mit der Hochschule (HSP) zu fahren, was immer ein ereignisreiches und spannendes Erlebnis ist, 
+          denn man lernt neue gleichgesinnte Snowboarder und Skifahrer kennen, lebt, feiert und fährt mit ihnen. 
+          Es wäre toll, in den Bergen Fallschirmspringen zu gehen, mit einer tollen Aussicht 
+          denn das könnte ein ähnliches Gefühl von Adrenalin gepaart mit Freiheit und Lebenslust auslösen 
+          für das Leben. Daher freue ich mich sehr darauf, das eines Tages zu tun!
+        </p>`
       },
       en: {
         introHeader: "What is most important to you?",
@@ -175,6 +198,23 @@ export default {
           However, it is difficult for me to find the time to commit properly to playing at a 
           high level. Nevertheless, it is my favourite sport and I love playing it, regardless 
           if it is relaxed with family or friends or competitive in a football team.
+        </p>`,
+        tennisAndSkiing: `
+        <p>
+          Additionally, I enjoy playing Tennis with friends because I find it easier to create a 
+          strong bond with people while doing sports. 
+          Moreover, I love the incredible feeling of skiing because of the swift glide in the snow 
+          and the great view while you move fast but elegantly down a mountain. This feeling peaks 
+          when you ski off-slope in a sporty and dynamic group, where there are no or only a few 
+          tracks of previous skiers. Because you can feel how you shape the soft snow, which also 
+          reflects the sun rays.
+          That is why I go on a yearly skiing trip with my family to Warth/Lech, Austria. 
+          Occasionally, I also have the opportunity to ski in Portes du Soleil, Switzerland 
+          with the university (HSP), which is always an eventful and thrilling experience, 
+          because you get to know, live, party and ski with new like-minded snowboarders and skiers. 
+          It would be awesome to go skydiving and parachuting in the mountains with a great view 
+          because that might spark a similar feeling of adrenalin combined with freedom and lust 
+          for life. Consequently, I am thrilled to do that one day!
         </p>`
       }
     }
