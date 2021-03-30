@@ -17,7 +17,7 @@ div
               v-btn.pa-6.gradient-btn.ma-10(
                 @click="$router.push('/about')") For Businesses
               v-btn.pa-6(outlined color="secondary"
-                @click="$router.push('/playground')" ) Other Visitors
+                @click="$router.push('/playground')") Other Visitors
         v-row.text-center(align="center" justify="center" fill-height fluid)
           v-col(cols="12")
             ScrollHero
