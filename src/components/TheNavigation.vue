@@ -56,8 +56,7 @@ div
             v-list-item-title 
               v-icon(color="primary") mdi-{{ view.icon }}
               | {{ view.tag }}
-          v-list-item
-            LanguageSwitcher
+          LanguageSwitcher.text-center
 </template>
 
 <script>
