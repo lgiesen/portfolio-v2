@@ -3,8 +3,9 @@
   //- span.ml-2 {{ $i18n.locale.toUpperCase() }}
   //-       img.h-8.w-8(src="@/assets/locales/English.svg" alt='english flag')
   div
-    v-btn.pa-0(text @click="switchLanguage()")
-      v-img(:src="switchLanguageSrc" width="50")
+    //- Set the width, so that the svg does not scale to its 900x600 size
+    v-btn.pa-0(text @click="switchLanguage()" width="1")
+      v-img(:src="switchLanguageSrc" width="1")
     //- Alternative select option
     //- select.text-uppercase(v-model="$i18n.locale")
     //-   option(v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang"
