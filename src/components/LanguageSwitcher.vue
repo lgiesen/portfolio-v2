@@ -20,28 +20,17 @@ export default {
   }),
   methods: {
     switchLanguage() {
-      console.log("----");
-      console.log("START: set language: " + this.$i18n.locale);
-
-      if (!this.$i18n.locale || this.$i18n.locale == "en") {
-        console.log("EN -> DE");
+      if (!this.$i18n.locale || this.$i18n.locale == "en")
         this.$i18n.locale = "de";
-      } else if (this.$i18n.locale == "de") {
-        this.$i18n.locale = "en";
-        console.log("DE -> EN");
-      }
-      console.log("END: set language: " + this.$i18n.locale);
+      else if (this.$i18n.locale == "de") this.$i18n.locale = "en";
     }
   },
   computed: {
     switchLanguageSrc() {
-      if (!this.$i18n.locale) {
-        console.log("active language: " + this.$i18n.locale);
+      if (!this.$i18n.locale || this.$i18n.locale == "de") {
         this.$i18n.locale == "de";
-        return null;
-      } else if (this.$i18n.locale == "de")
         return require("@/assets/locales/English.svg");
-      else return require("@/assets/locales/German.svg");
+      } else return require("@/assets/locales/German.svg");
     }
   }
 };
