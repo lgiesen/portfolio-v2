@@ -40,6 +40,14 @@ const routes = [
     // ]
   },
   {
+    path: "/testing-playground",
+    name: "TestingPlayground",
+    component: () =>
+      import(
+        /* webpackChunkName: "testingPlayground" */ "../views/TestingPlayground.vue"
+      )
+  },
+  {
     path: "/contact",
     name: "Contact",
     component: () =>

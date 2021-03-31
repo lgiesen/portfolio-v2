@@ -40,38 +40,28 @@ div
           v-img(src="@/assets/about/Familie_Aegina.jpg")
         v-col.col-12.col-sm-6
           p {{ $t("friendsAndFamily") }}
-
-      //- career
-      v-row
-        v-col.col-12.col-sm-6
+          //- career
           p(v-html="$t('career')")
-        v-col.col-12.col-sm-6
-          v-img(src="@/assets/work/Programming.jpg")
 
       //- sport
       v-row
         v-col.col-12.col-sm-6
-          v-img(src="@/assets/about/FCG.jpg")
-        v-col.col-12.col-sm-6
           p(v-html="$t('sport')")
+        v-col.col-12.col-sm-6
+          v-img(src="@/assets/about/FCG.jpg")
       v-row
         v-col.col-12.col-sm-6
-          p(v-html="$t('tennisAndSkiing')")
-        v-col.col-12.col-sm-6    
           v-img(src="@/assets/about/Ski_HSP.jpeg")
+        v-col.col-12.col-sm-6    
+          p(v-html="$t('tennisAndSkiing')")
           //- v-img(src="@/assets/about/Ski_Familie.jpg")
       //- travel
       v-row
         v-col.col-12.col-sm-6
-          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
-        v-col.col-12.col-sm-6
           p(v-html="$t('travel')")
-  section.d-flex.flex-wrap
-    v-img(
-      v-for="(image, index) in imageGallery" :key="index" 
-      :width="$vuetify.breakpoint.mobile ? '40vw' : '25vw'"
-      :height="$vuetify.breakpoint.mobile ? '40vw' : '25vw'"
-      :src="image.src")
+          blockquote Lastly, I'd like to end with a quote, which sums up my life attitude
+        v-col.col-12.col-sm-6
+          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
 </template>
 
 <script>
@@ -82,34 +72,6 @@ export default {
   components: {
     ScrollHero
   },
-  data: () => ({
-    imageGallery: [
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      },
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      },
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      },
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      },
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      },
-      {
-        src:
-          "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-      }
-    ]
-  }),
   i18n: {
     messages: {
       de: {

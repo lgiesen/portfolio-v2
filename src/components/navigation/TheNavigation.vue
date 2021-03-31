@@ -19,8 +19,7 @@ div
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ view.tag }}
     LanguageSwitcher
-    v-btn(icon) 
-      v-icon(@click="toggleTheme") mdi-brightness-6
+    ToggleTheme
   
   //- Mobile navigation
   div.hidden-md-and-up
@@ -35,8 +34,7 @@ div
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
       v-spacer
-      v-btn(icon) 
-        v-icon(@click="toggleTheme") mdi-brightness-6
+      ToggleTheme
     v-navigation-drawer(v-model="drawer" absolute temporary)
       v-list(nav dense)
         v-list-item-group.mt-6(v-model="group")
@@ -61,12 +59,14 @@ div
 
 <script>
 import { mapGetters } from "vuex";
-import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import LanguageSwitcher from "@/components/navigation/LanguageSwitcher.vue";
+import ToggleTheme from "@/components/navigation/ToggleTheme.vue";
 
 export default {
   name: "TheNavigation",
   components: {
-    LanguageSwitcher
+    LanguageSwitcher,
+    ToggleTheme
   },
   data: () => ({
     views: [
@@ -84,6 +84,11 @@ export default {
         tag: "Projects",
         to: { name: "Projects" },
         icon: "code-tags"
+      },
+      {
+        tag: "Playground",
+        to: { name: "TestingPlayground" },
+        icon: "code-tags"
       }
     ],
     drawer: true,
@@ -99,11 +104,6 @@ export default {
     themespecificLogoSrc() {
       if (this.isDarkTheme) return require("@/assets/logo/dark/logo.svg");
       else return require("@/assets/logo/light/logo.svg");
-    }
-  },
-  methods: {
-    toggleTheme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     }
   }
 };
