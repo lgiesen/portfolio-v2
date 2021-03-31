@@ -59,8 +59,8 @@ div
       v-row
         v-col.col-12.col-sm-6
           p(v-html="$t('travel')")
-          p Lastly, I'd like to end with a quote, which sums up my life attitude
-          blockquote "The joy of life comes from our encounters with new experiences, and hence there is no greater joy than to have an endlessly changing horizon, for each day to have a new and different sun." - Christopher McCandless
+          p {{ $t("quote") }}
+          Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
   v-container.grey--text
@@ -70,12 +70,23 @@ div
 
 <script>
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import Quote from "@/components/Quote.vue";
 
 export default {
   name: "About",
   components: {
-    ScrollHero
+    ScrollHero,
+    Quote
   },
+  data: () => ({
+    quotes: [
+      {
+        quoteText:
+          "The joy of life comes from our encounters with new experiences, and hence there is no greater joy than to have an endlessly changing horizon, for each day to have a new and different sun.",
+        quoteAuthor: "Christopher McCandless"
+      }
+    ]
+  }),
   i18n: {
     messages: {
       de: {
@@ -142,7 +153,9 @@ export default {
           Chile oder Nicaragua. Außerdem könnte ich mir vorstellen, für längere Zeit in Kanada zu bleiben und dort zu arbeiten, da 
           ich tolle Landschaften mag und es nach allem, was ich gehört habe, viel zu bieten hat.
         </p>
-        `
+        `,
+        quote:
+          "Zum Schluss möchte ich mit einem Zitat abschließen, das meine Lebenseinstellung auf den Punkt bringt:"
       },
       en: {
         introHeader: "What is most important to you?",
@@ -209,7 +222,9 @@ export default {
           Asia and South or Central America. Specifically, I would like to travel to Japan and Argentina, 
           Chile or Nicaragua. Additionally, I could imagine staying a long time in Canada and working there as 
           I enjoy great landscapes and from what I have heard, it has a lot to offer.
-        </p>`
+        </p>`,
+        quote:
+          "Lastly, I'd like to conclude with a quote, which sums up my life attitude:"
       }
     }
   }
