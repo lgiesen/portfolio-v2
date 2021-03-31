@@ -59,9 +59,13 @@ div
       v-row
         v-col.col-12.col-sm-6
           p(v-html="$t('travel')")
-          blockquote Lastly, I'd like to end with a quote, which sums up my life attitude
+          p Lastly, I'd like to end with a quote, which sums up my life attitude
+          blockquote "The joy of life comes from our encounters with new experiences, and hence there is no greater joy than to have an endlessly changing horizon, for each day to have a new and different sun." - Christopher McCandless
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
+  v-container.grey--text
+    h2.mb-5 Citation
+    p Christopher McCandless Quotes. (n.d.). BrainyQuote.com. Retrieved March 31, 2021, from BrainyQuote.com Web site: https://www.brainyquote.com/quotes/christopher_mccandless_473529    
 </template>
 
 <script>
