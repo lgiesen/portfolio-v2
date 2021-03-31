@@ -1,14 +1,12 @@
 <template lang="pug">
-    v-btn( 
-      elevation="15"
-      v-scroll="onScroll"
-      v-show="fab" fab
-      outlined
-      color="primary"
-      fixed bottom right
-      style="backdrop-filter: blur(8px);"
-      @click="toTop")
-      v-icon mdi-chevron-up
+v-btn( 
+  elevation="15" v-scroll="onScroll"
+  v-show="fab" fab
+  outlined color="primary" 
+  style="backdrop-filter: blur(8px);"
+  fixed bottom right
+  @click="toTop")
+  v-icon mdi-chevron-up
 </template>
 
 <script>

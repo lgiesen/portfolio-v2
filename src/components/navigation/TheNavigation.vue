@@ -24,7 +24,7 @@ div
   //- Mobile navigation
   div.hidden-md-and-up
     v-app-bar(app)
-      v-app-bar-nav-icon(@click.stop="drawer = !drawer")
+      v-app-bar-nav-icon(@click.stop="mobileDialog = !mobileDialog")
       v-spacer
       div.d-flex
         a(href="/")
@@ -33,28 +33,24 @@ div
             transition="scale-transition"
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
-    v-navigation-drawer(v-model="drawer" absolute temporary)
-      v-list(nav dense)
-        v-list-item-group.mt-6(v-model="group")
-          v-list-item.justify-center
-            a(href="/")
-              v-img.shrink(alt="Leo Giesen Logo"
-                contain width="40"
-                transition="scale-transition"
-                :src="themespecificLogoSrc")
-                //- Change icon depending on the theme
-          //- active-class="deep-purple--text text--accent-4")
-          v-list-item(to="/")
-            v-list-item-title 
-              v-icon(color="primary") mdi-home-outline
-              | Home
-          v-list-item(v-for="view in views" :key="view.to.name" :to="view.to") 
-            v-list-item-title 
-              v-icon(color="primary") mdi-{{ view.icon }}
-              | {{ view.tag }}
-          div.d-flex.flex-wrap.justify-space-around.mt-10
-            LanguageSwitcher.text-center
-            ToggleTheme
+    //- v-navigation-drawer(v-model="mobileDialog" absolute temporary)
+    v-overlay(v-model="mobileDialog" transition="dialog-top-transition" 
+      opacity=".8" style="backdrop-filter: blur(8px);")
+      v-btn(fixed top right icon
+        @click="mobileDialog = false")
+        v-icon mdi-close
+
+      v-tab.ma-8(@click="mobileDialog = false" to="/" )
+        v-icon(color="secondary") mdi-home-outline
+        | Home
+      v-tab.ma-8(v-for="view in views" :key="view.to.name" 
+        @click="mobileDialog = false" :to="view.to")
+        v-icon(color="secondary") mdi-{{ view.icon }}
+        |  {{ view.tag }}
+      //-     //- active-class="deep-purple--text text--accent-4")
+      div.d-flex.flex-wrap.justify-space-around
+        LanguageSwitcher.text-center
+        ToggleTheme
 </template>
 
 <script>
@@ -91,14 +87,8 @@ export default {
         icon: "slide"
       }
     ],
-    drawer: true,
-    group: null
+    mobileDialog: false
   }),
-  watch: {
-    group() {
-      this.drawer = false;
-    }
-  },
   computed: {
     ...mapGetters(["isDarkTheme"]),
     themespecificLogoSrc() {
