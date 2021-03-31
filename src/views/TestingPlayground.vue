@@ -1,8 +1,20 @@
 <template lang="pug">
 div
+    section
+      v-container
+        h2.display-2.font-weight-thin.text-center.mb-12 Card Group  
+        v-row.d-flex.flex-wrap.justify-space-between
+          v-col.col-12.col-sm-6(v-for="i in 6" :key="i")
+            v-card.mb-9
+              v-card-title Card {{ i }}
+              v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+                | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+                | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+                | voluptate elit amet.
+    
     //- Image Gallery
     v-container
-        h2.text-center Image Gallery
+        hh2.display-2.font-weight-thin.text-center.mb-12 Image Gallery
     section.d-flex.flex-wrap
       v-img(
         v-for="(image, index) in imageGallery" :key="index" 
@@ -12,7 +24,7 @@ div
     
     section
       v-container
-        h2.text-center Quotes
+        h2.display-2.font-weight-thin.text-center.mb-12 Quotes
         p Nice background image as well: https://codepen.io/johnfinkdesign/pen/gRvEGq?editors=1100
         p https://codepen.io/jupago/pen/dwZKbM
         p https://codepen.io/abdelRhman345/pen/oJOPdq

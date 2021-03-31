@@ -33,7 +33,7 @@ div
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   section.text-justify
     v-container
-      h2 {{ $t("introHeader") }}
+      h1.display-2.font-weight-thin.text-center.ma-10.text-center {{ $t("introHeader") }}
       //- friends and family
       v-row
         v-col.col-12.col-sm-6

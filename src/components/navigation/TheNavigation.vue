@@ -84,12 +84,12 @@ export default {
         tag: "Projects",
         to: { name: "Projects" },
         icon: "code-tags"
-      },
-      {
-        tag: "Playground",
-        to: { name: "TestingPlayground" },
-        icon: "code-tags"
       }
+      // {
+      //   tag: "Playground",
+      //   to: { name: "TestingPlayground" },
+      //   icon: "code-tags"
+      // }
     ],
     drawer: true,
     group: null

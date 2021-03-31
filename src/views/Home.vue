@@ -21,20 +21,8 @@ div
         v-row.text-center(align="center" justify="center" fill-height fluid)
           v-col(cols="12")
             ScrollHero
-
-  section#scroll
-    v-container
-      h2.display-2.font-weight-thin.text-center.mb-12 Title  
-      v-row.d-flex.flex-wrap.justify-space-between
-        v-col.col-12.col-sm-6(v-for="i in 9" :key="i")
-          v-card.mb-9
-            v-card-title Card {{ i }}
-            v-card-text Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-              | do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-              | nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-              | voluptate elit amet.
   
-  section.d-flex.flex-wrap.justify-space-between
+  section.d-flex.flex-wrap.justify-space-between#scroll
     v-img(v-for="(image, index) in associations" :key="index" 
       :src="associations[index]" max-height="10vh" width="15vw" contain)
 </template>

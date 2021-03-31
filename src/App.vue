@@ -59,7 +59,7 @@ $btnColor: var(--v-btnColor-base);
   }
   p,
   v-btn {
-    font-family: "Roboto", "PT Sans", sans-serif !important;
+    font-family: "PT Sans", "Roboto", sans-serif !important;
   }
 }
 // 1.2 Link animation
