@@ -33,8 +33,6 @@ div
             transition="scale-transition"
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
-      v-spacer
-      ToggleTheme
     v-navigation-drawer(v-model="drawer" absolute temporary)
       v-list(nav dense)
         v-list-item-group.mt-6(v-model="group")
@@ -54,7 +52,9 @@ div
             v-list-item-title 
               v-icon(color="primary") mdi-{{ view.icon }}
               | {{ view.tag }}
-          LanguageSwitcher.text-center
+          div.d-flex.flex-wrap.justify-space-around.mt-10
+            LanguageSwitcher.text-center
+            ToggleTheme
 </template>
 
 <script>
@@ -84,12 +84,12 @@ export default {
         tag: "Projects",
         to: { name: "Projects" },
         icon: "code-tags"
+      },
+      {
+        tag: "Playground",
+        to: { name: "TestingPlayground" },
+        icon: "slide"
       }
-      // {
-      //   tag: "Playground",
-      //   to: { name: "TestingPlayground" },
-      //   icon: "code-tags"
-      // }
     ],
     drawer: true,
     group: null
