@@ -36,6 +36,13 @@ $btnColor: var(--v-btnColor-base);
 // $text: var(--v-text-base);
 
 // 1. General Style
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
 // 1.1 Word break
 #app {
   -webkit-font-smoothing: antialiased;

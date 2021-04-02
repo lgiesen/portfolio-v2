@@ -15,15 +15,16 @@ div
                 v-col
                   v-card-title.justify-center {{ item.title }} 
                   v-card-subtitle.text-center @
-                    a(:href="item.link" target="_blank"
-                      ) {{ item.institution }}, {{ item.location }}
-                  v-card-text.mt-7 {{ item.description }}
+                    AnimatedLink(:href="item.link" :linkText="item.institution + ', ' + item.location" target="_blank")
+                  v-card-text.mt-7.text-justify {{ item.description }}
 </template>
 
 <script>
+import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
 export default {
   name: "CardGroup",
-  props: ["sectionTitle", "iterableObject"]
+  props: ["sectionTitle", "iterableObject"],
+  components: { AnimatedLink }
 };
 </script>
 

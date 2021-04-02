@@ -74,15 +74,17 @@ export default {
     employment: [
       {
         title: "Student Assistant",
-        institution:
-          "Chair of Information Systems (European Research Center for Information Systems)",
+        institution: "WWU/ERCIS",
         link: "https://www.ercis.org/",
         imageSrc: require("@/assets/workExperience/ERCIS.png"),
         location: "Münster",
         startDate: "2019-10",
         endDate: "today",
-        description:
-          "I enthusiastically work as a student assistant for Dr. Chasin for IT projects and research at Westphalian Wilhelms- University Münster, where I gained insights into modern technologies."
+        description: `I enthusiastically work as a student assistant for Dr. Chasin 
+        at the chair of Information Systems and Information Management
+        for IT projects and contribute to scientific research at the European Research 
+        Center for Information Systems / University of Münster, where I gained insights 
+        into modern technologies and co-create and prepare lectures.`
       },
       {
         title: "Student Consultant",
@@ -92,8 +94,10 @@ export default {
         location: "Münster",
         startDate: "2019-03",
         endDate: "today",
-        description:
-          "At move I developed great communication skills and learned how to contribute an innovative perspective to foster productive teamwork."
+        description: `At move, I developed excellent communication skills and learned 
+        how to contribute an innovative perspective to foster productive teamwork. 
+        Through intense group work in projects, my work became very goal-orientated, and 
+        I improved my time management and developed the ability of precise project planning.`
       },
       {
         title: "Online Payment Internship",
@@ -108,35 +112,41 @@ export default {
       },
       {
         title: "Assistant of Insolvency Administrator",
-        institution: "Boege Rohde Luebbehuesen",
+        institution: "BRL",
         link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
         imageSrc: require("@/assets/workExperience/BRL.png"),
         location: "Hamburg",
         startDate: "2016-06",
         endDate: "2016-07",
-        description: "Gained experience in writing insolvency reports."
+        description: `Through the assistance of insolvency administrators and writing insolvency reports at 
+        Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`
       }
     ],
     education: [
       {
-        title: "Information Systems B.Sc.",
-        institution: "Westphalian Wilhelms-University",
+        title: "Wirtschaftsinformatik /Information Systems B. Sc.",
+        institution: "WWU",
         link: "https://www.wi.uni-muenster.de/de/willkommen",
         imageSrc: require("@/assets/workExperience/WWU.png"),
         location: "Münster",
         startDate: "2018-10",
         endDate: "today",
-        description: ""
+        description: `At the University of Münster, I acquired foundational knowledge
+        about economics, information systems, and computer science. Additionally, I 
+        picked up modelling languages and various programming languages, which I 
+        improved in my free time. Moreover, my project seminar team successfully
+        implemented a complex web application, where I led the frontend team.`
       },
       {
         title: "Abitur",
-        institution: "Evangelisch Stiftischem Gymnasium",
+        institution: "ESG",
         link: "https://esg-guetersloh.de/",
         imageSrc: require("@/assets/workExperience/ESG.png"),
         location: "Gütersloh",
         startDate: "2016-06",
         endDate: "2018-06",
-        description: ""
+        description: `I completed my Abitur with a GPA of 2.1 at the Evangelisch 
+        Stiftischem Gymnasium, which is a technology-oriented secondary school.`
       }
     ],
     recommendations: [

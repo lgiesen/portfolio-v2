@@ -1,24 +1,12 @@
 <template lang="pug">
-v-container.text-center
-  section
-    h1.display-3.font-weight-thin Projects
-  section 
-    h1.display-3.font-weight-thin Playground
-    v-card.pa-10
-      v-card-title Special Link animation
-      p This is a paragraph - 
-        a.link(href='#') 
-          span(data-content='ipsum') ipsum
-        |  etc.
-      p Component:
-        AnimatedLink(href="#" linkText="Prop")
+a.link(:href="this.href" :target="this.target") 
+  span(:data-content="this.linkText") {{ linkText }}
 </template>
 
 <script>
-import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
 export default {
-  name: "Projects",
-  components: { AnimatedLink }
+  name: "AnimatedLink",
+  props: ["href", "linkText", "target"]
 };
 </script>
 
