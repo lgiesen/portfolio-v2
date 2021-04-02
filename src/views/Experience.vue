@@ -6,30 +6,21 @@ div
       src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
       v-row(align="center" justify="center")
         v-col.text-center(cols='12')
-          h1.display-3.font-weight-thin.mb-4 Experience
-          h4.subheading I love to learn and apply my knowledge!
+          h1.display-3.font-weight-thin.mb-4 {{ $t("experienceTitle") }}
+          h4.subheading {{ $t("experitenceSubtitle") }}
       ScrollHero
   
   //- Introduction
   section#scroll
     v-container
-      h1.display-2.font-weight-thin.text-center.ma-10 About
+      //- h1.display-2.font-weight-thin.text-center.ma-10 {{ $t("experienceTitle") }}
       v-row(align="center")
         v-col.col-12.col-sm-6
-          p Leo has a huge passion for computer science and economics, which is why he 
-            | studies Information Systems and ambitiously works on personal projects 
-            | in his free time like his website.
-          p In order to put his insights into practice Leo started working at move e. V. 
-            | and at the chair of Information Systems at WWU, which fostered his 
-            | analytical and conceptional abilities.
-          p In his projects at move he developed a strength in communication and teamwork 
-            | through intense group work. From those projects and his course of study, 
-            | Leo acquired the skill of goal orientated work, great time management and 
-            | precise project planning.
+          p {{ $t("introExperience") }}
           div.text-center.mt-10
             v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
               v-icon mdi-download
-              | Download CV
+              | {{ $t("downloadCV") }}
         v-col.col-12.col-sm-6
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
@@ -199,6 +190,36 @@ voluptate elit amet.`
       // on medium sized viewports float
       if (index % 2 == 1) return "float-md-left";
       else return "float-md-right";
+    }
+  },
+  i18n: {
+    messages: {
+      en: {
+        experienceTitle: "Experience",
+        experitenceSubtitle: "I love to learn and apply my knowledge!",
+        introExperience: `Fascinating – That is how I perceive various computer 
+        science technologies. Thus, this passion drives me to study Information 
+        Systems at the WWU and to constantly improve my IT-skillset. To understand 
+        the application of the acquired theoretical knowledge from my studies, I 
+        put them into practice in real-life projects at the student consultancy move. 
+        Furthermore, I work on personal projects in my free time and work at the 
+        Information Systems’ chair, which fosters my analytical and conceptional abilities.`,
+        downloadCV: "CV / course of life"
+      },
+      de: {
+        experienceTitle: "Erfahrung",
+        experitenceSubtitle:
+          "Ich liebe es, zu lernen und mein Wissen anzuwenden!",
+        introExperience: `Faszinierend - so empfinde ich verschiedene Technologien der Informatik. 
+        Diese Leidenschaft treibt mich an, Wirtschaftsinformatik an der WWU zu studieren und 
+        meine IT-Fähigkeiten ständig zu verbessern. Um die Anwendung der erworbenen 
+        theoretischen Kenntnisse aus dem Studium noch tiefgehender zu verstehen, setze ich 
+        diese in realen Projekten bei der studentischen Unternehmensberatung move um. 
+        Darüber hinaus arbeite ich in meiner Freizeit an eignen Projekten und arbeite am 
+        Lehrstuhl für Wirtschaftsinformatik, was meine analytischen und konzeptionellen 
+        Fähigkeiten fördert.`,
+        downloadCV: "Lebenslauf"
+      }
     }
   }
 };
