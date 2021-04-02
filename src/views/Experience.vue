@@ -10,11 +10,12 @@ div
           h4.subheading I love to learn and apply my knowledge!
       ScrollHero
   
+  //- Introduction
   section#scroll
     v-container
-      h1.display-2.font-weight-thin.text-center.ma-10 Experience
+      h1.display-2.font-weight-thin.text-center.ma-10 About
       v-row(align="center")
-        v-col(cols="6")
+        v-col.col-12.col-sm-6
           p Leo has a huge passion for computer science and economics, which is why he 
             | studies Information Systems and ambitiously works on personal projects 
             | in his free time like his website.
@@ -26,10 +27,10 @@ div
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
           div.text-center.mt-10
-            v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
+            v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
               v-icon mdi-download
               | Download CV
-        v-col(cols="6")
+        v-col.col-12.col-sm-6
           v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
   
   ParallaxDivider(sectionTitle="Work Experience and Education" 

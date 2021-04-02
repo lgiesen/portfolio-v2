@@ -9,29 +9,9 @@ div
           h1.display-3.font-weight-thin.mb-4 About Leo
           h4.subheading I love to learn and apply my knowledge!
       ScrollHero
-  //- Introduction
-  section#scroll
-    v-container
-      h1.display-2.font-weight-thin.text-center.ma-10 About
-      v-row(align="center")
-        v-col.col-12.col-sm-6
-          p Leo has a huge passion for computer science and economics, which is why he 
-            | studies Information Systems and ambitiously works on personal projects 
-            | in his free time like his website.
-          p In order to put his insights into practice Leo started working at move e. V. 
-            | and at the chair of Information Systems at WWU, which fostered his 
-            | analytical and conceptional abilities.
-          p In his projects at move he developed a strength in communication and teamwork 
-            | through intense group work. From those projects and his course of study, 
-            | Leo acquired the skill of goal orientated work, great time management and 
-            | precise project planning.
-          div.text-center.mt-10
-            v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
-              v-icon mdi-download
-              | Download CV
-        v-col.col-12.col-sm-6
-          v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
-  section.text-justify
+  
+  //- About me texts alternating with corresponding images
+  section.text-justify#scroll
     v-container
       h1.display-2.font-weight-thin.text-center.ma-10.text-center {{ $t("introHeader") }}
       //- friends and family
