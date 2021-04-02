@@ -26,7 +26,7 @@ div
             | Leo acquired the skill of goal orientated work, great time management and 
             | precise project planning.
           div.text-center.mt-10
-            v-btn.ma-auto.pa-6.gradient-btn(href="/LeoGiesenCV.pdf")
+            v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
               v-icon mdi-download
               | Download CV
         v-col.col-12.col-sm-6
