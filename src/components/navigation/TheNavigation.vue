@@ -14,10 +14,10 @@ div
     v-tabs(align-with-title)
       v-tab(to="/") 
         //- v-icon.mr-3 mdi-home-outline
-        | Home
+        | {{ isDE ? 'Start' : 'Home' }}
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
-        | {{ view.tag }}
+        | {{ isDE ? view.tag_de : view.tag_en }}
     LanguageSwitcher
     ToggleTheme
   
@@ -42,11 +42,11 @@ div
 
       v-tab.ma-8(@click="mobileDialog = false" to="/" )
         v-icon(color="secondary") mdi-home-outline
-        | Home
+        | {{ isDE ? 'Start' : 'Home' }}
       v-tab.ma-8(v-for="view in views" :key="view.to.name" 
         @click="mobileDialog = false" :to="view.to")
         v-icon(color="secondary") mdi-{{ view.icon }}
-        |  {{ view.tag }}
+        |  {{ isDE ? view.tag_de : view.tag_en }}
       //-     //- active-class="deep-purple--text text--accent-4")
       div.d-flex.flex-wrap.justify-space-around
         LanguageSwitcher.text-center
@@ -67,22 +67,26 @@ export default {
   data: () => ({
     views: [
       {
-        tag: "About",
+        tag_en: "About",
+        tag_de: "Über Mich",
         to: { name: "About" },
         icon: "information-outline"
       },
       {
-        tag: "Experience",
+        tag_en: "Experience",
+        tag_de: "Erfahrung",
         to: { name: "Experience" },
         icon: "briefcase-outline"
       },
       {
-        tag: "Projects",
+        tag_en: "Projects",
+        tag_de: "Projekte",
         to: { name: "Projects" },
         icon: "code-tags"
       },
       {
-        tag: "Playground",
+        tag_en: "Playground",
+        tag_de: "Spielplatz",
         to: { name: "TestingPlayground" },
         icon: "slide"
       }
@@ -90,7 +94,7 @@ export default {
     mobileDialog: false
   }),
   computed: {
-    ...mapGetters(["isDarkTheme"]),
+    ...mapGetters(["isDarkTheme", "isDE"]),
     themespecificLogoSrc() {
       if (this.isDarkTheme) return require("@/assets/logo/dark/logo.svg");
       else return require("@/assets/logo/light/logo.svg");

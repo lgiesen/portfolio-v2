@@ -7,7 +7,7 @@ div
         :key="link.link"
         color="white"
         @click='goTo(link.link)'
-        text) {{ link.title }}
+        text) {{ isDE ? link.title_de : link.title_en }}
       v-col.lighten-2.py-4.text-center.white--text(
         cols="12")
         v-btn.mx-4.secondary--text(
@@ -28,15 +28,18 @@ export default {
   data: () => ({
     links: [
       {
-        title: "Contact",
+        title_en: "Contact",
+        title_de: "Kontakt",
         link: "contact"
       },
       {
-        title: "Imprint",
+        title_en: "Imprint",
+        title_de: "Impressum",
         link: "imprint"
       },
       {
-        title: "Privacy Policy",
+        title_en: "Privacy Policy",
+        title_de: "Datenschutz",
         link: "privacy-policy"
       }
     ],
@@ -68,7 +71,7 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters(["isDarkTheme"])
+    ...mapGetters(["isDarkTheme", "isDE"])
   },
   methods: {
     goTo(link) {
