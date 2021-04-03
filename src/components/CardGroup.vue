@@ -16,15 +16,20 @@ div
                   v-card-title.justify-center {{ item.title }} 
                   v-card-subtitle.text-center @
                     AnimatedLink(:href="item.link" :linkText="item.institution + ', ' + item.location" target="_blank")
-                  v-card-text.mt-7.text-justify {{ item.description }}
+                  v-card-text.mt-7.text-justify {{ isDE ? item.description_de : item.description_en }}
 </template>
 
 <script>
 import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
+import { mapGetters } from "vuex";
+
 export default {
   name: "CardGroup",
   props: ["sectionTitle", "iterableObject"],
-  components: { AnimatedLink }
+  components: { AnimatedLink },
+  computed: {
+    ...mapGetters(["isDE"])
+  }
 };
 </script>
 

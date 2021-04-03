@@ -13,7 +13,7 @@
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
-
+// import { mapState, mapGetters, mapActions } from "vuex";
 export default {
   name: "App",
   components: {
@@ -21,7 +21,30 @@ export default {
     TheFooter,
     ScrollToTop
   },
-  data: () => ({})
+  data: () => ({}),
+  methods: {
+    // ...mapActions([
+    //   "increment", // map `this.increment()` to `this.$store.dispatch('increment')`
+    //   "incrementBy" // map `this.incrementBy(amount)` to `this.$store.dispatch('incrementBy', amount)`
+    // ]),
+    // ...mapActions({
+    //   add: "increment" // map `this.add()` to `this.$store.dispatch('increment')`
+    // })
+  },
+  computed: {
+    // ...mapGetters(["getterName"])
+    // state() {
+    //   return this.$store.state.varName;
+    // }
+    // or
+    // ...mapState({
+    //   varNameLocal: state => state.varName,
+    //   varNameAlias: "varName", // = state => state.count
+    //   stateComputed(state) {
+    //     return state.varName + this.localVar;
+    //   }
+    // })
+  }
 };
 </script>
 <style lang="scss">
