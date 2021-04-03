@@ -31,9 +31,9 @@ div
   
   v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
     //- CV: work experience
-    CardGroup(sectionTitle="Work Experience" :iterableObject="employment")
+    CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
     //- Education
-    CardGroup(sectionTitle="Education" :iterableObject="education")
+    CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
 
   section
     v-container 
@@ -253,6 +253,8 @@ export default {
           title: "Work Experience and Education",
           subtitle: `I have gained a large variety of work experience and in-depth knowledge`
         },
+        workExperience: "Work Experience",
+        education: "Education",
         recommendationsTitle: "Recommendations"
       },
       de: {
@@ -275,6 +277,8 @@ export default {
           title: "Berufserfahrung und Bildung",
           subtitle: `Ich habe eine Vielzahl von Arbeitserfahrungen und fundierten Kenntnissen gesammelt`
         },
+        workExperience: "Berufserfahrung",
+        education: "Bildung",
         recommendationsTitle: "Empfehlungen"
       }
     }
