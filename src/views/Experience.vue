@@ -18,6 +18,7 @@ div
         v-col.col-12.col-sm-6
           p {{ $t("introExperience") }}
           div.text-center.mt-10
+            //- this.$i18n.locale represents the active language: element of {'de', 'en'}
             v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
               v-icon mdi-download
               | {{ $t("downloadCV") }}
@@ -38,13 +39,14 @@ div
     v-container 
       h1.display-2.font-weight-thin.mb-12.text-center Recommendations
       v-carousel
-        v-carousel-item(v-for="(recommendation, index) in recommendations" :key="index" :src="recommendation.src" 
+        v-carousel-item(v-for="(recommendation, index) in recommendations" 
+          :key="index" :src="recommendation.src" 
           reverse-transition="fade-transition" transition="fade-transition")
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
               h1.mb-5.display-1 {{ recommendation.title }}
               h3.ma-5.overline {{ recommendation.location }}
-              p.mt-10.font-italic.text-start.text-justify "{{ recommendation.description }}"
+              p.mt-10.font-italic.text-start.text-justify "{{ recommendation.description_de }}"
 
 </template>
 
@@ -71,11 +73,12 @@ export default {
         location: "Münster",
         startDate: "2019-10",
         endDate: "today",
-        description: `I enthusiastically work as a student assistant for Dr. Chasin 
+        description_de: `I enthusiastically work as a student assistant for Dr. Chasin 
         at the chair of Information Systems and Information Management
         for IT projects and contribute to scientific research at the European Research 
         Center for Information Systems / University of Münster, where I gained insights 
-        into modern technologies and co-create and prepare lectures.`
+        into modern technologies and co-create and prepare lectures.`,
+        description_en: ``
       },
       {
         title: "Student Consultant",
@@ -85,10 +88,11 @@ export default {
         location: "Münster",
         startDate: "2019-03",
         endDate: "today",
-        description: `At move, I developed excellent communication skills and learned 
+        description_de: `At move, I developed excellent communication skills and learned 
         how to contribute an innovative perspective to foster productive teamwork. 
         Through intense group work in projects, my work became very goal-orientated, and 
-        I improved my time management and developed the ability of precise project planning.`
+        I improved my time management and developed the ability of precise project planning.`,
+        description_en: ``
       },
       {
         title: "Online Payment Internship",
@@ -98,8 +102,9 @@ export default {
         location: "Gütersloh",
         startDate: "2018-04",
         endDate: "2018-05",
-        description:
-          "Data Process Management for Customers: Customer support on how to get started with the online payment process"
+        description_de: `Data Process Management for Customers: Customer support on how to 
+        get started with the online payment process`,
+        description_en: ``
       },
       {
         title: "Assistant of Insolvency Administrator",
@@ -109,8 +114,9 @@ export default {
         location: "Hamburg",
         startDate: "2016-06",
         endDate: "2016-07",
-        description: `Through the assistance of insolvency administrators and writing insolvency reports at 
-        Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`
+        description_de: `Through the assistance of insolvency administrators and writing insolvency reports at 
+        Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`,
+        description_en: ``
       }
     ],
     education: [
@@ -122,11 +128,12 @@ export default {
         location: "Münster",
         startDate: "2018-10",
         endDate: "today",
-        description: `At the University of Münster, I acquired foundational knowledge
+        description_de: `At the University of Münster, I acquired foundational knowledge
         about economics, information systems, and computer science. Additionally, I 
         picked up modelling languages and various programming languages, which I 
         improved in my free time. Moreover, my project seminar team successfully
-        implemented a complex web application, where I led the frontend team.`
+        implemented a complex web application, where I led the frontend team.`,
+        description_en: ``
       },
       {
         title: "Abitur",
@@ -136,8 +143,9 @@ export default {
         location: "Gütersloh",
         startDate: "2016-06",
         endDate: "2018-06",
-        description: `I completed my Abitur with a GPA of 2.1 at the Evangelisch 
-        Stiftischem Gymnasium, which is a technology-oriented secondary school.`
+        description_de: `I completed my Abitur with a GPA of 2.1 at the Evangelisch 
+        Stiftischem Gymnasium, which is a technology-oriented secondary school.`,
+        description_en: ``
       }
     ],
     recommendations: [
@@ -145,40 +153,44 @@ export default {
         title: "Prof. Dr. Friedrich Chasin",
         location: "Münster",
         src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-        description: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-voluptate elit amet.`
+        description_de: `1 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+        do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+        nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+        voluptate elit amet.`,
+        description_en: ``
       },
       {
         title: "Jason Haak - IT Ressortleiter und Vorstand bei move e. V.",
         location: "Münster",
         src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        description: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-voluptate elit amet.`
+        description_de: `2 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+        do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+        nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+        voluptate elit amet.`,
+        description_en: ``
       },
       {
         title: "Thespina Coombe - Teacher at Cambridge International School",
         location: "Cambridge (UK)",
         src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        description: `Leo has an exceptionally polite and mature manner. He is enthusiastic and 
+        description_de: `Leo has an exceptionally polite and mature manner. He is enthusiastic and 
         a pleasure to teach. He has shown an interest and aptitude in all the subjects he has 
         studied, including Chemistry, Maths and History. He has contributed to many interesting 
         discussions in English Literature lessons where Leo has had no reservations in joining 
         in confidently. He is an asset to any classroom to inspire and challenge other students; 
         he is a positive influence. All the subject teachers speak highly of Leo because he is 
-        curious and always focused in class.`
+        curious and always focused in class.`,
+        description_en: ``
       },
       {
         title: "Lehrer Recommendation",
         location: "Gütersloh",
         src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        description: `4 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
-do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
-nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
-voluptate elit amet.`
+        description_de: `4 Magna do deserunt Lorem nulla deserunt. Deserunt mollit minim excepteur 
+        do consequat eiusmod adipisicing. Fugiat qui adipisicing est occaecat consequat 
+        nisi est. Laboris ipsum irure enim nulla aute culpa. Voluptate consequat do 
+        voluptate elit amet.`,
+        description_en: ``
       }
     ]
   }),
