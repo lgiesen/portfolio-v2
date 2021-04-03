@@ -67,7 +67,8 @@ export default {
   data: () => ({
     employment: [
       {
-        title: "Student Assistant",
+        title_en: "Student Assistant",
+        title_de: "StudentischeHilfskraft",
         institution: "WWU/ERCIS",
         link: "https://www.ercis.org/",
         imageSrc: require("@/assets/workExperience/ERCIS.png"),
@@ -85,7 +86,8 @@ export default {
         moderne Technologien gewinnen und Vorlesungen mitgestalten und vorbereiten konnte.`
       },
       {
-        title: "Student Consultant",
+        title_en: "Student Consultant",
+        title_de: "Studentischer Berater",
         institution: "move e. V.",
         link: "https://move-ev.de/",
         imageSrc: require("@/assets/workExperience/move.png"),
@@ -102,7 +104,8 @@ export default {
         zu zielorientiertem Arbeiten, überzeugendem Zeitmanagement und präziser Projektplanung.`
       },
       {
-        title: "Online Payment Internship",
+        title_en: "Online Payment Internship",
+        title_de: "Online Payment Praktikum",
         institution: "SEPAone",
         link: "https://www.sepaone.com/",
         imageSrc: require("@/assets/workExperience/SEPAone.png"),
@@ -115,7 +118,8 @@ export default {
         Einstieg in den Online-Zahlungsprozess`
       },
       {
-        title: "Assistant of Insolvency Administrator",
+        title_en: "Assistant of Insolvency Administrator",
+        title_de: "Praktikum in der Insolvenzverwaltung",
         institution: "BRL",
         link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
         imageSrc: require("@/assets/workExperience/BRL.png"),
@@ -130,7 +134,8 @@ export default {
     ],
     education: [
       {
-        title: "Wirtschaftsinformatik /Information Systems B. Sc.",
+        title_en: "Information Systems B. Sc.",
+        title_de: "Wirtschaftsinformatik B. Sc.",
         institution: "WWU",
         link: "https://www.wi.uni-muenster.de/de/willkommen",
         imageSrc: require("@/assets/workExperience/WWU.png"),
@@ -148,7 +153,8 @@ export default {
         Projektseminar Frontend-Team, in dem eine komplexe Webanwendung erfolgreich implementiert wurde.`
       },
       {
-        title: "Abitur",
+        title_en: "Abitur (= A-levels)",
+        title_de: "Abitur",
         institution: "ESG",
         link: "https://esg-guetersloh.de/",
         imageSrc: require("@/assets/workExperience/ESG.png"),
