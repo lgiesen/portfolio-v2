@@ -11,13 +11,13 @@ div
       v-container(slot="overlay-content")
         v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
           v-col.white--text(cols="12")
-            h1.display-2.mb-4.font-weight-thin - Portfolio of Leo Giesen -
-            h1.subtitle-1 Passionate about Business and Computer Science
+            h1.display-2.mb-4.font-weight-thin {{ $t("homeHero.title") }}
+            h1.subtitle-1 {{ $t("homeHero.subtitle") }}
             div.mt-10
               v-btn.pa-6.gradient-btn.ma-10(
-                @click="$router.push('/about')") For Businesses
+                @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
               v-btn.pa-6(outlined color="secondary"
-                @click="$router.push('/playground')") Other Visitors
+                @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
         v-row.text-center(align="center" justify="center" fill-height fluid)
           v-col(cols="12")
             ScrollHero
@@ -53,6 +53,26 @@ export default {
       // else return require("@/assets/background/nature.jpg");
       else
         return "https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80";
+    }
+  },
+  i18n: {
+    messages: {
+      en: {
+        homeHero: {
+          title: "- Portfolio of Leo Giesen -",
+          subtitle: "Passionate about Business and Computer Science",
+          btnBussness: "For Businesses",
+          btnOtherVisistors: "Other Visitors"
+        }
+      },
+      de: {
+        homeHero: {
+          title: "- Portfolio von Leo Giesen -",
+          subtitle: "Leidenschaft für Wirtschaft und Informatik",
+          btnBussness: "Unternehmen",
+          btnOtherVisistors: "Interessenten"
+        }
+      }
     }
   }
 };

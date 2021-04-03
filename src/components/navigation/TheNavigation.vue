@@ -89,6 +89,12 @@ export default {
         tag_de: "Spielplatz",
         to: { name: "TestingPlayground" },
         icon: "slide"
+      },
+      {
+        tag_en: "Blog",
+        tag_de: "Blog",
+        to: { name: "BlogHome" },
+        icon: "slide"
       }
     ],
     mobileDialog: false

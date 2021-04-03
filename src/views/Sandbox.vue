@@ -34,7 +34,7 @@ div
 
 <script>
 export default {
-  name: "TestingPlayground",
+  name: "Sandbox",
   data: () => ({
     imageGallery: [
       {

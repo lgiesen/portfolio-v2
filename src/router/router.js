@@ -30,22 +30,25 @@ const routes = [
     name: "Projects",
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
-    // children: [
-    //   {
-    //     path: "user-dashboard",
-    //     name: "UserDashboard",
-    //     component: () =>
-    //     import("@/views/user/Dashboard.vue"),
-    //   },
-    // ]
   },
   {
-    path: "/testing-playground",
-    name: "TestingPlayground",
+    path: "/blog",
+    name: "BlogHome",
     component: () =>
-      import(
-        /* webpackChunkName: "testingPlayground" */ "../views/TestingPlayground.vue"
-      )
+      import(/* webpackChunkName: "blogHome" */ "../views/blog/BlogHome.vue"),
+    children: [
+      {
+        path: "testpost",
+        name: "TestPost",
+        component: () => import("@/views/blog/posts/TestPost.vue")
+      }
+    ]
+  },
+  {
+    path: "/sandbox",
+    name: "Sandbox",
+    component: () =>
+      import(/* webpackChunkName: "sandbox" */ "../views/Sandbox.vue")
   },
   {
     path: "/contact",
