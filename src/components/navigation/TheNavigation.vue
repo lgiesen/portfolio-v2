@@ -14,7 +14,7 @@ div
     v-tabs(align-with-title)
       v-tab(to="/") 
         //- v-icon.mr-3 mdi-home-outline
-        | {{ isDE ? 'Start' : 'Home' }}
+        | {{ isDE ? "Start" : "Home" }}
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ isDE ? view.tag_de : view.tag_en }}
@@ -42,7 +42,7 @@ div
 
       v-tab.ma-8(@click="mobileDialog = false" to="/" )
         v-icon(color="secondary") mdi-home-outline
-        | {{ isDE ? 'Start' : 'Home' }}
+        | {{ isDE ? "Start" : "Home" }}
       v-tab.ma-8(v-for="view in views" :key="view.to.name" 
         @click="mobileDialog = false" :to="view.to")
         v-icon(color="secondary") mdi-{{ view.icon }}

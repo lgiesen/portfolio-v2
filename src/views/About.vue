@@ -44,13 +44,18 @@ div
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
   v-container.grey--text
-    h2.mb-5 Citation
-    p Christopher McCandless Quotes. (n.d.). BrainyQuote.com. Retrieved March 31, 2021, from BrainyQuote.com Web site: https://www.brainyquote.com/quotes/christopher_mccandless_473529    
+    h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
+    p McCandless, C. (n.d.). The joy of life comes from our 
+      | encounters with new experiences, and hence there is no greater joy 
+      | than to have an endlessly changing horizon, for each day to have a 
+      | new and different sun. Retrieved April 3, 2021, from 
+      a(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
 </template>
 
 <script>
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import Quote from "@/components/Quote.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "About",
@@ -63,10 +68,15 @@ export default {
       {
         quoteText:
           "The joy of life comes from our encounters with new experiences, and hence there is no greater joy than to have an endlessly changing horizon, for each day to have a new and different sun.",
-        quoteAuthor: "Christopher McCandless"
+        quoteAuthor: "Christopher McCandless",
+        quoteLink:
+          "https://www.brainyquote.com/quotes/christopher_mccandless_473529"
       }
     ]
   }),
+  computed: {
+    ...mapGetters(["isDE"])
+  },
   i18n: {
     messages: {
       de: {
