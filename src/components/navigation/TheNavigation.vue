@@ -85,9 +85,9 @@ export default {
         icon: "code-tags"
       },
       {
-        tag_en: "Playground",
+        tag_en: "Sandbox",
         tag_de: "Spielplatz",
-        to: { name: "TestingPlayground" },
+        to: { name: "Sandbox" },
         icon: "slide"
       },
       {
