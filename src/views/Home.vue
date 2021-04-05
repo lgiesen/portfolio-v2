@@ -21,10 +21,13 @@ div
         v-row.text-center(align="center" justify="center" fill-height fluid)
           v-col(cols="12")
             ScrollHero
-  
-  section.d-flex.flex-wrap.justify-space-between#scroll
-    v-img(v-for="(image, index) in associations" :key="index" 
-      :src="associations[index]" max-height="10vh" width="15vw" contain)
+  section#scroll
+    v-container
+      p {{ $t("homeIntro") }}
+  section
+    v-container.d-flex.flex-wrap.justify-space-between
+      v-img(v-for="(image, index) in associations" :key="index" 
+        :src="associations[index]" max-height="7vh" width="15vw" contain)
 </template>
 
 <script>

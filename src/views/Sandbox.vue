@@ -14,7 +14,7 @@ div
     
     //- Image Gallery
     v-container
-        hh2.display-2.font-weight-thin.text-center.mb-12 Image Gallery
+        h2.display-2.font-weight-thin.text-center.mb-12 Image Gallery
     section.d-flex.flex-wrap
       v-img(
         v-for="(image, index) in imageGallery" :key="index" 

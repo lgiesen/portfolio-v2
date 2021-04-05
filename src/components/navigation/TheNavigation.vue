@@ -1,20 +1,20 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-div
+v-container
   //- Tablet and desktop navigation
   v-app-bar.hidden-sm-and-down(app style="opacity: 0.9; backdrop-filter: blur(8px);")
     //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
-    div.d-flex
-      a(href="/")
+    //- div.d-flex
+        a(href="/")
+          //- Change icon depending on the theme
+    v-tabs(align-with-title)
+      v-tab(to="/") 
         v-img.shrink.mr-2(alt="Leo Giesen Logo"
           contain width="40"
           transition="scale-transition"
           :src="themespecificLogoSrc")
-          //- Change icon depending on the theme
-    v-tabs(align-with-title)
-      v-tab(to="/") 
         //- v-icon.mr-3 mdi-home-outline
-        | {{ isDE ? "Start" : "Home" }}
+        //- | {{ isDE ? "Start" : "Home" }}
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ isDE ? view.tag_de : view.tag_en }}
@@ -48,8 +48,8 @@ div
         v-icon(color="secondary") mdi-{{ view.icon }}
         |  {{ isDE ? view.tag_de : view.tag_en }}
       //-     //- active-class="deep-purple--text text--accent-4")
-      div.d-flex.flex-wrap.justify-space-around
-        LanguageSwitcher.text-center
+      div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
+        LanguageSwitcher
         ToggleTheme
 </template>
 
