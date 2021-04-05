@@ -63,7 +63,15 @@ export default {
           subtitle: "Passionate about Business and Computer Science",
           btnBussness: "For Businesses",
           btnOtherVisistors: "Other Visitors"
-        }
+        },
+        homeIntro: `Fascinating – That is how I perceive various computer science 
+        technologies. Thus, this passion drives me to study Information Systems at 
+        the WWU and to constantly improve my IT-skillset. To understand the 
+        application of the acquired theoretical knowledge from my studies, I put 
+        them into practice in real-life projects at the student consultancy move. 
+        Furthermore, I work on personal projects in my free time and work at the 
+        Information Systems’ chair, which fosters my analytical and conceptual 
+        abilities.`
       },
       de: {
         homeHero: {
@@ -71,7 +79,16 @@ export default {
           subtitle: "Leidenschaft für Wirtschaft und Informatik",
           btnBussness: "Unternehmen",
           btnOtherVisistors: "Interessenten"
-        }
+        },
+        homeIntro: `Faszinierend - so empfinde ich verschiedene Technologien der 
+        Informatik. Diese Leidenschaft treibt mich an, Wirtschaftsinformatik an der 
+        WWU zu studieren und meine IT-Fähigkeiten ständig zu verbessern. Um die 
+        Anwendung der erworbenen theoretischen Kenntnisse aus dem Studium noch 
+        tiefgehender zu verstehen, setze ich diese in realen Projekten bei der 
+        studentischen Unternehmensberatung move um. Darüber hinaus arbeite ich in 
+        meiner Freizeit an eignen Projekten und arbeite am Lehrstuhl für 
+        Wirtschaftsinformatik, was meine analytischen und konzeptionellen 
+        Fähigkeiten fördert.`
       }
     }
   }
