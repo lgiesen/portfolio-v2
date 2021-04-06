@@ -101,7 +101,20 @@ a:not(a.v-tab, .v-btn) {
     text-decoration: underline !important;
   }
 }
-
+// 1.3 center items
+.center-items {
+  display: grid;
+  place-items: center;
+}
+// 1.4 box layout to prevent unintended upsizing on bigger viewports
+section:not(.fullwidth) {
+  // center items becasue size is reduced
+  display: grid;
+  place-items: center;
+  & > div:not(.v-parallax, .vue-video-section-wrapper) {
+    max-width: 1280px;
+  }
+}
 // 2. Sections
 // 2.1 Space between sections
 section {

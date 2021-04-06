@@ -11,7 +11,7 @@ div
       ScrollHero
   
   //- About me texts alternating with corresponding images
-  section.text-justify#scroll
+  section#scroll.text-justify
     v-container
       h1.display-2.font-weight-thin.text-center.ma-10.text-center {{ $t("introHeader") }}
       //- friends and family
@@ -43,13 +43,14 @@ div
           Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
         v-col.col-12.col-sm-6
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
-  v-container.grey--text
-    h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
-    p McCandless, C. (n.d.). The joy of life comes from our 
-      | encounters with new experiences, and hence there is no greater joy 
-      | than to have an endlessly changing horizon, for each day to have a 
-      | new and different sun. Retrieved April 3, 2021, from 
-      a(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
+  section
+    v-container.grey--text
+      h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
+      p McCandless, C. (n.d.). The joy of life comes from our 
+        | encounters with new experiences, and hence there is no greater joy 
+        | than to have an endlessly changing horizon, for each day to have a 
+        | new and different sun. Retrieved April 3, 2021, from 
+        a(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
 </template>
 
 <script>

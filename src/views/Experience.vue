@@ -16,24 +16,26 @@ div
       //- h1.display-2.font-weight-thin.text-center.ma-10 {{ $t("experienceHero.title") }}
       v-row(align="center")
         v-col.col-12.col-sm-6
-          p {{ $t("experienceIntro.introduction") }}
+          p.text-justify {{ $t("experienceIntro.introduction") }}
           div.text-center.mt-10
             //- this.$i18n.locale represents the active language: element of {'de', 'en'}
             v-btn.ma-auto.pa-6.gradient-btn(:href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
               v-icon mdi-download
               | {{ $t("experienceIntro.downloadCV") }}
-        v-col.col-12.col-sm-6
-          v-img(src="@/assets/profile/Leo Giesen Profile square.jpg")
+        v-col.col-12.col-sm-6.center-items
+          v-img(src="@/assets/profile/Leo Giesen Profile square.jpg" 
+            max-height="400px" max-width="400px")
   
   ParallaxDivider(:sectionTitle="$t('experienceParallax.title')" 
     :sectionSubtitle="$t('experienceParallax.subtitle')"
     imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
   
   v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
-    //- CV: work experience
-    CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
-    //- Education
-    CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
+    section
+      //- CV: work experience
+      CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
+      //- Education
+      CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
 
   section
     v-container 
@@ -44,10 +46,11 @@ div
           reverse-transition="fade-transition" transition="fade-transition")
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
-              h1.mb-5.display-1 {{ recommendation.title }}
-              h3.ma-5.overline {{ recommendation.location }}
-              p.mt-10.font-italic.text-start.text-justify 
-                | "{{ isDE ? recommendation.description_de : recommendation.description_en }}"
+              v-container.pa-12
+                h1.mb-5.display-1 {{ recommendation.title }}
+                h3.ma-5.overline {{ recommendation.location }}
+                p.mt-10.font-italic.text-justify 
+                  | "{{ isDE ? recommendation.description_de : recommendation.description_en }}"
 
 </template>
 
