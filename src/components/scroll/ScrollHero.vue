@@ -1,9 +1,9 @@
 <template lang="pug">
-  div.text-center.mb-6
-    v-btn#heroScrollBtn(
-      @click="scrollHero"
-      fab text outlined color="white") 
-      v-icon mdi-chevron-down
+div.text-center.mb-6
+  v-btn#heroScrollBtn(
+    @click="scrollHero"
+    fab text outlined color="white") 
+    v-icon mdi-chevron-down
 </template>
 
 <script>
@@ -20,5 +20,6 @@ export default {
 <style lang="scss">
 #heroScrollBtn {
   border-color: white;
+  margin-top: -200px;
 }
 </style>

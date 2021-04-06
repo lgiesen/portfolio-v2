@@ -14,9 +14,7 @@ div
             h1.display-2.mb-4.font-weight-thin {{ $t("blogHero.title") }}
             h1.subtitle-1 {{ $t("blogHero.subtitle") }}
             
-        v-row.text-center(align="center" justify="center" fill-height fluid)
-          v-col(cols="12")
-            ScrollHero
+    ScrollHero
   
   section.d-flex.flex-wrap.justify-space-between#scroll
     v-container

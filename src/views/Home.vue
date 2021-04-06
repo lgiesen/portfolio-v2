@@ -9,25 +9,24 @@ div
       :mp4Source="require('../assets/background/video/coast.mp4')"
       :posterSource="require('../assets/background/nature.jpg')")
       v-container(slot="overlay-content")
-        v-row.text-center.pa-12(align="center" justify="center" fill-height fluid)
+        v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
           v-col.white--text(cols="12")
-            h1.display-2.mb-4.font-weight-thin {{ $t("homeHero.title") }}
+            h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
             h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-            div.mt-10
-              v-btn.pa-6.gradient-btn.ma-10(
-                @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
-              v-btn.pa-6(outlined color="secondary"
-                @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-        v-row.text-center(align="center" justify="center" fill-height fluid)
-          v-col(cols="12")
-            ScrollHero
+            v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
+              @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
+            v-btn.pa-6(outlined color="secondary"
+              @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
+        //- v-row.text-center.align-center.justify-center(fill-height fluid)
+        //-   v-col(cols="12")
+    ScrollHero
   section#scroll
     v-container
       p {{ $t("homeIntro") }}
   section
     v-container.d-flex.flex-wrap.justify-space-between
       v-img(v-for="(image, index) in associations" :key="index" 
-        :src="associations[index]" max-height="7vh" width="15vw" contain)
+        :src="associations[index]" max-height="7vh" max-width="13vw" contain)
 </template>
 
 <script>

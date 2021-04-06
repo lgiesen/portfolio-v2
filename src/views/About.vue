@@ -8,7 +8,7 @@ div
         v-col.text-center(cols="12")
           h1.display-3.font-weight-thin.mb-4 About Leo
           h4.subheading I love to learn and apply my knowledge!
-      ScrollHero
+    ScrollHero
   
   //- About me texts alternating with corresponding images
   section#scroll.text-justify
