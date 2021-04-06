@@ -57,7 +57,6 @@ $secondaryLight: var(--v-secondaryLight-base);
 $secondaryDark: var(--v-secondaryDark-base);
 $btnColor: var(--v-btnColor-base);
 // $text: var(--v-text-base);
-
 // 1. General Style
 * {
   box-sizing: border-box;

@@ -1,9 +1,23 @@
 ﻿<svg xmlns='http://www.w3.org/2000/svg' width='100%'>
     <defs>
+        <style>
+            :root {
+                --primaryLight: #6f74dd;
+                --primaryDark: #00227b;
+            }
+
+            .gradient-footer-start {
+                stop-color: var(--primaryLight);
+            }
+
+            .gradient-footer-end {
+                stop-color: var(--primaryDark);
+            }
+        </style>
         <linearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%'
             gradientTransform='rotate(240)'>
-            <stop offset='0' stop-color='#3949ab' />
-            <stop offset='1' stop-color='#00227b' />
+            <stop offset='0' class='gradient-footer-start' />
+            <stop offset='1' class='gradient-footer-end' />
         </linearGradient>
         <pattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'>
             <g fill-opacity='0.1'>
