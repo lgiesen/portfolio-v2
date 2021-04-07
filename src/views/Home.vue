@@ -61,8 +61,9 @@ export default {
     messages: {
       en: {
         homeHero: {
-          title: "- Portfolio of Leo Giesen -",
-          subtitle: "Passionate about Business and Computer Science",
+          title: "Progress with Passion",
+          subtitle:
+            "Fascination for new technologies and their application in business",
           btnBussness: "For Businesses",
           btnOtherVisistors: "Other Visitors"
         },
@@ -77,8 +78,9 @@ export default {
       },
       de: {
         homeHero: {
-          title: "- Portfolio von Leo Giesen -",
-          subtitle: "Leidenschaft für Wirtschaft und Informatik",
+          title: "Fortschritt mit Leidenschaft",
+          subtitle:
+            "Faszination für neue Technologien und deren Anwendung in der Wirtschaft",
           btnBussness: "Unternehmen",
           btnOtherVisistors: "Interessenten"
         },
