@@ -71,7 +71,7 @@ export default {
     employment: [
       {
         title_en: "Student Assistant",
-        title_de: "StudentischeHilfskraft",
+        title_de: "Studentische Hilfskraft",
         institution: "WWU/ERCIS",
         link: "https://www.ercis.org/",
         imageSrc: require("@/assets/workExperience/ERCIS.png"),

@@ -7,9 +7,9 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
         v-card-title
           h2.display-1 Contact Me
         v-card-subtitle 
-          h4 I'd be happy to hear from you! You can also contact me via 
-            a(href="mailto:leo.richard.giesen@gmail.com") mail
-            | .
+          h4 I'd be happy to hear from you! You can also contact me via your 
+            AnimatedLink(href="mailto:leo.richard.giesen@gmail.com" linkText="mail application ")
+            |  of choice.
         v-card-text
           v-form#form(ref="form"
             @submit.prevent="submit")
@@ -48,12 +48,12 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
             v-divider
             v-card-actions
               v-btn(
-                color="primary"
+                color="secondary"
                 @click="clear")
                 v-icon.mr-2 mdi-close-circle-outline
                 | Clear
               v-spacer
-              v-btn(color="secondary")
+              v-btn(color="primary")
                 v-icon.mr-2 mdi-send
                 input#button(
                   type="submit"
@@ -72,6 +72,8 @@ v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
   src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
 ></script>
 <script>
+import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
+
 emailjs.init("user_75cp2FduRtFFNEXJNEWrH");
 import { validationMixin } from "vuelidate";
 import {
@@ -90,6 +92,9 @@ export default {
     email: { required, email },
     subject: { required, minLength: minLength(6), maxLength: maxLength(150) },
     message: { required, minLength: minLength(5), maxLength: maxLength(2000) }
+  },
+  components: {
+    AnimatedLink
   },
   data: () => ({
     name: "",

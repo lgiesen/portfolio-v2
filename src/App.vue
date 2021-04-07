@@ -5,21 +5,24 @@
     TheNavigation#scroll-target
     v-main
       router-view
-    ScrollToTop
+    //- ScrollToTop
+    LetsTalk
     TheFooter
 </template>
 
 <script>
 import TheNavigation from "@/components/navigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
+// import ScrollToTop from "@/components/scroll/ScrollToTop.vue";
+import LetsTalk from "@/components/LetsTalk.vue";
 // import { mapState, mapGetters, mapActions } from "vuex";
 export default {
   name: "App",
   components: {
     TheNavigation,
     TheFooter,
-    ScrollToTop
+    // ScrollToTop,
+    LetsTalk
   },
   data: () => ({}),
   methods: {
