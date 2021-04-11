@@ -1,42 +1,50 @@
 <template lang="pug">
 div
   //- Hero Area
-  section
+  //- section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
-    vue-video-section(
-      :elementId="'coast'" :desktopHeight="750" :mobileHeight="680"
-      :mp4Source="require('../assets/background/video/coast.mp4')"
-      :posterSource="require('../assets/background/nature.jpg')")
-      v-container(slot="overlay-content")
-        v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
-          v-col.white--text(cols="12")
-            h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
-            h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-            v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
-              @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
-            v-btn.pa-6(outlined color="secondary"
-              @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-        //- v-row.text-center.align-center.justify-center(fill-height fluid)
-        //-   v-col(cols="12")
+    //- vue-video-section(
+    //-   :elementId="'coast'" :desktopHeight="750" :mobileHeight="680"
+    //-   :mp4Source="require('../assets/background/video/coast.mp4')"
+    //-   :posterSource="require('../assets/background/nature.jpg')")
+  v-img(src="@/assets/background/light/background-gradient-group.svg" width="100vw")
+    v-container(slot="overlay-content")
+      v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
+        v-col.white--text(cols="12")
+          h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
+          h1.subtitle-1 {{ $t("homeHero.subtitle") }}
+          v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
+            @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
+          v-btn.pa-6(outlined color="secondary"
+            @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
+
     ScrollHero
   section#scroll
     v-container
       p {{ $t("homeIntro") }}
-  section
-    v-container.d-flex.flex-wrap.justify-space-between
-      v-img(v-for="(image, index) in associations" :key="index" 
-        :src="associations[index]" max-height="7vh" max-width="13vw" contain)
+    v-container.center-items
+      v-row.align-center
+        v-col
+          ExperienceCard(:associationsSrc="associations[0]")
+        v-col
+          ExperienceCard(:associationsSrc="associations[1]")
+          ExperienceCard(:associationsSrc="associations[2]")
+          ExperienceCard(:associationsSrc="associations[3]")
+        v-col
+          ExperienceCard(:associationsSrc="associations[4]")
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import ExperienceCard from "@/components/ExperienceCard.vue";
 
 export default {
   name: "Home",
   components: {
-    ScrollHero
+    ScrollHero,
+    ExperienceCard
   },
   data: () => ({
     associations: [
