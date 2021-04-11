@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 <template lang="pug">
-v-container
+div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
   //- Tablet and desktop navigation
-  v-app-bar.appBar.hidden-sm-and-down(app style="opacity: 0.9; backdrop-filter: blur(8px);")
+  v-app-bar.appBar.hidden-sm-and-down(outlined elevation="0" 
+    :class="!this.dontShowAtTop ? 'transparent-background' : ''")
     //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
     //- div.d-flex
         a(href="/")
@@ -19,11 +20,11 @@ v-container
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ isDE ? view.tag_de : view.tag_en }}
     LanguageSwitcher
-    ToggleTheme
+    ToggleTheme.mr-5
   
   //- Mobile navigation
   div.hidden-md-and-up
-    v-app-bar.appBar(app)
+    v-app-bar.appBar(outlined elevation="0")
       v-app-bar-nav-icon(@click.stop="mobileDialog = !mobileDialog")
       v-spacer
       div.d-flex
@@ -96,8 +97,16 @@ export default {
         icon: "slide"
       }
     ],
-    mobileDialog: false
+    mobileDialog: false,
+    dontShowAtTop: false
   }),
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.dontShowAtTop = top > 700;
+    }
+  },
   computed: {
     ...mapGetters(["isDarkTheme", "isDE"]),
     themespecificLogoSrc() {
@@ -111,7 +120,11 @@ export default {
 <style scoped lang="scss">
 .appBar {
   opacity: 0.7;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
+}
+.transparent-background {
+  background-color: rgba($color: #000000, $alpha: 0) !important;
+  border-color: rgba(255, 255, 255, 0) !important;
 }
 // Navigation Font
 // Tablet/desktop (a.v-tab); Mobile (div.v-list-item__title)

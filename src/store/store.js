@@ -8,8 +8,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    showContactDialog: false,
-    isMobile: false
+    showContactDialog: false
   },
   mutations: {
     ToggleShowContactDialog(state) {
