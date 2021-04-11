@@ -25,6 +25,15 @@ export default {
     LetsTalk
   },
   data: () => ({}),
+  beforeDestroy() {
+    if (typeof window === "undefined") return;
+    window.removeEventListener("resize", this.onResize, { passive: true });
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
+
   methods: {
     // ...mapActions([
     //   "increment", // map `this.increment()` to `this.$store.dispatch('increment')`
@@ -33,6 +42,9 @@ export default {
     // ...mapActions({
     //   add: "increment" // map `this.add()` to `this.$store.dispatch('increment')`
     // })
+    onResize() {
+      this.$store.state.isMobile = window.innerWidth < 600;
+    }
   },
   computed: {
     // ...mapGetters(["getterName"])
@@ -138,9 +150,9 @@ section {
   // box-shadow: 0 0 20px #eee;
   background-image: linear-gradient(
     to right,
-    $primaryLight 0%,
-    $primaryDark 51%,
-    $primaryLight 100%
+    $secondary 0%,
+    $primary 51%,
+    $secondary 100%
   );
   &:hover {
     // change the direction of the change here

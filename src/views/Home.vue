@@ -10,17 +10,24 @@ div
     //-   :posterSource="require('../assets/background/nature.jpg')")
     //- v-container(slot="overlay-content")
   section.fullwidth
-    v-img(src="@/assets/background/light/background-gradient-group.svg")
-      v-container
-        v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
-          v-col.white--text(cols="12")
-            h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
-            h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-            v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
+    div
+      HeroBackgroundGradientGroup.p-absolute
+      v-container.text-center
+        v-row.pa-md-12.align-center.justify-center(fill-height fluid)
+          v-col.col-12.col-sm-6.col-md-7
+            v-card.white--text(outlined color="rgb(255, 255, 255, 0)" border-color="rgb(255, 255, 255, 0)")
+              h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
+              h1.subtitle-1 {{ $t("homeHero.subtitle") }}
+            v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
               @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
-            v-btn.pa-6(outlined color="secondary"
+            v-btn.pa-7(outlined color="btnColor" rounded
               @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-    ScrollHero.negative-margin-top
+          v-col.col-12.col-sm-6.col-md-5
+            v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" 
+              max-height="calc(max(500px, 60vh))" contain)
+        v-row.center-items.mt-12
+          ScrollHero(v-if="!this.$store.state.isMobile")
+  
   section#scroll
     v-container
       p {{ $t("homeIntro") }}
@@ -40,10 +47,12 @@ div
 import { mapGetters } from "vuex";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import ExperienceCard from "@/components/ExperienceCard.vue";
+import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
 
 export default {
   name: "Home",
   components: {
+    HeroBackgroundGradientGroup,
     ScrollHero,
     ExperienceCard
   },
@@ -109,7 +118,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.negative-margin-top {
-  margin-top: -350px;
+.p-absolute {
+  position: absolute;
 }
 </style>

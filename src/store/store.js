@@ -8,7 +8,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    showContactDialog: false
+    showContactDialog: false,
+    isMobile: false
   },
   mutations: {
     ToggleShowContactDialog(state) {
@@ -30,6 +31,10 @@ export default new Vuex.Store({
       else return "light";
     },
     GetShowContactDialog: state => state.showContactDialog
+    // isMobile() {
+    //   if (this.$vuetify.breakpoint.width < 600) return true;
+    //   else return false;
+    // }
   },
   modules: {
     auth
