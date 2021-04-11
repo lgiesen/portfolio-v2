@@ -8,18 +8,19 @@ div
     //-   :elementId="'coast'" :desktopHeight="750" :mobileHeight="680"
     //-   :mp4Source="require('../assets/background/video/coast.mp4')"
     //-   :posterSource="require('../assets/background/nature.jpg')")
-  v-img(src="@/assets/background/light/background-gradient-group.svg" width="100vw")
-    v-container(slot="overlay-content")
-      v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
-        v-col.white--text(cols="12")
-          h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
-          h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-          v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
-            @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
-          v-btn.pa-6(outlined color="secondary"
-            @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-
-    ScrollHero
+    //- v-container(slot="overlay-content")
+  section.fullwidth
+    v-img(src="@/assets/background/light/background-gradient-group.svg")
+      v-container
+        v-row.text-center.pa-md-12.align-center.justify-center(fill-height fluid)
+          v-col.white--text(cols="12")
+            h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
+            h1.subtitle-1 {{ $t("homeHero.subtitle") }}
+            v-btn.pa-6.gradient-btn.ma-4.ma-md-10(
+              @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
+            v-btn.pa-6(outlined color="secondary"
+              @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
+    ScrollHero.negative-margin-top
   section#scroll
     v-container
       p {{ $t("homeIntro") }}
@@ -107,4 +108,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.negative-margin-top {
+  margin-top: -350px;
+}
+</style>
