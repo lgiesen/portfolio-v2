@@ -15,6 +15,7 @@ div
       v-container.text-center
         v-row.pa-md-12.align-center.justify-center(fill-height fluid)
           v-col.col-12.col-sm-6.col-md-7
+            //- The v-card makes the title visible, because the SVG background was more prominent
             v-card.white--text(outlined color="rgb(255, 255, 255, 0)" border-color="rgb(255, 255, 255, 0)")
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
               h1.subtitle-1 {{ $t("homeHero.subtitle") }}
