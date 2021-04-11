@@ -122,10 +122,6 @@ export default {
   opacity: 0.7;
   backdrop-filter: blur(20px);
 }
-.transparent-background {
-  background-color: rgba($color: #000000, $alpha: 0) !important;
-  border-color: rgba(255, 255, 255, 0) !important;
-}
 // Navigation Font
 // Tablet/desktop (a.v-tab); Mobile (div.v-list-item__title)
 a.v-tab,

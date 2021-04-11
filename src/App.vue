@@ -139,7 +139,11 @@ section {
   min-height: calc(100vh - 60px);
   width: 100vw;
 }
-
+// 2.3 transparenet background (used in nav and home)
+.transparent-background {
+  background-color: rgba(#fff, 0) !important;
+  border-color: rgba(#fff, 0) !important;
+}
 // 3. Components
 // 3.1 Gradient Button
 .gradient-btn {
