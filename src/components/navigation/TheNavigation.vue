@@ -34,8 +34,7 @@ v-container
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
     //- v-navigation-drawer(v-model="mobileDialog" absolute temporary)
-    v-overlay(v-if="mobileDialog" v-model="mobileDialog" transition="dialog-top-transition" 
-      opacity=".8" style="backdrop-filter: blur(8px);")
+    v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity=".8")
       v-btn(fixed top right icon
         @click="mobileDialog = false")
         v-icon mdi-close
@@ -111,8 +110,8 @@ export default {
 
 <style scoped lang="scss">
 .appBar {
-  opacity: 0.7 !important;
-  backdrop-filter: blur(8px) !important;
+  opacity: 0.7;
+  backdrop-filter: blur(8px);
 }
 // Navigation Font
 // Tablet/desktop (a.v-tab); Mobile (div.v-list-item__title)
