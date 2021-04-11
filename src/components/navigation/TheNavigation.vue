@@ -2,7 +2,7 @@
 <template lang="pug">
 v-container
   //- Tablet and desktop navigation
-  v-app-bar.hidden-sm-and-down(app style="opacity: 0.9; backdrop-filter: blur(8px);")
+  v-app-bar.appBar.hidden-sm-and-down(app style="opacity: 0.9; backdrop-filter: blur(8px);")
     //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
     //- div.d-flex
         a(href="/")
@@ -23,7 +23,7 @@ v-container
   
   //- Mobile navigation
   div.hidden-md-and-up
-    v-app-bar(app)
+    v-app-bar.appBar(app)
       v-app-bar-nav-icon(@click.stop="mobileDialog = !mobileDialog")
       v-spacer
       div.d-flex
@@ -34,7 +34,7 @@ v-container
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
     //- v-navigation-drawer(v-model="mobileDialog" absolute temporary)
-    v-overlay(v-model="mobileDialog" transition="dialog-top-transition" 
+    v-overlay(v-if="mobileDialog" v-model="mobileDialog" transition="dialog-top-transition" 
       opacity=".8" style="backdrop-filter: blur(8px);")
       v-btn(fixed top right icon
         @click="mobileDialog = false")
@@ -110,9 +110,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#appBar {
+.appBar {
   opacity: 0.7 !important;
-  z-index: 9999999 !important;
   backdrop-filter: blur(8px) !important;
 }
 // Navigation Font
