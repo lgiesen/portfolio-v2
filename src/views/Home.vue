@@ -9,7 +9,7 @@ div
     //-   :mp4Source="require('../assets/background/video/coast.mp4')"
     //-   :posterSource="require('../assets/background/nature.jpg')")
     //- v-container(slot="overlay-content")
-  section.fullwidth
+  section.fullwidth(minheight="100vh")
     div
       HeroBackgroundGradientGroup.p-absolute
       v-container.text-center
@@ -28,7 +28,6 @@ div
               max-height="calc(max(500px, 60vh))" contain)
         v-row.center-items.mt-12
           ScrollHero(v-if="!this.$store.state.isMobile")
-  
   section#scroll
     v-container
       p {{ $t("homeIntro") }}

@@ -6,57 +6,57 @@
       viewBox="0 0 1440 1024"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0)">
+      <g id="background-gradient-group" clip-path="url(#clip0)">
         <path
           id="background-gradient"
           d="M-45.3998 -84.2708L1506.45 -84.2708L1506.45 639.532L-45.3998 830.076L-45.3998 -84.2708Z"
           fill="url(#paint0_linear)"
         />
         <path
-          id="white-rectangle-center"
+          id="Intersect"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M1067.54 93.6823L146.811 206.734V908.691L1067.54 795.64V93.6823Z"
+          d="M1067.54 693.424L146.811 806.475V206.734L1067.54 93.6823V693.424Z"
           fill="url(#paint1_linear)"
           fill-opacity="0.1"
         />
         <path
-          id="white-rectangle-bottom-right"
+          id="Intersect_2"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M1353.29 401.555L432.554 514.607V776.787L1353.29 663.735V401.555Z"
+          d="M1353.29 658.339L432.554 771.391V514.607L1353.29 401.555V658.339Z"
           fill="url(#paint2_linear)"
           fill-opacity="0.1"
         />
         <path
-          id="white-rectangle-bottom"
+          id="Intersect_3"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M961.711 618.028L40.9785 731.08V826.777L961.711 713.725V618.028Z"
+          d="M961.711 706.418L40.9785 819.47V731.08L961.711 618.028V706.418Z"
           fill="url(#paint3_linear)"
           fill-opacity="0.1"
         />
         <path
-          id="white-rectangle-top-left"
+          id="Intersect_4"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M370.017 -138.364L-107.737 -77.1483L-54.0056 379.52L370.017 325.189V-138.364Z"
+          d="M370.018 -84.2708L-45.3994 -84.2708L-45.3994 378.417L370.018 325.189V-84.2708Z"
           fill="url(#paint4_radial)"
           fill-opacity="0.1"
         />
         <path
-          id="white-rectangle-top"
+          id="Intersect_5"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M1067.54 -284L421.972 -204.734V123.384L1067.54 44.1182V-284Z"
+          d="M1067.54 -84.2864H421.972V123.384L1067.54 44.1182V-84.2864Z"
           fill="url(#paint5_radial)"
           fill-opacity="0.1"
         />
         <path
-          id="white-rectangle-right"
+          id="Intersect_6"
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M1137.4 691.961L1114.68 545.62V-64.615L1554.99 -107.386L1671 640.127L1137.4 691.961Z"
+          d="M1136.31 684.98L1506.45 639.532V-84.2708H1317.03L1114.68 -64.6149V545.62L1136.31 684.98Z"
           fill="url(#paint6_linear)"
           fill-opacity="0.1"
         />
@@ -70,8 +70,8 @@
           y2="1537.78"
           gradientUnits="userSpaceOnUse"
         >
-          <stop class="stopColorPrimary" />
-          <stop class="stopColorSecondary" offset="1" />
+          <stop class="stopColorLeft" />
+          <stop class="stopColorRight" offset="1" />
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -154,14 +154,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$primary: var(--v-primary-base);
-$secondary: var(--v-secondary-base);
+$heroGradientBackgroundLeft: var(--v-heroGradientBackgroundLeft-base);
+$heroGradientBackgroundRight: var(--v-heroGradientBackgroundRight-base);
 
-.stopColorPrimary {
-  stop-color: $primary;
+.stopColorLeft {
+  stop-color: $heroGradientBackgroundLeft;
 }
 
-.stopColorSecondary {
-  stop-color: $secondary;
+.stopColorRight {
+  stop-color: $heroGradientBackgroundRight;
 }
 </style>

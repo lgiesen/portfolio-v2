@@ -35,7 +35,7 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
             :src="themespecificLogoSrc")
             //- Change icon depending on the theme
     //- v-navigation-drawer(v-model="mobileDialog" absolute temporary)
-    v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity=".8")
+    v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity="1")
       v-btn(fixed top right icon
         @click="mobileDialog = false")
         v-icon mdi-close

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
-
 Vue.use(Vuetify);
 
 export default new Vuetify({
@@ -9,7 +8,8 @@ export default new Vuetify({
         options: {
           customProperties: true
         },
-        dark: false,
+        // update theme here: if localStorage null --> light else use localStorage
+        dark: (localStorage.getItem("isDarkTheme") != null) ? localStorage.getItem("isDarkTheme") : false,
         themes: {
             // Choose colours
             // https://material.io/design/color/the-color-system.html#tools-for-picking-colors
@@ -37,6 +37,9 @@ export default new Vuetify({
                 // alternatively e.g. #cccccc
 
                 btnColor: "#ffffff",
+                // Home Hero Are
+                heroGradientBackgroundLeft: "#3949ab",
+                heroGradientBackgroundRight: "#f4511e",
 
                 success: "#34c759",
                 warning: "#ff954f",
@@ -62,6 +65,9 @@ export default new Vuetify({
                 // If colours above are used as background: black text, otherwise white
 
                 btnColor: "#121212",
+                heroGradientBackgroundLeft: "#383838",
+                heroGradientBackgroundRight: "#121212",
+
                 // as recommended by the Material Design Guidelines from Google
                 background: "#121212",
                 backgroundLight: "#383838",
@@ -71,7 +77,5 @@ export default new Vuetify({
         }
     },
     // maybe need to install mdi fonts: npm i @mdi/font
-    icons: {
-        iconfont: "mdi"
-    }
+    icons: { iconfont: "mdi" }
 });
