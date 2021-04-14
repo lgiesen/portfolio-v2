@@ -1,5 +1,9 @@
 <template>
-  <div class="center-items">
+  <!-- Hide the horizontal overflow on mobile (otherwise there are side effects on desktop) -->
+  <div
+    :style="this.$vuetify.breakpoint.mobile ? 'overflow:hidden;' : ''"
+    class="center-items"
+  >
     <svg
       max-width="100vw"
       :height="this.$vuetify.breakpoint.mobile ? '100vh' : ''"
