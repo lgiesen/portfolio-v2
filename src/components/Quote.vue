@@ -17,7 +17,7 @@ $background: var(--v-background-base)
 // Sass integrated from https://codepen.io/johnfinkdesign/pen/gRvEGq?editors=1100 from John Fink
 blockquote
     border-left: 3px solid $color
-    color: #1a1a1a
+    // color: #1a1a1a
     font-family: Prata, Georgia, Times, "Times New Roman", serif
     font-size: 1.25em
     font-style: italic
