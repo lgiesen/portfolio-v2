@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="center-items">
     <svg
-      width="100vw"
+      max-width="100vw"
+      :height="this.$vuetify.breakpoint.mobile ? '100vh' : ''"
       fill="none"
       viewBox="0 0 1440 1024"
       xmlns="http://www.w3.org/2000/svg"

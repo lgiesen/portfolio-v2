@@ -3,17 +3,18 @@ div
   h1.display-2.font-weight-thin.mb-12.text-center {{ this.sectionTitle }}
   v-container
     v-row(justify="center")
-      v-col.col-12.col-md-8.col-lg-6(
+      v-col.col-11.col-md-8.col-lg-6(
         v-for="(item, index) in iterableObject" 
         :key="index" :id="'card-' + item.institution.split(' ', 1)")
         //- give each card an id so that you can create a scroll link
         v-hover
           template(v-slot:default="{ hover }")
-            v-card.mb-12.pa-7.transition-swing(height="100%"
+            v-card.mb-12.px-3.px-md-7.pt-5.transition-swing(height="100%"
               :class="`elevation-${hover ? 24 : 6}`")
               v-row
                 v-col(align="center" justify="center")
-                  v-img(:src="item.imageSrc" height="10vh" max-width="20vw" contain)
+                  v-img(:src="item.imageSrc" height="10vh" contain
+                    :max-width="$vuetify.breakpoint.mobile ? '40vw' : '15vw'")
               v-row
                 v-col
                   v-card-title.justify-center 
