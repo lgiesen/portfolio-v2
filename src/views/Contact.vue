@@ -2,7 +2,7 @@
 v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
   v-card
     v-img(:src="imageURL[0].url"
-      gradient="rgba(255,255,255,.8), rgba(255,255,255,.8)")
+      :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.8), rgba(0,0,0,.8)' : 'rgba(255,255,255,.8), rgba(255,255,255,.8)'")
       div.foregroundCard
         v-card-title
           h2.display-1 Contact Me
