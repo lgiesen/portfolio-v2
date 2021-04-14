@@ -28,9 +28,11 @@ div
               max-height="calc(max(500px, 60vh))" contain)
         v-row.center-items.mt-12
           ScrollHero(v-if="!this.$store.state.isMobile")
+    
   section#scroll
     v-container
-      p {{ $t("homeIntro") }}
+      v-card
+        v-card-text {{ $t("homeIntro") }}
     v-container.center-items
       v-row.align-center
         v-col
