@@ -79,12 +79,12 @@ $btnColor: var(--v-btnColor-base);
   &::after {
     box-sizing: border-box;
   }
+  word-break: keep-all !important;
 }
 // 1.1 Word break
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-break: normal !important;
   box-sizing: border-box;
   &::before,
   &::after {
@@ -106,7 +106,11 @@ $btnColor: var(--v-btnColor-base);
     font-family: "PT Sans", "Roboto", sans-serif !important;
   }
 }
-// 1.2 Link animation
+// 1.2 scroll (to) section padding top so that the navigation does not lay over it
+#scroll {
+  padding-top: 100px;
+}
+// 1.3 Link animation
 a:not(a.v-tab, .v-btn) {
   text-decoration: none;
   cursor: pointer;
@@ -115,12 +119,12 @@ a:not(a.v-tab, .v-btn) {
     text-decoration: underline !important;
   }
 }
-// 1.3 center items
+// 1.4 center items
 .center-items {
   display: grid;
   place-items: center;
 }
-// 1.4 box layout to prevent unintended upsizing on bigger viewports
+// 1.5 box layout to prevent unintended upsizing on bigger viewports
 section:not(.fullwidth) {
   // center items becasue size is reduced
   display: grid;

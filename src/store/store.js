@@ -29,11 +29,12 @@ export default new Vuex.Store({
       else if (Vuetify.framework.theme.dark) return "dark";
       else return "light";
     },
-    GetShowContactDialog: state => state.showContactDialog
-    // isMobile() {
-    //   if (this.$vuetify.breakpoint.width < 600) return true;
-    //   else return false;
-    // }
+    GetShowContactDialog: state => state.showContactDialog,
+    isMobile() {
+      return Vuetify.framework.breakpoint.mobile;
+      // in local components, you could use:
+      // console.log(this.$vuetify.breakpoint.mobile);
+    }
   },
   modules: {
     auth
