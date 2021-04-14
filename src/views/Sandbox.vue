@@ -62,7 +62,15 @@ export default {
           "https://images.unsplash.com/photo-1615672875631-c0e3c1c1c079?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
       }
     ]
-  })
+  }),
+  methods: {
+    // alternating boxes using float - CODE NOT USED
+    floatDirection(index) {
+      // on medium sized viewports float
+      if (index % 2 == 1) return "float-md-left";
+      else return "float-md-right";
+    }
+  }
 };
 </script>
 
