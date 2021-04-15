@@ -1,14 +1,15 @@
 <template lang="pug">
 div
   v-footer#footer.mt-12.pa-10(padless :class="isDarkTheme ? 'darkFooterBg' : 'lightFooterBg'")
-    v-row(justify="center" no-gutters)
-      v-btn.my-2(
-        v-for="link in links"
-        :key="link.link"
-        color="white"
-        @click='goTo(link.link)'
-        text) {{ isDE ? link.title_de : link.title_en }}
-      v-col.lighten-2.py-4.text-center.white--text(
+    v-row.center-items(justify="center" no-gutters)
+      v-col
+        v-btn.my-2(
+          v-for="link in links"
+          :key="link.link"
+          color="white"
+          @click='goTo(link.link)'
+          text) {{ isDE ? link.title_de : link.title_en }}
+      v-col.lighten-2.py-4.white--text(
         cols="12")
         v-btn.mx-4.secondary--text(
           v-for="icon in icons"

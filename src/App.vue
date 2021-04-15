@@ -143,6 +143,9 @@ section {
   min-height: calc(100vh - 60px);
   width: 100vw;
 }
+.h-100vh {
+  min-height: calc(100vh - 60px);
+}
 // 2.3 transparenet background (used in nav and home)
 .transparent-background {
   background-color: rgba(#fff, 0) !important;

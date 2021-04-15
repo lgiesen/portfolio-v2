@@ -13,8 +13,8 @@ div
     div
       HeroBackgroundGradientGroup.p-absolute
       v-container.text-center
-        v-row.pa-md-12.pb-md-0.align-center.justify-center(fill-height fluid)
-          v-col.col-12.col-sm-6.col-md-7
+        v-row.pa-md-12.pb-md-0.align-center.justify-center.h-100vh(fill-height fluid)
+          v-col.col-12.col-sm-6.col-md-6
             //- The v-card makes the title visible, because the SVG background was more prominent
             v-card.white--text.transparent-background(outlined)
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
@@ -23,13 +23,12 @@ div
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
             //- v-btn.pa-7(outlined color="btnColor" rounded
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-          v-col.col-12.col-sm-6.col-md-5
-            v-card
-              v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" 
-                max-height="calc(max(500px, 60vh))")
-        //- Scroll arrow down button (desktop only)
-        v-row.center-items.mt-0
-          ScrollHero(v-if="!this.isMobile")
+            ScrollHero(v-if="!this.isMobile")
+          v-col.col-12.col-sm-6.col-md-4
+            v-card(height="60vh")
+              v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" height="60vh")
+          //- Scroll arrow down button (desktop only)
+          //- v-col.col-12.mt-n16
     //- Intro card text
     v-container#scroll.center-items
       v-card.pa-4(:width="this.isMobile ? '90vw' : '60vw'")
@@ -74,6 +73,10 @@ div
       CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
       //- Education
       CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
+  
+  section.fullwidth.center-items
+    v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
+      @click="$router.push('/contact')") {{ $t("contact") }}
 </template>
 
 <script>
@@ -263,7 +266,8 @@ export default {
           subtitle: `I have gained a large variety of work experience and in-depth knowledge`
         },
         workExperience: "Work Experience",
-        education: "Education"
+        education: "Education",
+        contact: "Let's Talk!"
       },
       de: {
         homeHero: {
@@ -301,7 +305,8 @@ export default {
           subtitle: `Ich habe eine Vielzahl von Arbeitserfahrungen und fundierten Kenntnissen gesammelt`
         },
         workExperience: "Berufserfahrung",
-        education: "Bildung"
+        education: "Bildung",
+        contact: "Lass Uns Austauschen!"
       }
     }
   }

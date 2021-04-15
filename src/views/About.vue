@@ -16,32 +16,32 @@ div
       h1.display-2.font-weight-thin.text-center.ma-10.text-center {{ $t("introHeader") }}
       //- friends and family
       v-row
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           v-img(src="@/assets/about/Familie_Aegina.jpg")
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           p {{ $t("friendsAndFamily") }}
           //- career
           p(v-html="$t('career')")
 
       //- sport
       v-row
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           p(v-html="$t('sport')")
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           v-img(src="@/assets/about/FCG.jpg")
       v-row
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           v-img(src="@/assets/about/Ski_HSP.jpeg")
-        v-col.col-12.col-sm-6    
+        v-col.col-11.col-md-6
           p(v-html="$t('tennisAndSkiing')")
           //- v-img(src="@/assets/about/Ski_Familie.jpg")
       //- travel
       v-row
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           p(v-html="$t('travel')")
           p {{ $t("quote") }}
           Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
-        v-col.col-12.col-sm-6
+        v-col.col-11.col-md-6
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
   section
     v-container.grey--text
