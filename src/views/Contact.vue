@@ -5,11 +5,11 @@ v-container.ma-12.mx-auto
       :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.8), rgba(0,0,0,.8)' : 'rgba(255,255,255,.8), rgba(255,255,255,.8)'")
       v-container.foregroundCard
         v-card-title.justify-center
-          h2.display-1.mb-12 Contact Me
+          h2.display-1.mb-12 {{ $t("contactIntro.contactTitle") }}
         v-card-subtitle
-          h4.cols-12.col-md-6.mx-auto.text-justify.mt-0.py-0 {{ $t("contactSubtitle1") }}
-            AnimatedLink(href="mailto:leo.richard.giesen@gmail.com" :linkText="$t('contactSubtitleLinkText')")
-            | {{ $t("contactSubtitle2") }}
+          h4.cols-12.col-md-6.mx-auto.text-justify.mt-0.py-0 {{ $t("contactIntro.contactSubtitle1") }}
+            AnimatedLink(href="mailto:leo.richard.giesen@gmail.com" :linkText="$t('contactIntro.contactSubtitleLinkText')")
+            | {{ $t("contactIntro.contactSubtitle2") }}
         v-card-text
           v-form#form(ref="form"
             @submit.prevent="submit")
@@ -32,7 +32,7 @@ v-container.ma-12.mx-auto
             v-row
               v-col
                 v-text-field#subject(required
-                  name="subject" label="Subject*" 
+                  name="subject" :label="$t('form.subject') + '*'" 
                   v-model="subject"
                   :error-messages="subjectErrors"
                   @input="$v.subject.$touch()" @blur="$v.subject.$touch()"
@@ -40,7 +40,7 @@ v-container.ma-12.mx-auto
             v-row 
               v-col 
                 v-textarea#message(required
-                  name="message" label="Message*" 
+                  name="message" :label="$t('form.message') + '*'" 
                   v-model="message"
                   :error-messages="messageErrors"
                   @input="$v.message.$touch()" @blur="$v.message.$touch()"
@@ -51,13 +51,13 @@ v-container.ma-12.mx-auto
                 color="secondary"
                 @click="clear")
                 v-icon.mr-2 mdi-close-circle-outline
-                | Clear
+                | {{ $t("form.clear") }}
               v-spacer
               v-btn(color="primary")
                 v-icon.mr-2 mdi-send
                 input#button(
                   type="submit"
-                  value="Send Email")
+                  :value="$t('form.send')")
   v-dialog(v-model="successDialogMail")
     v-card
       v-img(
@@ -167,7 +167,7 @@ export default {
           .addEventListener("submit", function(event) {
             event.preventDefault();
 
-            btn.value = "Sending...";
+            btn.value = "SENDING...";
 
             const serviceID = "default_service";
             const templateID = "email_template";
@@ -175,10 +175,10 @@ export default {
             // console.log(this);
             emailjs.sendForm(serviceID, templateID, this).then(
               () => {
-                btn.value = "Send Email";
+                btn.value = "SEND EMAIL";
               },
               err => {
-                btn.value = "Send Email";
+                btn.value = "SEND EMAIL";
                 alert(JSON.stringify(err));
               }
             );
@@ -187,26 +187,42 @@ export default {
       } catch (error) {
         console.log(error);
       }
-      // this.clear();
+      this.clear();
     }
   },
   i18n: {
     messages: {
       en: {
-        contactTitle: "Contact Me",
-        contactSubtitle1: `Let's exchange ideas and see if we can do a project together or if 
-        there is a job opportunity! I am open to various suggestions, so just contact me using 
-        the form or a `,
-        contactSubtitleLinkText: "mail application",
-        contactSubtitle2: " of your choice."
+        contactIntro: {
+          contactTitle: "Contact Me",
+          contactSubtitle1: `Let's exchange ideas and see if we can do a project together or if 
+          there is a job opportunity! I am open to various suggestions, so just contact me using 
+          the form or a `,
+          contactSubtitleLinkText: "mail application",
+          contactSubtitle2: " of your choice."
+        },
+        form: {
+          subject: "Subject",
+          message: "Message",
+          clear: "Clear",
+          send: "SEND EMAIL"
+        }
       },
       de: {
-        contactTitle: "Contact Me",
-        contactSubtitle1: `Lass uns austauschen, ob man ein Projekt zusammen 
-        durchführen kann oder es eine Jobmöglichkeit gibt! Ich bin offen für viele Vorschläge 
-        und bin erreichbar über das Vormular oder einem `,
-        contactSubtitleLinkText: "Email Programm",
-        contactSubtitle2: "."
+        contactIntro: {
+          contactTitle: "Kontakt",
+          contactSubtitle1: `Lass uns austauschen, ob man ein Projekt zusammen 
+          durchführen kann oder es eine Jobmöglichkeit gibt! Ich bin offen für viele Vorschläge 
+          und bin erreichbar über das Vormular oder einem `,
+          contactSubtitleLinkText: "Email Programm",
+          contactSubtitle2: "."
+        },
+        form: {
+          subject: "Betreff",
+          message: "Nachricht",
+          clear: "Löschen",
+          send: "SENDEN"
+        }
       }
     }
   }
