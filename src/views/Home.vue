@@ -19,7 +19,6 @@ div
             v-card.white--text.transparent-background(outlined)
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
               h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-              p {{ localStorage }}
             //- v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
             //- v-btn.pa-7(outlined color="btnColor" rounded
@@ -229,10 +228,7 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters(["isMobile", "ActiveTheme"]),
-    localStorage() {
-      return localStorage.getItem("isDarkTheme") !== null;
-    }
+    ...mapGetters(["isMobile", "ActiveTheme"])
   },
   i18n: {
     messages: {

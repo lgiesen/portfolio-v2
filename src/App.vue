@@ -30,6 +30,13 @@ export default {
     window.removeEventListener("resize", this.onResize, { passive: true });
   },
   mounted() {
+    // set theme
+    const isDarkThemeActive = localStorage.getItem("isDarkTheme");
+    if (isDarkThemeActive) {
+      if (isDarkThemeActive == "true") this.$vuetify.theme.dark = true;
+      else this.$vuetify.theme.dark = true;
+    }
+    // --
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
   },
