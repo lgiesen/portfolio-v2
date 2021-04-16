@@ -9,12 +9,37 @@ div
         @click='goTo(link.link)'
         text) {{ isDE ? link.title_de : link.title_en }}
       v-col.white--text.text-center.col-12
-        v-btn.mx-4.secondary--text(
-          v-for="icon in icons"
-          :key="icon.mdi"
-          icon target="_blank"
-          :href="icon.link")
-          v-icon(elevation="15" size="24px") {{ icon.mdi }}
+        //- changing arrangement of icons (low code quality :( )
+        //- tablet & desktop version
+        div.hidden-sm-and-down
+          v-btn.mx-4.secondary--text(
+              v-for="icon in socialIcons"
+              :key="icon.mdi"
+              icon target="_blank"
+              :href="icon.link")
+              v-icon(elevation="15" size="24px") {{ icon.mdi }}
+          v-btn.mx-4.secondary--text(
+            v-for="icon in programmingIcons"
+            :key="icon.mdi"
+            icon target="_blank"
+            :href="icon.link")
+            v-icon(elevation="15" size="24px") {{ icon.mdi }}
+        //- mobile version: two social icons above, three code icons below
+        v-row.hidden-md-and-up
+          v-col.col-12
+            v-btn.mx-4.secondary--text(
+              v-for="icon in socialIcons"
+              :key="icon.mdi"
+              icon target="_blank"
+              :href="icon.link")
+              v-icon(elevation="15" size="24px") {{ icon.mdi }}
+          v-col.col-12
+            v-btn.mx-4.secondary--text(
+              v-for="icon in programmingIcons"
+              :key="icon.mdi"
+              icon target="_blank"
+              :href="icon.link")
+              v-icon(elevation="15" size="24px") {{ icon.mdi }}
         p.mt-6 &copy; {{new Date().getFullYear()}} - 
           span.secondary--text Leo Giesen
 
@@ -43,7 +68,7 @@ export default {
         link: "privacy-policy"
       }
     ],
-    icons: [
+    socialIcons: [
       // {
       //   mdi: "mdi-email-outline",
       //   link: "mailto:leo.richard.giesen@gmail.com"
@@ -55,7 +80,9 @@ export default {
       {
         mdi: "mdi-xing",
         link: "https://www.xing.com/profile/Leo_Giesen"
-      },
+      }
+    ],
+    programmingIcons: [
       {
         mdi: "mdi-github",
         link: "https://github.com/lgiesen"
