@@ -1,5 +1,7 @@
 <template lang="pug">
-v-btn.secondary( 
+//- only display icon when not on contact page
+v-btn.secondary(
+  v-if="$route.name != 'Contact'"
   elevation="15"
   fixed bottom right fab 
   style="backdrop-filter: blur(8px);"
