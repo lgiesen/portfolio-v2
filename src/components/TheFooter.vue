@@ -1,16 +1,14 @@
 <template lang="pug">
 div
   v-footer#footer.mt-12.pa-10(padless :class="isDarkTheme ? 'darkFooterBg' : 'lightFooterBg'")
-    v-row.center-items(justify="center" no-gutters)
-      v-col
-        v-btn.my-2(
-          v-for="link in links"
-          :key="link.link"
-          color="white"
-          @click='goTo(link.link)'
-          text) {{ isDE ? link.title_de : link.title_en }}
-      v-col.lighten-2.py-4.white--text(
-        cols="12")
+    v-row.justify-center
+      v-btn.my-2(
+        v-for="link in links"
+        :key="link.link"
+        color="white"
+        @click='goTo(link.link)'
+        text) {{ isDE ? link.title_de : link.title_en }}
+      v-col.white--text.text-center.col-12
         v-btn.mx-4.secondary--text(
           v-for="icon in icons"
           :key="icon.mdi"
@@ -19,6 +17,7 @@ div
           v-icon(elevation="15" size="24px") {{ icon.mdi }}
         p.mt-6 &copy; {{new Date().getFullYear()}} - 
           span.secondary--text Leo Giesen
+
 </template>
 
 <script>
