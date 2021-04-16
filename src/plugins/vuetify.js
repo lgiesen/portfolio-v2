@@ -9,7 +9,7 @@ export default new Vuetify({
           customProperties: true
         },
         // update theme here: if localStorage null --> light else use localStorage
-        dark: (localStorage.getItem("isDarkTheme") != null) ? localStorage.getItem("isDarkTheme") : false,
+        dark: (localStorage.getItem("isDarkTheme") !== null) ? localStorage.getItem("isDarkTheme") : false,
         themes: {
             // Choose colours
             // https://material.io/design/color/the-color-system.html#tools-for-picking-colors

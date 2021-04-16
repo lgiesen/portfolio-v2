@@ -1,12 +1,11 @@
 <template>
   <!-- Hide the horizontal overflow on mobile (otherwise there are side effects on desktop) -->
   <div
-    :style="this.$vuetify.breakpoint.mobile ? 'overflow:hidden;' : ''"
+    :style="this.$vuetify.breakpoint.mobile ? 'overflow: hidden;' : ''"
     class="center-items"
   >
     <svg
-      max-width="100vw"
-      :height="this.$vuetify.breakpoint.mobile ? '100vh' : ''"
+      :class="this.$vuetify.breakpoint.mobile ? 'isMobile' : 'isDesktop'"
       fill="none"
       viewBox="0 0 1440 1024"
       xmlns="http://www.w3.org/2000/svg"
@@ -168,5 +167,15 @@ $heroGradientBackgroundRight: var(--v-heroGradientBackgroundRight-base);
 
 .stopColorRight {
   stop-color: $heroGradientBackgroundRight;
+}
+
+// SVG needs to distinguish between the different viewports
+// to display correctly
+.isMobile {
+  min-width: 100vw;
+  height: 100vh;
+}
+.isDesktop {
+  width: 100vw;
 }
 </style>
