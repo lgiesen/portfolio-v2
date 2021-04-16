@@ -13,11 +13,11 @@ div
   //- About me texts alternating with corresponding images
   section#scroll.text-justify
     v-container
-      h1.display-2.font-weight-thin.text-center.ma-10.text-center {{ $t("introHeader") }}
+      h1.display-2.font-weight-thin.text-center.ma-10 {{ $t("introHeader") }}
       //- friends and family
-      v-row
+      v-row(cols="12")
         v-col.col-11.col-md-6
-          v-img(src="@/assets/about/Familie_Aegina.jpg")
+          v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
         v-col.col-11.col-md-6
           p {{ $t("friendsAndFamily") }}
           //- career
@@ -25,24 +25,24 @@ div
 
       //- sport
       v-row
-        v-col.col-11.col-md-6
+        v-col.col-11.col-md-6(order-md="2")
+          v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
+        v-col.col-11.col-md-6(order-md="1")
           p(v-html="$t('sport')")
-        v-col.col-11.col-md-6
-          v-img(src="@/assets/about/FCG.jpg")
       v-row
         v-col.col-11.col-md-6
-          v-img(src="@/assets/about/Ski_HSP.jpeg")
+          v-img(src="@/assets/about/Ski_HSP.jpeg" :max-width="imageWidth")
         v-col.col-11.col-md-6
           p(v-html="$t('tennisAndSkiing')")
           //- v-img(src="@/assets/about/Ski_Familie.jpg")
       //- travel
       v-row
-        v-col.col-11.col-md-6
+        v-col.col-11.col-md-6(order-md="2")
+          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+        v-col.col-11.col-md-6(order-md="1")
           p(v-html="$t('travel')")
           p {{ $t("quote") }}
           Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
-        v-col.col-11.col-md-6
-          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg")
   section
     v-container.grey--text
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
@@ -76,7 +76,11 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters(["isDE"])
+    ...mapGetters(["isDE", "isMobile"]),
+    imageWidth() {
+      if (this.isMobile) return "90vw";
+      else return "50vw";
+    }
   },
   i18n: {
     messages: {
