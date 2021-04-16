@@ -1,15 +1,15 @@
 <template lang="pug">
-v-container.ma-12.mx-auto(persistant width="80vw" height=" 80vh")
+v-container.ma-12.mx-auto
   v-card
     v-img(:src="imageURL[0].url"
       :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.8), rgba(0,0,0,.8)' : 'rgba(255,255,255,.8), rgba(255,255,255,.8)'")
-      div.foregroundCard
-        v-card-title
-          h2.display-1 Contact Me
-        v-card-subtitle 
-          h4 I'd be happy to hear from you! You can also contact me via your 
-            AnimatedLink(href="mailto:leo.richard.giesen@gmail.com" linkText="mail application ")
-            |  of choice.
+      v-container.foregroundCard
+        v-card-title.justify-center
+          h2.display-1.mb-12 Contact Me
+        v-card-subtitle
+          h4.cols-12.col-md-6.mx-auto.text-justify.mt-0.py-0 {{ $t("contactSubtitle1") }}
+            AnimatedLink(href="mailto:leo.richard.giesen@gmail.com" :linkText="$t('contactSubtitleLinkText')")
+            | {{ $t("contactSubtitle2") }}
         v-card-text
           v-form#form(ref="form"
             @submit.prevent="submit")
@@ -188,6 +188,26 @@ export default {
         console.log(error);
       }
       // this.clear();
+    }
+  },
+  i18n: {
+    messages: {
+      en: {
+        contactTitle: "Contact Me",
+        contactSubtitle1: `Let's exchange ideas and see if we can do a project together or if 
+        there is a job opportunity! I am open to various suggestions, so just contact me using 
+        the form or a `,
+        contactSubtitleLinkText: "mail application",
+        contactSubtitle2: " of your choice."
+      },
+      de: {
+        contactTitle: "Contact Me",
+        contactSubtitle1: `Lass uns austauschen, ob man ein Projekt zusammen 
+        durchführen kann oder es eine Jobmöglichkeit gibt! Ich bin offen für viele Vorschläge 
+        und bin erreichbar über das Vormular oder einem `,
+        contactSubtitleLinkText: "Email Programm",
+        contactSubtitle2: "."
+      }
     }
   }
 };
