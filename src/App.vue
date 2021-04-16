@@ -6,7 +6,7 @@
     v-main
       router-view
     //- ScrollToTop
-    LetsTalk
+    //- LetsTalk
     TheFooter
 </template>
 

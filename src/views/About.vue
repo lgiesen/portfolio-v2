@@ -11,11 +11,11 @@ div
     ScrollHero
   
   //- About me texts alternating with corresponding images
-  section#scroll.text-justify
+  div#scroll.text-justify
     v-container
       h1.display-2.font-weight-thin.text-center.ma-10 {{ $t("introHeader") }}
       //- friends and family
-      v-row(cols="12")
+      v-row.center-items
         v-col.col-11.col-md-6
           v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
         v-col.col-11.col-md-6
@@ -24,19 +24,19 @@ div
           p(v-html="$t('career')")
 
       //- sport
-      v-row
+      v-row.center-items
         v-col.col-11.col-md-6(order-md="2")
           v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
         v-col.col-11.col-md-6(order-md="1")
           p(v-html="$t('sport')")
-      v-row
+      v-row.center-items
         v-col.col-11.col-md-6
           v-img(src="@/assets/about/Ski_HSP.jpeg" :max-width="imageWidth")
         v-col.col-11.col-md-6
           p(v-html="$t('tennisAndSkiing')")
           //- v-img(src="@/assets/about/Ski_Familie.jpg")
       //- travel
-      v-row
+      v-row.center-items
         v-col.col-11.col-md-6(order-md="2")
           v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
         v-col.col-11.col-md-6(order-md="1")
