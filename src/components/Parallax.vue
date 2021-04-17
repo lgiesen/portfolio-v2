@@ -7,14 +7,14 @@ div
                 v-row.justify-center.align-center
                     v-col.text-center
                         h1.display-3.font-weight-thin.mb-4.black--text {{ this.title }}
-                        h4.subheading {{ this.subtitle }}
+                        p.subheading {{ this.subtitle }}
                 ScrollHero
         
         v-parallax.hero(v-else :src="this.parallaxImage")
             v-row.justify-center.align-center
                 v-col.text-center
-                    h1.display-3.font-weight-thin.mb-4.black--text {{ this.title }}
-                    h4.subheading {{ this.subtitle }} {{ this.parallaxImage }}
+                    h1.display-3.font-weight-thin.black--text {{ this.title }}
+                    p.subheading {{ this.subtitle }}
             ScrollHero
 </template>
 
