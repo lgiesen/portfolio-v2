@@ -8,7 +8,7 @@ div
         v-col.text-center(cols='12')
           h1.display-3.font-weight-thin.mb-4 {{ $t("experienceHero.title") }}
           h4.subheading {{ $t("experienceHero.subtitle") }}
-    ScrollHero
+      ScrollHero
   
   section
     v-row

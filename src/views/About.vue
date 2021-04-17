@@ -1,13 +1,7 @@
 <template lang="pug">
 div
   //- Hero Area
-  section
-    v-parallax.hero(src="@/assets/about/Aasee.jpg")
-      v-row.justify-center.align-center
-        v-col.text-center
-          h1.display-3.font-weight-thin.mb-4 About Leo
-          h4.subheading I love to learn and apply my knowledge!
-      ScrollHero
+  Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
   
   //- About me texts alternating with corresponding images
   section#scroll
@@ -54,14 +48,14 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import Parallax from "@/components/Parallax.vue";
 import Quote from "@/components/Quote.vue";
 import { mapGetters } from "vuex";
 
 export default {
   name: "About",
   components: {
-    ScrollHero,
+    Parallax,
     Quote
   },
   data: () => ({
@@ -85,6 +79,11 @@ export default {
   i18n: {
     messages: {
       de: {
+        parallaxText: {
+          title: "Über Leo",
+          subtitle:
+            "Ich liebe es komplexe Probleme zu destrukturieren und das Gelernte anzuwenden!"
+        },
         introHeader: "Was ist für Dich am wichtigsten?",
         friendsAndFamily: `Für mich haben meine Familie, Freunde und meine Karriere 
         die höchste Priorität, denn ohne ein tolles soziales Leben als Fundament 
@@ -153,6 +152,10 @@ export default {
           "Zum Schluss möchte ich mit einem Zitat abschließen, das meine Lebenseinstellung auf den Punkt bringt:"
       },
       en: {
+        parallaxText: {
+          title: "About Leo",
+          subtitle: "I love to learn and apply my knowledge!"
+        },
         introHeader: "What is most important to you?",
         friendsAndFamily: `For me, my family, friends and my career have the highest 
         priority, because, without a great social life as a foundation, you can easily 
