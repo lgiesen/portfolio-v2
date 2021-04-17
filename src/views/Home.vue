@@ -178,7 +178,7 @@ export default {
       },
       {
         title_en: "Assistant of Insolvency Administrator",
-        title_de: "Praktikum in der Insolvenzverwaltung",
+        title_de: "Insolvenzverwaltung Praktikum",
         institution: "BRL",
         link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
         imageSrc: require("@/assets/workExperience/BRL.png"),

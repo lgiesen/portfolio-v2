@@ -2,7 +2,7 @@
 div
   h1.display-2.font-weight-thin.mb-12.text-center {{ this.sectionTitle }}
   v-container
-    v-row(justify="center")
+    v-row.justify-center
       v-col.col-11.col-md-8.col-lg-6(
         v-for="(item, index) in iterableObject" 
         :key="index" :id="'card-' + item.institution.split(' ', 1)")
@@ -13,11 +13,11 @@ div
               :class="`elevation-${hover ? 24 : 6}`")
               v-row
                 v-col(align="center" justify="center")
-                  v-img(:src="item.imageSrc" height="10vh" contain
+                  v-img(:src="item.imageSrc" height="10vh" width="40%" contain
                     :max-width="$vuetify.breakpoint.mobile ? '40vw' : '15vw'")
               v-row
                 v-col
-                  v-card-title.justify-center 
+                  v-card-title.justify-center.text-center
                     | {{ isDE ? item.title_de : item.title_en }} 
                   v-card-subtitle.text-center @
                     AnimatedLink(target="_blank"
