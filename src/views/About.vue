@@ -6,7 +6,7 @@ div
   //- About me texts alternating with corresponding images
   section#scroll
     div
-      h1.display-2.font-weight-thin.text-center {{ $t("introHeader") }}
+      h3.display-1.font-weight-thin.text-center {{ $t("introHeader") }}
       v-container.text-justify
         //- friends and family
         v-row.justify-center

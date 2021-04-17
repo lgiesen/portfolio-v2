@@ -28,8 +28,8 @@ div
           v-row.fill-height(align="center")
             v-col.text-center.pa-12
               v-container.pa-12
-                h1.mb-5.display-1 {{ recommendation.title }}
-                h3.ma-5.overline {{ recommendation.location }}
+                h2.mb-5.display-1 {{ recommendation.title }}
+                h4.ma-5.overline {{ recommendation.location }}
                 p.mt-10.font-italic.text-justify 
                   | "{{ isDE ? recommendation.description_de : recommendation.description_en }}"
 
