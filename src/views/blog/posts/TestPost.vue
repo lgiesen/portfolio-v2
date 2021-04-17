@@ -4,7 +4,7 @@ div
   section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
-    vue-video-section(
+    //- vue-video-section(
       :elementId="'coast'" :desktopHeight="750" :mobileHeight="680"
       :mp4Source="require('@/assets/background/video/coast.mp4')"
       :posterSource="require('@/assets/background/nature.jpg')")

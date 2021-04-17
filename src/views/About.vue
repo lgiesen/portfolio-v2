@@ -2,13 +2,12 @@
 div
   //- Hero Area
   section
-    v-parallax.hero(dark
-      src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
-      v-row(align="center" justify="center")
-        v-col.text-center(cols="12")
+    v-parallax.hero(src="@/assets/about/Aasee.jpg")
+      v-row.justify-center.align-center
+        v-col.text-center
           h1.display-3.font-weight-thin.mb-4 About Leo
           h4.subheading I love to learn and apply my knowledge!
-    ScrollHero
+      ScrollHero
   
   //- About me texts alternating with corresponding images
   section#scroll

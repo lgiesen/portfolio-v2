@@ -23,15 +23,13 @@ div
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
             //- v-btn.pa-7(outlined color="btnColor" rounded
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
-            ScrollHero(v-if="!this.isMobile")
+            ScrollHero
           v-col.col-12.col-sm-6.col-md-4
             v-card
               v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" max-height="60vh")
-          //- Scroll arrow down button (desktop only)
-          //- v-col.col-12.mt-n16
     //- Intro card text
     v-container#scroll.center-items
-      v-card.pa-4(:width="this.isMobile ? '90vw' : '60vw'")
+      v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
         v-row
           v-col.col-12.col-sm-6.center-items
             //- should be replaced with an animated SVG
@@ -228,7 +226,7 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters(["isMobile", "ActiveTheme"])
+    ...mapGetters(["ActiveTheme"])
   },
   i18n: {
     messages: {

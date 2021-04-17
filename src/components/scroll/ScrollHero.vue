@@ -1,5 +1,5 @@
 <template lang="pug">
-div.text-center.mb-6
+div.text-center.mb-6(v-if="!this.$vuetify.breakpoint.mobile")
   v-btn#heroScrollBtn(
     @click="scrollHero"
     fab text outlined color="white") 
