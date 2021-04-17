@@ -11,38 +11,39 @@ div
     ScrollHero
   
   //- About me texts alternating with corresponding images
-  div#scroll.text-justify
-    v-container
-      h1.display-2.font-weight-thin.text-center.ma-10 {{ $t("introHeader") }}
-      //- friends and family
-      v-row.justify-center
-        v-col.col-11.col-md-6
-          v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
-        v-col.col-11.col-md-6
-          p {{ $t("friendsAndFamily") }}
-          //- career
-          p(v-html="$t('career')")
+  section#scroll
+    div
+      h1.display-2.font-weight-thin.text-center {{ $t("introHeader") }}
+      v-container.text-justify
+        //- friends and family
+        v-row.justify-center
+          v-col.col-11.col-md-6
+            v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
+          v-col.col-11.col-md-6
+            p {{ $t("friendsAndFamily") }}
+            //- career
+            p(v-html="$t('career')")
 
-      //- sport
-      v-row.justify-center
-        v-col.col-11.col-md-6(order-md="2")
-          v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
-        v-col.col-11.col-md-6(order-md="1")
-          p(v-html="$t('sport')")
-      v-row.justify-center
-        v-col.col-11.col-md-6
-          v-img(src="@/assets/about/Ski_HSP.jpeg" :max-width="imageWidth")
-        v-col.col-11.col-md-6
-          p(v-html="$t('tennisAndSkiing')")
-          //- v-img(src="@/assets/about/Ski_Familie.jpg")
-      //- travel
-      v-row.justify-center
-        v-col.col-11.col-md-6(order-md="2")
-          v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
-        v-col.col-11.col-md-6(order-md="1")
-          p(v-html="$t('travel')")
-          p {{ $t("quote") }}
-          Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
+        //- sport
+        v-row.justify-center
+          v-col.col-11.col-md-6(order-md="2")
+            v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
+          v-col.col-11.col-md-6(order-md="1")
+            p(v-html="$t('sport')")
+        v-row.justify-center
+          v-col.col-11.col-md-6
+            v-img(src="@/assets/about/Ski_HSP.jpeg" :max-width="imageWidth")
+          v-col.col-11.col-md-6
+            p(v-html="$t('tennisAndSkiing')")
+            //- v-img(src="@/assets/about/Ski_Familie.jpg")
+        //- travel
+        v-row.justify-center
+          v-col.col-11.col-md-6(order-md="2")
+            v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+          v-col.col-11.col-md-6(order-md="1")
+            p(v-html="$t('travel')")
+            p {{ $t("quote") }}
+            Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
   section
     v-container.grey--text
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
