@@ -73,10 +73,10 @@ div
       CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
       //- Education
       CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
-  
-  section.fullwidth.center-items
-    v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-      @click="$router.push('/contact')") {{ $t("contact") }}
+
+    div.center-items
+      v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
+        @click="$router.push('/contact')") {{ $t("contact") }}
 </template>
 
 <script>
