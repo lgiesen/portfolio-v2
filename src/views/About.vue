@@ -45,7 +45,7 @@ div
             p {{ $t("quote") }}
             Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
   section
-    v-container.grey--text
+    v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
       p McCandless, C. (n.d.). The joy of life comes from our 
         | encounters with new experiences, and hence there is no greater joy 
