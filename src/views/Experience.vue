@@ -10,8 +10,14 @@ div
           h4.subheading {{ $t("experienceHero.subtitle") }}
     ScrollHero
   
-  
-
+  section
+    v-row
+      v-col.col-12.col-md-6
+        h2 Lorem ipsum
+        p Lorem ipsum ...
+      v-col.col-12.col-md-6
+        v-card
+          v-img(src="@/assets/about/Snow-Profile.jpg")
   section
     v-container 
       h1.display-2.font-weight-thin.mb-12.text-center {{ $t("recommendationsTitle") }}
