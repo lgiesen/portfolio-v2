@@ -25,8 +25,8 @@ div
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
             ScrollHero(v-if="!this.isMobile")
           v-col.col-12.col-sm-6.col-md-4
-            v-card(height="60vh")
-              v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" height="60vh")
+            v-card
+              v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" max-height="60vh")
           //- Scroll arrow down button (desktop only)
           //- v-col.col-12.mt-n16
     //- Intro card text

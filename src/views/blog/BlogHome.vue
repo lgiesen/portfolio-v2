@@ -1,7 +1,6 @@
 <template lang="pug">
 div
-  //- Hero Area
-  section
+  //- section
     //- https://github.com/johndatserakis/vue-video-section
     //- Video by Michal Marek from Pexels
     vue-video-section(
@@ -15,7 +14,8 @@ div
             h1.subtitle-1 {{ $t("blogHero.subtitle") }}
             
     ScrollHero
-  
+  section
+    h2.display-2.font-weight-thin.text-center.mb-12 This page is in development 
   section.d-flex.flex-wrap.justify-space-between#scroll
     v-container
       h2.display-2.font-weight-thin.text-center.mb-12 Posts  
