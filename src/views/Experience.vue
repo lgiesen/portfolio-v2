@@ -2,25 +2,33 @@
 div
   //- Hero Area
   section
-    v-parallax.hero(dark
+    v-parallax.hero(
       src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
-      v-row(align="center" justify="center")
-        v-col.text-center(cols='12')
-          h1.display-3.font-weight-thin.mb-4 {{ $t("experienceHero.title") }}
-          h4.subheading {{ $t("experienceHero.subtitle") }}
+      v-row.align-center.justify-center
+        v-col.text-center
+          h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
+          p.subheading {{ $t("experienceHero.subtitle") }}
       ScrollHero
   
+  //- Intro
   section
     v-row
       v-col.col-12.col-md-6
-        h2 Lorem ipsum
+        h2.display-1 Intro text
         p Lorem ipsum ...
       v-col.col-12.col-md-6
         v-card
           v-img(src="@/assets/about/Snow-Profile.jpg")
+  
+  section
+    h2.display-1 Skills
+    
+
+
+  //- Recommendation
   section
     v-container 
-      h1.display-2.font-weight-thin.mb-12.text-center {{ $t("recommendationsTitle") }}
+      h1.display-1.mb-12.text-center {{ $t("recommendationsTitle") }}
       v-carousel
         v-carousel-item(v-for="(recommendation, index) in recommendations" 
           :key="index" :src="recommendation.src" 
