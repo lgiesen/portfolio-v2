@@ -286,7 +286,6 @@ export default {
 <style lang="scss" scoped>
 $primary: var(--v-primary-base);
 $secondary: var(--v-secondary-base);
-$background: var(--v-background-base);
 $borderWidth: 2px;
 
 .p-absolute {
@@ -313,54 +312,4 @@ $borderWidth: 2px;
   border-image-slice: 1;
   border-image-source: linear-gradient(120deg, $primary, $secondary);
 }
-// Animated gradient border:
-
-// background: linear-gradient(to right, $primary, $secondary);
-// .gradient-border {
-//   border: $borderWidth solid;
-//   // background: $background;
-//   // position: relative;
-//   &::after {
-//     position: absolute;
-//     content: "";
-
-//     top: calc(-1 * $borderWidth);
-//     left: calc(-1 * $borderWidth);
-
-//     z-index: -1;
-
-//     height: calc(100% + $borderWidth * 2);
-//     width: calc(100% + $borderWidth * 2);
-
-//     background: linear-gradient(
-//       60deg,
-//       hsl(224, 85%, 66%),
-//       hsl(273, 7%, 24%),
-//       hsl(314, 85%, 66%),
-//       hsl(359, 85%, 66%),
-//       hsl(44, 85%, 66%),
-//       hsl(89, 85%, 66%),
-//       hsl(134, 85%, 66%),
-//       hsl(179, 85%, 66%)
-//     );
-//     // background: linear-gradient(60deg, $primary, $secondary);
-//     background-size: 300% 300%;
-//     background-position: 0 50%;
-//     // border-radius: calc(2 * $borderWidth);
-
-//     animation: animatedgradient 3s ease alternate infinite;
-//   }
-// }
-
-// @keyframes animatedgradient {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
 </style>
