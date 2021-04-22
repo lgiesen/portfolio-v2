@@ -84,7 +84,7 @@ export default {
         textSrc: "office"
       },
       {
-        title: "Other",
+        title: "Modelling & Project Management",
         textSrc: "other"
       },
       {
@@ -169,7 +169,7 @@ export default {
           <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to <strong>SharePoint</strong> databases.`,
           other: `In my study, I worked with <strong>Java</strong> and learned about data management, structures, and 
           algorithms. Moreover, I learned how to structure and plan IT projects and their implementation 
-          with the help of various modules, e.g., Project Management. Additionaly, I learned UML, OCL, the 
+          with the help of various modules, e.g., Project Management. Additionaly, I learned Unified Modeling Language (UML), Object Constraint Language (OCL), the 
           theory of Process Mining and the process modelling with <strong>BPMN</strong> or <strong>EPK</strong> 
           in the Software Engineering and Process Management modules. Finally, after I studied <strong>SCRUM</strong> 
           at my university and in a 
@@ -245,7 +245,8 @@ export default {
           Game of Competences
            erworben und angewendet. Außerdem zeige 
           ich in meinen Projekten, wie man mit API-Aufrufen arbeitet.`,
-          office: `Da ich in der Schule täglich mit Microsoft PowerPoint, Word und Excel arbeite, habe ich diese 
+          office: `Da ich in der Schule täglich mit 
+          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite, habe ich diese 
           Microsoft-Produkte häufig eingesetzt. Als studentische Hilfskraft am Lehrstuhl für Wirtschaftsinformatik an der 
           Universität Münster habe ich viele Vorträge vorbereitet. Außerdem habe ich bei move als Berater verschiedene 
           Präsentationen erstellt, was meine Präsentationsfähigkeiten erweitert hat. So wurde ich vor allem mit 
@@ -255,9 +256,9 @@ export default {
           other: `In meinem Studium habe ich mit <strong>Java</strong> gearbeitet und Prinzipien des Datenmanagements, 
           Strukturen und Algorithmen gelernt und wie man sie umsetzt. Außerdem lernte ich in verschiedenen 
           Modulen, z. B. Projektmanagement, wie man IT-Projekte strukturiert und plant und wie man sie umsetzt. 
-          Außerdem lernte ich UML, OCL, Theorie des Process Mining und Modellierung eines Prozesses mithilfe BPMN 
-          und EPK in den Modulen Software-Engineering und Prozessmanagement. 
-          Nachdem ich SCRUM an der WWU und in einem 
+          Außerdem lernte ich Unified Modeling Language (UML), Object Constraint Language (OCL), Theorie des Process Mining und Modellierung eines Prozesses mithilfe 
+          <strong>BPMN</strong> und <strong>EPK</strong> in den Modulen Software-Engineering und Prozessmanagement. 
+          Nachdem ich <strong>SCRUM</strong> an der WWU und in einem 
           Lufthansa Consulting 
           Workshop lernte, habe ich es im Projekt 
           Game of Competences 
