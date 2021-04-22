@@ -17,6 +17,15 @@ v-container
           span This is a link with 
             BackgroundHighlightLink(href="#" linkText="background highlight" target="_self")
             | .
+  section
+    h1.display-3.font-weight-thin#watchtrainer Watchtrainer Project
+    p not live yet, though the homepage can be observed here:
+    a(href="https://watchtrainer.arz.berlin/") Homepage
+  section
+    h1.display-3.font-weight-thin#publicAdministrationProject Web-based simulation platform for public administrations
+    p I am not allowed to share the project results of the project seminar, though
+    p it was successful as it recieved a grade of 1.3 (explain grading system quickly)
+    a(href="https://watchtrainer.arz.berlin/") Homepage
 </template>
 
 <script>
