@@ -48,13 +48,19 @@ div
       v-row.d-flex.flex-wrap.justify-space-between
         //- skillCardGroup holds the title and where to find the corresponding text
         //- of the skill card in i18n 
-        v-img.pa-0.ma-0(:gradient="$store.getters.isDarkTheme ? '#9fa8da, #ffab91' : '#3949ab, #f4511e'")
-          v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
-            v-card.mb-9(height="100%")
-              v-icon mdi-{{ card.icon}}
-              v-card-title {{ card.title }}
-              v-card-text
-                p(v-html="$t('skills.' + card.textSrc)")
+        v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
+          v-card(height="100%" tile)
+            v-img.d-flex.white--text.align-end.bottom-border.gradient-border(height="200px" :src="card.backgroundImage"
+              :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.6)' : 'rgba(255,255,255,.6), rgba(255,255,255,.6)'")
+              //- single line requires .justify-center and multiline .text-center
+              v-card-title.justify-center.text-center
+                h2.primary--text {{ card.title }}
+            v-col.seperatorIcon.pt-0
+              v-btn(elevation="15" fab color="background" 
+                style="backdrop-filter: blur(8px);")
+                v-icon(color="primary") mdi-{{ card.icon}}
+            v-card-text
+              p.my-0.py-0(v-html="$t('skills.' + card.textSrc)")
 </template>
 
 <script>
@@ -72,31 +78,37 @@ export default {
       {
         title: "Python",
         textSrc: "python",
+        backgroundImage: require("@/assets/home/python.jpg"),
         icon: "language-python"
       },
       {
         title: "Front-end Web Development",
         textSrc: "frontend",
+        backgroundImage: require("@/assets/home/frontend.jpg"),
         icon: "vuejs"
       },
       {
         title: "Back-end Web Development",
         textSrc: "backend",
+        backgroundImage: require("@/assets/home/backend.jpg"),
         icon: "api"
       },
       {
         title: "Microsoft Office / 365",
         textSrc: "office",
+        backgroundImage: require("@/assets/home/office.jpg"),
         icon: "microsoft-office"
       },
       {
-        title: "Modelling & Project Management",
+        title: "Process Modelling & Project Management",
         textSrc: "other",
+        backgroundImage: require("@/assets/home/desk.jpg"),
         icon: "language-java"
       },
       {
         title: "Soft Skills",
         textSrc: "softSkills",
+        backgroundImage: require("@/assets/home/office.jpg"),
         icon: "account-group"
       }
     ]
@@ -272,7 +284,83 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primary: var(--v-primary-base);
+$secondary: var(--v-secondary-base);
+$background: var(--v-background-base);
+$borderWidth: 2px;
+
 .p-absolute {
   position: absolute;
 }
+.seperatorIcon {
+  // center icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // move icon to top
+  position: relative;
+  top: -30px;
+  // make button not clickable
+  pointer-events: none;
+}
+.bottom-border {
+  border-bottom: $borderWidth solid;
+}
+.bordered {
+  border: $borderWidth solid;
+}
+.gradient-border {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(120deg, $primary, $secondary);
+}
+// Animated gradient border:
+
+// background: linear-gradient(to right, $primary, $secondary);
+// .gradient-border {
+//   border: $borderWidth solid;
+//   // background: $background;
+//   // position: relative;
+//   &::after {
+//     position: absolute;
+//     content: "";
+
+//     top: calc(-1 * $borderWidth);
+//     left: calc(-1 * $borderWidth);
+
+//     z-index: -1;
+
+//     height: calc(100% + $borderWidth * 2);
+//     width: calc(100% + $borderWidth * 2);
+
+//     background: linear-gradient(
+//       60deg,
+//       hsl(224, 85%, 66%),
+//       hsl(273, 7%, 24%),
+//       hsl(314, 85%, 66%),
+//       hsl(359, 85%, 66%),
+//       hsl(44, 85%, 66%),
+//       hsl(89, 85%, 66%),
+//       hsl(134, 85%, 66%),
+//       hsl(179, 85%, 66%)
+//     );
+//     // background: linear-gradient(60deg, $primary, $secondary);
+//     background-size: 300% 300%;
+//     background-position: 0 50%;
+//     // border-radius: calc(2 * $borderWidth);
+
+//     animation: animatedgradient 3s ease alternate infinite;
+//   }
+// }
+
+// @keyframes animatedgradient {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
 </style>
