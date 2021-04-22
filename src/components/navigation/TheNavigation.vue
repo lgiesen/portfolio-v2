@@ -119,11 +119,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// Fallback, if browser does not support backdrop-filter
 .appBar {
-  opacity: 0.7;
-  // works for all browsers except Firefox [April 2021]
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  opacity: 0.9;
+}
+// works for all browsers except Firefox [April 2021]
+@supports (
+  (-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))
+) {
+  .appBar {
+    opacity: 0.7;
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+  }
 }
 // Navigation Font
 // Tablet/desktop (a.v-tab); Mobile (div.v-list-item__title)
