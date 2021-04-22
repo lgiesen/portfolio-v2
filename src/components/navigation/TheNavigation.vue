@@ -4,7 +4,8 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
   //- Tablet and desktop navigation
   v-app-bar.appBar.hidden-sm-and-down(outlined elevation="0" 
     :class="!this.dontShowAtTop ? 'transparent-background' : ''")
-    //- style="opacity: 0.7; z-index: 9999999; backdrop-filter: blur(10px);")
+    //- transparent-background class is defined in @/App.vue
+    //- If the logo is seperate:
     //- div.d-flex
         a(href="/")
           //- Change icon depending on the theme
