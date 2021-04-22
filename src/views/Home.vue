@@ -48,11 +48,13 @@ div
       v-row.d-flex.flex-wrap.justify-space-between
         //- skillCardGroup holds the title and where to find the corresponding text
         //- of the skill card in i18n 
-        v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
-          v-card.mb-9(height="100%")
-            v-card-title {{ card.title }}
-            v-card-text
-              p(v-html="$t('skills.' + card.textSrc)")
+        v-img.pa-0.ma-0(:gradient="$store.getters.isDarkTheme ? '#9fa8da, #ffab91' : '#3949ab, #f4511e'")
+          v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
+            v-card.mb-9(height="100%")
+              v-icon mdi-{{ card.icon}}
+              v-card-title {{ card.title }}
+              v-card-text
+                p(v-html="$t('skills.' + card.textSrc)")
 </template>
 
 <script>
@@ -69,27 +71,33 @@ export default {
     skillCardGroup: [
       {
         title: "Python",
-        textSrc: "python"
+        textSrc: "python",
+        icon: "language-python"
       },
       {
         title: "Front-end Web Development",
-        textSrc: "frontend"
+        textSrc: "frontend",
+        icon: "vuejs"
       },
       {
         title: "Back-end Web Development",
-        textSrc: "backend"
+        textSrc: "backend",
+        icon: "api"
       },
       {
         title: "Microsoft Office / 365",
-        textSrc: "office"
+        textSrc: "office",
+        icon: "microsoft-office"
       },
       {
         title: "Modelling & Project Management",
-        textSrc: "other"
+        textSrc: "other",
+        icon: "language-java"
       },
       {
         title: "Soft Skills",
-        textSrc: "softSkills"
+        textSrc: "softSkills",
+        icon: "account-group"
       }
     ]
   }),

@@ -120,6 +120,8 @@ export default {
 <style scoped lang="scss">
 .appBar {
   opacity: 0.7;
+  // works for all browsers except Firefox [April 2021]
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 // Navigation Font
