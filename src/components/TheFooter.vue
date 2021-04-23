@@ -12,34 +12,14 @@ div
         //- changing arrangement of icons (low code quality :( )
         //- tablet & desktop version
         div.hidden-sm-and-down
-          v-btn.mx-4.secondary--text(
-              v-for="icon in socialIcons"
-              :key="icon.mdi"
-              icon target="_blank"
-              :href="icon.link")
-              v-icon(elevation="15" size="24px") {{ icon.mdi }}
-          v-btn.mx-4.secondary--text(
-            v-for="icon in programmingIcons"
-            :key="icon.mdi"
-            icon target="_blank"
-            :href="icon.link")
-            v-icon(elevation="15" size="24px") {{ icon.mdi }}
+          Icons(:iconGroup="socialIcons")
+          Icons(:iconGroup="programmingIcons")
         //- mobile version: two social icons above, three code icons below
         v-row.hidden-md-and-up
           v-col.col-12
-            v-btn.mx-4.secondary--text(
-              v-for="icon in socialIcons"
-              :key="icon.mdi"
-              icon target="_blank"
-              :href="icon.link")
-              v-icon(elevation="15" size="24px") {{ icon.mdi }}
+            Icons(:iconGroup="socialIcons")
           v-col.col-12
-            v-btn.mx-4.secondary--text(
-              v-for="icon in programmingIcons"
-              :key="icon.mdi"
-              icon target="_blank"
-              :href="icon.link")
-              v-icon(elevation="15" size="24px") {{ icon.mdi }}
+            Icons(:iconGroup="programmingIcons")
         p.mt-6 &copy; {{new Date().getFullYear()}} - 
           span.secondary--text Leo Giesen
 
@@ -47,9 +27,13 @@ div
 
 <script>
 import { mapGetters } from "vuex";
+import socialIcons from "@/components/social-icons/SocialIcons.json";
+import programmingIcons from "@/components/social-icons/ProgrammingIcons.json";
+import Icons from "@/components/social-icons/Icons.vue";
 
 export default {
   name: "TheFooter",
+  components: { Icons },
   data: () => ({
     links: [
       {
@@ -68,34 +52,8 @@ export default {
         link: "privacy-policy"
       }
     ],
-    socialIcons: [
-      // {
-      //   mdi: "mdi-email-outline",
-      //   link: "mailto:leo.richard.giesen@gmail.com"
-      // },
-      {
-        mdi: "mdi-linkedin",
-        link: "www.linkedin.com/in/leogiesen"
-      },
-      {
-        mdi: "mdi-xing",
-        link: "https://www.xing.com/profile/Leo_Giesen"
-      }
-    ],
-    programmingIcons: [
-      {
-        mdi: "mdi-github",
-        link: "https://github.com/lgiesen"
-      },
-      {
-        mdi: "mdi-gitlab",
-        link: "https://wiwi-gitlab.uni-muenster.de/l_gies10"
-      },
-      {
-        mdi: "mdi-stack-overflow",
-        link: "https://stackoverflow.com/users/10220142/leo-giesen"
-      }
-    ]
+    socialIcons: socialIcons,
+    programmingIcons: programmingIcons
   }),
   computed: {
     ...mapGetters(["isDarkTheme", "isDE"])

@@ -54,7 +54,7 @@ div
       v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
         @click="$router.push('/contact')") {{ $t("contact") }}
     
-
+  SocialContactSection
 
   //- Recommendation
   section
@@ -80,6 +80,7 @@ import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import ExperienceCard from "@/components/ExperienceCard.vue";
 import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import CardGroup from "@/components/CardGroup.vue";
+import SocialContactSection from "@/components/SocialContactSection.vue";
 
 export default {
   name: "Experience",
@@ -87,7 +88,8 @@ export default {
     ScrollHero,
     ExperienceCard,
     ParallaxDivider,
-    CardGroup
+    CardGroup,
+    SocialContactSection
   },
   data: () => ({
     associations: [
