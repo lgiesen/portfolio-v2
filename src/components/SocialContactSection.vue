@@ -1,18 +1,39 @@
 <template lang="pug">
 div
   section.fullwidth
-    div.animated-gradient-box.in
-      div.center-items(min-height="20vh" max-height="400px")
-
+    v-img.align-center(src="@/assets/background/WWU-Schloss.jpg" cover
+        max-height="calc(min(500px, 100vh))" width="100vw"
+        :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.6)' : 'rgba(0,0,0,.4), rgba(0,0,0,.4)'")
+        v-row.text-center.pb-12
+            v-col
+                h3.white--text.display-1 {{ $t("socialTitle") }}
+                v-btn.mx-8(
+                    :class="$vuetify.theme.dark ? 'secondary--text' : 'white--text'"
+                    v-for="icon in socialIcons" :key="icon.mdi"
+                    icon target="_blank" :href="icon.link")
+                    v-icon(elevation="15" size="42px") {{ icon.mdi }}
 </template>
 
 <script>
 import socialIcons from "@/components/social-icons/SocialIcons.json";
+import Icons from "@/components/social-icons/Icons.vue";
+
 export default {
   name: "SocialContactSection",
+  components: { Icons },
   data: () => ({
     socialIcons: socialIcons
-  })
+  }),
+  i18n: {
+    messages: {
+      en: {
+        socialTitle: "Connect with me"
+      },
+      de: {
+        socialTitle: "In Kontakt setzen"
+      }
+    }
+  }
 };
 </script>
 

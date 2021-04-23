@@ -1,24 +1,18 @@
 <template lang="pug">
 div
   //- Hero Area
-  section
-    v-parallax.hero(
+  section.hero.fullwidth
+    v-parallax(
       src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
-      v-row.align-center.justify-center
-        v-col.text-center
-          h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
-          p.subheading {{ $t("experienceHero.subtitle") }}
-      ScrollHero
-  
-  //- Intro
-  section
-    v-row
-      v-col.col-12.col-md-6
-        h2.display-1 Intro text
-        p Lorem ipsum ...
-      v-col.col-12.col-md-6
-        v-card
-          v-img(src="@/assets/about/Snow-Profile.jpg")
+      v-container.text-center
+        v-row.align-center.justify-center.pa-md-12
+          v-col.col-12.col-md-6
+            h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
+            p.subheading {{ $t("experienceHero.subtitle") }}
+            ScrollHero.mt-12
+          v-col.col-11.col-md-6
+            v-card(max-width="400px" elevation="50")
+              v-img(src="@/assets/about/Snow-Profile.jpg")
   
   //- Overview of employers and education
   section
@@ -39,7 +33,7 @@ div
           ExperienceCard(v-for="(association, index) in associations" 
             :key="association.title" :associationsSrc="associations[index]")
   
-  ParallaxDivider(:sectionTitle="$t('experienceParallax.title')" 
+  ParallaxDivider#scroll(:sectionTitle="$t('experienceParallax.title')" 
     :sectionSubtitle="$t('experienceParallax.subtitle')"
     imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
   
@@ -50,16 +44,17 @@ div
       //- Education
       CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
 
-    div.center-items
-      v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-        @click="$router.push('/contact')") {{ $t("contact") }}
+    //- Contact Me Button:
+    //- div.center-items
+    //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
+    //-     @click="$router.push('/contact')") {{ $t("contact") }}
     
   SocialContactSection
 
   //- Recommendation
   section
     v-container 
-      h1.display-1.mb-12.text-center {{ $t("recommendationsTitle") }}
+      h1.display-2.font-weight-thin.mb-12.text-center {{ $t("recommendationsTitle") }}
       v-carousel
         v-carousel-item(v-for="(recommendation, index) in recommendations" 
           :key="index" :src="recommendation.src" 

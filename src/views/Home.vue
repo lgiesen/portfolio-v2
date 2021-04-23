@@ -14,7 +14,7 @@ div
       HeroBackgroundGradientGroup.p-absolute
       v-container.text-center
         v-row.pa-md-12.pb-md-0.align-center.justify-center.h-100vh(fill-height fluid)
-          v-col.col-12.col-sm-6.col-md-6
+          v-col.col-12.col-md-6
             //- The v-card makes the title visible, because the SVG background was more prominent
             v-card.white--text.transparent-background(outlined)
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
@@ -24,7 +24,7 @@ div
             //- v-btn.pa-7(outlined color="btnColor" rounded
             //-   @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
             ScrollHero
-          v-col.col-12.col-sm-6.col-md-4
+          v-col.col-12.col-md-6.col-lg-4
             v-card
               v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" max-height="60vh")
     //- Intro card text
