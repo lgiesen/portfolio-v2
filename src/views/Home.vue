@@ -50,7 +50,7 @@ div
         //- of the skill card in i18n 
         v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
           v-card(height="100%" tile)
-            div.animated-gradient-box.in.bottom-border
+            div.animated-gradient-box.in
               v-img.d-flex.white--text.align-end(height="200px" :src="card.backgroundImage"
                 :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                 //- single line requires .justify-center and multiline .text-center
@@ -312,14 +312,13 @@ $secondary: var(--v-secondary-base);
 .animated-gradient-box {
   position: relative;
   &::after {
-    --border-width: 2px;
+    --border-width: 20px;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: var(--border-width);
     background: linear-gradient(120deg, $secondary, $primary, $secondary);
     background-size: 300% 300%;
     clip-path: polygon(
