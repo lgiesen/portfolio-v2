@@ -312,7 +312,7 @@ $secondary: var(--v-secondary-base);
 .animated-gradient-box {
   position: relative;
   &::after {
-    --border-width: 20px;
+    --border-width: 3px;
     content: "";
     position: absolute;
     top: 0;
@@ -343,12 +343,12 @@ $secondary: var(--v-secondary-base);
     //   0 100% -> now we move back to where we began to complete the line
     // );
   }
-  .in:after {
-    animation: gradient-animation 4s ease-in-out infinite;
-    // With enter-animation:
-    // animation: frame-enter 1s forwards ease-in-out reverse,
-    //   gradient-animation 4s ease-in-out infinite;
-  }
+}
+.animated-gradient-box.in:after {
+  animation: gradient-animation 4s ease-in-out infinite;
+  // With enter-animation:
+  // animation: frame-enter 1s forwards ease-in-out reverse,
+  //   gradient-animation 4s ease-in-out infinite;
 }
 
 /* motion */
