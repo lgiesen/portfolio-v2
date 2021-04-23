@@ -51,16 +51,15 @@ div
         v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
           v-card(height="100%" tile)
             v-img.d-flex.white--text.align-end.bottom-border.gradient-border(height="200px" :src="card.backgroundImage"
-              :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.6)' : 'rgba(255,255,255,.6), rgba(255,255,255,.6)'")
+              :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
               //- single line requires .justify-center and multiline .text-center
               v-card-title.justify-center.text-center
                 h2.primary--text {{ card.title }}
-            v-col.seperatorIcon.pt-0
-              v-btn(elevation="15" fab color="background" 
-                style="backdrop-filter: blur(8px);")
+            v-col.seperatorIcon.py-0
+              v-btn(elevation="15" fab color="background")
                 v-icon(color="primary") mdi-{{ card.icon}}
             v-card-text
-              p.my-0.py-0(v-html="$t('skills.' + card.textSrc)")
+              p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
 </template>
 
 <script>
@@ -161,7 +160,7 @@ export default {
           previous and this portfolio page, two WordPress websites, which I single-handedly developed in consultancy projects at 
             <a href="/experience#card-move">move</a>. 
           However, I am most proud of my project team's complex 
-            <a href="/projects#publicAdministrationProject">web-based simulation platform</a> 
+            <a href="/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
           backend: `My primary Web Development focus lies on the front end. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
@@ -170,7 +169,7 @@ export default {
             <strong>API calls</strong> 
           with a REST API and GraphQL. I acquired and applied these skills at university and in the 
             <a href="/projects#watchtrainer">watchtrainer</a> and 
-            <a href="/projects#publicAdministrationProject">web-based simulation platform</a> 
+            <a href="/projects#goc">Game of Competences</a> 
           project. Moreover, I demonstrate how to work with API calls in my 
             <a href="/projects">projects</a>.`,
           office: `Since my everyday use of 
@@ -194,7 +193,7 @@ export default {
           at my university and in a 
             <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
           workshop, I worked with it in the 
-            <a href="/projects#publicAdministrationProject">web-based simulation platform</a> 
+            <a href="/projects#goc">Game of Competences</a> 
           project and a web development project at 
             <a href="/experience#card-move">move</a> .`,
           softSkills: `dynamic teamwork, leadership`
@@ -243,7 +242,7 @@ export default {
           bei 
             <a href="/experience#card-move">move</a>  
           entwickelt habe. Besonders stolz bin ich auf die 
-            <a href="/projects#publicAdministrationProject">webbasierte Simulationsplattform</a>, 
+            <a href="/projects#goc">webbasierte Simulationsplattform</a>, 
           die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz bin ich sehr vertraut 
           mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (ERM), 
@@ -251,7 +250,7 @@ export default {
             <strong>API Calls</strong> mit einer REST-API und GraphQL. 
           Diese Fähigkeiten habe ich an der Universität und im Projekt 
             <a href="/projects#watchtrainer">watchtrainer</a> und der 
-            <a href="/projects#publicAdministrationProject">webbasierte Simulationsplattform</a>
+            <a href="/projects#goc">webbasierte Simulationsplattform</a>
           erworben und angewendet. Außerdem zeige ich in meinen 
             <a href="/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
           office: `Da ich in der Schule täglich mit 
@@ -273,7 +272,7 @@ export default {
           Nachdem ich <strong>SCRUM</strong> an der WWU und in einem 
           <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
           Workshop lernte, habe ich es im Projekt der
-          <a href="/projects#publicAdministrationProject">webbasierten Simulationsplattform</a> 
+          <a href="/projects#goc">webbasierten Simulationsplattform</a> 
           und in einem Webentwicklungsprojekt bei <a href="/experience#card-move">move</a>  angewendet.`,
           softSkills: `dynamische Teamarbeit, Führung`
         }
@@ -304,11 +303,6 @@ $borderWidth: 2px;
 }
 .bottom-border {
   border-bottom: $borderWidth solid;
-}
-.bordered {
-  border: $borderWidth solid;
-}
-.gradient-border {
   border-image-slice: 1;
   border-image-source: linear-gradient(120deg, $primary, $secondary);
 }
