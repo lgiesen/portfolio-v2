@@ -61,10 +61,6 @@ div
                 v-icon(color="primary") mdi-{{ card.icon}}
             v-card-text
               p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
-  section
-    div.animated-gradient-box.in 
-      h1 title
-      p asidfö
 </template>
 
 <script>
