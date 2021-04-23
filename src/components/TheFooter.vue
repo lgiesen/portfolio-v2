@@ -2,12 +2,10 @@
 div
   v-footer#footer.mt-12.pa-10(padless :class="isDarkTheme ? 'darkFooterBg' : 'lightFooterBg'")
     v-row.justify-center
-      v-btn.my-2(
-        v-for="link in links"
-        :key="link.link"
-        color="white"
-        @click='goTo(link.link)'
-        text) {{ isDE ? link.title_de : link.title_en }}
+      v-btn.my-2(color="white" text
+        v-for="link in links" :key="link.link"
+        @click='$router.push("/" + link.link).catch(()=>{})'
+        ) {{ isDE ? link.title_de : link.title_en }}
       v-col.white--text.text-center.col-12
         //- changing arrangement of icons (low code quality :( )
         //- tablet & desktop version
@@ -20,9 +18,8 @@ div
             Icons(:iconGroup="socialIcons")
           v-col.col-12
             Icons(:iconGroup="programmingIcons")
-        p.mt-6 &copy; {{new Date().getFullYear()}} - 
+        p.mt-6 &copy; {{ new Date().getFullYear() }} - 
           span.secondary--text Leo Giesen
-
 </template>
 
 <script>
@@ -57,13 +54,6 @@ export default {
   }),
   computed: {
     ...mapGetters(["isDarkTheme", "isDE"])
-  },
-  methods: {
-    goTo(link) {
-      // if the link is internal, the router should be used. Otherwise open a new page
-      if (!link.includes("http")) this.$router.push("/" + link);
-      else window.open("https://www.wi.uni-muenster.de/legal-notice", "_blank");
-    }
   }
 };
 </script>
