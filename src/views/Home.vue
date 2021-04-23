@@ -50,16 +50,21 @@ div
         //- of the skill card in i18n 
         v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
           v-card(height="100%" tile)
-            v-img.d-flex.white--text.align-end.bottom-border.gradient-border(height="200px" :src="card.backgroundImage"
-              :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
-              //- single line requires .justify-center and multiline .text-center
-              v-card-title.justify-center.text-center
-                h2.primary--text {{ card.title }}
+            div.animated-gradient-box.in.bottom-border
+              v-img.d-flex.white--text.align-end(height="200px" :src="card.backgroundImage"
+                :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
+                //- single line requires .justify-center and multiline .text-center
+                v-card-title.justify-center.text-center
+                  h2.primary--text {{ card.title }}
             v-col.seperatorIcon.py-0
               v-btn(elevation="15" fab color="background")
                 v-icon(color="primary") mdi-{{ card.icon}}
             v-card-text
               p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
+  section
+    div.animated-gradient-box.in 
+      h1 title
+      p asidfö
 </template>
 
 <script>
@@ -285,7 +290,6 @@ export default {
 <style lang="scss" scoped>
 $primary: var(--v-primary-base);
 $secondary: var(--v-secondary-base);
-$borderWidth: 2px;
 
 .p-absolute {
   position: absolute;
@@ -301,9 +305,99 @@ $borderWidth: 2px;
   // make button not clickable
   pointer-events: none;
 }
-.bottom-border {
-  border-bottom: $borderWidth solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(120deg, $primary, $secondary);
+// non-animated border
+// .bottom-border {
+// --border-width: 2px;
+// border-bottom: var(--border-width) solid;
+// border-image-slice: 1;
+// border-image-source: linear-gradient(120deg, $primary, $secondary);
+// border-radius: var(--border-width);
+// }
+.animated-gradient-box {
+  position: relative;
+  &::after {
+    --border-width: 2px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-width);
+    background: linear-gradient(120deg, $secondary, $primary, $secondary);
+    background-size: 300% 300%;
+    clip-path: polygon(
+      0 100%,
+      0 calc(100% - var(--border-width)),
+      100% calc(100% - var(--border-width)),
+      100% 100%,
+      0 100%
+    );
+    // 0 100%,
+    // 0 calc(100% - 3px),
+    // 100% calc(100% - 3px),
+    // 100% 100%,
+    // 0 100%
+
+    // Explanation: https://beyond-paper.com/clip-path-polygons-explained/
+    // polygon( We use coordinates to draw: 0 0 is top-left and 100% 0 is the top-right
+    //   0% 100%, -> We start in the bottom left (= 0 100%) => result: .
+    //   0 calc(100% - 3px), -> Now we define the thinkness of the line, by moving up => result: |
+    //   100% calc(100% - 3px), -> Then we move to the right side => result: |‾‾‾‾‾‾‾‾‾‾‾
+    //   100% 100%, -> then to the bottom left to mind the border thickness => result: |‾‾‾‾‾‾‾‾‾‾‾|
+    //   0 100% -> now we move back to where we began to complete the line
+    // );
+  }
 }
+
+.animated-gradient-box.in:after {
+  animation: gradient-animation 4s ease-in-out infinite;
+  // With enter-animation:
+  // animation: frame-enter 1s forwards ease-in-out reverse,
+  //   gradient-animation 4s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+// You could also animate the polygon (this is not as desired at the moment)
+// Hence, it is not in production
+// @keyframes frame-enter {
+//   0% {
+//     clip-path: polygon(
+//       0 100%,
+//       0 calc(100% - 3px),
+//       3px calc(100% - 3px),
+//       3px 100%,
+//       0 100%
+//     );
+//   }
+//   // 50% {
+//   //   clip-path: polygon(
+//   //     0 100%,
+//   //     0 calc(100% - 3px),
+//   //     50% calc(100% - 3px),
+//   //     50% 100%,
+//   //     0 100%
+//   //   );
+//   // }
+//   100% {
+//     -webkit-clip-path: polygon(
+//       0 100%,
+//       0 calc(100% - 3px),
+//       100% calc(100% - 3px),
+//       100% 100%,
+//       0 100%
+//     );
+//   }
+// }
 </style>
