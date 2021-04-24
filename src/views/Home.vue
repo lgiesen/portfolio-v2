@@ -55,7 +55,7 @@ div
                 :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                 //- single line requires .justify-center and multiline .text-center
                 v-card-title.justify-center.text-center
-                  h2.primary--text {{ card.title }}
+                  h2.gradient-text {{ card.title }}
             v-col.seperatorIcon.py-0
               v-btn(elevation="15" fab color="background")
                 v-icon(color="primary") mdi-{{ card.icon}}
@@ -285,6 +285,9 @@ export default {
 
 <style lang="scss" scoped>
 $primary: var(--v-primary-base);
+$primaryDark: var(--v-primaryDark-base);
+$secondaryLight: var(--v-secondaryLight-base);
+$primaryLight: var(--v-primaryLight-base);
 $secondary: var(--v-secondary-base);
 
 .p-absolute {
@@ -301,6 +304,14 @@ $secondary: var(--v-secondary-base);
   // make button not clickable
   pointer-events: none;
 }
+
+.gradient-text {
+  background: -webkit-linear-gradient(120deg, $secondary, $primaryDark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // non-animated border
 // .bottom-border {
 // --border-width: 2px;
