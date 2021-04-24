@@ -1,17 +1,17 @@
 <template lang="pug">
 div
   section.fullwidth
-    v-img.align-center(src="@/assets/background/WWU-Schloss.jpg" cover
-        max-height="calc(min(500px, 100vh))" width="100vw"
-        :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.6)' : 'rgba(0,0,0,.4), rgba(0,0,0,.4)'")
-        v-row.text-center.pb-12
-            v-col
-                h3.white--text.display-1 {{ $t("socialTitle") }}
-                v-btn.mx-8(
-                    :class="$vuetify.theme.dark ? 'secondary--text' : 'white--text'"
-                    v-for="icon in socialIcons" :key="icon.mdi"
-                    icon target="_blank" :href="icon.link")
-                    v-icon(elevation="15" size="42px") {{ icon.mdi }}
+    v-img#WWU.align-center(src="@/assets/background/WWU-Schloss.jpg" cover
+      max-height="calc(min(500px, 100vh))" width="100vw"
+      :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.4), rgb(255,255,255,.7)'")
+      v-row.text-center.pb-12
+        v-col
+          h6.primary--text.display-2 {{ $t("socialTitle") }}
+          v-btn.mx-8.secondary--text(
+            v-for="icon in socialIcons" :key="icon.mdi"
+            icon target="_blank" :href="icon.link")
+            //- :class="$vuetify.theme.dark ? 'secondary--text' : 'white--text'"
+            v-icon(elevation="15" size="42px") {{ icon.mdi }}
 </template>
 
 <script>
@@ -41,21 +41,8 @@ export default {
 $primary: var(--v-primary-base);
 $secondary: var(--v-secondary-base);
 
-.animated-gradient-box {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to left, $secondary, $primary, $secondary);
-    background-size: 300% 300%;
-  }
-}
-.animated-gradient-box.in:after {
-  animation: gradient-animation 4s ease-in-out infinite;
+#WWU {
+  background: linear-gradient(blue, pink);
 }
 
 /* motion */

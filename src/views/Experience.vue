@@ -193,7 +193,7 @@ export default {
         endDate: "today",
         description_en: `At the University of Münster, I acquired foundational knowledge
         about economics, information systems, and computer science. Additionally, I 
-        picked up modelling languages and various programming languages, which I 
+        picked up modeling languages and various programming languages, which I 
         improved in my free time. Moreover, my project seminar team successfully
         implemented a complex web application, where I led the frontend team.`,
         description_de: `An der WWU eignete ich mir grundlegendes Wissen der BWL, Wirtschafts- 
