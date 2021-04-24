@@ -31,11 +31,11 @@ div
     v-container#scroll.center-items
       v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
         v-row
-          v-col.col-12.col-sm-6.center-items
+          v-col.col-12.col-md-6.center-items
             //- should be replaced with an animated SVG
             v-card
               v-skeleton-loader(type="card" width="300")
-          v-col.col-12.col-sm-6.pr-4
+          v-col.col-12.col-md-6.pr-4
             v-card-title {{ $t("homeIntro.title") }}
             v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
               v-btn.gradient-btn.pa-6.mt-4(rounded
@@ -48,10 +48,10 @@ div
       v-row.d-flex.flex-wrap.justify-space-between
         //- skillCardGroup holds the title and where to find the corresponding text
         //- of the skill card in i18n 
-        v-col.col-12.col-sm-6(v-for="card in skillCardGroup" :key="card.title")
-          v-card(height="100%" tile)
+        v-col.col-12.col-md-6(v-for="card in skillCardGroup" :key="card.title")
+          v-card(height="100%" tile max-width="94vw")
             div.animated-gradient-box.in
-              v-img.d-flex.white--text.align-end(height="200px" :src="card.backgroundImage"
+              v-img.d-flex.white--text.align-end(max-height="200px" :src="card.backgroundImage"
                 :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                 //- single line requires .justify-center and multiline .text-center
                 v-card-title.justify-center.text-center
