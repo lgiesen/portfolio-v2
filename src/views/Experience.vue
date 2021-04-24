@@ -37,7 +37,7 @@ div
   
   ParallaxDivider#scroll(:sectionTitle="$t('experienceParallax.title')" 
     :sectionSubtitle="$t('experienceParallax.subtitle')"
-    imgSrc="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+    imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
   
   v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
     section
