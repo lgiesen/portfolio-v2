@@ -14,6 +14,7 @@ div
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
               ScrollHero.mt-16.pt-16
+    //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
   
   //- Overview of employers and education
   section

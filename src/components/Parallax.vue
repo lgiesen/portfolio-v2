@@ -1,21 +1,20 @@
 <template lang="pug">
-div
-    section.mb-0
-        v-container(v-if="$vuetify.breakpoint.xlOnly")
-            //- hero class makes parallax fullwidth, which most likely distorts the parallax image
-            v-parallax(:src="this.parallaxImage")
-                v-row.justify-center.align-center
-                    v-col.text-center
-                        h1.display-3.font-weight-thin.mb-4.black--text {{ this.title }}
-                        p.subheading {{ this.subtitle }}
-                ScrollHero
-        
-        v-parallax.hero(v-else :src="this.parallaxImage")
+section.mb-0
+    v-container(v-if="$vuetify.breakpoint.xlOnly")
+        //- hero class makes parallax fullwidth, which most likely distorts the parallax image
+        v-parallax(:src="this.parallaxImage")
             v-row.justify-center.align-center
                 v-col.text-center
-                    h1.display-3.font-weight-thin.black--text {{ this.title }}
+                    h1.display-3.font-weight-thin.mb-4.black--text {{ this.title }}
                     p.subheading {{ this.subtitle }}
             ScrollHero
+    
+    v-parallax.hero(v-else :src="this.parallaxImage")
+        v-row.justify-center.align-center
+            v-col.text-center
+                h1.display-3.font-weight-thin.black--text {{ this.title }}
+                p.subheading {{ this.subtitle }}
+        ScrollHero
 </template>
 
 <script>
@@ -30,4 +29,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hero {
+  // min-height: calc(100vh - 60px);
+  width: 100vw;
+}
+</style>
