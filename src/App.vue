@@ -146,10 +146,6 @@ section {
   margin-bottom: 20vh;
 }
 // 2.2 Hero area
-.hero {
-  // min-height: calc(100vh - 60px);
-  width: 100vw;
-}
 .h-100vh {
   min-height: calc(100vh - 60px);
 }

@@ -1,18 +1,19 @@
 <template lang="pug">
 div
   //- Hero Area
-  section.hero.fullwidth
-    v-parallax(
-      src='https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')
-      v-container.text-center
-        v-row.align-center.justify-center.pa-md-12
-          v-col.col-12.col-md-6
-            h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
-            p.subheading {{ $t("experienceHero.subtitle") }}
-            ScrollHero.mt-12
-          v-col.col-11.col-md-6
-            v-card(max-width="400px" elevation="50")
-              v-img(src="@/assets/about/Snow-Profile.jpg")
+  section.fullwidth
+    v-parallax(src="@/assets/background/Aasee.jpg" height="800")
+      //- Another section is necessary to provide the max-width for ultra-wide screens
+      section.mb-0 
+        v-container.text-center
+          v-row.align-center.justify-center.pa-md-12
+            v-col.col-11.col-md-6
+              v-card(max-width="400px" elevation="50")
+                v-img(src="@/assets/about/Snow-Profile.jpg")
+            v-col.col-12.col-md-6
+              h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
+              p.subheading {{ $t("experienceHero.subtitle") }}
+              ScrollHero.mt-16.pt-16
   
   //- Overview of employers and education
   section

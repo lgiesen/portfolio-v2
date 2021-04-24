@@ -9,7 +9,7 @@ div
     //-   :mp4Source="require('../assets/background/video/coast.mp4')"
     //-   :posterSource="require('../assets/background/nature.jpg')")
     //- v-container(slot="overlay-content")
-  section.hero.fullwidth
+  section.fullwidth
     div
       HeroBackgroundGradientGroup.p-absolute
       v-container.text-center
