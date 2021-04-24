@@ -1,14 +1,16 @@
 <template lang="pug">
 //- full-width parralax image
 v-parallax.py-12.text-center(:src="this.imgSrc")
-  h1.font-weight-thin.mb-4.break-word(:class="this.$vuetify.breakpoint.mobile ? 'display-1' : 'display-2'") {{ this.sectionTitle }}
+  h1.font-weight-thin.mb-4.break-word(:class="this.ResponsiveFontSize") {{ this.sectionTitle }}
   h4.subheading {{ this.sectionSubtitle }}
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "ParallaxDivider",
-  props: ["sectionTitle", "sectionSubtitle", "imgSrc"]
+  props: ["sectionTitle", "sectionSubtitle", "imgSrc"],
+  computed: { ...mapGetters(["ResponsiveFontSize"]) }
 };
 </script>
 

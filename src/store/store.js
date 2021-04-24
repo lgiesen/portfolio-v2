@@ -34,6 +34,10 @@ export default new Vuex.Store({
       return Vuetify.framework.breakpoint.mobile;
       // in local components, you could use:
       // console.log(this.$vuetify.breakpoint.mobile);
+    },
+    ResponsiveFontSize() {
+      if (Vuetify.framework.breakpoint.smAndDown) return "display-1";
+      else return "display-2";
     }
   },
   modules: {
