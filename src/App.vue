@@ -86,9 +86,8 @@ $btnColor: var(--v-btnColor-base);
   &::after {
     box-sizing: border-box;
   }
-  word-break: keep-all !important;
+  // word-break: break-all !important;
 }
-// 1.1 Word break
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

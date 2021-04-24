@@ -2,18 +2,18 @@
 div
   //- Hero Area
   section.fullwidth
-    v-parallax(src="@/assets/background/Aasee.jpg" height="800")
+    v-parallax(src="@/assets/background/Aasee.jpg" height="900")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
-        v-container.text-center
-          v-row.align-center.justify-center.pa-md-12
-            v-col.col-11.col-md-6
-              v-card(max-width="400px" elevation="50")
-                v-img(src="@/assets/about/Snow-Profile.jpg")
-            v-col.col-12.col-md-6
+        v-container
+          v-row.pa-md-12.d-flex.text-center
+            v-col.col-10.col-md-6(order-md="2")
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
               ScrollHero.mt-16.pt-16
+            v-col.col-10.col-md-6(order-md="1")
+              v-card(max-width="400px" elevation="50")
+                v-img(src="@/assets/about/Snow-Profile.jpg")
     //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
   
   //- Overview of employers and education
@@ -54,7 +54,7 @@ div
   SocialContactSection
 
   //- Recommendation
-  section
+  //- section
     v-container 
       h1.display-2.font-weight-thin.mb-12.text-center {{ $t("recommendationsTitle") }}
       v-carousel
