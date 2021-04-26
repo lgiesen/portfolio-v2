@@ -29,7 +29,7 @@ export default {
         socialTitle: "Connect with me"
       },
       de: {
-        socialTitle: "In Kontakt setzen"
+        socialTitle: "Kontakt"
       }
     }
   }

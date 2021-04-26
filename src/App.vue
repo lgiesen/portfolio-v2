@@ -106,6 +106,7 @@ $btnColor: var(--v-btnColor-base);
     font-family: "Montserrat", "Prata", sans-serif !important;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    word-break: keep-all;
   }
   p,
   v-btn {

@@ -18,6 +18,9 @@ v-container
             BackgroundHighlightLink(href="#" linkText="background highlight" target="_self")
             | .
   section
+    h2 Portfolio v1
+    embed(src="https://www.leogiesen.com" width="400" height="900")
+  section
     h1.display-3.font-weight-thin#watchtrainer Watchtrainer Project
     p not live yet, though the homepage can be observed here:
     a(href="https://watchtrainer.arz.berlin/") Homepage
