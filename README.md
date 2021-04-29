@@ -53,3 +53,5 @@ npm run lint
 ### Improve Performance
 - Reduce the image size with a [compressor](http://jpeg-optimizer.com/)
 - Avoid CDNs
+- Tools & Guidelines: 
+  - [Check Page Speed](https://developers.google.com/speed/pagespeed/insights/)
