@@ -1,6 +1,6 @@
 <template lang="pug">
 section.fullwidth
-  v-img.align-center(src="@/assets/background/WWU-Schloss.jpg" cover
+  v-img.align-center(src="@/assets/background/WWU-Schloss.webp" cover
     max-height="calc(min(500px, 100vh))" width="100vw"
     :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.4), rgb(255,255,255,.7)'")
     v-row.text-center.pb-12

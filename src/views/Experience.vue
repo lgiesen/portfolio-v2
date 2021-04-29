@@ -2,7 +2,7 @@
 div
   //- Hero Area
   section.fullwidth
-    v-parallax(src="@/assets/background/Aasee.jpg" height="900")
+    v-parallax(src="@/assets/background/Aasee.webp" height="900")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
         v-container
@@ -14,7 +14,7 @@ div
             v-col.col-10.col-md-6(order-md="1")
               v-card(max-width="400px" elevation="50")
                 v-img(src="@/assets/about/Snow-Profile.webp")
-    //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
+    //- v-parallax(src="@/assets/background/Aasee.webp" height="800" )
   
   //- Overview of employers and education
   section
