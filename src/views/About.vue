@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //- Hero Area
-  Parallax(:parallaxImage="require('@/assets/about/Aasee.webp')" :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
+  Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
   
   //- About me texts alternating with corresponding images
   section#scroll
@@ -11,7 +11,7 @@ div
         //- friends and family
         v-row.justify-center
           v-col.col-11.col-md-6
-            v-img(src="@/assets/about/Familie_Aegina.webp" :max-width="imageWidth")
+            v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6
             p {{ $t("friendsAndFamily") }}
             //- career
@@ -20,19 +20,19 @@ div
         //- sport
         v-row.justify-center
           v-col.col-11.col-md-6(order-md="2")
-            v-img(src="@/assets/about/FCG.webp" :max-width="imageWidth")
+            v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6(order-md="1")
             p(v-html="$t('sport')")
         v-row.justify-center
           v-col.col-11.col-md-6
-            v-img(src="@/assets/about/Ski_HSP.webp" :max-width="imageWidth")
+            v-img(src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6
             p(v-html="$t('tennisAndSkiing')")
-            //- v-img(src="@/assets/about/Ski_Familie.webp")
+            //- v-img(src="@/assets/about/Ski_Familie.jpg")
         //- travel
         v-row.justify-center
           v-col.col-11.col-md-6(order-md="2")
-            v-img(src="@/assets/about/Fujiyoshida, Japan.webp" :max-width="imageWidth")
+            v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6(order-md="1")
             p(v-html="$t('travel')")
             p {{ $t("quote") }}
