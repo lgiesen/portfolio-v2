@@ -43,11 +43,13 @@ npm run lint
 - Use alt and aria attributes
 - Increase your Click-Through-Rate (CTR)
 - Make use of metadata (located in head), e.g. description tag displayed in google search results
-- Tools: 
-  - (Google Starter Guide)[https://developers.google.com/search/docs/beginner/seo-starter-guide]
-- 
+- Responsive Web Design ([Mobile Friendly Test](https://search.google.com/test/mobile-friendly))
+- Linked by other sources, e.g. social media and other websites
+- Tools & Guidelines: 
+  - [Google Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
+<img src="https://moz.imgix.net/learn/guides/Mozlows-01-outline.svg?auto=format&ch=Width&fit=max&q=50&s=e088165a17e355b8186964266ef71ca5" width="500px">
 
 
-##### Improve Performance
+### Improve Performance
 - Reduce the image size with a [compressor](http://jpeg-optimizer.com/)
 - Avoid CDNs
