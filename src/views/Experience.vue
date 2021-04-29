@@ -2,7 +2,7 @@
 div
   //- Hero Area
   section.fullwidth
-    v-parallax(src="@/assets/background/Aasee.webp" height="900")
+    v-parallax(src="@/assets/background/Aasee.jpg" height="900")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
         v-container
