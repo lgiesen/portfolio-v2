@@ -13,7 +13,7 @@ div
               ScrollHero.mt-16.pt-16
             v-col.col-10.col-md-6(order-md="1")
               v-card(max-width="400px" elevation="50")
-                v-img(src="@/assets/about/Snow-Profile.jpg")
+                v-img(src="@/assets/about/Snow-Profile.webp")
     //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
   
   //- Overview of employers and education
