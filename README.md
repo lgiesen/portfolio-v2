@@ -34,3 +34,20 @@ npm run build
 ```
 npm run lint
 ```
+
+### General Advice for Web Projects
+
+##### SEO
+- Keep visitors on your website (dwell time) by providing excellent content (!)
+- Improve loading speed (cf. Improve Performance)
+- Use alt and aria attributes
+- Increase your Click-Through-Rate (CTR)
+- Make use of metadata (located in head), e.g. description tag displayed in google search results
+- Tools: 
+  - (Google Starter Guide)[https://developers.google.com/search/docs/beginner/seo-starter-guide]
+- 
+
+
+##### Improve Performance
+- Reduce the image size with a [compressor](http://jpeg-optimizer.com/)
+- Avoid CDNs
