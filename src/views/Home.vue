@@ -78,37 +78,37 @@ export default {
       {
         title: "Python",
         textSrc: "python",
-        backgroundImage: require("@/assets/home/python.jpg"),
+        backgroundImage: require("@/assets/home/python.webp"),
         icon: "language-python"
       },
       {
         title: "Front-end Web Development",
         textSrc: "frontend",
-        backgroundImage: require("@/assets/home/frontend.jpg"),
+        backgroundImage: require("@/assets/home/frontend.webp"),
         icon: "vuejs"
       },
       {
         title: "Back-end Web Development",
         textSrc: "backend",
-        backgroundImage: require("@/assets/home/backend.jpg"),
+        backgroundImage: require("@/assets/home/backend.webp"),
         icon: "api"
       },
       {
         title: "Microsoft Office / 365",
         textSrc: "office",
-        backgroundImage: require("@/assets/home/office.jpg"),
+        backgroundImage: require("@/assets/home/office.webp"),
         icon: "microsoft-office"
       },
       {
         title: "Process Modelling & Project Management",
         textSrc: "other",
-        backgroundImage: require("@/assets/home/desk.jpg"),
+        backgroundImage: require("@/assets/home/desk.webp"),
         icon: "language-java"
       },
       {
         title: "Soft Skills",
         textSrc: "softSkills",
-        backgroundImage: require("@/assets/home/office.jpg"),
+        backgroundImage: require("@/assets/home/office.webp"),
         icon: "account-group"
       }
     ]
