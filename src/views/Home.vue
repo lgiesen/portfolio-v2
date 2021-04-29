@@ -26,7 +26,7 @@ div
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card
-              v-img(src="@/assets/profile/Leo Giesen Profile.jpeg" max-height="60vh")
+              v-img(src="@/assets/profile/Leo Giesen Profile.jpg" max-height="60vh")
     //- Intro card text
     v-container#scroll.center-items
       v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
