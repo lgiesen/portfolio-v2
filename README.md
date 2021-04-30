@@ -38,20 +38,21 @@ npm run lint
 ### General Advice for Web Projects
 
 ##### SEO
-- Keep visitors on your website (dwell time) by providing excellent content (!)
+
+- Keep visitors on your website (dwell time) by providing excellent content (!) (define important keywords, which people search to get to your website)
 - Improve loading speed (cf. Improve Performance)
-- Use alt and aria attributes
+- Use alt attributes in images so that the search engine knows what you display
 - Increase your Click-Through-Rate (CTR)
 - Make use of metadata (located in head), e.g. description tag displayed in google search results
 - Responsive Web Design ([Mobile Friendly Test](https://search.google.com/test/mobile-friendly))
 - Linked by other sources, e.g. social media and other websites
-- Tools & Guidelines: 
+- Tools & Guidelines:
   - [Google Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
-<img src="https://moz.imgix.net/learn/guides/Mozlows-01-outline.svg?auto=format&ch=Width&fit=max&q=50&s=e088165a17e355b8186964266ef71ca5" width="500px">
-
+    <img src="https://moz.imgix.net/learn/guides/Mozlows-01-outline.svg?auto=format&ch=Width&fit=max&q=50&s=e088165a17e355b8186964266ef71ca5" width="500px">
 
 ### Improve Performance
+
 - Reduce the image size with a [compressor](http://jpeg-optimizer.com/)
 - Avoid CDNs
-- Tools & Guidelines: 
+- Tools & Guidelines:
   - [Check Page Speed](https://developers.google.com/speed/pagespeed/insights/)
