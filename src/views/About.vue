@@ -11,7 +11,7 @@ div
         //- friends and family
         v-row.justify-center
           v-col.col-11.col-md-6
-            v-img(src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
+            v-img(alt="Leo Giesen Familie" src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6
             p {{ $t("friendsAndFamily") }}
             //- career
@@ -20,19 +20,18 @@ div
         //- sport
         v-row.justify-center
           v-col.col-11.col-md-6(order-md="2")
-            v-img(src="@/assets/about/FCG.jpg" :max-width="imageWidth")
+            v-img(alt="FC Gütersloh Team" src="@/assets/about/FCG.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6(order-md="1")
             p(v-html="$t('sport')")
         v-row.justify-center
           v-col.col-11.col-md-6
-            v-img(src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
+            v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6
             p(v-html="$t('tennisAndSkiing')")
-            //- v-img(src="@/assets/about/Ski_Familie.jpg")
         //- travel
         v-row.justify-center
           v-col.col-11.col-md-6(order-md="2")
-            v-img(src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+            v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
           v-col.col-11.col-md-6(order-md="1")
             p(v-html="$t('travel')")
             p {{ $t("quote") }}

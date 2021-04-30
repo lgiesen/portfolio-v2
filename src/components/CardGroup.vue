@@ -13,8 +13,8 @@ div
               height="100%" :class="`elevation-${hover ? 24 : 6}`")
               v-row
                 v-col(align="center" justify="center")
-                  v-img(:src="item.imageSrc" height="10vh" width="40%" contain
-                    :max-width="$vuetify.breakpoint.mobile ? '40vw' : '15vw'")
+                  v-img(:src="item.imageSrc" :alt="item.title_de" height="10vh" width="40%" 
+                    :max-width="$vuetify.breakpoint.mobile ? '40vw' : '15vw'" contain)
               v-row
                 v-col
                   v-card-title.justify-center.text-center

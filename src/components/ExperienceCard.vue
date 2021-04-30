@@ -4,7 +4,7 @@ v-hover
     v-card.pa-5.mt-5.transition-swing(
       :class="`elevation-${hover ? 24 : 6}`"
       @click="scrollToCard(associationsSrc.href)")
-      v-img(:src="associationsSrc.imageSrc" contain
+      v-img(:src="associationsSrc.imageSrc" :alt="associationsSrc.title" contain
           min-height="30px" height="5vh"  min-width="100px" max-width="7vw")
 </template>
 

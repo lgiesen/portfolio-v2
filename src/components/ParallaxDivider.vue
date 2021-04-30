@@ -1,6 +1,6 @@
 <template lang="pug">
 //- full-width parralax image
-v-parallax.py-12.text-center(:src="this.imgSrc")
+v-parallax.py-12.text-center(:src="this.imgSrc" :alt="this.sectionTitle")
   h1.font-weight-thin.mb-4.break-word(:class="this.ResponsiveFontSize") {{ this.sectionTitle }}
   h4.subheading {{ this.sectionSubtitle }}
 </template>

@@ -26,7 +26,7 @@ div
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card
-              v-img(src="@/assets/profile/Leo Giesen Profile.jpg" max-height="60vh")
+              v-img(alt="Leo Giesen Profil" src="@/assets/profile/Leo Giesen Profile.jpg" max-height="60vh")
     //- Intro card text
     v-container#scroll.center-items
       v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
@@ -51,7 +51,7 @@ div
         v-col.col-12.col-md-6(v-for="card in skillCardGroup" :key="card.title")
           v-card(height="100%" tile max-width="94vw")
             div.animated-gradient-box.in
-              v-img.d-flex.white--text.align-end(max-height="200px" :src="card.backgroundImage"
+              v-img.d-flex.white--text.align-end(max-height="200px" :src="card.backgroundImage" :alt="card.aria"
                 :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                 //- single line requires .justify-center and multiline .text-center
                 v-card-title.justify-center.text-center
@@ -79,38 +79,44 @@ export default {
         title: "Python",
         textSrc: "python",
         backgroundImage: require("@/assets/home/python.jpg"),
-        icon: "language-python"
+        icon: "language-python",
+        aria: "Python Programming Language"
       },
       {
         title: "Front-end Web Development",
         textSrc: "frontend",
         backgroundImage: require("@/assets/home/frontend.jpg"),
-        icon: "vuejs"
+        icon: "vuejs",
+        aria: "Front-end Web Development Vue.js"
       },
       {
         title: "Back-end Web Development",
         textSrc: "backend",
         backgroundImage: require("@/assets/home/backend.jpg"),
-        icon: "api"
+        icon: "api",
+        aria: "API and back-end Web Development"
       },
       {
         title: "Microsoft Office / 365",
         textSrc: "office",
         backgroundImage: require("@/assets/home/office.jpg"),
-        icon: "microsoft-office"
+        icon: "microsoft-office",
+        aria: "Microsoft Office and Microsoft 365"
       },
       {
         title: "Process Modelling & Project Management",
         textSrc: "other",
         backgroundImage: require("@/assets/home/desk.jpg"),
-        icon: "language-java"
-      },
-      {
-        title: "Soft Skills",
-        textSrc: "softSkills",
-        backgroundImage: require("@/assets/home/office.jpg"),
-        icon: "account-group"
+        icon: "language-java",
+        aria: "Prozessmodellierung und Projektmanagement Java"
       }
+      // {
+      //   title: "Soft Skills",
+      //   textSrc: "softSkills",
+      //   backgroundImage: require("@/assets/home/office.jpg"),
+      //   icon: "account-group",
+      //   aria: ""
+      // }
     ]
   }),
   i18n: {
