@@ -1,6 +1,6 @@
 <template lang="pug">
 //- Set the width, so that the svg does not scale to its 900x600 size
-v-btn.white--text.pa-0(text icon @click="switchLanguage()")
+v-btn.pa-0(text icon @click="switchLanguage()")
   v-icon mdi-translate
   //- alternatively use language image
   //- v-img(:src="switchLanguageSrc" width="10")
