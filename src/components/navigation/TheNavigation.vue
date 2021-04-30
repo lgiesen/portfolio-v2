@@ -17,7 +17,7 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
           :src="themespecificLogoSrc")
         //- v-icon.mr-3 mdi-home-outline
         //- | {{ isDE ? "Start" : "Home" }}
-      v-tab(v-for="view in views" :key="view.to.name" :to="view.to") 
+      v-tab.white--text(v-for="view in views" :key="view.to.name" :to="view.to") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ isDE ? view.tag_de : view.tag_en }}
     LanguageSwitcher
@@ -139,10 +139,9 @@ a.v-tab,
 div.v-list-item__title {
   font-family: "Montserrat", "Prata", sans-serif !important;
 }
-// $primary: #2142b9;
 // .router-link-exact-active,
 // a.v-tab--active {
-//   color: $primary;
+//   color: white;
 // }
 
 // Mobile navigation
