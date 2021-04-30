@@ -191,6 +191,10 @@ section {
   }
 }
 
+.p-absolute {
+  position: absolute;
+}
+
 .vue-video-section-wrapper {
   z-index: 0;
 }

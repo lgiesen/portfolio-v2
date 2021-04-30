@@ -297,9 +297,6 @@ $secondaryLight: var(--v-secondaryLight-base);
 $primaryLight: var(--v-primaryLight-base);
 $secondary: var(--v-secondary-base);
 
-.p-absolute {
-  position: absolute;
-}
 .seperatorIcon {
   // center icon
   display: flex;
