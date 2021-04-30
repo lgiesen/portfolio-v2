@@ -31,11 +31,12 @@ div
     v-container#scroll.center-items
       v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
         v-row
-          v-col.col-12.col-md-6.center-items
+          //- v-col.col-12.col-md-6.center-items
             //- should be replaced with an animated SVG
             v-card
               v-skeleton-loader(type="card" width="300")
-          v-col.col-12.col-md-6.pr-4
+          v-col
+            //- with other column: .col-12.col-md-6.pr-4
             v-card-title {{ $t("homeIntro.title") }}
             v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
               v-btn.gradient-btn.pa-6.mt-4(rounded
