@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["imprint"],{3043:function(n,t,e){"use strict";e.r(t);var a=function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("v-container",{staticClass:"text-center"},[e("h3",[n._v("Imprint")])])},r=[],c={name:"Imprint"},i=c,s=e("2877"),o=e("6544"),p=e.n(o),l=e("a523"),u=Object(s["a"])(i,a,r,!1,null,"200c086c",null);t["default"]=u.exports;p()(u,{VContainer:l["a"]})}}]);
-//# sourceMappingURL=imprint.f1eada0e.js.map
