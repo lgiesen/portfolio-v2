@@ -2,7 +2,10 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
 
-[Portfiolio (v1)](https://github.com/lgiesen/portfolio-v1)
+The previous version of my portfolio can be inspected here: [Portfiolio (v1)](https://github.com/lgiesen/portfolio-v1).
+
+This project is deployed at [leogiesen.com](https://leogiesen.com).
+
 
 ## Project Setup
 
