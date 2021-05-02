@@ -17,7 +17,8 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
           :src="themespecificLogoSrc")
         //- v-icon.mr-3 mdi-home-outline
         //- | {{ isDE ? "Start" : "Home" }}
-      v-tab.white--text(v-for="view in views" :key="view.to.name" :to="view.to") 
+      v-tab(v-for="view in views" :key="view.to.name" :to="view.to"
+        :class="dontShowAtTopComputed ? '' : 'white--text'") 
         //- v-icon.mr-3 mdi-{{ view.icon }}
         | {{ isDE ? view.tag_de : view.tag_en }}
     LanguageSwitcher
@@ -113,6 +114,9 @@ export default {
     themespecificLogoSrc() {
       if (this.isDarkTheme) return require("@/assets/logo/dark/logo.svg");
       else return require("@/assets/logo/light/logo.svg");
+    },
+    dontShowAtTopComputed() {
+      return this.dontShowAtTop;
     }
   }
 };
