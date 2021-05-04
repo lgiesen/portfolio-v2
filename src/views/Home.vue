@@ -40,7 +40,7 @@ div
                 v-skeleton-loader(type="card" width="300")
             v-col
               //- with other column: .col-12.col-md-6.pr-4
-              v-card-title {{ $t("homeIntro.title") }}
+              v-card-title.justify-center {{ $t("homeIntro.title") }}
               v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
                 v-btn.gradient-btn.pa-6.ma-8.mt-12(rounded
                   :href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
