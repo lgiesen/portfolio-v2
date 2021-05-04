@@ -4,38 +4,39 @@ div
   Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
   
   //- About me texts alternating with corresponding images
-  section#scroll
-    div
-      h3.display-1.font-weight-thin.text-center {{ $t("introHeader") }}
-      v-container.text-justify
-        //- friends and family
-        v-row.justify-center
-          v-col.col-11.col-md-6
-            v-img(alt="Leo Giesen Familie" src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
-          v-col.col-11.col-md-6
-            p {{ $t("friendsAndFamily") }}
-            //- career
-            p(v-html="$t('career')")
+  article
+    section#scroll
+      div
+        h3.display-1.font-weight-thin.text-center {{ $t("introHeader") }}
+        v-container.text-justify
+          //- friends and family
+          v-row.justify-center
+            v-col.col-11.col-md-6
+              v-img(alt="Leo Giesen Familie" src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
+            v-col.col-11.col-md-6
+              p {{ $t("friendsAndFamily") }}
+              //- career
+              p(v-html="$t('career')")
 
-        //- sport
-        v-row.justify-center
-          v-col.col-11.col-md-6(order-md="2")
-            v-img(alt="FC Gütersloh Team" src="@/assets/about/FCG.jpg" :max-width="imageWidth")
-          v-col.col-11.col-md-6(order-md="1")
-            p(v-html="$t('sport')")
-        v-row.justify-center
-          v-col.col-11.col-md-6
-            v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
-          v-col.col-11.col-md-6
-            p(v-html="$t('tennisAndSkiing')")
-        //- travel
-        v-row.justify-center
-          v-col.col-11.col-md-6(order-md="2")
-            v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
-          v-col.col-11.col-md-6(order-md="1")
-            p(v-html="$t('travel')")
-            p {{ $t("quote") }}
-            Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
+          //- sport
+          v-row.justify-center
+            v-col.col-11.col-md-6(order-md="2")
+              v-img(alt="FC Gütersloh Team" src="@/assets/about/FCG.jpg" :max-width="imageWidth")
+            v-col.col-11.col-md-6(order-md="1")
+              p(v-html="$t('sport')")
+          v-row.justify-center
+            v-col.col-11.col-md-6
+              v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
+            v-col.col-11.col-md-6
+              p(v-html="$t('tennisAndSkiing')")
+          //- travel
+          v-row.justify-center
+            v-col.col-11.col-md-6(order-md="2")
+              v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+            v-col.col-11.col-md-6(order-md="1")
+              p(v-html="$t('travel')")
+              p {{ $t("quote") }}
+              Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
