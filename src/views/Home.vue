@@ -28,21 +28,24 @@ div
             v-card
               v-img(alt="Leo Giesen Profil" src="@/assets/profile/Leo Giesen Profile.jpg" max-height="60vh")
     //- Intro card text
-    v-container#scroll.center-items
-      v-card.pa-4(:width="this.$vuetify.breakpoint.mobile ? '90vw' : '60vw'")
-        v-row
-          //- v-col.col-12.col-md-6.center-items
-            //- should be replaced with an animated SVG
-            v-card
-              v-skeleton-loader(type="card" width="300")
-          v-col
-            //- with other column: .col-12.col-md-6.pr-4
-            v-card-title {{ $t("homeIntro.title") }}
-            v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
-              v-btn.gradient-btn.pa-6.mt-4(rounded
-                :href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
-                v-icon mdi-download
-                | {{ $t("homeIntro.downloadCV") }}
+    //- Create another section to create overlap with hero area 
+    //- while still maintaining the max-width of all sections
+    section
+      v-container#scroll
+        v-card.pa-4
+          v-row
+            //- v-col.col-12.col-md-6.center-items
+              //- should be replaced with an animated SVG
+              v-card
+                v-skeleton-loader(type="card" width="300")
+            v-col
+              //- with other column: .col-12.col-md-6.pr-4
+              v-card-title {{ $t("homeIntro.title") }}
+              v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
+                v-btn.gradient-btn.pa-6.ma-8.mt-12(rounded
+                  :href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
+                  v-icon mdi-download
+                  | {{ $t("homeIntro.downloadCV") }}
   section
     h2.display-1 Skills
     v-container
