@@ -46,25 +46,26 @@ div
                   :href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
                   v-icon mdi-download
                   | {{ $t("homeIntro.downloadCV") }}
-  section
-    h2.display-1 Skills
-    v-container
-      v-row.d-flex.flex-wrap.justify-space-between
-        //- skillCardGroup holds the title and where to find the corresponding text
-        //- of the skill card in i18n 
-        v-col.col-12.col-md-6(v-for="card in skillCardGroup" :key="card.title")
-          v-card(height="100%" tile max-width="94vw")
-            div.animated-gradient-box.in
-              v-img.d-flex.white--text.align-end(max-height="200px" :src="card.backgroundImage" :alt="card.aria"
-                :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
-                //- single line requires .justify-center and multiline .text-center
-                v-card-title.justify-center.text-center
-                  h2.gradient-text {{ card.title }}
-            v-col.seperatorIcon.py-0
-              v-btn(elevation="15" fab color="background")
-                v-icon(color="primary") mdi-{{ card.icon}}
-            v-card-text
-              p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
+  article
+    section
+      h2.display-1 Skills
+      v-container
+        v-row.d-flex.flex-wrap.justify-space-between
+          //- skillCardGroup holds the title and where to find the corresponding text
+          //- of the skill card in i18n 
+          v-col.col-12.col-md-6(v-for="card in skillCardGroup" :key="card.title")
+            v-card(height="100%" tile max-width="94vw")
+              div.animated-gradient-box.in
+                v-img.d-flex.white--text.align-end(max-height="200px" :src="card.backgroundImage" :alt="card.aria"
+                  :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
+                  //- single line requires .justify-center and multiline .text-center
+                  v-card-title.justify-center.text-center
+                    h2.gradient-text {{ card.title }}
+              v-col.seperatorIcon.py-0
+                v-btn(elevation="15" fab color="background")
+                  v-icon(color="primary") mdi-{{ card.icon}}
+              v-card-text
+                p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
 </template>
 
 <script>

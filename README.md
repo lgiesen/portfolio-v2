@@ -6,7 +6,6 @@ The previous version of my portfolio can be inspected here: [Portfiolio (v1)](ht
 
 This project is deployed at [leogiesen.com](https://leogiesen.com).
 
-
 ## Project Setup
 
 0. [VS Code](https://code.visualstudio.com "VS Code") is the recommended code editor
@@ -38,19 +37,22 @@ npm run build
 npm run lint
 ```
 
-
 ## General Advice for Web Projects
 
 ### SEO
 
 - Keep visitors on your website (dwell time) by providing excellent content (!) (define important keywords, which people search to get to your website)
 - Improve loading speed (cf. Improve Performance)
-- Use alt attributes in images so that the search engine knows what you display
+- Optimize your HTML
+  - Use alt attributes in images so that the search engine knows what you display
+  - Use aria tags for more complicated displayed content, e.g., sliders
+  - Use article tags for Bots to know what main content the site presents
 - Increase your Click-Through-Rate (CTR)
 - Make use of metadata (located in head), e.g. description tag displayed in google search results
 - Responsive Web Design ([Mobile Friendly Test](https://search.google.com/test/mobile-friendly))
 - Linked by other sources, e.g. social media and other websites
 - Tools & Guidelines:
+
   - [Google Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
 
    <img src="https://moz.imgix.net/learn/guides/Mozlows-01-outline.svg?auto=format&ch=Width&fit=max&q=50&s=e088165a17e355b8186964266ef71ca5" width="500px">
