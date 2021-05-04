@@ -4,7 +4,7 @@ div
     v-row.justify-center
       v-btn.my-2(color="white" text
         v-for="link in links" :key="link.link"
-        @click='$router.push("/" + link.link).catch(()=>{})'
+        @click="goTo(link.link)"
         ) {{ isDE ? link.title_de : link.title_en }}
       v-col.white--text.text-center.col-12
         //- changing arrangement of icons (low code quality :( )
@@ -36,7 +36,7 @@ export default {
       {
         title_en: "Contact",
         title_de: "Kontakt",
-        link: "contact"
+        link: "mailto"
       },
       {
         title_en: "Imprint",
@@ -52,6 +52,14 @@ export default {
     socialIcons: socialIcons,
     programmingIcons: programmingIcons
   }),
+  methods: {
+    goTo(link) {
+      // if the link is internal, the router should be used. Otherwise open a new page
+      if (link.includes("mailto"))
+        window.location.href = "mailto:contact@leogiesen.com";
+      else this.$router.push("/" + link).catch(() => {});
+    }
+  },
   computed: {
     ...mapGetters(["isDarkTheme", "isDE"])
   }

@@ -50,12 +50,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "sandbox" */ "../views/Sandbox.vue")
   },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: () =>
-      import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
-  },
+  // {
+  //   path: "/contact",
+  //   name: "Contact",
+  //   component: () =>
+  //     import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
+  // },
   // Policy and other law-related pages
   {
     path: "/privacy-policy",
