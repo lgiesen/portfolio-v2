@@ -1,7 +1,8 @@
 <template lang="pug">
 div
   //- Hero Area
-  Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
+  Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" 
+    :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
   
   //- About me texts alternating with corresponding images
   article

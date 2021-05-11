@@ -2,7 +2,7 @@
 section.fullwidth
   v-img.align-center(alt="Münster WWU Schloss" src="@/assets/background/WWU-Schloss.jpg" cover
     max-height="calc(min(500px, 100vh))" width="100vw"
-    :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(23,23,23,.4), rgb(10,10,10,.8)'")
+    :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgba(23,23,23,.4), rgba(10,10,10,.8)'")
     v-row.text-center.pb-12
       v-col
         h3.white--text.display-2 {{ $t("socialTitle") }}
