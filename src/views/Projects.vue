@@ -32,13 +32,13 @@ div
               //- repository
               span(v-if="project.link != ''") 
                 v-icon(small) mdi-link-variant
-                AnimatedLink(:href="project.link" linkText="repository" target="_blank" prepend-icon="mdi-link-variant")
+                AnimatedLink(:href="project.link" :linkText="$t('projects.links.repository')" target="_blank" prepend-icon="mdi-link-variant")
               //- divider between repository and website
               span.mx-3(v-if="project.link != '' && project.embedLink != ''") |
               //- website
               span(v-if="project.embedLink != ''")
                 v-icon(small) mdi-open-in-new
-                AnimatedLink(:href="project.embedLink" linkText="website" target="_blank")
+                AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
             //- Icon of project
             v-img.ma-10.mx-auto(:src="project.imgSrc" width="80px")
             //- Project description
@@ -126,6 +126,10 @@ export default {
           subtitle: "- This page is still in development -"
         },
         projects: {
+          links: {
+            repository: "repository",
+            website: "website"
+          },
           preview: {
             hide: "Hide Preview",
             show: "Show Preview"
@@ -145,6 +149,10 @@ export default {
           subtitle: "- Diese Seite ist noch in Entwicklung -"
         },
         projects: {
+          links: {
+            repository: "Repository",
+            website: "Website"
+          },
           preview: {
             hide: "Vorschau verbergen",
             show: "Vorschau anzeigen"
