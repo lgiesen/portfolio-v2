@@ -94,7 +94,7 @@ export default {
         link: "",
         imgSrc: require("@/assets/projects/GoC.svg"),
         translationKey: "projects.goc",
-        HTMLid: "goc",
+        id: "goc",
         showPreview: false,
         embedLink: ""
       },
@@ -103,7 +103,7 @@ export default {
         link: "https://github.com/Arceoavs/watchtrainer",
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
         translationKey: "projects.watchtrainer",
-        HTMLid: "watchtrainer",
+        id: "watchtrainer",
         showPreview: false,
         embedLink: "https://watchtrainer.arz.berlin/"
       },
@@ -112,7 +112,7 @@ export default {
         link: "https://github.com/lgiesen/portfolio-v1",
         imgSrc: require("@/assets/projects/portfolioV1Logo.png"),
         translationKey: "projects.portfolioV1",
-        HTMLid: "",
+        id: "",
         showPreview: false,
         embedLink: "https://lgiesen.github.io/portfolio-v1/"
       }
