@@ -43,9 +43,9 @@ div
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
       section
         //- CV: work experience
-        CardGroup(:sectionTitle="$t('workExperience')" :iterableObject="employment")
+        CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
         //- Education
-        CardGroup(:sectionTitle="$t('education')" :iterableObject="education")
+        CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
 
       //- Contact Me Button:
       //- div.center-items

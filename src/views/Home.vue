@@ -150,7 +150,7 @@ export default {
           python: `I learned Python by studying online courses and programming along 
           in my free time. Furthermore, I had the opportunity to apply and enhance my 
           python capabilities in a regular and advanced module of my study at the 
-            <a href="/experience#card-WWU">University of Münster</a>. 
+            <a href="/experience#education">University of Münster</a>. 
           In the latter, I used Python and 
             <strong>TensorFlow</strong> for a 
             <strong>Machine Learning</strong>
@@ -187,7 +187,7 @@ export default {
           office: `Since my everyday use of 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> in school, I frequently 
           used these Microsoft products. As a student assistant at the 
-            <a href="/experience#card-ERCIS">Information Systems' chair</a> 
+            <a href="/experience#experience">Information Systems' chair</a> 
           at the University of Münster, I prepared many lectures. Further, I created various presentations 
           as a consultant at 
             <a href="/experience#card-move">move</a> , which enhanced my presentation abilities. Thus, I became very profound with 
@@ -233,7 +233,7 @@ export default {
         skills: {
           python: `Python habe ich durch das Studium und mit Hilfe vom nebenher Programmieren bei Online-Kursen in meiner 
           Freizeit gelernt. Außerdem hatte ich die Möglichkeit, meine Python-Fähigkeiten in einem regulären 
-          und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/experience#card-WWU">WWU</a> anzuwenden und zu erweitern. In 
+          und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/experience#education">WWU</a> anzuwenden und zu erweitern. In 
           letzterem habe ich Python und  <strong>TensorFlow </strong> für ein <strong>Machine-Learning</strong>-Projekt eingesetzt, was mir 
           Einblicke in die Funktionsweise und die aktuellen Grenzen und Möglichkeiten von Künstlicher Intelligenz 
           gegeben hat.
@@ -268,7 +268,7 @@ export default {
           office: `Da ich in der Schule täglich mit 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite, habe ich diese 
           Microsoft-Produkte häufig eingesetzt. Als studentische Hilfskraft am 
-            <a href="/experience#card-ERCIS">Lehrstuhl für Wirtschaftsinformatik</a> 
+            <a href="/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
           an der Universität Münster habe ich viele Vorträge vorbereitet. Außerdem habe ich bei 
             <a href="/experience#card-move">move</a> 
           als Berater verschiedene Präsentationen erstellt, was meine Präsentationsfähigkeiten erweitert hat. So wurde ich vor allem mit 
