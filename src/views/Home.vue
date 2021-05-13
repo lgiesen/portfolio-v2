@@ -19,10 +19,8 @@ div
             v-card.white--text.transparent-background(outlined)
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
               h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-            //- v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-            //-   @click="$router.push('/about')") {{ $t("homeHero.btnBussness") }}
-            //- v-btn.pa-7(outlined color="btnColor" rounded
-            //-   @click="$router.push('/about')") {{ $t("homeHero.btnOtherVisistors") }}
+            v-btn.pa-7(outlined color="btnColor" rounded
+              @click="$router.push('/projects')") Projects
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card
@@ -131,8 +129,6 @@ export default {
           title: "Progress with Passion",
           subtitle:
             "Fascination for new technologies and their application in business"
-          // btnBussness: "For Businesses",
-          // btnOtherVisistors: "Other Visitors"
         },
         homeIntro: {
           title: "I love to learn and apply my knowledge!",
@@ -216,8 +212,6 @@ export default {
           title: "Fortschritt mit Leidenschaft",
           subtitle:
             "Faszination für neue Technologien und deren Anwendung in der Wirtschaft"
-          // btnBussness: "Unternehmen",
-          // btnOtherVisistors: "Projekte"
         },
         homeIntro: {
           title: `Ich liebe es, zu lernen und mein Wissen anzuwenden!`,
