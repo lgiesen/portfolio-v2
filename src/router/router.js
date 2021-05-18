@@ -74,17 +74,13 @@ const routes = [
 
   // 404-page needs to be at the end so that the wildcard
   // (*) does not get matched with any other URLs
-  // {
-  //   path: "/*",
-  //   name: "Not Found",
-  //   component: () =>
-  //     import(
-  //       /* webpackChunkName: "404NotFound" */ "../views/errors/404NotFound.vue"
-  //     )
-  // },
   {
-    path: "*",
-    redirect: "/"
+    path: "/*",
+    name: "Not Found",
+    component: () =>
+      import(
+        /* webpackChunkName: "404NotFound" */ "../views/errors/404NotFound.vue"
+      )
   }
 ];
 
