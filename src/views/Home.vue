@@ -19,8 +19,6 @@ div
             v-card.white--text.transparent-background(outlined)
               h1.display-2.font-weight-thin {{ $t("homeHero.title") }}
               h1.subtitle-1 {{ $t("homeHero.subtitle") }}
-            v-btn.pa-7(outlined color="btnColor" rounded
-              @click="$router.push('/projects')") Projects
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card

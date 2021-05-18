@@ -79,13 +79,13 @@ export default {
         tag_de: "Erfahrung",
         to: { name: "Experience" },
         icon: "briefcase-outline"
+      },
+      {
+        tag_en: "Projects",
+        tag_de: "Projekte",
+        to: { name: "Projects" },
+        icon: "code-tags"
       }
-      // {
-      //   tag_en: "Projects",
-      //   tag_de: "Projekte",
-      //   to: { name: "Projects" },
-      //   icon: "code-tags"
-      // },
       // {
       //   tag_en: "Playground",
       //   tag_de: "Sandbox",

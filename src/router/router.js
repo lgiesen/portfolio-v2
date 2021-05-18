@@ -81,6 +81,10 @@ const routes = [
       import(
         /* webpackChunkName: "404NotFound" */ "../views/errors/404NotFound.vue"
       )
+  },
+  {
+    path: "*",
+    redirect: "/"
   }
 ];
 
