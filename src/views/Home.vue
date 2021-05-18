@@ -144,7 +144,7 @@ export default {
           python: `I learned Python by studying online courses and programming along 
           in my free time. Furthermore, I had the opportunity to apply and enhance my 
           python capabilities in a regular and advanced module of my study at the 
-            <a href="/experience#education">University of Münster</a>. 
+            <a href="/#/experience#education">University of Münster</a>. 
           In the latter, I used Python and 
             <strong>TensorFlow</strong> for a 
             <strong>Machine Learning</strong>
@@ -161,12 +161,12 @@ export default {
           program a website with 
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
           I was able to apply my web dev skills in numerous projects, e.g., the 
-            <a href="/projects#watchtrainer">watchtrainer</a>
+            <a href="/#/projects#watchtrainer">watchtrainer</a>
           project, which is the corresponding website to a fitness app for the apple watch. Additional projects comprise my
           previous and this portfolio page, two WordPress websites, which I single-handedly developed in consultancy projects at 
-            <a href="/experience#card-move">move</a>. 
+            <a href="/#/experience#card-move">move</a>. 
           However, I am most proud of my project team's complex 
-            <a href="/projects#goc">web-based simulation platform</a> 
+            <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
           backend: `My primary Web Development focus lies on the front end. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
@@ -174,19 +174,19 @@ export default {
             <strong>SQL</strong> queries, and implemented 
             <strong>API calls</strong> 
           with a REST API and GraphQL. I acquired and applied these skills at university and in the 
-            <a href="/projects#watchtrainer">watchtrainer</a> and 
-            <a href="/projects#goc">Game of Competences</a> 
+            <a href="/#/projects#watchtrainer">watchtrainer</a> and 
+            <a href="/#/projects#goc">Game of Competences</a> 
           project. Moreover, I demonstrate how to work with API calls in my 
-            <a href="/projects">projects</a>.`,
+            <a href="/#/projects">projects</a>.`,
           office: `Since my everyday use of 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> in school, I frequently 
           used these Microsoft products. As a student assistant at the 
-            <a href="/experience#experience">Information Systems' chair</a> 
+            <a href="/#/experience#experience">Information Systems' chair</a> 
           at the University of Münster, I prepared many lectures. Further, I created various presentations 
           as a consultant at 
-            <a href="/experience#card-move">move</a> , which enhanced my presentation abilities. Thus, I became very profound with 
+            <a href="/#/experience#card-move">move</a> , which enhanced my presentation abilities. Thus, I became very profound with 
           PowerPoint and Word in particular. Lastly, in my work in the IT department at 
-            <a href="/experience#card-move">move</a>, I worked with 
+            <a href="/#/experience#card-move">move</a>, I worked with 
           <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to 
             <strong>SharePoint</strong> databases.`,
           other: `In my study, I worked with <strong>Java</strong> and learned about data management, structures,
@@ -199,9 +199,9 @@ export default {
           at my university and in a 
             <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
           workshop, I worked with it in the 
-            <a href="/projects#goc">Game of Competences</a> 
+            <a href="/#/projects#goc">Game of Competences</a> 
           project and a web development project at 
-            <a href="/experience#card-move">move</a> .`,
+            <a href="/#/experience#card-move">move</a> .`,
           softSkills: `dynamic teamwork, leadership`
         }
       },
@@ -225,7 +225,7 @@ export default {
         skills: {
           python: `Python habe ich durch das Studium und mit Hilfe vom nebenher Programmieren bei Online-Kursen in meiner 
           Freizeit gelernt. Außerdem hatte ich die Möglichkeit, meine Python-Fähigkeiten in einem regulären 
-          und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/experience#education">WWU</a> anzuwenden und zu erweitern. In 
+          und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/#/experience#education">WWU</a> anzuwenden und zu erweitern. In 
           letzterem habe ich Python und  <strong>TensorFlow </strong> für ein <strong>Machine-Learning</strong>-Projekt eingesetzt, was mir 
           Einblicke in die Funktionsweise und die aktuellen Grenzen und Möglichkeiten von Künstlicher Intelligenz 
           gegeben hat.
@@ -240,32 +240,32 @@ export default {
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
           programmiert. Meine Webdev-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
           im Projekt 
-            <a href="/projects#watchtrainer">watchtrainer</a>,
+            <a href="/#/projects#watchtrainer">watchtrainer</a>,
           das die Website zu einer Fitness-App für die Apple Watch ist. Weitere Projekte 
           sind meine bisherige und diese Portfolio Webseite, zwei WordPress-Websiten, die ich in Beratungsprojekten 
           bei 
-            <a href="/experience#card-move">move</a>  
+            <a href="/#/experience#card-move">move</a>  
           entwickelt habe. Besonders stolz bin ich auf die 
-            <a href="/projects#goc">webbasierte Simulationsplattform</a>, 
+            <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
           die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz bin ich sehr vertraut 
           mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (ERM), 
             <strong>SQL</strong>-Abfragen und der Implementierung von 
             <strong>API Calls</strong> mit einer REST-API und GraphQL. 
           Diese Fähigkeiten habe ich an der Universität und im Projekt 
-            <a href="/projects#watchtrainer">watchtrainer</a> und der 
-            <a href="/projects#goc">webbasierte Simulationsplattform</a>
+            <a href="/#/projects#watchtrainer">watchtrainer</a> und der 
+            <a href="/#/projects#goc">webbasierte Simulationsplattform</a>
           erworben und angewendet. Außerdem zeige ich in meinen 
-            <a href="/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
+            <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
           office: `Da ich in der Schule täglich mit 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite, habe ich diese 
           Microsoft-Produkte häufig eingesetzt. Als studentische Hilfskraft am 
-            <a href="/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
+            <a href="/#/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
           an der Universität Münster habe ich viele Vorträge vorbereitet. Außerdem habe ich bei 
-            <a href="/experience#card-move">move</a> 
+            <a href="/#/experience#card-move">move</a> 
           als Berater verschiedene Präsentationen erstellt, was meine Präsentationsfähigkeiten erweitert hat. So wurde ich vor allem mit 
           PowerPoint und Word sehr tiefgründig. Zuletzt habe ich bei 
-            <a href="/experience#card-move">move</a> in der IT-Abteilung mit 
+            <a href="/#/experience#card-move">move</a> in der IT-Abteilung mit 
             <strong>Microsoft PowerApps</strong> und <strong>Flows</strong> mit Anbindung an 
             <strong>SharePoint</strong>-Datenbanken gearbeitet.`,
           other: `In meinem Studium habe ich mit <strong>Java</strong> gearbeitet und Prinzipien des Datenmanagements, 
@@ -276,8 +276,8 @@ export default {
           Nachdem ich <strong>SCRUM</strong> an der WWU und in einem 
           <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
           Workshop lernte, habe ich es im Projekt der
-          <a href="/projects#goc">webbasierten Simulationsplattform</a> 
-          und in einem Webentwicklungsprojekt bei <a href="/experience#card-move">move</a>  angewendet.`,
+          <a href="/#/projects#goc">webbasierten Simulationsplattform</a> 
+          und in einem Webentwicklungsprojekt bei <a href="/#/experience#card-move">move</a>  angewendet.`,
           softSkills: `dynamische Teamarbeit, Führung`
         }
       }
