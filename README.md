@@ -1,19 +1,17 @@
 # Portfolio (v2)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
-
 The previous version of my portfolio can be inspected [here](https://github.com/lgiesen/portfolio-v1).
 
-This project is deployed at [leogiesen.com](https://leogiesen.com).
+This project is deployed at [leogiesen.com](https://leogiesen.com) and on [Netlify](https://giesen.netlify.app/): [![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
 
 ## Project Setup
 
-0. [VS Code](https://code.visualstudio.com "VS Code") is the recommended code editor
-1. [Node.js](https://nodejs.org/en/download/ "Node 14.15.1")
-1. [Vue.js](https://v3.vuejs.org/guide/installation.html#cli): `npm install -g @vue/cli #Install Command Line Interface`
+1. [VS Code](https://code.visualstudio.com "VS Code") is the recommended code editor
+2. [Node.js](https://nodejs.org/en/download/ "Node 14.15.1")
+3. [Vue.js](https://v3.vuejs.org/guide/installation.html#cli): `npm install -g @vue/cli #Install Command Line Interface`
 
+Check your versions:
 ```
-Check your version:
    node --version              # v14.16.0
    npm --version               # 6.14.11
    vue --version               # @vue/cli 4.5.11
@@ -22,19 +20,14 @@ Check your version:
 ### Serve/Start Front-end - Compiles and hot-reloads for development
 
 ```
-npm run serve
+npm run serve #directly start server
+vue ui #or start via User Interface
 ```
 
 ### Build for Development/Production - Compiles and minifies for production
 
 ```
 npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
 ```
 
 ## General Advice for Web Projects
