@@ -123,7 +123,7 @@ export default {
       en: {
         intro: {
           title: "Projects",
-          subtitle: "- This page is still in development -"
+          subtitle: "- get inspired or fascinated by selected IT projects -"
         },
         projects: {
           links: {
@@ -146,7 +146,8 @@ export default {
       de: {
         intro: {
           title: "Projekte",
-          subtitle: "- Diese Seite ist noch in Entwicklung -"
+          subtitle:
+            "- inspiriert oder fasziniert werden von ausgewählten Projekten -"
         },
         projects: {
           links: {
