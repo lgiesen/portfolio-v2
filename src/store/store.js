@@ -8,7 +8,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    showContactDialog: false
+    showContactDialog: false,
+    isDE() {
+      if (i18n.locale == "de") return true;
+      else return false;
+    }
   },
   mutations: {
     ToggleShowContactDialog(state) {

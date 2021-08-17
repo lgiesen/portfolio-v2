@@ -56,10 +56,10 @@ div
                   :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                   //- single line requires .justify-center and multiline .text-center
                   v-card-title.justify-center.text-center
-                    h2.gradient-text {{ card.title }}
+                    h2.gradient-text {{ $t("skills." + card.title) }}
               v-col.seperatorIcon.py-0
                 v-btn(elevation="15" fab color="background")
-                  v-icon(color="primary") mdi-{{ card.icon}}
+                  v-icon(color="primary") mdi-{{ card.icon }}
               v-card-text
                 p.my-0.py-0.text-justify(v-html="$t('skills.' + card.textSrc)")
 </template>
@@ -67,7 +67,6 @@ div
 <script>
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
-
 export default {
   name: "Home",
   components: {
@@ -77,39 +76,53 @@ export default {
   data: () => ({
     skillCardGroup: [
       {
-        title: "Python",
+        title: "pythonTitle",
         textSrc: "python",
         backgroundImage: require("@/assets/home/python.jpg"),
         icon: "language-python",
         aria: "Python Programming Language"
       },
       {
-        title: "Front-end Web Development",
+        title: "feTitle",
         textSrc: "frontend",
         backgroundImage: require("@/assets/home/frontend.jpg"),
         icon: "vuejs",
         aria: "Front-end Web Development Vue.js"
       },
       {
-        title: "Back-end Web Development",
+        title: "beTitle",
         textSrc: "backend",
         backgroundImage: require("@/assets/home/backend.jpg"),
-        icon: "api",
-        aria: "API and back-end Web Development"
+        icon: "database", //api
+        aria: "API and backend Web Development"
       },
       {
-        title: "Microsoft Office / 365",
+        title: "officeTitle",
         textSrc: "office",
         backgroundImage: require("@/assets/home/office.jpg"),
         icon: "microsoft-office",
         aria: "Microsoft Office and Microsoft 365"
       },
       {
-        title: "Process Modelling & Project Management",
+        title: "pmTitle",
+        textSrc: "processManagement",
+        backgroundImage: require("@/assets/home/office.jpg"),
+        icon: "arrow-decision",
+        aria: "Process Management"
+      },
+      {
+        title: "sdevTitle",
+        textSrc: "softwareDev",
+        backgroundImage: require("@/assets/home/office.jpg"),
+        icon: "language-java",
+        aria: "Software Development"
+      },
+      {
+        title: "otherTitle",
         textSrc: "other",
         backgroundImage: require("@/assets/home/desk.jpg"),
         icon: "language-java",
-        aria: "Prozessmodellierung und Projektmanagement Java"
+        aria: "Other"
       }
       // {
       //   title: "Soft Skills",
@@ -141,6 +154,8 @@ export default {
           downloadCV: "CV"
         },
         skills: {
+          /* TODO: ML, M. Power BI */
+          pythonTitle: "Python: Machine Learning & Business Intelligence",
           python: `I learned Python by studying online courses and programming along 
           in my free time. Furthermore, I had the opportunity to apply and enhance my 
           python capabilities in a regular and advanced module of my study at the 
@@ -157,6 +172,9 @@ export default {
           Lastly, I will use either Machine Learning or Web scraping at the start-up pivoty, 
           where I will work for a couple of months. As an outlook, I love to work with Python 
           and would be grateful for any Python-related job opportunities.`,
+
+          /* TODO: Webscraping */
+          feTitle: "Frontend Web Development",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
@@ -168,6 +186,8 @@ export default {
           However, I am most proud of my project team's complex 
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
+
+          beTitle: "Backend & Databases",
           backend: `My primary Web Development focus lies on the front end. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
           Model (ERM), 
@@ -178,6 +198,8 @@ export default {
             <a href="/#/projects#goc">Game of Competences</a> 
           project. Moreover, I demonstrate how to work with API calls in my 
             <a href="/#/projects">projects</a>.`,
+
+          officeTitle: "Microsoft Office / 365",
           office: `Since my everyday use of 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> in school, I frequently 
           used these Microsoft products. As a student assistant at the 
@@ -189,10 +211,12 @@ export default {
             <a href="/#/experience#card-move">move</a>, I worked with 
           <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to 
             <strong>SharePoint</strong> databases.`,
-          other: `In my study, I worked with <strong>Java</strong> and learned about data management, structures,
-          and algorithms. Moreover, I learned how to structure and plan IT projects and their implementation 
-          with the help of various modules, e.g., Project Management. Additionaly, I learned Unified Modeling 
-          Language (UML), Object Constraint Language (OCL), the theory of Process Mining and the process modelling with 
+          // TODO: other aufbrechen
+
+          otherTitle: "Other Skills",
+          other: `
+          SCRUM, EPK, UML/OCL, Simulation, 
+           the theory of Process Mining and the process modelling with 
             <strong>BPMN</strong> or <strong>EPK</strong> 
           in the Software Engineering and Process Management modules. Finally, after I studied 
             <strong>SCRUM</strong> 
@@ -202,7 +226,22 @@ export default {
             <a href="/#/projects#goc">Game of Competences</a> 
           project and a web development project at 
             <a href="/#/experience#card-move">move</a> .`,
-          softSkills: `dynamic teamwork, leadership`
+
+          softSkills: `dynamic teamwork, leadership`,
+
+          pmTitle: "Process Management",
+          processManagement: `PM`,
+
+          sdevTitle: "Software Development",
+          softwareDev: `A Software Developer needs to have a mathematical understanding and aptitude 
+          as well as problem-solving skills. These were taught in my Information Systems course along 
+          with programming languages like Java. In all honesty, I prefer JavaScript and already 
+          implemented a web app with it. In the project, I enhanced my organizational, teamwork, and 
+          time management skills as I led a team of seven fellow students. Thorough work and attention 
+          to detail are rewarded in the long term, as I have discovered in the creation process of the 
+          web app.
+          I am looking forward to gaining further experience in Software Development and continually 
+          expand my horizon and adapt to the ever- and fast-changing technology trends. `
         }
       },
       de: {
@@ -223,6 +262,8 @@ export default {
           downloadCV: "Lebenslauf"
         },
         skills: {
+          /* TODO: ML */
+          pythonTitle: "Python: Machine Learning & Business Intelligence",
           python: `Python habe ich durch das Studium und mit Hilfe vom nebenher Programmieren bei Online-Kursen in meiner 
           Freizeit gelernt. Außerdem hatte ich die Möglichkeit, meine Python-Fähigkeiten in einem regulären 
           und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/#/experience#education">WWU</a> anzuwenden und zu erweitern. In 
@@ -236,6 +277,9 @@ export default {
           Zuletzt werde ich entweder Machine Learning oder Web Scraping bei dem Start-up Pivoty einsetzen, wo ich für ein paar 
           Monate arbeiten werde. Als Ausblick: Ich liebe es, mit Python zu arbeiten und wäre dankbar für jede 
           Jobmöglichkeit mit Python-Bezug.`,
+
+          // TODO: Webscraping
+          feTitle: "Frontend Web Development",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich lernte, wie man eine Website mit 
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
           programmiert. Meine Webdev-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
@@ -248,6 +292,8 @@ export default {
           entwickelt habe. Besonders stolz bin ich auf die 
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
           die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
+
+          beTitle: "Backend & Datenbanken",
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz bin ich sehr vertraut 
           mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (ERM), 
             <strong>SQL</strong>-Abfragen und der Implementierung von 
@@ -257,6 +303,8 @@ export default {
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>
           erworben und angewendet. Außerdem zeige ich in meinen 
             <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
+
+          officeTitle: "Microsoft Office / 365",
           office: `Da ich in der Schule täglich mit 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite, habe ich diese 
           Microsoft-Produkte häufig eingesetzt. Als studentische Hilfskraft am 
@@ -268,6 +316,25 @@ export default {
             <a href="/#/experience#card-move">move</a> in der IT-Abteilung mit 
             <strong>Microsoft PowerApps</strong> und <strong>Flows</strong> mit Anbindung an 
             <strong>SharePoint</strong>-Datenbanken gearbeitet.`,
+
+          pmTitle: "Prozess Management",
+          processManagement: `PM`,
+
+          sdevTitle: "Software Entwicklung",
+          softwareDev: `Ein Softwareentwickler muss mathematisches Verständnis und 
+          Problemlösungsfähigkeiten besitzen. Diese habe ich mir in meinem Studiengang Wirtschaftsinformatik 
+          zusammen mit Programmiersprachen wie <strong>Java</strong> angeeignet. Um ehrlich zu sein, bevorzuge ich <strong>JavaScript</strong> 
+          und habe damit bereits z.B. eine 
+            <a href="/#/projects#goc">Web-App</a> 
+          implementiert. In diesem Projekt konnte ich ebenfalls mein 
+          Zeitmanagement, meine Selbstorganisation als auch die Koordination im Team verbessern, da ich ein Team von sieben 
+          Kommilitonen leitete. Gründliches und detailliertes Arbeiten werden langfristig belohnt, 
+          wie ich im Verlaufe der Web-App Implementation festgestellt habe. </br>
+          Ich freue mich darauf, weitere Erfahrungen in der Softwareentwicklung zu sammeln und meinen Horizont 
+          kontinuierlich zu erweitern und mich den sich ständig und schnell ändernden Technologietrends anzupassen.`,
+
+          // TODO: other aufbrechen
+          otherTitle: "Weitere Fähigkeiten",
           other: `In meinem Studium habe ich mit <strong>Java</strong> gearbeitet und Prinzipien des Datenmanagements, 
           Strukturen und Algorithmen gelernt und wie man sie umsetzt. Außerdem lernte ich in verschiedenen 
           Modulen, z. B. Projektmanagement, wie man IT-Projekte strukturiert und plant und wie man sie umsetzt. 
@@ -277,8 +344,8 @@ export default {
           <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
           Workshop lernte, habe ich es im Projekt der
           <a href="/#/projects#goc">webbasierten Simulationsplattform</a> 
-          und in einem Webentwicklungsprojekt bei <a href="/#/experience#card-move">move</a>  angewendet.`,
-          softSkills: `dynamische Teamarbeit, Führung`
+          und in einem Webentwicklungsprojekt bei <a href="/#/experience#card-move">move</a>  angewendet.
+          </br></br> dynamische Teamarbeit, Führung`
         }
       }
     }
