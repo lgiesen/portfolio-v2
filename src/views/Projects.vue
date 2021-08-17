@@ -113,7 +113,6 @@ export default {
   },
   data: () => ({
     projects: [
-      // TODO ML Transfer Learning Presentation + Overview + Paper)
       {
         title: "Machine Learning Case Study",
         year: "2021",

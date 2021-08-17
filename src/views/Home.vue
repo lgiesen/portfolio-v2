@@ -154,7 +154,6 @@ export default {
           downloadCV: "CV"
         },
         skills: {
-          // TODO Link to ML Case Study project
           pythonTitle: "Python: Machine Learning & Business Intelligence",
           python: `I learned Python by studying online courses and programming along 
           in my free time. Furthermore, I had the opportunity to apply and enhance 
@@ -175,7 +174,6 @@ export default {
           Concluding, I love to work with Python and am thrilled to apply it in various 
           contexts. Hence, I would be grateful for any Python-related job opportunities.`,
 
-          /* TODO: Webscraping */
           feTitle: "Frontend Web Development",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
@@ -285,7 +283,6 @@ export default {
           Abschließend kann man sagen, dass ich gerne mit Python arbeite und es spannend finde, es 
           in verschiedenen Kontexten anzuwenden. Daher wäre ich für jede Arbeitsmöglichkeit mit Python dankbar.`,
 
-          // TODO: Webscraping
           feTitle: "Frontend Web Development",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich lernte, wie man eine Website mit 
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
@@ -340,7 +337,6 @@ export default {
           Ich freue mich darauf, weitere Erfahrungen in der Softwareentwicklung zu sammeln und meinen Horizont 
           kontinuierlich zu erweitern und mich den sich ständig und schnell ändernden Technologietrends anzupassen.`,
 
-          // TODO: other aufbrechen
           otherTitle: "Weitere Fähigkeiten",
           other: `In meinem Studium habe ich mit <strong>Java</strong> gearbeitet und Prinzipien des Datenmanagements, 
           Strukturen und Algorithmen gelernt und wie man sie umsetzt. Außerdem lernte ich in verschiedenen 
