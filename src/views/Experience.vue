@@ -2,7 +2,7 @@
 div
   //- Hero Area
   section.fullwidth
-    v-parallax(src="@/assets/background/Aasee.jpg" height="900")
+    v-img.align-center(src="@/assets/background/Glatthorn.jpg" height="100vh")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
         v-container
