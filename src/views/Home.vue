@@ -200,39 +200,36 @@ export default {
           project. Moreover, I demonstrate how to work with API calls in my 
             <a href="/#/projects">projects</a>.`,
 
-          /* TODO: M. Power BI (Data Science & andere Buzzwords?)*/
-          officeTitle: "Microsoft Office / 365",
-          office: `Since my everyday use of 
-          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> in school, I frequently 
-          used these Microsoft products. As a student assistant at the 
+          officeTitle: "Microsoft Software",
+          office: `Since year 7 in school, I have been using  
+          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> almost every day. 
+          As a student assistant at the 
             <a href="/#/experience#experience">Information Systems' chair</a> 
-          at the University of Münster, I prepared many lectures. Further, I created various presentations 
+          at the University of Münster, I prepared many lectures in PowerPoint. Further, I created various presentations 
           as a consultant at 
-            <a href="/#/experience#card-move">move</a> , which enhanced my presentation abilities. Thus, I became very profound with 
-          PowerPoint and Word in particular. Lastly, in my work in the IT department at 
-            <a href="/#/experience#card-move">move</a>, I worked with 
-          <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to 
-            <strong>SharePoint</strong> databases.`,
-          // TODO: other aufbrechen
+            <a href="/#/experience#card-move">move</a>, which enhanced my presentation abilities. 
+          </br> 
+          Lastly, in my work in the IT department at move, I worked with 
+            <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to 
+            <strong>SharePoint</strong> databases. Moreover, I gained a brief overview of Business Intelligence 
+          in a Microsoft <strong>Power BI</strong> workshop from the 
+            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a>.`,
 
           otherTitle: "Other Skills",
           other: `
-          SCRUM, EPK, UML/OCL, Simulation, 
-           the theory of Process Mining and the process modelling with 
-            <strong>BPMN</strong> or <strong>EPK</strong> 
-          in the Software Engineering and Process Management modules. Finally, after I studied 
-            <strong>SCRUM</strong> 
-          at my university and in a 
+          At university, I studied and applied <strong>Process Mining</strong> and <strong>Modelling</strong> 
+          with BPMN and EPK. Additionally, I learned the
+            <strong>SCRUM</strong> at my university and in a 
             <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
-          workshop, I worked with it in the 
+          workshop at the 
+            <a href="https://consultingcontact.de/" target="_blank">Consulting Contact</a>. 
+          This helped me to apply it in real-life situations, such as the project seminar
             <a href="/#/projects#goc">Game of Competences</a> 
-          project and a web development project at 
-            <a href="/#/experience#card-move">move</a> .`,
+          and two web development projects at 
+            <a href="/#/experience#card-move">move</a>.`,
 
-          softSkills: `dynamic teamwork, leadership`,
-
-          pmTitle: "Process Management",
-          processManagement: `PM`,
+          // pmTitle: "Process Management",
+          // processManagement: `PM`,
 
           sdevTitle: "Software Development",
           softwareDev: `A Software Developer needs to have a mathematical understanding and aptitude 
@@ -308,21 +305,23 @@ export default {
           erworben und angewendet. Außerdem zeige ich in meinen 
             <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
 
-          officeTitle: "Microsoft Office / 365",
-          office: `Da ich in der Schule täglich mit 
-          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite, habe ich diese 
-          Microsoft-Produkte häufig eingesetzt. Als studentische Hilfskraft am 
+          officeTitle: "Microsoft Software",
+          office: `Da ich schon seit der 7. Klasse fast täglich mit 
+          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite und als studentische Hilfskraft am 
             <a href="/#/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
-          an der Universität Münster habe ich viele Vorträge vorbereitet. Außerdem habe ich bei 
+          an der Universität Münster viele Vorlesungen in PowerPoint vorbereitet habe, kenne ich mich besonders gut mit 
+          Microsoft Office aus. Außerdem habe ich bei 
             <a href="/#/experience#card-move">move</a> 
-          als Berater verschiedene Präsentationen erstellt, was meine Präsentationsfähigkeiten erweitert hat. So wurde ich vor allem mit 
-          PowerPoint und Word sehr tiefgründig. Zuletzt habe ich bei 
-            <a href="/#/experience#card-move">move</a> in der IT-Abteilung mit 
+          als Berater verschiedene Präsentationen erstellt und z.B. einen BCG-Workshop besucht, was meine Präsentationsfähigkeiten förderte. 
+          </br>
+          Zuletzt habe ich bei move in der IT-Abteilung mit 
             <strong>Microsoft PowerApps</strong> und <strong>Flows</strong> mit Anbindung an 
-            <strong>SharePoint</strong>-Datenbanken gearbeitet.`,
+            <strong>SharePoint</strong>-Datenbanken gearbeitet. Außerdem habe ich einen kurzen Überblick über Business Intelligence 
+          in einem Microsoft <strong>Power BI</strong> Workshop von des 
+            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a> bekommen.`,
 
-          pmTitle: "Prozess Management",
-          processManagement: `PM`,
+          // pmTitle: "Prozess Management",
+          // processManagement: `PM`,
 
           sdevTitle: "Software Entwicklung",
           softwareDev: `Ein Softwareentwickler muss mathematisches Verständnis und 
@@ -338,17 +337,18 @@ export default {
           kontinuierlich zu erweitern und mich den sich ständig und schnell ändernden Technologietrends anzupassen.`,
 
           otherTitle: "Weitere Fähigkeiten",
-          other: `In meinem Studium habe ich mit <strong>Java</strong> gearbeitet und Prinzipien des Datenmanagements, 
-          Strukturen und Algorithmen gelernt und wie man sie umsetzt. Außerdem lernte ich in verschiedenen 
-          Modulen, z. B. Projektmanagement, wie man IT-Projekte strukturiert und plant und wie man sie umsetzt. 
-          Außerdem lernte ich Unified Modeling Language (UML), Object Constraint Language (OCL), Theorie des Process Mining und Modellierung eines Prozesses mithilfe 
-          <strong>BPMN</strong> und <strong>EPK</strong> in den Modulen Software-Engineering und Prozessmanagement. 
-          Nachdem ich <strong>SCRUM</strong> an der WWU und in einem 
-          <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
-          Workshop lernte, habe ich es im Projekt der
-          <a href="/#/projects#goc">webbasierten Simulationsplattform</a> 
-          und in einem Webentwicklungsprojekt bei <a href="/#/experience#card-move">move</a>  angewendet.
-          </br></br> dynamische Teamarbeit, Führung`
+          other: `An der WWU habe ich <strong>Process Mining</strong> und 
+            <strong>Prozessmodellierung</strong> mit BPMN und EPK gelernt. 
+          Darüber hinaus habe ich 
+            <strong>SCRUM</strong> an meiner Universität und in einem 
+            <a href="https://www.lhconsulting.com/" target="_blank">Lufthansa Consulting</a> 
+          Workshop bei der 
+            <a href="https://consultingcontact.de/" target="_blank">Consulting Contact</a> gelernt. 
+          Dieses theoretische Wissen habe ich habe ich in realen Situationen angewendet, wie zum 
+          Beispiel im Projektseminar
+            <a href="/#/projects#goc">Game of Competences</a> 
+          und in zwei Webentwicklungsprojekten bei 
+            <a href="/#/experience#card-move">move</a>.`
         }
       }
     }
