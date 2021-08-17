@@ -56,7 +56,7 @@ div
             //- Icon of project
             v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width")
             //- Project description
-            p.text-justify(v-html="$t(project.translationKey)")
+            p.text-justify(v-html="$t('projects.' + project.translationKey)")
             
             //- Show preview of website, but exclude elements, which do not have an embedLink
             div.text-center(v-if="project.embedLink != ''")
@@ -122,7 +122,7 @@ export default {
         link: "",
         imgSrc: require("@/assets/projects/ml_case_study.png"),
         img_width: "500px",
-        translationKey: "projects.ml_case_study",
+        translationKey: "ml_case_study",
         id: "ml_case_study",
         showPreview: false,
         embedLink: "",
@@ -145,7 +145,7 @@ export default {
         link: "",
         imgSrc: require("@/assets/projects/pivoty-logo.png"),
         img_width: "80px",
-        translationKey: "projects.forum_web_scraper",
+        translationKey: "forum_web_scraper",
         id: "forum_web_scraper",
         showPreview: false,
         embedLink: "",
@@ -157,7 +157,7 @@ export default {
         link: "",
         imgSrc: require("@/assets/projects/GoC.svg"),
         img_width: "80px",
-        translationKey: "projects.goc",
+        translationKey: "goc",
         id: "goc",
         showPreview: false,
         embedLink: "",
@@ -169,7 +169,7 @@ export default {
         link: "https://github.com/Arceoavs/watchtrainer",
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
         img_width: "80px",
-        translationKey: "projects.watchtrainer",
+        translationKey: "watchtrainer",
         id: "watchtrainer",
         showPreview: false,
         embedLink: "https://watchtrainer.arz.berlin/",
@@ -181,7 +181,7 @@ export default {
         link: "https://github.com/lgiesen/portfolio-v1",
         imgSrc: require("@/assets/projects/portfolioV1Logo.png"),
         img_width: "80px",
-        translationKey: "projects.portfolioV1",
+        translationKey: "portfolioV1",
         id: "",
         showPreview: false,
         embedLink: "https://lgiesen.github.io/portfolio-v1/",
