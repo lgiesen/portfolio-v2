@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //- Hero area
-  section.fullwidth
+  section.fullwidth.mb-0
     v-parallax(src="@/assets/background/Aasee.jpg" height="900")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
@@ -22,55 +22,53 @@ div
   
   //- Projects
   article#scroll
-    section(v-for="project in projects" :id="project.id")
+    section
       v-container
-        v-row.justify-center
-          v-col.col-11.col-md-7.text-center
-            h2.display-3.font-weight-thin.mb-0(style="word-break: break-word;") {{ project.title }}
-            //- Links to repository and/or website
-            div.mt-5
-              //- repository
-              span(v-if="project.link != ''") 
-                v-icon(small) mdi-link-variant
-                AnimatedLink(:href="project.link" :linkText="$t('projects.links.repository')" target="_blank" prepend-icon="mdi-link-variant")
-              //- divider between repository and website
-              span.mx-3(v-if="project.link != '' && project.embedLink != ''") |
-              //- website
-              span(v-if="project.embedLink != ''")
-                v-icon(small) mdi-open-in-new
-                AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
-              //- divider between website and file
-              span.mx-3(v-if="project.embedLink != '' && project.files.length != 0") |
-              //- website
-              span(v-for="(file, index) in project.files")
-                span(v-if="project.files.length > 0")
-                  v-icon(small) mdi-file-document-outline
-                    //- "$t('projects.links.' + project.id)"
-                  AnimatedLink(:href="project.files[index].link"
-                    :linkText="$t('projects.' + project.files[index].title)"
-                    target="_blank")
-                  //- divider between multiple files
-                  span.mx-3 | 
-                  //- TODO: mit CSS first-/last-child display none || before/after tag
+        div(v-for="project in projects" :id="project.id")
+          v-row.justify-center
+            v-col.col-11.col-md-7.text-center
+              h2.display-3.font-weight-thin.mb-0(style="word-break: break-word;") {{ project.title }}
+              //- Links to repository and/or website
+              div.mt-5
+                v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != ''" :href="project.link" target="_blank") 
+                  v-icon(small) mdi-code-tags
+                  | {{ $t('projects.links.repository') }}
+                  //- AnimatedLink(:href="project.link" :linkText="$t('projects.links.repository')" target="_blank" prepend-icon="mdi-link-variant")
 
-            //- Icon of project
-            v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
-            //- Project description
-            p.text-justify(v-html="$t('projects.' + project.translationKey)")
-            
-            //- Show preview of website, but exclude elements, which do not have an embedLink
-            div.text-center(v-if="project.embedLink != ''")
-              //- toggle preview button
-              v-btn.gradient-btn.pa-6.ma-8(rounded
-                @click="project.showPreview = !project.showPreview") 
-                span(v-show="!project.showPreview") {{ $t("projects.preview.show")}}
-                span(v-show="project.showPreview") {{ $t("projects.preview.hide")}}
-              //- actual preview (embed of other website)
-              v-card.pa-0.my-10(v-show="project.showPreview")
-                embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
+                //- website
+                v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.embedLink != ''" :href="project.embedLink" target="_blank") 
+                  v-icon(small) mdi-open-in-new
+                  | {{ $t('projects.links.website') }}
+                  //- AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
+                
+                //- file(s)
+                span(v-for="(file, index) in project.files")
+                  v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.files.length > 0" :href="project.files[index].link" target="_blank")
+                    v-icon(small) mdi-file-document-outline
+                      //- "$t('projects.links.' + project.id)"
+                    | {{ $t('projects.' + project.files[index].title) }}
+                    //- AnimatedLink(:href="project.files[index].link"
+                    //-   :linkText="$t('projects.' + project.files[index].title)"
+                    //-   target="_blank")
+                    
+              //- Icon of project
+              v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
+              //- Project description
+              p.text-justify(v-html="$t('projects.' + project.translationKey)")
+              
+              //- Show preview of website, but exclude elements, which do not have an embedLink
+              div.text-center(v-if="project.embedLink != ''")
+                //- toggle preview button
+                v-btn.gradient-btn.pa-6.ma-8(rounded
+                  @click="project.showPreview = !project.showPreview") 
+                  span(v-show="!project.showPreview") {{ $t("projects.preview.show")}}
+                  span(v-show="project.showPreview") {{ $t("projects.preview.hide")}}
+                //- actual preview (embed of other website)
+                v-card.pa-0.my-10(v-show="project.showPreview")
+                  embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
   
   //- Bibliography
-  section
+  section#bibliography
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ this.$store.getters.isDE ? "Literaturverzeichnis" : "Bibliography" }}
       p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
@@ -135,6 +133,10 @@ export default {
           {
             title: "ML.poster_overview",
             link: "ML/ML_Case_Study_LULC_Poster.pdf"
+          },
+          {
+            title: "ML.transfer_learning",
+            link: "ML/Transfer_Learning_Presentation.pdf"
           }
         ]
       },
@@ -208,6 +210,7 @@ export default {
           ML: {
             seminar_thesis: "Seminar Thesis",
             poster_overview: "Poster Overview",
+            transfer_learning: "Transfer Learning Presentation",
             ml_case_study: `In this case study, a supervised deep learning algorithm is 
             implemented with the objective of semantically segmenting a landscape into ten 
             predefined land usage and coverage classes. This is achieved by sliding window 
@@ -223,19 +226,25 @@ export default {
           potentials with an AI analysis.
           </br>
           pivoty is located in Münster and develops “an AI-based analytics software that 
-          tries to discover innovation potentials” (Schäper et al. 2021a) for companies 
-          “by analyzing unbiased customer insights” (Schäper et al. 2021a). To clarify, 
+          tries to discover innovation potentials” 
+            (<a href="#bibliography">Schäper et al. 2021a</a>)
+          for companies “by analyzing unbiased customer insights” 
+            (<a href="#bibliography">Schäper et al. 2021a</a>)
+          . To clarify, 
           the extracted ideas are subjective, but the positivity bias may be overcome. 
           These insights “draw on a variety of online sources like social networks, 
           forums, blogs, and product reviews to systematically derive inspirations for 
-          new products and services” (Schäper et al. 2021b).`,
+          new products and services” 
+            (<a href="#bibliography">Schäper et al. 2021b</a>).`,
           goc: `We created a web-based simulation platform for public administrations. 
           Unfortunatly, I am not allowed to share the project results of the project seminar, 
-          though it was a lot of fun for the whole project team and considering a grade of 1.3 
+          though it was a lot of fun for the whole project team and considering a grade of 1.3
           successful.`,
-          watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of wearable devices like the AppleWatch.`,
-          portfolioV1: `This is the previous version of my portfolio website. I created it with 
-          simple HTML5, CSS3, JavaScript and Bootstrap.`
+          watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of 
+          wearable devices like the AppleWatch. The linked page only includes the frontend, since 
+          not all backend features are implemented yet.`,
+          portfolioV1: `I created the first version of my portfolio website in 2019 
+          with simple HTML5, CSS3, JavaScript and Bootstrap.`
         }
       },
       de: {
@@ -256,6 +265,7 @@ export default {
           ML: {
             seminar_thesis: "Seminararbeit",
             poster_overview: "Poster Überblick",
+            transfer_learning: "Transfer Learning Präsentation",
             ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
             mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
             vordefinierte Landnutzungs- und Bedeckungsklassen. Dies wird durch einen Sliding-Window 
@@ -271,18 +281,23 @@ export default {
           Innovationspotenziale abzuleiten.
           </br>
           pivoty ist in Münster ansässig und entwickelt "eine KI-basierte Analysesoftware, die 
-          Innovationspotenziale" (Schäper et al. 2021a) für Unternehmen  
-          "durch die Analyse von unvoreingenommenen Customer Insights" (Schäper et al. 2021a) 
+          Innovationspotenziale" 
+            (<a href="#bibliography">Schäper et al. 2021a</a>)
+          für Unternehmen "durch die Analyse von unvoreingenommenen Customer Insights" 
+            (<a href="#bibliography">Schäper et al. 2021a</a>)
           versucht zu entdecken. Die extrahierten Ideen sind zwar subjektiv, aber der 
           Positivitätsbias kann überwunden werden. 
           Diese Erkenntnisse "stützen sich auf eine Vielzahl von Online-Quellen wie soziale Netzwerke, 
           Foren, Blogs und Produktrezensionen, um systematisch Inspirationen für neue 
-          neue Produkte und Dienstleistungen abzuleiten" (Schäper et al. 2021b).`,
+          neue Produkte und Dienstleistungen abzuleiten" 
+          (<a href="#bibliography">Schäper et al. 2021b</a>).`,
           goc: `Wir haben eine webbasierte Simulationsplattform für öffentliche Verwaltungen erstellt. 
           Leider darf ich die Projektergebnisse des Projektseminars nicht teilen. Im Projektteam hat es 
           sehr viel Spaß gemacht hat und mit einer Note von 1,3 kann man es einen Erfolg nennen.`,
-          watchtrainer: `WatchTrainer ist eine auf Sharing basierende Sportplattform für die Zukunft von Wearable Devices wie der AppleWatch.`,
-          portfolioV1: `Dies ist die vorherige Version meiner Portfolio-Website. Ich habe sie erstellt mit 
+          watchtrainer: `WatchTrainer ist eine auf Sharing basierende Sportplattform für die Zukunft von 
+          Wearable Devices wie der AppleWatch. Die verlinkte Seite umfasst lediglich das Frontend, da 
+          noch nicht alle Backend Features implementiert sind.`,
+          portfolioV1: `Die erste Version meiner Portfolio-Website habeich 2019 mit 
           einfachem HTML5, CSS3, JavaScript und Bootstrap erstellt.`
         }
       }
