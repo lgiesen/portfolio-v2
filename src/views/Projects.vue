@@ -42,15 +42,16 @@ div
               //- divider between website and file
               span.mx-3(v-if="project.embedLink != '' && project.file != ''") |
               //- website
-              span(v-if="project.files.length > 0")
-                div(v-for="file in project.files")
-                  v-icon(small) mdi-file-document-outline
-                  AnimatedLink(:href="project.files" :linkText="$t('projects.links.' + project.id)" target="_blank")
+              //- span(v-if="project.files.length > 0")
+              //-   div(v-for="file in project.files")
+              //-     v-icon(small) mdi-file-document-outline
+              //-       //- project.files[0].link" 
+              //-     AnimatedLink(href="ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
+              //-       :linkText="$t('projects.links.' + project.id)" target="_blank")
             //- Icon of project
             v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width")
             //- Project description
-            p.text-justify {{ $t(project.translationKey)}} 
-            //- (v-html="$t(project.translationKey)")
+            p.text-justify(v-html="$t(project.translationKey)")
             
             //- Show preview of website, but exclude elements, which do not have an embedLink
             div.text-center(v-if="project.embedLink != ''")
@@ -62,6 +63,15 @@ div
               //- actual preview (embed of other website)
               v-card.pa-0.my-10(v-show="project.showPreview")
                 embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
+  section
+    v-container.grey--text.px-5.text-justify
+      h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
+      p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
+        a(href="https://www.pivoty.de/" target="_blank") https://www.pivoty.de/
+        | , accessed June 29, 2021).
+      p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “Pivoty,” LinkedIn. (
+        a(href="https://www.linkedin.com/company/pivoty/" target="_blank") https://www.linkedin.com/company/pivoty/
+        | , accessed June 30, 2021).
 
     //- section
       v-container
@@ -198,21 +208,17 @@ export default {
           be improved upon.`,
           forum_web_scraper: `The Information Systems specialization module ‘Principles 
           of Entrepreneurship’ was supplemented by the project group work with the startup 
-          pivoty. This project strengthens pivoty’s product development as well as gives 
-          the project team the opportunity to gain practical experience. Thus, both parties 
-          benefitted from the external input and work together.
+          pivoty. The basic business process idea of the start-up is that extracted information 
+          from discussion forums (using web scraping) is used to derive hidden innovation 
+          potentials with an AI analysis.
           </br>
           pivoty is located in Münster and develops “an AI-based analytics software that 
-          tries to discover innovation potentials” (Schäper et al. 2021) for companies 
-          “by analyzing unbiased customer insights” (Schäper et al. 2021). To clarify, 
+          tries to discover innovation potentials” (Schäper et al. 2021a) for companies 
+          “by analyzing unbiased customer insights” (Schäper et al. 2021a). To clarify, 
           the extracted ideas are subjective, but the positivity bias may be overcome. 
           These insights “draw on a variety of online sources like social networks, 
           forums, blogs, and product reviews to systematically derive inspirations for 
-          new products and services” (Schäper et al. 2021b). The corresponding two-step 
-          process portrays that the innovation potential is derived with an AI analysis 
-          from extracted information from discussion forums using web scraping`,
-          // Schäper:
-          // Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021. “Pivoty - Simplifying Innovation.” (https://www.pivoty.de/, accessed June 29, 2021).
+          new products and services” (Schäper et al. 2021b).`,
           goc: `We created a web-based simulation platform for public administrations. 
           Unfortunatly, I am not allowed to share the project results of the project seminar, 
           though it was a lot of fun for the whole project team and considering a grade of 1.3 
@@ -245,7 +251,20 @@ export default {
           Genauigkeit von 73%. An der Hand von sieben Schritten des maschinellen Lernens werden die 
           werden die Funktionalität und die Eigenschaften des Algorithmus beschrieben und wie er 
           verbessert werden kann.`,
-          forum_web_scraper: ``,
+          forum_web_scraper: `Das Vertiefungsmodul 'Principles of Entrepreneurship' wurde durch 
+          die Projektgruppenarbeit mit dem Startup pivoty ergänzt. Die grundlegende 
+          Geschäftsprozess-Idee von pivoty ist, dass extrahierte Informationen (mittels Web 
+          Scraping) aus Diskussionsforen genutzt werden, um mit einer KI-Analyse versteckte 
+          Innovationspotenziale abzuleiten.
+          </br>
+          pivoty ist in Münster ansässig und entwickelt "eine KI-basierte Analysesoftware, die 
+          Innovationspotenziale" (Schäper et al. 2021a) für Unternehmen  
+          "durch die Analyse von unvoreingenommenen Customer Insights" (Schäper et al. 2021a) 
+          versucht zu entdecken. Die extrahierten Ideen sind zwar subjektiv, aber der 
+          Positivitätsbias kann überwunden werden. 
+          Diese Erkenntnisse "stützen sich auf eine Vielzahl von Online-Quellen wie soziale Netzwerke, 
+          Foren, Blogs und Produktrezensionen, um systematisch Inspirationen für neue 
+          neue Produkte und Dienstleistungen abzuleiten" (Schäper et al. 2021b).`,
           goc: `Wir haben eine webbasierte Simulationsplattform für öffentliche Verwaltungen erstellt. 
           Leider darf ich die Projektergebnisse des Projektseminars nicht teilen. Im Projektteam hat es 
           sehr viel Spaß gemacht hat und mit einer Note von 1,3 kann man es einen Erfolg nennen.`,
