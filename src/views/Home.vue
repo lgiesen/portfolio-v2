@@ -103,13 +103,13 @@ export default {
         icon: "microsoft-office",
         aria: "Microsoft Office and Microsoft 365"
       },
-      {
-        title: "pmTitle",
-        textSrc: "processManagement",
-        backgroundImage: require("@/assets/home/process.jpg"),
-        icon: "arrow-decision",
-        aria: "Process Management"
-      },
+      // {
+      //   title: "pmTitle",
+      //   textSrc: "processManagement",
+      //   backgroundImage: require("@/assets/home/process.jpg"),
+      //   icon: "arrow-decision",
+      //   aria: "Process Management"
+      // },
       {
         title: "sdevTitle",
         textSrc: "softwareDev",
@@ -233,10 +233,12 @@ export default {
 
           sdevTitle: "Software Development",
           softwareDev: `A Software Developer needs to have a mathematical understanding and aptitude 
-          as well as problem-solving skills. These were taught in my Information Systems course along 
-          with programming languages like Java. In all honesty, I prefer JavaScript and already 
-          implemented a web app with it. In the project, I enhanced my organizational, teamwork, and 
-          time management skills as I led a team of seven fellow students. Thorough work and attention 
+          as well as <strong>problem-solving</strong> skills. These were taught in my Information Systems course along 
+          with programming languages like <strong>Java</strong>. In all honesty, I prefer <strong>JavaScript</strong> and already 
+          implemented a 
+            <a href="/#/projects#goc">web app</a>  with it.
+          In the project, I enhanced my organizational, teamwork, and 
+          <strong>time management</strong> skills as I led a team of seven fellow students. Thorough work and attention 
           to detail are rewarded in the long term, as I have discovered in the creation process of the 
           web app.
           I am looking forward to gaining further experience in Software Development and continually 
@@ -325,12 +327,12 @@ export default {
 
           sdevTitle: "Software Entwicklung",
           softwareDev: `Ein Softwareentwickler muss mathematisches Verständnis und 
-          Problemlösungsfähigkeiten besitzen. Diese habe ich mir in meinem Studiengang Wirtschaftsinformatik 
+            <strong>Problemlösungsfähigkeiten</strong> besitzen. Diese habe ich mir in meinem Studiengang Wirtschaftsinformatik 
           zusammen mit Programmiersprachen wie <strong>Java</strong> angeeignet. Um ehrlich zu sein, bevorzuge ich <strong>JavaScript</strong> 
           und habe damit bereits z.B. eine 
             <a href="/#/projects#goc">Web-App</a> 
           implementiert. In diesem Projekt konnte ich ebenfalls mein 
-          Zeitmanagement, meine Selbstorganisation als auch die Koordination im Team verbessern, da ich ein Team von sieben 
+          <strong>Zeitmanagement</strong>, meine Selbstorganisation als auch die Koordination im Team verbessern, da ich ein Team von sieben 
           Kommilitonen leitete. Gründliches und detailliertes Arbeiten werden langfristig belohnt, 
           wie ich im Verlaufe der Web-App Implementation festgestellt habe. </br>
           Ich freue mich darauf, weitere Erfahrungen in der Softwareentwicklung zu sammeln und meinen Horizont 
