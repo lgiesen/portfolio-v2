@@ -187,7 +187,6 @@ export default {
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
 
-          // TODO drüber lesen
           beTitle: "Backend & Databases",
           backend: `My primary web development focus lies on the frontend. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
