@@ -41,11 +41,12 @@ div
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
-      p McCandless, C. (n.d.). The joy of life comes from our 
+      p McCandless, C. unknown. "The joy of life comes from our 
         | encounters with new experiences, and hence there is no greater joy 
         | than to have an endlessly changing horizon, for each day to have a 
-        | new and different sun. Retrieved April 3, 2021, from 
+        | new and different sun." BrainyQuote. (
         a(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
+        | , accessed April 3, 2021).
 </template>
 
 <script>

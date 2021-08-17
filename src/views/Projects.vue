@@ -74,7 +74,7 @@ div
       p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
         a(href="https://www.pivoty.de/" target="_blank") https://www.pivoty.de/
         | , accessed June 29, 2021).
-      p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “Pivoty,” LinkedIn. (
+      p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “Pivoty” LinkedIn. (
         a(href="https://www.linkedin.com/company/pivoty/" target="_blank") https://www.linkedin.com/company/pivoty/
         | , accessed June 30, 2021).
 
