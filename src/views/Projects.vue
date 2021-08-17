@@ -40,14 +40,19 @@ div
                 v-icon(small) mdi-open-in-new
                 AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
               //- divider between website and file
-              span.mx-3(v-if="project.embedLink != '' && project.file != ''") |
+              span.mx-3(v-if="project.embedLink != '' && project.files.length != 0") |
               //- website
-              //- span(v-if="project.files.length > 0")
-              //-   div(v-for="file in project.files")
-              //-     v-icon(small) mdi-file-document-outline
-              //-       //- project.files[0].link" 
-              //-     AnimatedLink(href="ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
-              //-       :linkText="$t('projects.links.' + project.id)" target="_blank")
+              span(v-for="(file, index) in project.files")
+                span(v-if="project.files.length > 0")
+                  v-icon(small) mdi-file-document-outline
+                    //- "$t('projects.links.' + project.id)"
+                  AnimatedLink(:href="project.files[index].link"
+                    :linkText="project.files[index].title"
+                    target="_blank")
+                  //- divider between multiple files
+                  span.mx-3 | 
+                  //- TODO: mit CSS first-/last-child display none || before/after tag
+
             //- Icon of project
             v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width")
             //- Project description
@@ -65,7 +70,7 @@ div
                 embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
   section
     v-container.grey--text.px-5.text-justify
-      h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
+      h2.mb-5 {{ this.$store.getters.isDE ? "Literaturverzeichnis" : "Bibliography" }}
       p Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
         a(href="https://www.pivoty.de/" target="_blank") https://www.pivoty.de/
         | , accessed June 29, 2021).
@@ -121,7 +126,7 @@ export default {
         embedLink: "",
         files: [
           {
-            title: "Paper",
+            title: "Seminar Thesis",
             link:
               "ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
           },
@@ -142,7 +147,7 @@ export default {
         id: "forum_web_scraper",
         showPreview: false,
         embedLink: "",
-        file: ""
+        files: []
       },
       {
         title: "Game of Competences",
@@ -154,7 +159,7 @@ export default {
         id: "goc",
         showPreview: false,
         embedLink: "",
-        file: ""
+        files: []
       },
       {
         title: "watchtrainer",
@@ -166,7 +171,7 @@ export default {
         id: "watchtrainer",
         showPreview: false,
         embedLink: "https://watchtrainer.arz.berlin/",
-        file: ""
+        files: []
       },
       {
         title: "Portfolio v1",
@@ -178,7 +183,7 @@ export default {
         id: "",
         showPreview: false,
         embedLink: "https://lgiesen.github.io/portfolio-v1/",
-        file: ""
+        files: []
       }
     ]
   }),
