@@ -39,10 +39,19 @@ div
               span(v-if="project.embedLink != ''")
                 v-icon(small) mdi-open-in-new
                 AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
+              //- divider between website and file
+              span.mx-3(v-if="project.embedLink != '' && project.file != ''") |
+              //- website
+              span(v-if="project.files.length > 0")
+                div(v-for="file in project.files")
+                  v-icon(small) mdi-file-document-outline
+                  AnimatedLink(:href="project.files" :linkText="$t('projects.links.' + project.id)" target="_blank")
             //- Icon of project
-            v-img.ma-10.mx-auto(:src="project.imgSrc" width="80px")
+            v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width")
             //- Project description
-            p.text-justify {{ $t(project.translationKey)}}
+            p.text-justify {{ $t(project.translationKey)}} 
+            //- (v-html="$t(project.translationKey)")
+            
             //- Show preview of website, but exclude elements, which do not have an embedLink
             div.text-center(v-if="project.embedLink != ''")
               //- toggle preview button
@@ -89,32 +98,77 @@ export default {
   },
   data: () => ({
     projects: [
+      // TODO ML Transfer Learning Presentation + Overview + Paper)
+      {
+        title: "Machine Learning Case Study",
+        year: "2021",
+        link: "",
+        imgSrc: require("@/assets/projects/ml_case_study.png"),
+        img_width: "500px",
+        translationKey: "projects.ml_case_study",
+        id: "ml_case_study",
+        showPreview: false,
+        embedLink: "",
+        files: [
+          {
+            title: "Paper",
+            link:
+              "ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
+          },
+          {
+            title: "Poster Overview",
+            link: "ML/ML_Case_Study_LULC_Poster.pdf"
+          }
+        ]
+      },
+      // TODO Scalable Web Scraper pivoty Text
+      {
+        title: "Scalable Forum Web Scraper",
+        year: "2021",
+        link: "",
+        imgSrc: require("@/assets/projects/pivoty-logo.png"),
+        img_width: "80px",
+        translationKey: "projects.forum_web_scraper",
+        id: "forum_web_scraper",
+        showPreview: false,
+        embedLink: "",
+        file: ""
+      },
       {
         title: "Game of Competences",
+        year: "2020-2021",
         link: "",
         imgSrc: require("@/assets/projects/GoC.svg"),
+        img_width: "80px",
         translationKey: "projects.goc",
         id: "goc",
         showPreview: false,
-        embedLink: ""
+        embedLink: "",
+        file: ""
       },
       {
         title: "watchtrainer",
+        year: "2019-2020",
         link: "https://github.com/Arceoavs/watchtrainer",
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
+        img_width: "80px",
         translationKey: "projects.watchtrainer",
         id: "watchtrainer",
         showPreview: false,
-        embedLink: "https://watchtrainer.arz.berlin/"
+        embedLink: "https://watchtrainer.arz.berlin/",
+        file: ""
       },
       {
         title: "Portfolio v1",
+        year: "2019",
         link: "https://github.com/lgiesen/portfolio-v1",
         imgSrc: require("@/assets/projects/portfolioV1Logo.png"),
+        img_width: "80px",
         translationKey: "projects.portfolioV1",
         id: "",
         showPreview: false,
-        embedLink: "https://lgiesen.github.io/portfolio-v1/"
+        embedLink: "https://lgiesen.github.io/portfolio-v1/",
+        file: ""
       }
     ]
   }),
@@ -128,12 +182,37 @@ export default {
         projects: {
           links: {
             repository: "repository",
-            website: "website"
+            website: "website",
+            file: "file"
           },
           preview: {
             hide: "Hide Preview",
             show: "Show Preview"
           },
+          ml_case_study: `In this case study, a supervised deep learning algorithm is 
+          implemented with the objective of semantically segmenting a landscape into ten 
+          predefined land usage and coverage classes. This is achieved by sliding window 
+          approach with a three-dimensional convolutional neural network resulting in an 
+          accuracy of 73%. At the hand of seven steps of machine learning projects, the 
+          functionality and characteristics of the algorithm are outlined and how it may 
+          be improved upon.`,
+          forum_web_scraper: `The Information Systems specialization module ‘Principles 
+          of Entrepreneurship’ was supplemented by the project group work with the startup 
+          pivoty. This project strengthens pivoty’s product development as well as gives 
+          the project team the opportunity to gain practical experience. Thus, both parties 
+          benefitted from the external input and work together.
+          </br>
+          pivoty is located in Münster and develops “an AI-based analytics software that 
+          tries to discover innovation potentials” (Schäper et al. 2021) for companies 
+          “by analyzing unbiased customer insights” (Schäper et al. 2021). To clarify, 
+          the extracted ideas are subjective, but the positivity bias may be overcome. 
+          These insights “draw on a variety of online sources like social networks, 
+          forums, blogs, and product reviews to systematically derive inspirations for 
+          new products and services” (Schäper et al. 2021b). The corresponding two-step 
+          process portrays that the innovation potential is derived with an AI analysis 
+          from extracted information from discussion forums using web scraping`,
+          // Schäper:
+          // Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021. “Pivoty - Simplifying Innovation.” (https://www.pivoty.de/, accessed June 29, 2021).
           goc: `We created a web-based simulation platform for public administrations. 
           Unfortunatly, I am not allowed to share the project results of the project seminar, 
           though it was a lot of fun for the whole project team and considering a grade of 1.3 
@@ -141,7 +220,6 @@ export default {
           watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of wearable devices like the AppleWatch.`,
           portfolioV1: `This is the previous version of my portfolio website. I created it with 
           simple HTML5, CSS3, JavaScript and Bootstrap.`
-          // TODO ML Case Study bei Projects hinzufügen (inkl. Transfer Learning Presentation + Overview + Paper)
         }
       },
       de: {
@@ -153,12 +231,21 @@ export default {
         projects: {
           links: {
             repository: "Repository",
-            website: "Website"
+            website: "Website",
+            file: "Dokument"
           },
           preview: {
             hide: "Vorschau verbergen",
             show: "Vorschau anzeigen"
           },
+          ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
+          mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
+          vordefinierte Landnutzungs- und Bedeckungsklassen. Dies wird durch einen Sliding-Window 
+          mit einem dreidimensionalen neuronalen Faltungsnetzwerk erreicht, was zu einer 
+          Genauigkeit von 73%. An der Hand von sieben Schritten des maschinellen Lernens werden die 
+          werden die Funktionalität und die Eigenschaften des Algorithmus beschrieben und wie er 
+          verbessert werden kann.`,
+          forum_web_scraper: ``,
           goc: `Wir haben eine webbasierte Simulationsplattform für öffentliche Verwaltungen erstellt. 
           Leider darf ich die Projektergebnisse des Projektseminars nicht teilen. Im Projektteam hat es 
           sehr viel Spaß gemacht hat und mit einer Note von 1,3 kann man es einen Erfolg nennen.`,

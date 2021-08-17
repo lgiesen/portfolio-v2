@@ -39,7 +39,7 @@ div
               v-card-title.justify-center {{ $t("homeIntro.title") }}
               v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
                 v-btn.gradient-btn.pa-6.ma-8.mt-12(rounded
-                  :href="'Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
+                  :href="'/CV/Leo_Giesen-CV-' + this.$i18n.locale +'.pdf'")
                   v-icon mdi-download
                   | {{ $t("homeIntro.downloadCV") }}
   article
@@ -161,8 +161,9 @@ export default {
           these capabilities in multiple university modules. For instance, in the 
           advanced course 'Deep Learning with Python' I used 
             <strong>TensorFlow</strong> and <strong>Keras</strong> for a 
-            <strong>Machine Learning</strong>
-          Case Study, which gave me practical insights into how Artificial Intelligence 
+            <strong>Machine Learning</strong> 
+            <a href="/#/projects#ml_case_study">case study</a>, 
+          which gave me practical insights into how Artificial Intelligence 
           works and what its current limitations and capabilities are.
           </br>
           Additionally, I realized smaller projects, such as a backtracking 
@@ -272,7 +273,8 @@ export default {
           "Deep Learning mit Python" 
             <strong>TensorFlow</strong> und <strong>Keras</strong> für eine 
             <strong>Machine Learning</strong> 
-          Case Study verwendet, was mir praktische Einblicke in die Funktionsweise von 
+            <a href="/#/projects#ml_case_study">Fallstudie</a>, 
+           verwendet, was mir praktische Einblicke in die Funktionsweise von 
           Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffte.
           </br>
           Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 

@@ -18,7 +18,7 @@ div
               p {{ $t("friendsAndFamily") }}
               //- career
               p(v-html="$t('career')")
-
+            //- TODO Link Erfahrungsbericht & Projekt does not work
           //- sport
           v-row.justify-center
             v-col.col-11.col-md-6(order-md="2")
