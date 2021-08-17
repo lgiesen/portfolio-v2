@@ -179,7 +179,7 @@ export default {
           program a website with 
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
           I was able to apply my web dev skills in numerous projects, e.g., the 
-            <a href="/#/projects#watchtrainer">watchtrainer</a>
+            <a href="/#/projects#watchtrainer">watchTrainer</a>
           project, which is the corresponding website to a fitness app for the apple watch. Additional projects comprise my
           previous and this portfolio page, two WordPress websites, which I single-handedly developed in consultancy projects at 
             <a href="/#/experience#card-move">move</a>. 
@@ -189,16 +189,16 @@ export default {
 
           // TODO drüber lesen
           beTitle: "Backend & Databases",
-          backend: `My primary Web Development focus lies on the front end. Nevertheless, I am very 
+          backend: `My primary web development focus lies on the frontend. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
-          Model (ERM), 
-            <strong>SQL</strong> queries, and implemented 
+          Model (<strong>ERM</strong>), 
+            <strong>SQL</strong>, and implemented 
             <strong>API calls</strong> 
           with a REST API and GraphQL. I acquired and applied these skills at university and in the 
-            <a href="/#/projects#watchtrainer">watchtrainer</a> and 
+            <a href="/#/projects#watchtrainer">watchTrainer</a> and 
             <a href="/#/projects#goc">Game of Competences</a> 
-          project. Moreover, I demonstrate how to work with API calls in my 
-            <a href="/#/projects">projects</a>.`,
+          project.`,
+          // Moreover, I demonstrate how to work with API calls in my <a href="/#/projects">projects</a>.
 
           officeTitle: "Microsoft Software",
           office: `Since year 7 in school, I have been using  
@@ -287,7 +287,7 @@ export default {
             <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
           programmiert. Meine Webdev-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
           im Projekt 
-            <a href="/#/projects#watchtrainer">watchtrainer</a>,
+            <a href="/#/projects#watchtrainer">watchTrainer</a>,
           das die Website zu einer Fitness-App für die Apple Watch ist. Weitere Projekte 
           sind meine bisherige und diese Portfolio Webseite, zwei WordPress-Websiten, die ich in Beratungsprojekten 
           bei 
@@ -298,14 +298,14 @@ export default {
 
           beTitle: "Backend & Datenbanken",
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz bin ich sehr vertraut 
-          mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (ERM), 
-            <strong>SQL</strong>-Abfragen und der Implementierung von 
+          mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (<strong>ERM</strong>), 
+            <strong>SQL</strong> und der Implementierung von 
             <strong>API Calls</strong> mit einer REST-API und GraphQL. 
           Diese Fähigkeiten habe ich an der Universität und im Projekt 
-            <a href="/#/projects#watchtrainer">watchtrainer</a> und der 
+            <a href="/#/projects#watchtrainer">watchTrainer</a> und der 
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>
-          erworben und angewendet. Außerdem zeige ich in meinen 
-            <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.`,
+          erworben und angewendet.`,
+          // Außerdem zeige ich in meinen <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.
 
           officeTitle: "Microsoft Software",
           office: `Da ich schon seit der 7. Klasse fast täglich mit 
