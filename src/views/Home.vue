@@ -106,14 +106,14 @@ export default {
       {
         title: "pmTitle",
         textSrc: "processManagement",
-        backgroundImage: require("@/assets/home/office.jpg"),
+        backgroundImage: require("@/assets/home/process.jpg"),
         icon: "arrow-decision",
         aria: "Process Management"
       },
       {
         title: "sdevTitle",
         textSrc: "softwareDev",
-        backgroundImage: require("@/assets/home/office.jpg"),
+        backgroundImage: require("@/assets/home/software_development.jpg"),
         icon: "language-java",
         aria: "Software Development"
       },
@@ -154,24 +154,25 @@ export default {
           downloadCV: "CV"
         },
         skills: {
-          /* TODO: ML, M. Power BI */
+          // TODO Link to ML Case Study project
           pythonTitle: "Python: Machine Learning & Business Intelligence",
           python: `I learned Python by studying online courses and programming along 
-          in my free time. Furthermore, I had the opportunity to apply and enhance my 
-          python capabilities in a regular and advanced module of my study at the 
-            <a href="/#/experience#education">University of Münster</a>. 
-          In the latter, I used Python and 
-            <strong>TensorFlow</strong> for a 
+          in my free time. Furthermore, I had the opportunity to apply and enhance 
+          these capabilities in multiple university modules. For instance, in the 
+          advanced course 'Deep Learning with Python' I used 
+            <strong>TensorFlow</strong> and <strong>Keras</strong> for a 
             <strong>Machine Learning</strong>
-          project, which gave me insights into how Artificial Intelligence 
+          Case Study, which gave me practical insights into how Artificial Intelligence 
           works and what its current limitations and capabilities are.
-          Additionally, I implemented smaller projects, for instance, a backtracking 
+          </br>
+          Additionally, I realized smaller projects, such as a backtracking 
           algorithm to solve Sudokus and used 
-            <strong>Web scraping</strong>
-          to predict Bundesliga game results. 
-          Lastly, I will use either Machine Learning or Web scraping at the start-up pivoty, 
-          where I will work for a couple of months. As an outlook, I love to work with Python 
-          and would be grateful for any Python-related job opportunities.`,
+            <strong>Web Scraping</strong>
+          to predict Bundesliga game results. I also implemented a scalable web scraper 
+          for data extraction from forums at the start-up 
+            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>. 
+          Concluding, I love to work with Python and am thrilled to apply it in various 
+          contexts. Hence, I would be grateful for any Python-related job opportunities.`,
 
           /* TODO: Webscraping */
           feTitle: "Frontend Web Development",
@@ -187,6 +188,7 @@ export default {
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
 
+          // TODO drüber lesen
           beTitle: "Backend & Databases",
           backend: `My primary Web Development focus lies on the front end. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
@@ -199,6 +201,7 @@ export default {
           project. Moreover, I demonstrate how to work with API calls in my 
             <a href="/#/projects">projects</a>.`,
 
+          /* TODO: M. Power BI (Data Science & andere Buzzwords?)*/
           officeTitle: "Microsoft Office / 365",
           office: `Since my everyday use of 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> in school, I frequently 
@@ -262,21 +265,23 @@ export default {
           downloadCV: "Lebenslauf"
         },
         skills: {
-          /* TODO: ML */
           pythonTitle: "Python: Machine Learning & Business Intelligence",
-          python: `Python habe ich durch das Studium und mit Hilfe vom nebenher Programmieren bei Online-Kursen in meiner 
-          Freizeit gelernt. Außerdem hatte ich die Möglichkeit, meine Python-Fähigkeiten in einem regulären 
-          und einem Vertiefungsmodul meines Wirtschaftsinformatik Studiums an der <a href="/#/experience#education">WWU</a> anzuwenden und zu erweitern. In 
-          letzterem habe ich Python und  <strong>TensorFlow </strong> für ein <strong>Machine-Learning</strong>-Projekt eingesetzt, was mir 
-          Einblicke in die Funktionsweise und die aktuellen Grenzen und Möglichkeiten von Künstlicher Intelligenz 
-          gegeben hat.
+          python: `Python habe ich mir durch das Studium und Online-Kurse in meiner 
+          Freizeit angeeignet. Außerdem habe ich meine Python-Fähigkeiten in mehreren 
+          Uni-Modulen erweitert. Zum Beispiel habe ich im Vertiefungsmodul 
+          "Deep Learning mit Python" 
+            <strong>TensorFlow</strong> und <strong>Keras</strong> für eine 
+            <strong>Machine Learning</strong> 
+          Case Study verwendet, was mir praktische Einblicke in die Funktionsweise von 
+          Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffte.
           </br>
-          Außerdem habe ich kleinere Projekte umgesetzt, z.B. einen 
-          Backtracking-Algorithmus 
-          zum Lösen von Sudokus und habe <strong>Web Scraping</strong> zur Vorhersage von Bundesliga-Spielergebnissen eingesetzt. 
-          Zuletzt werde ich entweder Machine Learning oder Web Scraping bei dem Start-up Pivoty einsetzen, wo ich für ein paar 
-          Monate arbeiten werde. Als Ausblick: Ich liebe es, mit Python zu arbeiten und wäre dankbar für jede 
-          Jobmöglichkeit mit Python-Bezug.`,
+          Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
+          zur Lösung von Sudokus und nutzte Web Scraping zur Vorhersage von Bundesliga-Spielergebnissen. 
+          Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
+            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
+          implementiert. 
+          Abschließend kann man sagen, dass ich gerne mit Python arbeite und es spannend finde, es 
+          in verschiedenen Kontexten anzuwenden. Daher wäre ich für jede Arbeitsmöglichkeit mit Python dankbar.`,
 
           // TODO: Webscraping
           feTitle: "Frontend Web Development",

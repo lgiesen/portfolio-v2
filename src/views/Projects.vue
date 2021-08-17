@@ -141,6 +141,7 @@ export default {
           watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of wearable devices like the AppleWatch.`,
           portfolioV1: `This is the previous version of my portfolio website. I created it with 
           simple HTML5, CSS3, JavaScript and Bootstrap.`
+          // TODO ML Case Study bei Projects hinzufügen (inkl. Transfer Learning Presentation + Overview + Paper)
         }
       },
       de: {
