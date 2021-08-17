@@ -177,11 +177,13 @@ export default {
           feTitle: "Frontend Web Development",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
-            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
+            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
+            <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
           I was able to apply my web dev skills in numerous projects, e.g., the 
             <a href="/#/projects#watchtrainer">watchTrainer</a>
-          project, which is the corresponding website to a fitness app for the apple watch. Additional projects comprise my
-          previous and this portfolio page, two WordPress websites, which I single-handedly developed in consultancy projects at 
+          project, which is the corresponding website to a fitness app for the apple watch. 
+          Additional projects comprise my previous and this portfolio page, two WordPress 
+          websites, which I single-handedly developed in consultancy projects at 
             <a href="/#/experience#card-move">move</a>. 
           However, I am most proud of my project team's complex 
             <a href="/#/projects#goc">web-based simulation platform</a> 
@@ -274,7 +276,8 @@ export default {
           Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffte.
           </br>
           Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
-          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> zur Vorhersage von Bundesliga-Spielergebnissen. 
+          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> 
+          zur Vorhersage von Bundesliga-Spielergebnissen. 
           Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
             <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
           implementiert. 
@@ -282,22 +285,25 @@ export default {
           in verschiedenen Kontexten anzuwenden. Daher wäre ich für jede Arbeitsmöglichkeit mit Python dankbar.`,
 
           feTitle: "Frontend Web Development",
-          frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich lernte, wie man eine Website mit 
-            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
-          programmiert. Meine Web Development-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
-          im Projekt 
+          frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich 
+          lernte, wie man eine Website mit 
+            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
+            <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
+          programmiert. Meine Web Development-Kenntnisse konnte ich in zahlreichen 
+          Projekten anwenden, z. B. im Projekt 
             <a href="/#/projects#watchtrainer">watchTrainer</a>,
           das die Website zu einer Fitness-App für die Apple Watch ist. Weitere Projekte 
-          sind meine bisherige und diese Portfolio Webseite, zwei WordPress-Websiten, die ich in Beratungsprojekten 
-          bei 
+          sind meine bisherige und diese Portfolio Webseite, zwei WordPress-Websiten, 
+          die ich in Beratungsprojekten bei 
             <a href="/#/experience#card-move">move</a>  
           entwickelt habe. Besonders stolz bin ich auf die 
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
           die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
 
           beTitle: "Backend & Datenbanken",
-          backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz bin ich sehr vertraut 
-          mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau eines Entity-Relationship-Modells (<strong>ERM</strong>), 
+          backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz 
+          bin ich sehr vertraut mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau 
+          eines Entity-Relationship-Modells (<strong>ERM</strong>), 
             <strong>SQL</strong> und der Implementierung von 
             <strong>API Calls</strong> mit einer REST-API und GraphQL. 
           Diese Fähigkeiten habe ich an der Universität und im Projekt 
@@ -308,17 +314,19 @@ export default {
 
           officeTitle: "Microsoft Software",
           office: `Da ich schon seit der 7. Klasse fast täglich mit 
-          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> arbeite und als studentische Hilfskraft am 
+          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> 
+          arbeite und als studentische Hilfskraft am 
             <a href="/#/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
-          an der Universität Münster viele Vorlesungen in PowerPoint vorbereitet habe, kenne ich mich besonders gut mit 
-          Microsoft Office aus. Außerdem habe ich bei 
+          an der Universität Münster viele Vorlesungen in PowerPoint vorbereitet habe, 
+          kenne ich mich besonders gut mit Microsoft Office aus. Außerdem habe ich bei 
             <a href="/#/experience#card-move">move</a> 
-          als Berater verschiedene Präsentationen erstellt und z.B. einen BCG-Workshop besucht, was meine Präsentationsfähigkeiten förderte. 
+          als Berater verschiedene Präsentationen erstellt und z.B. einen BCG-Workshop besucht, 
+          was meine Präsentationsfähigkeiten förderte. 
           </br>
           Zuletzt habe ich bei move in der IT-Abteilung mit 
             <strong>Microsoft PowerApps</strong> und <strong>Flows</strong> mit Anbindung an 
-            <strong>SharePoint</strong>-Datenbanken gearbeitet. Außerdem habe ich einen kurzen Überblick über Business Intelligence 
-          in einem Microsoft <strong>Power BI</strong> Workshop von des 
+            <strong>SharePoint</strong>-Datenbanken gearbeitet. Außerdem habe ich einen kurzen 
+            Überblick über Business Intelligence in einem Microsoft <strong>Power BI</strong> Workshop von des 
             <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a> bekommen.`,
 
           // pmTitle: "Prozess Management",
@@ -326,14 +334,15 @@ export default {
 
           sdevTitle: "Software Entwicklung",
           softwareDev: `Ein Softwareentwickler muss mathematisches Verständnis und 
-            <strong>Problemlösungsfähigkeiten</strong> besitzen. Diese habe ich mir in meinem Studiengang Wirtschaftsinformatik 
-          zusammen mit Programmiersprachen wie <strong>Java</strong> angeeignet. Um ehrlich zu sein, bevorzuge ich <strong>JavaScript</strong> 
-          und habe damit bereits z.B. eine 
+            <strong>Problemlösungsfähigkeiten</strong> besitzen. Diese habe ich mir in meinem 
+          Studiengang Wirtschaftsinformatik zusammen mit Programmiersprachen wie <strong>Java</strong> angeeignet. 
+          Um ehrlich zu sein, bevorzuge ich <strong>JavaScript</strong> und habe damit bereits z.B. eine 
             <a href="/#/projects#goc">Web-App</a> 
           implementiert. In diesem Projekt konnte ich ebenfalls mein 
-          <strong>Zeitmanagement</strong>, meine Selbstorganisation als auch die Koordination im Team verbessern, da ich ein Team von sieben 
-          Kommilitonen leitete. Gründliches und detailliertes Arbeiten werden langfristig belohnt, 
-          wie ich im Verlaufe der Web-App Implementation festgestellt habe. </br>
+          <strong>Zeitmanagement</strong>, meine Selbstorganisation als auch die Koordination im Team verbessern, 
+          da ich ein Team von sieben Kommilitonen leitete. Gründliches und detailliertes Arbeiten werden langfristig 
+          belohnt, wie ich im Verlaufe der Web-App Implementation festgestellt habe. 
+          </br>
           Ich freue mich darauf, weitere Erfahrungen in der Softwareentwicklung zu sammeln und meinen Horizont 
           kontinuierlich zu erweitern und mich den sich ständig und schnell ändernden Technologietrends anzupassen.`,
 
