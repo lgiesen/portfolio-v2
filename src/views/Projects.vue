@@ -12,8 +12,8 @@ div
               p.subheading {{ $t("intro.subtitle") }}
               ScrollHero.mt-16.pt-16
             v-col.d-flex.justify-center.col-md-3(order-md="1")
-              v-card(width="400px" elevation="50" max-width="80vw" max-height="400px")
-                v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg")
+              v-card(width="400px" elevation="50" max-width="80vw")
+                v-img(alt="Leo Giesen Profil" src="@/assets/profile/Glatthorn_Aufstieg.jpg")
 
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
