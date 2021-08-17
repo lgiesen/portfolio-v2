@@ -47,7 +47,7 @@ div
                   v-icon(small) mdi-file-document-outline
                     //- "$t('projects.links.' + project.id)"
                   AnimatedLink(:href="project.files[index].link"
-                    :linkText="project.files[index].title"
+                    :linkText="$t('projects.' + project.files[index].title)"
                     target="_blank")
                   //- divider between multiple files
                   span.mx-3 | 
@@ -68,6 +68,8 @@ div
               //- actual preview (embed of other website)
               v-card.pa-0.my-10(v-show="project.showPreview")
                 embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
+  
+  //- Bibliography
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ this.$store.getters.isDE ? "Literaturverzeichnis" : "Bibliography" }}
@@ -126,12 +128,12 @@ export default {
         embedLink: "",
         files: [
           {
-            title: "Seminar Thesis",
+            title: "ML.seminar_thesis",
             link:
               "ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
           },
           {
-            title: "Poster Overview",
+            title: "ML.poster_overview",
             link: "ML/ML_Case_Study_LULC_Poster.pdf"
           }
         ]
@@ -204,6 +206,10 @@ export default {
             hide: "Hide Preview",
             show: "Show Preview"
           },
+          ML: {
+            seminar_thesis: "Seminar Thesis",
+            poster_overview: "Poster Overview"
+          },
           ml_case_study: `In this case study, a supervised deep learning algorithm is 
           implemented with the objective of semantically segmenting a landscape into ten 
           predefined land usage and coverage classes. This is achieved by sliding window 
@@ -248,6 +254,10 @@ export default {
           preview: {
             hide: "Vorschau verbergen",
             show: "Vorschau anzeigen"
+          },
+          ML: {
+            seminar_thesis: "Seminararbeit",
+            poster_overview: "Poster Überblick"
           },
           ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
           mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
