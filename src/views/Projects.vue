@@ -5,14 +5,14 @@ div
     v-parallax(src="@/assets/background/Aasee.jpg" height="900")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
-        v-container(width="50vw")
+        v-container
           v-row.pa-md-12.d-flex.text-center
-            v-col.col-10.col-md-6(order-md="2")
+            v-col.col-md-9(order-md="2")
               h1.display-3.font-weight-thin.mb-12 {{ $t("intro.title") }}
-              h3.subtitle.mt-0 {{ $t("intro.subtitle") }}
+              p.subheading {{ $t("intro.subtitle") }}
               ScrollHero.mt-16.pt-16
-            v-col.col-10.col-md-6(order-md="1")
-              v-card(max-width="400px" elevation="50")
+            v-col.d-flex.justify-center.col-md-3(order-md="1")
+              v-card(width="400px" elevation="50" max-width="80vw" max-height="400px")
                 v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg")
 
   //- Ideas to include:
@@ -26,7 +26,7 @@ div
       v-container
         v-row.justify-center
           v-col.col-11.col-md-7.text-center
-            h2.display-3.font-weight-thin.mb-0 {{ project.title }}
+            h2.display-3.font-weight-thin.mb-0(style="word-break: break-word;") {{ project.title }}
             //- Links to repository and/or website
             div.mt-5
               //- repository
@@ -54,7 +54,7 @@ div
                   //- TODO: mit CSS first-/last-child display none || before/after tag
 
             //- Icon of project
-            v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width")
+            v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
             //- Project description
             p.text-justify(v-html="$t('projects.' + project.translationKey)")
             
@@ -122,7 +122,7 @@ export default {
         link: "",
         imgSrc: require("@/assets/projects/ml_case_study.png"),
         img_width: "500px",
-        translationKey: "ml_case_study",
+        translationKey: "ML.ml_case_study",
         id: "ml_case_study",
         showPreview: false,
         embedLink: "",
@@ -138,7 +138,6 @@ export default {
           }
         ]
       },
-      // TODO Scalable Web Scraper pivoty Text
       {
         title: "Scalable Forum Web Scraper",
         year: "2021",
@@ -164,7 +163,7 @@ export default {
         files: []
       },
       {
-        title: "watchtrainer",
+        title: "watchTrainer",
         year: "2019-2020",
         link: "https://github.com/Arceoavs/watchtrainer",
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
@@ -208,15 +207,15 @@ export default {
           },
           ML: {
             seminar_thesis: "Seminar Thesis",
-            poster_overview: "Poster Overview"
+            poster_overview: "Poster Overview",
+            ml_case_study: `In this case study, a supervised deep learning algorithm is 
+            implemented with the objective of semantically segmenting a landscape into ten 
+            predefined land usage and coverage classes. This is achieved by sliding window 
+            approach with a three-dimensional convolutional neural network resulting in an 
+            accuracy of 73%. At the hand of seven steps of machine learning projects, the 
+            functionality and characteristics of the algorithm are outlined and how it may 
+            be improved upon.`
           },
-          ml_case_study: `In this case study, a supervised deep learning algorithm is 
-          implemented with the objective of semantically segmenting a landscape into ten 
-          predefined land usage and coverage classes. This is achieved by sliding window 
-          approach with a three-dimensional convolutional neural network resulting in an 
-          accuracy of 73%. At the hand of seven steps of machine learning projects, the 
-          functionality and characteristics of the algorithm are outlined and how it may 
-          be improved upon.`,
           forum_web_scraper: `The Information Systems specialization module ‘Principles 
           of Entrepreneurship’ was supplemented by the project group work with the startup 
           pivoty. The basic business process idea of the start-up is that extracted information 
@@ -242,8 +241,7 @@ export default {
       de: {
         intro: {
           title: "Projekte",
-          subtitle:
-            "- inspiriert oder fasziniert werden von ausgewählten Projekten -"
+          subtitle: "Meine Erfahrung baut auf diese Beispiel-Projekte"
         },
         projects: {
           links: {
@@ -257,15 +255,15 @@ export default {
           },
           ML: {
             seminar_thesis: "Seminararbeit",
-            poster_overview: "Poster Überblick"
+            poster_overview: "Poster Überblick",
+            ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
+            mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
+            vordefinierte Landnutzungs- und Bedeckungsklassen. Dies wird durch einen Sliding-Window 
+            mit einem dreidimensionalen neuronalen Faltungsnetzwerk erreicht, was zu einer 
+            Genauigkeit von 73%. An der Hand von sieben Schritten des maschinellen Lernens werden die 
+            werden die Funktionalität und die Eigenschaften des Algorithmus beschrieben und wie er 
+            verbessert werden kann.`
           },
-          ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
-          mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
-          vordefinierte Landnutzungs- und Bedeckungsklassen. Dies wird durch einen Sliding-Window 
-          mit einem dreidimensionalen neuronalen Faltungsnetzwerk erreicht, was zu einer 
-          Genauigkeit von 73%. An der Hand von sieben Schritten des maschinellen Lernens werden die 
-          werden die Funktionalität und die Eigenschaften des Algorithmus beschrieben und wie er 
-          verbessert werden kann.`,
           forum_web_scraper: `Das Vertiefungsmodul 'Principles of Entrepreneurship' wurde durch 
           die Projektgruppenarbeit mit dem Startup pivoty ergänzt. Die grundlegende 
           Geschäftsprozess-Idee von pivoty ist, dass extrahierte Informationen (mittels Web 
