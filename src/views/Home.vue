@@ -177,7 +177,7 @@ export default {
           feTitle: "Frontend Web Development",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
-            <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
+            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
           I was able to apply my web dev skills in numerous projects, e.g., the 
             <a href="/#/projects#watchtrainer">watchTrainer</a>
           project, which is the corresponding website to a fitness app for the apple watch. Additional projects comprise my
@@ -275,7 +275,7 @@ export default {
           Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffte.
           </br>
           Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
-          zur Lösung von Sudokus und nutzte Web Scraping zur Vorhersage von Bundesliga-Spielergebnissen. 
+          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> zur Vorhersage von Bundesliga-Spielergebnissen. 
           Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
             <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
           implementiert. 
@@ -284,8 +284,8 @@ export default {
 
           feTitle: "Frontend Web Development",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich lernte, wie man eine Website mit 
-            <strong>Vue.js</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
-          programmiert. Meine Webdev-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
+            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
+          programmiert. Meine Web Development-Kenntnisse konnte ich in zahlreichen Projekten anwenden, z. B. 
           im Projekt 
             <a href="/#/projects#watchtrainer">watchTrainer</a>,
           das die Website zu einer Fitness-App für die Apple Watch ist. Weitere Projekte 
