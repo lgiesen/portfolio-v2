@@ -13,7 +13,7 @@ section.mb-0
     v-parallax.hero(:src="this.parallaxImage" :alt="this.parallaxImage")
         v-row.justify-center.align-center
             v-col.text-center
-                h1.display-3.font-weight-thin.black--text {{ this.title }}
+                h1.display-3.font-weight-thin {{ this.title }}
                 p.subheading {{ this.subtitle }}
         ScrollHero
 </template>

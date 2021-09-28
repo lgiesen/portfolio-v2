@@ -7,7 +7,7 @@ div
       section.mb-0 
         v-container
           v-row.pa-md-12.d-flex.text-center
-            v-col.col-10.col-md-6(order-md="2")
+            v-col.col-10.col-md-6.white--text(order-md="2")
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
               ScrollHero.mt-16.pt-16
