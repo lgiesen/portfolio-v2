@@ -240,8 +240,8 @@ export default {
           though it was a lot of fun for the whole project team and considering a grade of 1.3
           successful.`,
           watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of 
-          wearable devices like the AppleWatch. The linked page only includes the frontend, since 
-          not all backend features are implemented yet.`,
+          wearable devices like the AppleWatch. After a fundamental implementation of the backend 
+          and frontend, I am no longer working on this research project.`,
           portfolioV1: `I created the first version of my portfolio website in 2019 
           with simple HTML5, CSS3, JavaScript and Bootstrap.`
         }
@@ -294,8 +294,8 @@ export default {
           Leider darf ich die Projektergebnisse des Projektseminars nicht teilen. Im Projektteam hat es 
           sehr viel Spaß gemacht hat und mit einer Note von 1,3 kann man es einen Erfolg nennen.`,
           watchtrainer: `WatchTrainer ist eine auf Sharing basierende Sportplattform für die Zukunft von 
-          Wearable Devices wie der AppleWatch. Die verlinkte Seite umfasst lediglich das Frontend, da 
-          noch nicht alle Backend Features implementiert sind.`,
+          Wearable Devices wie der AppleWatch. Nach einer fundamentalen Umsetzung des Backends und 
+          Frontends, arbeite ich nicht weiter an diesem Forschungsprojekt.`,
           portfolioV1: `Die erste Version meiner Portfolio-Website habeich 2019 mit 
           einfachem HTML5, CSS3, JavaScript und Bootstrap erstellt.`
         }
