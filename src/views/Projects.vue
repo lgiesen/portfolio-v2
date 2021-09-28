@@ -172,7 +172,7 @@ export default {
         translationKey: "watchtrainer",
         id: "watchtrainer",
         showPreview: false,
-        embedLink: "https://watchtrainer.arz.berlin/",
+        embedLink: "",
         files: []
       },
       {
