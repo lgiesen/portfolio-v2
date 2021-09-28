@@ -166,7 +166,7 @@ export default {
       {
         title: "watchTrainer",
         year: "2019-2020",
-        link: "https://github.com/Arceoavs/watchtrainer",
+        link: "",
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
         img_width: "80px",
         translationKey: "watchtrainer",
