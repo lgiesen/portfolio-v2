@@ -56,7 +56,8 @@ div
                   :gradient="$store.getters.isDarkTheme ? 'rgba(0,0,0,.6), rgba(0,0,0,.9)' : 'rgb(255,255,255,.6), rgb(255,255,255,.9)'")
                   //- single line requires .justify-center and multiline .text-center
                   v-card-title.justify-center.text-center
-                    h2.gradient-text {{ $t("skills." + card.title) }}
+                    pre
+                      h2.gradient-text {{ $t("skills." + card.title) }}
               v-col.seperatorIcon.py-0
                 v-btn(elevation="15" fab color="background")
                   v-icon(color="primary") mdi-{{ card.icon }}
@@ -76,11 +77,11 @@ export default {
   data: () => ({
     skillCardGroup: [
       {
-        title: "pythonTitle",
-        textSrc: "python",
-        backgroundImage: require("@/assets/home/python.jpg"),
+        title: "mlbiTitle",
+        textSrc: "mlbi",
+        backgroundImage: require("@/assets/home/bi.jpg"),
         icon: "language-python",
-        aria: "Python Programming Language"
+        aria: "Machine Learning & Business Intelligence"
       },
       {
         title: "feTitle",
@@ -154,8 +155,8 @@ export default {
           downloadCV: "CV"
         },
         skills: {
-          pythonTitle: "Python: Machine Learning & Business Intelligence",
-          python: `I learned Python by studying online courses and programming along 
+          mlbiTitle: `Machine Learning &\nBusiness Intelligence`,
+          mlbi: `I learned Python by studying online courses and programming along 
           in my free time. Furthermore, I had the opportunity to apply and enhance 
           these capabilities in multiple university modules. For instance, in the 
           advanced course 'Deep Learning with Python' I used 
@@ -264,8 +265,8 @@ export default {
           downloadCV: "Lebenslauf"
         },
         skills: {
-          pythonTitle: "Python: Machine Learning & Business Intelligence",
-          python: `Python habe ich mir durch das Studium und Online-Kurse in meiner 
+          mlbiTitle: `Machine Learning &\nBusiness Intelligence`,
+          mlbi: `Python habe ich mir durch das Studium und Online-Kurse in meiner 
           Freizeit angeeignet. Außerdem habe ich meine Python-Fähigkeiten in mehreren 
           Uni-Modulen erweitert. Zum Beispiel habe ich im Vertiefungsmodul 
           "Deep Learning mit Python" 
