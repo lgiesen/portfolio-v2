@@ -11,35 +11,31 @@ div
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
               ScrollHero.mt-16.pt-16
+            //- Overview of employers and education
             v-col.col-10.col-md-6(order-md="1")
-              v-card(max-width="400px" elevation="50")
-                v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg")
+              div.center-items
+                //- Tablet and desktop version
+                v-row.align-center.hidden-sm-and-down
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[0]")
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[1]")
+                    ExperienceCard(:associationsSrc="associations[2]")
+                    ExperienceCard(:associationsSrc="associations[3]")
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[4]")
+                //- Mobile Version
+                div.hidden-md-and-up
+                  div.align-center.d-flex.flex-wrap.justify-space-around
+                    ExperienceCard(v-for="(association, index) in associations" 
+                      :key="association.title" :associationsSrc="associations[index]")
     //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
   
-  //- Overview of employers and education
-  section
-    v-container.center-items
-      //- Tablet and desktop version
-      v-row.align-center.hidden-sm-and-down
-        v-col
-          ExperienceCard(:associationsSrc="associations[0]")
-        v-col
-          ExperienceCard(:associationsSrc="associations[1]")
-          ExperienceCard(:associationsSrc="associations[2]")
-          ExperienceCard(:associationsSrc="associations[3]")
-        v-col
-          ExperienceCard(:associationsSrc="associations[4]")
-      //- Mobile Version
-      div.hidden-md-and-up
-        div.align-center.d-flex.flex-wrap.justify-space-around
-          ExperienceCard(v-for="(association, index) in associations" 
-            :key="association.title" :associationsSrc="associations[index]")
+  //- ParallaxDivider(:sectionTitle="$t('experienceParallax.title')" 
+  //-   :sectionSubtitle="$t('experienceParallax.subtitle')"
+  //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
   
-  ParallaxDivider#scroll(:sectionTitle="$t('experienceParallax.title')" 
-    :sectionSubtitle="$t('experienceParallax.subtitle')"
-    imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
-  
-  article
+  article#scroll
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
       section
         //- CV: work experience

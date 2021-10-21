@@ -1,9 +1,21 @@
 <template lang="pug">
 div
   //- Hero Area
-  Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" 
-    :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
-  
+  //- Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" 
+  //-   :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
+  v-img.align-center(src="@/assets/background/Glatthorn.jpg" height="100vh"
+    gradient="to bottom right, rgba(100,115,201,.33), rgba(38,145,66,.5)")
+    //- Another section is necessary to provide the max-width for ultra-wide screens
+    section.mb-0 
+      v-container
+        v-row.pa-md-12.d-flex.text-center
+          v-col.col-10.col-md-6.white--text(order-md="2")
+            h1.display-3.font-weight-thin.mb-12 {{ $t("parallaxText.title") }}
+            p.subheading {{ $t("parallaxText.subtitle") }}
+            ScrollHero.mt-16.pt-16
+          v-col.col-10.col-md-6(order-md="1")
+            v-card(max-width="400px" elevation="50")
+              v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg")
   //- About me texts alternating with corresponding images
   article
     section#scroll
@@ -50,15 +62,17 @@ div
 </template>
 
 <script>
-import Parallax from "@/components/Parallax.vue";
+// import Parallax from "@/components/Parallax.vue";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import Quote from "@/components/Quote.vue";
 import { mapGetters } from "vuex";
 
 export default {
   name: "About",
   components: {
-    Parallax,
-    Quote
+    // Parallax,
+    Quote,
+    ScrollHero
   },
   data: () => ({
     quotes: [

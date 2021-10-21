@@ -19,7 +19,7 @@ export default new Vuetify({
                 primary: "#3949ab", 
                 primaryLight: "#6f74dd",
                 primaryDark: "#00227b",
-                // green
+                // orange
                 secondary: "#f4511e",
                 secondaryLight: "#ff844c",
                 secondaryDark: "#b91400", 
