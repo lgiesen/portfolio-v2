@@ -2,18 +2,16 @@
 div
   //- Hero Area
   section.fullwidth
-    v-img.align-center(src="@/assets/background/Glatthorn.jpg" height="100vh")
+    v-img.align-center(src="@/assets/background/Aegina_port.jpg" height="100vh")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
         v-container
           v-row.pa-md-12.d-flex.text-center
-            v-col.col-10.col-md-6.white--text(order-md="2")
+            v-col.white--text
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
-              ScrollHero.mt-16.pt-16
-            //- Overview of employers and education
-            v-col.col-10.col-md-6(order-md="1")
-              div.center-items
+              //- Overview of employers and education
+              div.center-items.mt-12
                 //- Tablet and desktop version
                 v-row.align-center.hidden-sm-and-down
                   v-col
@@ -36,17 +34,18 @@ div
   //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
   
   article#scroll
-    v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
-      section
-        //- CV: work experience
-        CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
-        //- Education
-        CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
+    section
+      v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
+        section
+          //- CV: work experience
+          CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
+          //- Education
+          CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
 
-      //- Contact Me Button:
-      //- div.center-items
-      //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-      //-     @click="$router.push('/contact')") {{ $t("contact") }}
+        //- Contact Me Button:
+        //- div.center-items
+        //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
+        //-     @click="$router.push('/contact')") {{ $t("contact") }}
     
   SocialContactSection
 
@@ -70,7 +69,6 @@ div
 
 <script>
 import { mapGetters } from "vuex";
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import ExperienceCard from "@/components/ExperienceCard.vue";
 import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import CardGroup from "@/components/CardGroup.vue";
@@ -79,7 +77,6 @@ import SocialContactSection from "@/components/SocialContactSection.vue";
 export default {
   name: "Experience",
   components: {
-    ScrollHero,
     ExperienceCard,
     ParallaxDivider,
     CardGroup,

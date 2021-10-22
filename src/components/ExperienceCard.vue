@@ -2,7 +2,7 @@
 v-hover
   template
     v-hover(v-slot="{ hover }")
-      v-card.pa-5.mt-5(
+      v-card.pa-5.mt-5.white(
         :elevation="hover ? 24 : 2"
         @click="scrollToCard(associationsSrc.href)"
         :class="{ 'on-hover': hover }")
