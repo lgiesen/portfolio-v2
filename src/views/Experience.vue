@@ -33,19 +33,19 @@ div
   //-   :sectionSubtitle="$t('experienceParallax.subtitle')"
   //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
   
+  //- no section here because it limits the background's width
   article#scroll
-    section
-      v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
-        section
-          //- CV: work experience
-          CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
-          //- Education
-          CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
+    v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
+      section
+        //- CV: work experience
+        CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
+        //- Education
+        CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
 
-        //- Contact Me Button:
-        //- div.center-items
-        //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-        //-     @click="$router.push('/contact')") {{ $t("contact") }}
+      //- Contact Me Button:
+      //- div.center-items
+      //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
+      //-     @click="$router.push('/contact')") {{ $t("contact") }}
     
   SocialContactSection
 
