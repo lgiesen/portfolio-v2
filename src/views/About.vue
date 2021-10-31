@@ -14,7 +14,7 @@ div
             p.subheading {{ $t("parallaxText.subtitle") }}
             ScrollHero.mt-16.pt-16
           v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
-            v-card(max-width="400px" elevation="50")
+            v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
               v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
   //- About me texts alternating with corresponding images
   article
