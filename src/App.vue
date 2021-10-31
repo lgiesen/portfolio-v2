@@ -108,6 +108,10 @@ $btnColor: var(--v-btnColor-base);
     margin-bottom: 5rem;
     word-break: keep-all;
   }
+
+  div.v-card__title {
+    word-break: keep-all;
+  }
   p,
   v-btn {
     font-family: "PT Sans", "Roboto", sans-serif !important;

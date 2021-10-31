@@ -57,7 +57,7 @@ div
                   //- single line requires .justify-center and multiline .text-center
                   v-card-title.justify-center.text-center
                     pre
-                      h2.gradient-text {{ $t("skills." + card.title) }}
+                      h2.gradient-text(width="94vw" max-width="94vw") {{ $t("skills." + card.title) }}
               v-col.seperatorIcon.py-0
                 v-btn(elevation="15" fab color="background")
                   v-icon(color="primary") mdi-{{ card.icon }}
@@ -175,7 +175,7 @@ export default {
           Concluding, I love to work with Python and am thrilled to apply it in various 
           contexts. Hence, I would be grateful for any Python-related job opportunities.`,
 
-          feTitle: "Frontend Web Development",
+          feTitle: "Frontend Web\nDevelopment",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
             <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
@@ -190,7 +190,7 @@ export default {
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
 
-          beTitle: "Backend & Databases",
+          beTitle: "Backend &\nDatabases",
           backend: `My primary web development focus lies on the frontend. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
           Model (<strong>ERM</strong>), 
@@ -233,7 +233,7 @@ export default {
           // pmTitle: "Process Management",
           // processManagement: `PM`,
 
-          sdevTitle: "Software Development",
+          sdevTitle: "Software\nDevelopment",
           softwareDev: `A Software Developer needs to have a mathematical understanding and aptitude 
           as well as <strong>problem-solving</strong> skills. These were taught in my Information Systems course along 
           with programming languages like <strong>Java</strong>. In all honesty, I prefer <strong>JavaScript</strong> and already 
@@ -285,7 +285,7 @@ export default {
           Abschließend kann man sagen, dass ich gerne mit Python arbeite und es spannend finde, es 
           in verschiedenen Kontexten anzuwenden. Daher wäre ich für jede Arbeitsmöglichkeit mit Python dankbar.`,
 
-          feTitle: "Frontend Web Development",
+          feTitle: "Frontend Web\nDevelopment",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich 
           lernte, wie man eine Website mit 
             <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
@@ -301,7 +301,7 @@ export default {
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
           die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
 
-          beTitle: "Backend & Datenbanken",
+          beTitle: "Backend &\nDatenbanken",
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz 
           bin ich sehr vertraut mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau 
           eines Entity-Relationship-Modells (<strong>ERM</strong>), 
@@ -333,7 +333,7 @@ export default {
           // pmTitle: "Prozess Management",
           // processManagement: `PM`,
 
-          sdevTitle: "Software Entwicklung",
+          sdevTitle: "Software\nEntwicklung",
           softwareDev: `Ein Softwareentwickler muss mathematisches Verständnis und 
             <strong>Problemlösungsfähigkeiten</strong> besitzen. Diese habe ich mir in meinem 
           Studiengang Wirtschaftsinformatik zusammen mit Programmiersprachen wie <strong>Java</strong> angeeignet. 
