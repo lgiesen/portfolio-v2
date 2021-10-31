@@ -47,7 +47,7 @@ div
       //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
       //-     @click="$router.push('/contact')") {{ $t("contact") }}
     
-  SocialContactSection.mb-0
+  SocialContactSection.mt-12
 
   //- Recommendation
   //- section
