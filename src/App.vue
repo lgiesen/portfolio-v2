@@ -146,9 +146,9 @@ section:not(.fullwidth) {
 }
 // 2. Sections
 // 2.1 Space between sections
-section {
-  margin-bottom: 20vh;
-}
+// section {
+//   margin-bottom: 20vh;
+// }
 // 2.2 Hero area
 .h-100vh {
   min-height: calc(100vh - 60px);
