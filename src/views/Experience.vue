@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //- Hero Area
-  section.fullwidth
+  section.fullwidth.mb-0
     v-img.align-center(src="@/assets/background/Aegina_port.jpg" height="100vh")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
@@ -34,7 +34,7 @@ div
   //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
   
   //- no section here because it limits the background's width
-  article#scroll
+  article
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
       section
         //- CV: work experience
@@ -47,7 +47,7 @@ div
       //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
       //-     @click="$router.push('/contact')") {{ $t("contact") }}
     
-  SocialContactSection
+  SocialContactSection.mb-0
 
   //- Recommendation
   //- section
