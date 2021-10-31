@@ -7,11 +7,11 @@ div
       section.mb-0 
         v-container
           v-row.pa-md-12.d-flex.text-center
-            v-col.col-md-9(order-md="2")
+            v-col.col-12.col-md-6(order-md="2")
               h1.display-3.font-weight-thin.mb-12 {{ $t("intro.title") }}
               p.subheading {{ $t("intro.subtitle") }}
               ScrollHero.mt-16.pt-16
-            v-col.d-flex.justify-center.col-md-3(order-md="1")
+            v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
               v-card(width="400px" elevation="50" max-width="80vw")
                 v-img(alt="Leo Giesen Profil" src="@/assets/profile/Glatthorn_Aufstieg.jpg")
 
@@ -27,7 +27,7 @@ div
         div(v-for="project in projects" :id="project.id")
           v-row.justify-center
             v-col.col-11.col-md-7.text-center
-              h2.display-3.font-weight-thin.mb-0(style="word-break: break-word;") {{ project.title }}
+              h2.display-2.font-weight-thin.mb-0(style="word-break: break-word;") {{ project.title }}
               //- Links to repository and/or website
               div.mt-5
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != ''" :href="project.link" target="_blank") 

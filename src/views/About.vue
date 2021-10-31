@@ -9,11 +9,11 @@ div
     section.mb-0 
       v-container
         v-row.pa-md-12.d-flex.text-center
-          v-col.col-10.col-md-6.white--text(order-md="2")
+          v-col.col-12.col-md-6.white--text(order-md="2")
             h1.display-3.font-weight-thin.mb-12 {{ $t("parallaxText.title") }}
             p.subheading {{ $t("parallaxText.subtitle") }}
             ScrollHero.mt-16.pt-16
-          v-col.col-10.col-md-6(order-md="1")
+          v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
             v-card(max-width="400px" elevation="50")
               v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg")
   //- About me texts alternating with corresponding images
