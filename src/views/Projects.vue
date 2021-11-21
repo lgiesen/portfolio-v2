@@ -153,7 +153,7 @@ export default {
           {
             title: "ML.seminar_thesis",
             link:
-              "projects/Scalable_Web_Scraper/Extraction_of_Consumer_Insights_with_Scalable_Web_Scraping_of_Forums.pdf"
+              "projects/scalable_web_scraper/Extraction_of_Consumer_Insights_with_Scalable_Web_Scraping_of_Forums.pdf"
           }
         ]
       },
