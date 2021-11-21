@@ -127,15 +127,15 @@ export default {
           {
             title: "ML.seminar_thesis",
             link:
-              "ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
+              "projects/ML/Machine_Learning_Segmentation_Case_Study__Land_Usage_and_Land_Coverage.pdf"
           },
           {
             title: "ML.poster_overview",
-            link: "ML/ML_Case_Study_LULC_Poster.pdf"
+            link: "projects/ML/ML_Case_Study_LULC_Poster.pdf"
           },
           {
             title: "ML.transfer_learning",
-            link: "ML/Transfer_Learning_Presentation.pdf"
+            link: "projects/ML/Transfer_Learning_Presentation.pdf"
           }
         ]
       },
@@ -149,7 +149,13 @@ export default {
         id: "forum_web_scraper",
         showPreview: false,
         embedLink: "",
-        files: []
+        files: [
+          {
+            title: "ML.seminar_thesis",
+            link:
+              "projects/Scalable_Web_Scraper/Extraction_of_Consumer_Insights_with_Scalable_Web_Scraping_of_Forums.pdf"
+          }
+        ]
       },
       {
         title: "Game of Competences",
