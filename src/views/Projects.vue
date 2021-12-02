@@ -228,7 +228,11 @@ export default {
           of Entrepreneurship’ was supplemented by the project group work with the startup 
           pivoty. The basic business process idea of the start-up is that extracted information 
           from discussion forums (using web scraping) is used to derive hidden innovation 
-          potentials with an AI analysis.
+          potentials with an AI analysis. In the project, I have built 
+          a scalable web scraper with Scrapy, so that it can be applied to as many discussion forums as possible. 
+          The structure of the most widespread forum frameworks was used to cover almost 
+          90% of all german discussion forums. 
+          </br>
           </br>
           pivoty is located in Münster and develops “an AI-based analytics software that 
           tries to discover innovation potentials” 
@@ -241,15 +245,15 @@ export default {
           forums, blogs, and product reviews to systematically derive inspirations for 
           new products and services” 
             (<a href="#bibliography">Schäper et al. 2021b</a>).`,
-          goc: `We created a web-based simulation platform for public administrations. 
-          Unfortunatly, I am not allowed to share the project results of the project seminar, 
-          though it was a lot of fun for the whole project team and considering a grade of 1.3
-          successful.`,
+          goc: `We created a web-based simulation platform for public administrations with Vue.js and Flask. 
+          It was a lot of fun for me as I was able to lead the front-end team and teach them front-end skills with Vue.js 2. 
+          The overall grade of 1.3 also underlined the project's success. 
+          Unfortunatly, I am not allowed to share the project results of the project seminar in further detail.`,
           watchtrainer: `WatchTrainer is a sharing-based sports platform for the future of 
           wearable devices like the AppleWatch. After a fundamental implementation of the backend 
           and frontend, I am no longer working on this research project.`,
           portfolioV1: `I created the first version of my portfolio website in 2019 
-          with simple HTML5, CSS3, JavaScript and Bootstrap.`
+          with HTML5, CSS3, JavaScript and Bootstrap to understand front-end web development.`
         }
       },
       de: {
@@ -271,19 +275,22 @@ export default {
             seminar_thesis: "Seminararbeit",
             poster_overview: "Poster Überblick",
             transfer_learning: "Transfer Learning Präsentation",
-            ml_case_study: `In dieser Fallstudie wird ein überwachter Deep-Learning-Algorithmus 
-            mit dem Ziel implementiert, eine Landschaft semantisch in zehn vordefinierte 
-            vordefinierte Landnutzungs- und Bedeckungsklassen. Dies wird durch einen Sliding-Window 
-            mit einem dreidimensionalen neuronalen Faltungsnetzwerk erreicht, was zu einer 
-            Genauigkeit von 73%. An der Hand von sieben Schritten des maschinellen Lernens werden die 
-            werden die Funktionalität und die Eigenschaften des Algorithmus beschrieben und wie er 
-            verbessert werden kann.`
+            ml_case_study: `In dieser Fallstudie habe ich mit einem Kommolitonen einen supervised 
+            Deep-Learning-Algorithmus implementiert, der eine Landschaft semantisch in zehn vordefinierte 
+            Landnutzungs- und Flächenklassen segmentiert. Dabei wird eine Genauigkeit von 73% durch einen Sliding-Window 
+            mit einem 3D CNN erreicht. In den sieben Schritten des Machine Learnings werden die 
+            Funktionalität und die Eigenschaften des Algorithmus erklärt und zum Schluss wird ein Ausblick gegeben wie  
+            Verbesserungspotential ausgenutzt werden kann.`
           },
           forum_web_scraper: `Das Vertiefungsmodul 'Principles of Entrepreneurship' wurde durch 
           die Projektgruppenarbeit mit dem Startup pivoty ergänzt. Die grundlegende 
           Geschäftsprozess-Idee von pivoty ist, dass extrahierte Informationen (mittels Web 
           Scraping) aus Diskussionsforen genutzt werden, um mit einer KI-Analyse versteckte 
-          Innovationspotenziale abzuleiten.
+          Innovationspotenziale abzuleiten. In dem Projekt habe ich mit zwei anderen Projektmitgliedern 
+          einen skalierbaren Web Scraper mit Scrapy gebaut, sodass dieser auf so viele Foren wie möglich angewendet werden kann. 
+          Hierbei wurde sich an der Struktur von den am weit verbreitensten Forenframeworks orientiert, um knapp 90% 
+          aller deutschsprachigen Diskussionsforen abzudecken. 
+          </br>
           </br>
           pivoty ist in Münster ansässig und entwickelt "eine KI-basierte Analysesoftware, die 
           Innovationspotenziale" 
@@ -296,14 +303,15 @@ export default {
           Foren, Blogs und Produktrezensionen, um systematisch Inspirationen für neue 
           neue Produkte und Dienstleistungen abzuleiten" 
           (<a href="#bibliography">Schäper et al. 2021b</a>).`,
-          goc: `Wir haben eine webbasierte Simulationsplattform für öffentliche Verwaltungen erstellt. 
-          Leider darf ich die Projektergebnisse des Projektseminars nicht teilen. Im Projektteam hat es 
-          sehr viel Spaß gemacht hat und mit einer Note von 1,3 kann man es einen Erfolg nennen.`,
+          goc: `Wir haben eine webbasierte Simulationsplattform für öffentliche Verwaltungen mit Vue.js und Flask implementiert. 
+          Das Projekt hat mir viel Spaß gemacht, da ich das Frontend-Team leiten und ihnen Frontend-Kenntnisse mit Vue.js 2 vermitteln konnte. 
+          Auch die Gesamtnote von 1,3 unterstreicht den Erfolg des Projekts. 
+          Leider darf ich die Projektergebnisse des Projektseminars nicht im Detail veröffentlichen.`,
           watchtrainer: `WatchTrainer ist eine auf Sharing basierende Sportplattform für die Zukunft von 
           Wearable Devices wie der AppleWatch. Nach einer fundamentalen Umsetzung des Backends und 
           Frontends, arbeite ich nicht weiter an diesem Forschungsprojekt.`,
-          portfolioV1: `Die erste Version meiner Portfolio-Website habeich 2019 mit 
-          einfachem HTML5, CSS3, JavaScript und Bootstrap erstellt.`
+          portfolioV1: `Die erste Version meiner Portfolio-Website habe ich 2019 mit 
+          HTML5, CSS3, JavaScript und Bootstrap erstellt, um die Front-End-Webentwicklung zu verstehen.`
         }
       }
     }
