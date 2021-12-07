@@ -149,13 +149,7 @@ export default {
         id: "forum_web_scraper",
         showPreview: false,
         embedLink: "",
-        files: [
-          {
-            title: "ML.seminar_thesis",
-            link:
-              "projects/scalable_web_scraper/Extraction_of_Consumer_Insights_with_Scalable_Web_Scraping_of_Forums.pdf"
-          }
-        ]
+        files: []
       },
       {
         title: "Game of Competences",
