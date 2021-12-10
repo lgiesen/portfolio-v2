@@ -260,7 +260,7 @@ export default {
           IT-Fähigkeiten ständig zu verbessern. Um die Anwendung der erworbenen 
           theoretischen Kenntnisse aus dem Studium noch tiefgehender zu verstehen, setze ich diese in 
           realen Projekten bei der studentischen Unternehmensberatung move um. Darüber hinaus arbeite 
-          ich in meiner Freizeit an eignen Projekten und arbeite am Lehrstuhl 
+          ich in meiner Freizeit an eigenen Projekten und arbeite am Lehrstuhl 
           für Wirtschaftsinformatik, was meine analytischen und konzeptionellen Fähigkeiten fördert.`,
           downloadCV: "Lebenslauf"
         },
