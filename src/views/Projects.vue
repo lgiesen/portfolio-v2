@@ -52,7 +52,7 @@ div
                     //-   target="_blank")
                     
               //- Icon of project
-              v-img.ma-10.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
+              v-img.ma-7.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
               //- Project description
               p.text-justify(v-html="$t('projects.' + project.translationKey)")
               
@@ -113,6 +113,19 @@ export default {
   },
   data: () => ({
     projects: [
+      {
+        title: "Natural Language Processing",
+        year: "2021",
+        link: "",
+        imgSrc: require("@/assets/projects/svm.jpg"),
+        img_width: "250px",
+        translationKey: "NLP",
+        id: "NLP",
+        showPreview: false,
+        embedLink: "",
+        files: []
+        // TODO: Präsentation updaten und hochladen -> vorher Ti Fragen
+      },
       {
         title: "Machine Learning Case Study",
         year: "2021",
@@ -206,6 +219,13 @@ export default {
             hide: "Hide Preview",
             show: "Show Preview"
           },
+          NLP: `<p style="text-align:center;">
+            (<a href="#bibliography">The MathWorks 2021</a>)
+          </p>
+          During my software development internship at zeb, I worked on a Machine Learning (ML) 
+          project where I gained experience with Natural Language Processing (NLP). By selecting and 
+          implementing an alternative Support Vector Machine (SVM) approach, I was able to increase 
+          the accuracy of the ML algorithm from 50% to 83%.`,
           ML: {
             seminar_thesis: "Seminar Thesis",
             poster_overview: "Poster Overview",
@@ -226,8 +246,8 @@ export default {
           a scalable web scraper with Scrapy, so that it can be applied to as many discussion forums as possible. 
           The structure of the most widespread forum frameworks was used to cover almost 
           90% of all german discussion forums. 
-          </br>
-          </br>
+          <br/>
+          <br/>
           pivoty is located in Münster and develops “an AI-based analytics software that 
           tries to discover innovation potentials” 
             (<a href="#bibliography">Schäper et al. 2021a</a>)
@@ -265,6 +285,14 @@ export default {
             hide: "Vorschau verbergen",
             show: "Vorschau anzeigen"
           },
+          NLP: `
+          <p style="text-align:center;">
+            (<a href="#bibliography">The MathWorks 2021</a>)
+          </p>
+          Im Software Development Praktikum bei zeb habe ich an einem Machine Learning (ML) Projekt 
+          gearbeitet, wo ich Erfahrung mit Natural Language Processing (NLP) gemacht habe. Durch die Auswahl 
+          und Implementation eines alternativen Support Vector Machine (SVM) Ansatzes mit konnte ich die 
+          Genauigkeit des ML-Algorithmus von 50% auf 83% erhöhen. `,
           ML: {
             seminar_thesis: "Seminararbeit",
             poster_overview: "Poster Überblick",
@@ -284,8 +312,8 @@ export default {
           einen skalierbaren Web Scraper mit Scrapy gebaut, sodass dieser auf so viele Foren wie möglich angewendet werden kann. 
           Hierbei wurde sich an der Struktur von den am weit verbreitensten Forenframeworks orientiert, um knapp 90% 
           aller deutschsprachigen Diskussionsforen abzudecken. 
-          </br>
-          </br>
+          <br/>
+          <br/>
           pivoty ist in Münster ansässig und entwickelt "eine KI-basierte Analysesoftware, die 
           Innovationspotenziale" 
             (<a href="#bibliography">Schäper et al. 2021a</a>)

@@ -2,7 +2,8 @@
 div
   //- Hero Area
   section.fullwidth.mb-0
-    v-img.align-center(src="@/assets/background/Aegina_port.jpg" height="100vh")
+    v-img.align-center(src="@/assets/background/Aegina_port.jpg" height="100vh"
+      gradient="to bottom right, rgba(37,81,126,.33), rgba(6, 19, 54,.5)")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       section.mb-0 
         v-container
@@ -14,14 +15,14 @@ div
               div.center-items.mt-12
                 //- Tablet and desktop version
                 v-row.align-center.hidden-sm-and-down
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[0]")
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[1]")
-                    ExperienceCard(:associationsSrc="associations[2]")
-                    ExperienceCard(:associationsSrc="associations[3]")
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[4]")
+                  //- v-col
+                  //-   ExperienceCard(:associationsSrc="associations[0]")
+                  //- v-col
+                  //-   ExperienceCard(:associationsSrc="associations[1]")
+                  //-   ExperienceCard(:associationsSrc="associations[2]")
+                  //-   ExperienceCard(:associationsSrc="associations[3]")
+                  //- v-col
+                  //-   ExperienceCard(:associationsSrc="associations[4]")
                 //- Mobile Version
                 div.hidden-md-and-up
                   div.align-center.d-flex.flex-wrap.justify-space-around
@@ -69,7 +70,7 @@ div
 
 <script>
 import { mapGetters } from "vuex";
-import ExperienceCard from "@/components/ExperienceCard.vue";
+// import ExperienceCard from "@/components/ExperienceCard.vue";
 import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import CardGroup from "@/components/CardGroup.vue";
 import SocialContactSection from "@/components/SocialContactSection.vue";
@@ -77,12 +78,13 @@ import SocialContactSection from "@/components/SocialContactSection.vue";
 export default {
   name: "Experience",
   components: {
-    ExperienceCard,
+    // ExperienceCard,
     ParallaxDivider,
     CardGroup,
     SocialContactSection
   },
   data: () => ({
+    /*
     associations: [
       {
         title: "SEPAone",
@@ -110,6 +112,7 @@ export default {
         href: "BRL"
       }
     ],
+    */
     employment: [
       {
         title_en: "Student Assistant",
@@ -149,6 +152,24 @@ export default {
         zu zielorientiertem Arbeiten, überzeugendem Zeitmanagement und präziser Projektplanung.`
       },
       {
+        title_en: "Software Development Internship",
+        title_de: "Software Development Praktikum",
+        institution: "zeb",
+        link: "https://zeb-consulting.com/en-DE",
+        imageSrc: require("@/assets/workExperience/zeb.png"),
+        location: "Münster",
+        startDate: "2021-08",
+        endDate: "2021-12",
+        description_en: `During my software development internship at zeb, I worked on a Machine 
+        Learning (ML) project where I gained experience with Natural Language Processing (NLP). 
+        By selecting and implementing an alternative Support Vector Machine (SVM) approach, I 
+        was able to increase the accuracy of the ML algorithm from 50% to 83%.`,
+        description_de: `Im Software Development Praktikum bei zeb habe ich an einem Machine 
+        Learning (ML) Projekt gearbeitet, wo ich Erfahrung mit Natural Language Processing (NLP) 
+        gemacht habe. Durch die Auswahl und Implementation eines alternativen Support Vector Machine 
+        (SVM) Ansatzes mit konnte ich die Genauigkeit des ML-Algorithmus von 50% auf 83% erhöhen. `
+      },
+      {
         title_en: "Online Payment Internship",
         title_de: "Online Payment Praktikum",
         institution: "SEPAone",
@@ -158,9 +179,9 @@ export default {
         startDate: "2018-04",
         endDate: "2018-05",
         description_en: `Data Process Management for Customers: Customer support on how to 
-        get started with the online payment process`,
+        get started with the online payment process.`,
         description_de: `Datenprozessmanagement für Kunden: Kundenunterstützung bei der 
-        Einstieg in den Online-Zahlungsprozess`
+        Einstieg in den Online-Zahlungsprozess.`
       },
       {
         title_en: "Assistant of Insolvency Administrator",
@@ -191,11 +212,21 @@ export default {
         about economics, information systems, and computer science. Additionally, I 
         picked up modeling languages and various programming languages, which I 
         improved in my free time. Moreover, my project seminar team successfully
-        implemented a complex web application, where I led the frontend team.`,
+        implemented a complex web application, where I led the frontend team. 
+        In addition, I acquired important deep learning skills in the advanced module "Deep Learning with Python".
+        These have paved the way and laid a foundation for my bachelor thesis, as I am going to implement a U-Net 
+        (technological Deep Learning approach) to derive animal populations and tree stock from satellite images. 
+        This fascination for Machine Learning will run continue in my Information Systems Master at WWU, 
+        because I will choose the Business Intelligence Track.`,
         description_de: `An der WWU eignete ich mir grundlegendes Wissen der BWL, Wirtschafts- 
         und Informatik an. Zusätzlich habe ich mir Modellierungs- und verschiedene Programmiersprachen 
         angeeignet, die ich in meiner Freizeit verbessert habe. Außerdem leitete ich das 
-        Projektseminar Frontend-Team, in dem eine komplexe Webanwendung erfolgreich implementiert wurde.`
+        Projektseminar Frontend-Team, in dem eine komplexe Webanwendung erfolgreich implementiert wurde. 
+        Darüber hinaus habe ich im Vertiefungsmodul "Deep Learning mit Python" wichtige Deep Learning 
+        Kenntnisse erworben. Diese haben eine Basis für meine Bachelorarbeit gelegt, da ich ein U-Net 
+        (technologischer Deep Learning Ansatz) implementieren werde, um aus Satelitenbilder Tier- und 
+        Baumbestände abzuleiten. Diese Faszination für Machine Learning wird sich durch meinen Master ziehen, 
+        weil ich den Business Intelligence Track im Information Systems Master an der WWU wählen werde.`
       },
       {
         title_en: "Abitur (= A-levels)",
@@ -207,11 +238,12 @@ export default {
         startDate: "2016-06",
         endDate: "2018-06",
         description_en: `I completed my Abitur with a GPA of 2.1 at the Evangelisch 
-        Stiftischem Gymnasium, which is a technology-oriented secondary school.`,
+        Stiftischem Gymnasium, which is a technology-oriented secondary school. My advanced modules were Maths and English.`,
         description_de: `Mit einem Notendurchschnitt von 2,1 habe ich mein Abitur an 
-        einem technisch orientierten Gymnasium abgeschlossen.`
+        einem technisch orientierten Gymnasium abgeschlossen. Meine Leistungskurse waren Mathe und Englisch.`
       }
-    ],
+    ]
+    /*
     recommendations: [
       {
         title: "Prof. Dr. Friedrich Chasin",
@@ -266,6 +298,7 @@ export default {
         voluptate elit amet.`
       }
     ]
+    */
   }),
   computed: {
     ...mapGetters(["isDE", "ActiveTheme"])
@@ -274,31 +307,32 @@ export default {
     messages: {
       en: {
         experienceHero: {
-          title: "Experience",
-          subtitle: "I love to learn and apply my knowledge!"
+          title: `Work Experience and Education`,
+          subtitle:
+            "I love to broaden my horizons by learning and applying my knowledge!"
         },
-        experienceParallax: {
-          title: "Work Experience and Education",
-          subtitle: `I have gained a large variety of work experience and in-depth knowledge`
-        },
+        // experienceParallax: {
+        //   title: "Work Experience and Education",
+        //   subtitle: `I have gained a large variety of work experience and in-depth knowledge`
+        // },
         workExperience: "Work Experience",
-        education: "Education",
-        contact: "Let's Talk!",
-        recommendationsTitle: "Recommendations"
+        education: "Education"
+        // contact: "Let's Talk!",
+        // recommendationsTitle: "Recommendations"
       },
       de: {
         experienceHero: {
-          title: "Erfahrung",
-          subtitle: `Ich liebe es, zu lernen und mein Wissen anzuwenden!`
-        },
-        experienceParallax: {
           title: "Berufserfahrung und Bildung",
-          subtitle: `Ich habe eine Vielzahl von Arbeitserfahrungen und fundierten Kenntnissen gesammelt`
+          subtitle: `Ich liebe es, meinen Horizont zu erweitern indem ich dazu lerne und mein Wissen anzuwende!`
         },
-        workExperience: "Berufserfahrung",
-        education: "Bildung",
-        contact: "Lass Uns Austauschen!",
-        recommendationsTitle: "Empfehlungen"
+        // experienceParallax: {
+        //   title: "Berufserfahrung und Bildung",
+        //   subtitle: `Ich habe eine Vielzahl von Arbeitserfahrungen und fundierten Kenntnissen gesammelt`
+        // },
+        workExperience: "Berufserfahrung und Bildung",
+        education: "Bildung"
+        // contact: "Lass Uns Austauschen!",
+        // recommendationsTitle: "Empfehlungen"
       }
     }
   }
