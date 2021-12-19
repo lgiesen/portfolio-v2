@@ -289,10 +289,10 @@ export default {
           <p style="text-align:center;">
             (<a href="#bibliography">The MathWorks 2021</a>)
           </p>
-          Im Software Development Praktikum bei zeb habe ich an einem Machine Learning (ML) Projekt 
-          gearbeitet, wo ich Erfahrung mit Natural Language Processing (NLP) gemacht habe. Durch die Auswahl 
-          und Implementation eines alternativen Support Vector Machine (SVM) Ansatzes mit konnte ich die 
-          Genauigkeit des ML-Algorithmus von 50% auf 83% erhöhen. `,
+          Im Software Development Praktikum bei zeb habe ich an einem Machine Learning (ML) Projekt gearbeitet, 
+          wo ich Erfahrung mit Natural Language Processing (NLP) gemacht habe. Durch die Auswahl und Implementation 
+          eines alternativen Support Vector Machine (SVM) Ansatzes konnte ich die ML-Algorithmus Genauigkeit 
+          von 50% auf 83% erhöhen. `,
           ML: {
             seminar_thesis: "Seminararbeit",
             poster_overview: "Poster Überblick",
