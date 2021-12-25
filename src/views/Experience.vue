@@ -12,17 +12,17 @@ div
               h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
               p.subheading {{ $t("experienceHero.subtitle") }}
               //- Overview of employers and education
-              div.center-items.mt-12
+              //- div.center-items.mt-12
                 //- Tablet and desktop version
                 v-row.align-center.hidden-sm-and-down
-                  //- v-col
-                  //-   ExperienceCard(:associationsSrc="associations[0]")
-                  //- v-col
-                  //-   ExperienceCard(:associationsSrc="associations[1]")
-                  //-   ExperienceCard(:associationsSrc="associations[2]")
-                  //-   ExperienceCard(:associationsSrc="associations[3]")
-                  //- v-col
-                  //-   ExperienceCard(:associationsSrc="associations[4]")
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[0]")
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[1]")
+                    ExperienceCard(:associationsSrc="associations[2]")
+                    ExperienceCard(:associationsSrc="associations[3]")
+                  v-col
+                    ExperienceCard(:associationsSrc="associations[4]")
                 //- Mobile Version
                 div.hidden-md-and-up
                   div.align-center.d-flex.flex-wrap.justify-space-around
@@ -322,7 +322,7 @@ export default {
       },
       de: {
         experienceHero: {
-          title: "Berufserfahrung und Bildung",
+          title: `Berufserfahrung und Bildung`,
           subtitle: `Ich liebe es, meinen Horizont zu erweitern indem ich dazu lerne und mein Wissen anzuwende!`
         },
         // experienceParallax: {

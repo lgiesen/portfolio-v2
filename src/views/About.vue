@@ -57,7 +57,7 @@ div
         | encounters with new experiences, and hence there is no greater joy 
         | than to have an endlessly changing horizon, for each day to have a 
         | new and different sun." BrainyQuote. (
-        a(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
+        a.text-break(:href="quotes[0].quoteLink" target="_blank") {{ quotes[0].quoteLink }}
         | , accessed April 3, 2021).
 </template>
 
