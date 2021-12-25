@@ -9,7 +9,7 @@ div
         v-container
           v-row.pa-md-12.d-flex.text-center
             v-col.white--text
-              h1.display-3.font-weight-thin.mb-12 {{ $t("experienceHero.title") }}
+              h1.display-3.font-weight-thin.mb-12.text-break(v-html="$t('experienceHero.title')")
               p.subheading {{ $t("experienceHero.subtitle") }}
               //- Overview of employers and education
               //- div.center-items.mt-12
@@ -307,7 +307,7 @@ export default {
     messages: {
       en: {
         experienceHero: {
-          title: `Work Experience and Education`,
+          title: "Work Experience <br>and Education",
           subtitle:
             "I love to broaden my horizons by learning and applying my knowledge!"
         },
@@ -322,14 +322,14 @@ export default {
       },
       de: {
         experienceHero: {
-          title: `Berufserfahrung und Bildung`,
+          title: "Berufserfahrung <br>und Bildung",
           subtitle: `Ich liebe es, meinen Horizont zu erweitern indem ich dazu lerne und mein Wissen anzuwende!`
         },
         // experienceParallax: {
         //   title: "Berufserfahrung und Bildung",
         //   subtitle: `Ich habe eine Vielzahl von Arbeitserfahrungen und fundierten Kenntnissen gesammelt`
         // },
-        workExperience: "Berufserfahrung und Bildung",
+        workExperience: "Berufserfahrung",
         education: "Bildung"
         // contact: "Lass Uns Austauschen!",
         // recommendationsTitle: "Empfehlungen"
