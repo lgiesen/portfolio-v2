@@ -56,7 +56,7 @@ export default {
     goTo(link) {
       // if the link is internal, the router should be used. Otherwise open a new page
       if (link.includes("mailto"))
-        window.location.href = "mailto:contact@leogiesen.com";
+        window.location.href = "mailto:contact@leogiesen.de";
       else this.$router.push("/" + link).catch(() => {});
     }
   },
