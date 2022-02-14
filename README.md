@@ -2,7 +2,7 @@
 
 The previous version of my portfolio can be inspected [here](https://github.com/lgiesen/portfolio-v1).
 
-This project is deployed at [leogiesen.com](https://leogiesen.com) and on [Netlify](https://giesen.netlify.app/): [![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
+This project is deployed at [leogiesen.de](https://leogiesen.de) and on [Netlify](https://giesen.netlify.app/): [![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys)
 
 ## Project Setup
 
@@ -11,6 +11,7 @@ This project is deployed at [leogiesen.com](https://leogiesen.com) and on [Netli
 3. [Vue.js](https://v3.vuejs.org/guide/installation.html#cli): `npm install -g @vue/cli #Install Command Line Interface`
 
 Check your versions:
+
 ```
    node --version              # v14.16.0
    npm --version               # 6.14.11
