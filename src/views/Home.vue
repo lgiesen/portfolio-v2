@@ -144,14 +144,14 @@ export default {
         },
         homeIntro: {
           title: "I love to learn and apply my knowledge!",
-          text: `Fascinating – That is how I perceive various computer science 
-          technologies. Thus, this passion drives me to study Information Systems at 
-          the WWU and to constantly improve my IT-skillset. To understand the 
-          application of the acquired theoretical knowledge from my studies, I put 
-          them into practice in real-life projects at the student consultancy move. 
-          Furthermore, I work on personal projects in my free time and work at the 
-          Information Systems’ chair, which fosters my analytical and conceptual 
-          abilities.`,
+          text: `I am fascinated by various computer science technologies, such 
+          as machine learning. Thus, this passion for gaining insights from data 
+          drives me to study Information Systems at the University of Münster 
+          with a focus on business intelligence. In internships and real-life 
+          projects at the student consultancy move, I put the acquired theoretical 
+          knowledge from my studies into practice. Furthermore, I work on personal 
+          projects in my free time and work at the chair of Information Systems, 
+          fostering my analytical and conceptual abilities.`,
           downloadCV: "CV"
         },
         skills: {
@@ -255,13 +255,14 @@ export default {
         },
         homeIntro: {
           title: `Ich liebe es, zu lernen und mein Wissen anzuwenden!`,
-          text: `Faszinierend - so empfinde ich verschiedene Technologien der Informatik. Diese 
-          Leidenschaft treibt mich an, Wirtschaftsinformatik an der WWU zu studieren und meine 
-          IT-Fähigkeiten ständig zu verbessern. Um die Anwendung der erworbenen 
-          theoretischen Kenntnisse aus dem Studium noch tiefgehender zu verstehen, setze ich diese in 
-          realen Projekten bei der studentischen Unternehmensberatung move um. Darüber hinaus arbeite 
-          ich in meiner Freizeit an eigenen Projekten und arbeite am Lehrstuhl 
-          für Wirtschaftsinformatik, was meine analytischen und konzeptionellen Fähigkeiten fördert.`,
+          text: `Ich bin fasziniert von Informatik Technologien, wie Machine Learning. 
+          Diese Leidenschaft für die Ableitung von Erkenntnissen aus Daten bewegt mich 
+          Wirtschaftsinformatik an der Universität Münster mit dem Schwerpunkt Business 
+          Intelligence zu studieren. In Praktika und Praxisprojekten bei der 
+          studentischen Unternehmensberatung move wende ich mein theoretisches Wissen 
+          aus dem Studium in der Praxis an. Darüber hinaus setze ich in meiner Freizeit 
+          eigene Projekten um und arbeite am Lehrstuhl für Wirtschaftsinformatik, um 
+          meine analytischen und konzeptionellen Fähigkeiten zu fördern.`,
           downloadCV: "Lebenslauf"
         },
         skills: {
