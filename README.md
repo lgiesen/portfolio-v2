@@ -13,27 +13,29 @@ This project is deployed at [leogiesen.de](https://leogiesen.de) and on [Netlify
 Check your versions:
 
 ```
-   node --version              # v14.16.0
-   npm --version               # 6.14.11
+   node --version              # v16.14.2
+   npm --version               # 8.5.0
    vue --version               # @vue/cli 4.5.11
 ```
 
 ### Serve/Start Front-end - Compiles and hot-reloads for development
 
 ```
-npm run serve #directly start server
-vue ui #or start via User Interface
+npm run serve
+#or start via User Interface with: vue ui
 ```
 
-### Build for Development/Production - Compiles and minifies for production
+### Build for Production - Compiles and minifies for production
 
 ```
 npm run build
 ```
 
+Subsequently, the dist directory contents have to be copied into the portfolio-v2-dist directory and pushed to the repository to publish the changes because the hosting is based on the portfolio-v2-dist repository. This has to be performed because the hosting plan is unable to build from production by itself.
+
 ## General Advice for Web Projects
 
-### SEO
+### SEO (Search Engine Optimization)
 
 - Keep visitors on your website (dwell time) by providing excellent content (!) (define important keywords, which people search to get to your website)
 - Improve loading speed (cf. Improve Performance)
