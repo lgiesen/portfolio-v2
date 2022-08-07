@@ -48,12 +48,14 @@ div
             v-card-text Vue template im Internet recherchieren für Blogposts und 
               | folder structure und referenzieren von Posts (z.B. Übersicht davon)
   section
-    iframe(style='position:fixed;top:0;left:0;width:100%;height:100%;border:none;margin:0;padding:0;overflow:hidden;z-index:10;' src='https://pseudocode.deepjain.com/')
-    iframe(src="https://v1.embednotion.com/embed/0c7acb7e6cb543d0b6b27fe4fbbd6a40")
+    //- iframe(style='position:fixed;top:0;left:0;width:100%;height:100%;border:none;margin:0;padding:0;overflow:hidden;z-index:10;' src='https://pseudocode.deepjain.com/')
     //- NotionRenderer(:blockMap="blockMap" fullPage)
     //- vue-notion-render(:unofficial="true" :data="data")
     //- src="https://www.notion.so/giesen/Productivity-Programs-d37875b3bdad42baaea754dd2100c693" 
     //- title="Great Applications to Boost Your Productivity"
+    
+    
+    //- iframe(src="https://v1.embednotion.com/embed/0c7acb7e6cb543d0b6b27fe4fbbd6a40")
 </template>
 
 <script>

@@ -56,9 +56,9 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import LanguageSwitcher from "@/components/navigation/LanguageSwitcher.vue";
 import ToggleTheme from "@/components/navigation/ToggleTheme.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "TheNavigation",
@@ -85,6 +85,12 @@ export default {
         tag_de: "Projekte",
         to: { name: "Projects" },
         icon: "code-tags"
+      },
+      {
+        tag_en: "Blog",
+        tag_de: "Blog",
+        to: { name: "BlogHome" },
+        icon: "slide"
       }
       // {
       //   tag_en: "Playground",
@@ -92,12 +98,6 @@ export default {
       //   to: { name: "Sandbox" },
       //   icon: "slide"
       // },
-      // {
-      //   tag_en: "Blog",
-      //   tag_de: "Blog",
-      //   to: { name: "BlogHome" },
-      //   icon: "slide"
-      // }
     ],
     mobileDialog: false,
     dontShowAtTop: false
