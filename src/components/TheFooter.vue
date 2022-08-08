@@ -23,10 +23,10 @@ div
 </template>
 
 <script>
+import programmingIcons from "@/components/icons/icons-programming.json";
+import socialIcons from "@/components/icons/icons-social.json";
+import Icons from "@/components/icons/Icons.vue";
 import { mapGetters } from "vuex";
-import socialIcons from "@/components/social-icons/SocialIcons.json";
-import programmingIcons from "@/components/social-icons/ProgrammingIcons.json";
-import Icons from "@/components/social-icons/Icons.vue";
 
 export default {
   name: "TheFooter",

@@ -35,21 +35,28 @@ const routes = [
     path: "/blog",
     name: "BlogHome",
     component: () =>
-      import(/* webpackChunkName: "blogHome" */ "../views/blog/BlogHome.vue"),
-    children: [
-      {
-        path: "testpost",
-        name: "TestPost",
-        component: () => import("@/views/blog/posts/TestPost.vue")
-      }
-    ]
+      import(/* webpackChunkName: "blogHome" */ "../views/blog/BlogHome.vue")
+    // children: [
+    //   {
+    //     path: ":postTitle",
+    //     name: "TestPost",
+    //     props: true,
+    //     component: () => import("@/views/blog/posts/TestPost.vue")
+    //   }
+    // ]
   },
   {
-    path: "/sandbox",
-    name: "Sandbox",
-    component: () =>
-      import(/* webpackChunkName: "sandbox" */ "../views/Sandbox.vue")
+    path: "/blog/:name",
+    name: "TestPost",
+    props: true,
+    component: () => import("@/views/blog/posts/TestPost.vue")
   },
+  // {
+  //   path: "/sandbox",
+  //   name: "Sandbox",
+  //   component: () =>
+  //     import(/* webpackChunkName: "sandbox" */ "../views/Sandbox.vue")
+  // },
   // {
   //   path: "/contact",
   //   name: "Contact",

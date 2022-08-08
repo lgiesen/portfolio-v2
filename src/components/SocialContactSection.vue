@@ -14,8 +14,8 @@ section.fullwidth
 </template>
 
 <script>
-import socialIcons from "@/components/social-icons/SocialIcons.json";
-import Icons from "@/components/social-icons/Icons.vue";
+import socialIcons from "@/components/icons/icons-social.json";
+import Icons from "@/components/icons/Icons.vue";
 
 export default {
   name: "SocialContactSection",

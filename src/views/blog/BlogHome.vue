@@ -15,11 +15,7 @@ div
             
     ScrollHero
   
-  
-  //- Code from about
   //- Hero Area
-  //- Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" 
-  //-   :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
   v-img.align-center(src="@/assets/background/Glatthorn.jpg" height="100vh"
     gradient="to bottom right, rgba(100,115,201,.33), rgba(38,145,66,.5)")
     //- Another section is necessary to provide the max-width for ultra-wide screens
@@ -33,29 +29,26 @@ div
           v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
             v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
               v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
-  //- About me texts alternating with corresponding images
+  //- Content Area
   article
-
-  section
-    h2.display-2.font-weight-thin.text-center.mb-12 This page is in development 
-  section.d-flex.flex-wrap.justify-space-between#scroll
-    v-container
-      h2.display-2.font-weight-thin.text-center.mb-12 Posts  
-      v-row.d-flex.flex-wrap.justify-space-between
-        v-col.col-12.col-sm-6(v-for="i in 6" :key="i")
-          v-card.mb-9
-            v-card-title Card {{ i }}
-            v-card-text Vue template im Internet recherchieren für Blogposts und 
-              | folder structure und referenzieren von Posts (z.B. Übersicht davon)
-  section
-    //- iframe(style='position:fixed;top:0;left:0;width:100%;height:100%;border:none;margin:0;padding:0;overflow:hidden;z-index:10;' src='https://pseudocode.deepjain.com/')
-    //- NotionRenderer(:blockMap="blockMap" fullPage)
-    //- vue-notion-render(:unofficial="true" :data="data")
-    //- src="https://www.notion.so/giesen/Productivity-Programs-d37875b3bdad42baaea754dd2100c693" 
-    //- title="Great Applications to Boost Your Productivity"
+    section.d-flex.flex-wrap.justify-space-between#scroll
+      v-container
+        h2.display-2.font-weight-thin.text-center.mb-12 Posts  
+        v-row.d-flex.flex-wrap.justify-space-between
+          v-col.col-12.col-sm-6(v-for="i in 6" :key="i")
+            v-card.mb-9
+              v-card-title Card {{ i }}
+              v-card-text Vue template im Internet recherchieren für Blogposts und 
+                | folder structure und referenzieren von Posts (z.B. Übersicht davon)
+    //- section
+      //- iframe(style='position:fixed;top:0;left:0;width:100%;height:100%;border:none;margin:0;padding:0;overflow:hidden;z-index:10;' src='https://pseudocode.deepjain.com/')
+      //- NotionRenderer(:blockMap="blockMap" fullPage)
+      //- vue-notion-render(:unofficial="true" :data="data")
+      //- src="https://www.notion.so/giesen/Productivity-Programs-d37875b3bdad42baaea754dd2100c693" 
+      //- title="Great Applications to Boost Your Productivity"
     
     
-    //- iframe(src="https://v1.embednotion.com/embed/0c7acb7e6cb543d0b6b27fe4fbbd6a40")
+      //- iframe(src="https://v1.embednotion.com/embed/0c7acb7e6cb543d0b6b27fe4fbbd6a40")
 </template>
 
 <script>
