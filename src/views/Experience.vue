@@ -121,7 +121,7 @@ export default {
         link: "https://www.ercis.org/",
         imageSrc: require("@/assets/workExperience/ERCIS.png"),
         location: "Münster",
-        startDate: "2019-10",
+        startDate: "10/2019",
         endDate: "",
         description_en: `I enthusiastically work as a student assistant for Dr. Chasin 
         at the chair of Information Systems and Information Management
@@ -140,7 +140,7 @@ export default {
         link: "https://move-ev.de/",
         imageSrc: require("@/assets/workExperience/move-title.png"),
         location: "Münster",
-        startDate: "2019-03",
+        startDate: "03/2019",
         endDate: "",
         description_en: `At move, I developed excellent communication skills and learned 
         how to contribute an innovative perspective to foster productive teamwork. 
@@ -158,8 +158,8 @@ export default {
         link: "https://zeb-consulting.com/en-DE",
         imageSrc: require("@/assets/workExperience/zeb.png"),
         location: "Münster",
-        startDate: "2021-08",
-        endDate: "2021-12",
+        startDate: "08/2021",
+        endDate: "12/2021",
         description_en: `During my software development internship at zeb, I worked on a Machine 
         Learning (ML) project where I gained experience with Natural Language Processing (NLP). 
         By selecting and implementing an alternative Support Vector Machine (SVM) approach, I 
@@ -176,7 +176,7 @@ export default {
         link: "https://www.viadee.de/",
         imageSrc: require("@/assets/workExperience/viadee.png"),
         location: "Münster",
-        startDate: "2020-09",
+        startDate: "09/2020",
         endDate: "",
         description_en: `Application of Machine Learing in IT-projects. Analysis and visualization of data in a Data Science context.`,
         description_de: `Anwendung von Machine Learing in IT-Projekten. Analyse und Visualisierung von Daten in einem Data Science-Kontext.`
@@ -188,8 +188,8 @@ export default {
       //   link: "https://www.sepaone.com/",
       //   imageSrc: require("@/assets/workExperience/SEPAone.png"),
       //   location: "Gütersloh",
-      //   startDate: "2018-04",
-      //   endDate: "2018-05",
+      //   startDate: "04/2018",
+      //   endDate: "05/2018",
       //   description_en: `Data Process Management for Customers: Customer support on how to
       //   get started with the online payment process.`,
       //   description_de: `Datenprozessmanagement für Kunden: Kundenunterstützung bei der
@@ -202,8 +202,8 @@ export default {
       //   link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
       //   imageSrc: require("@/assets/workExperience/BRL.png"),
       //   location: "Hamburg",
-      //   startDate: "2016-06",
-      //   endDate: "2016-07",
+      //   startDate: "06/2016",
+      //   endDate: "07/2016",
       //   description_en: `Through the assistance of insolvency administrators and writing insolvency
       //   reports at Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`,
       //   description_de: `Durch die Unterstützung von Insolvenzverwaltern und das Schreiben von
@@ -212,33 +212,44 @@ export default {
     ],
     education: [
       {
-        title_en: "Information Systems B. Sc.",
+        title_en: "Information Systems M. Sc.",
+        title_de: "Information Systems M. Sc.",
+        institution: "WWU",
+        link: "https://www.wi.uni-muenster.de/de/willkommen",
+        imageSrc: require("@/assets/workExperience/WWU.png"),
+        location: "Münster",
+        startDate: "04/2022",
+        endDate: "",
+        description_en: `I am currently studying at the University of Münster with a focus on Business Intelligence. 
+        Other domains of study are Process Management, Information Systems Development and Business Networks.`,
+        description_de: `Aktuell studiere ich an der Universität Münster mit dem Schwerpunkt Business Intelligence. 
+        Weitere Studienschwerpunkte sind Prozessmanagement, Entwicklung von Informationssystemen und Business Networks.`
+      },
+      {
+        title_en: "Business Informatics B. Sc.",
         title_de: "Wirtschaftsinformatik B. Sc.",
         institution: "WWU",
         link: "https://www.wi.uni-muenster.de/de/willkommen",
         imageSrc: require("@/assets/workExperience/WWU.png"),
         location: "Münster",
-        startDate: "2018-10",
-        endDate: "today",
+        startDate: "10/2018",
+        endDate: "03/2022",
         description_en: `At the University of Münster, I acquired foundational knowledge
         about economics, information systems, and computer science. Additionally, I 
         picked up modeling languages and various programming languages, which I 
         improved in my free time. Moreover, my project seminar team successfully
         implemented a complex web application, where I led the frontend team. 
         In addition, I acquired important deep learning skills in the advanced module "Deep Learning with Python".
-        These have paved the way and laid a foundation for my bachelor thesis, as I am going to implement a U-Net 
-        (technological Deep Learning approach) to derive animal populations and tree stock from satellite images. 
-        This fascination for Machine Learning will run continue in my Information Systems Master at WWU, 
-        because I will choose the Business Intelligence Track.`,
+        These have paved the way and laid a foundation for my bachelor thesis, where I implemented a U-Net 
+        (technological Deep Learning approach) to derive the tree stock from satellite images.`,
         description_de: `An der WWU eignete ich mir grundlegendes Wissen der BWL, Wirtschafts- 
         und Informatik an. Zusätzlich habe ich mir Modellierungs- und verschiedene Programmiersprachen 
         angeeignet, die ich in meiner Freizeit verbessert habe. Außerdem leitete ich das 
         Projektseminar Frontend-Team, in dem eine komplexe Webanwendung erfolgreich implementiert wurde. 
         Darüber hinaus habe ich im Vertiefungsmodul "Deep Learning mit Python" wichtige Deep Learning 
-        Kenntnisse erworben. Diese haben eine Basis für meine Bachelorarbeit gelegt, da ich ein U-Net 
-        (technologischer Deep Learning Ansatz) implementieren werde, um aus Satelitenbilder Tier- und 
-        Baumbestände abzuleiten. Diese Faszination für Machine Learning wird sich durch meinen Master ziehen, 
-        weil ich den Business Intelligence Track im Information Systems Master an der WWU wählen werde.`
+        Kenntnisse erworben. Diese haben eine Basis für meine Bachelorarbeit gelegt, wo ich ein U-Net 
+        (technologischer Deep Learning Ansatz) implementieren habe, um aus Satelitenbilder 
+        Baumbestände abzuleiten.`
       },
       {
         title_en: "Abitur (= A-levels)",
@@ -247,8 +258,8 @@ export default {
         link: "https://esg-guetersloh.de/",
         imageSrc: require("@/assets/workExperience/ESG.png"),
         location: "Gütersloh",
-        startDate: "2016-06",
-        endDate: "2018-06",
+        startDate: "06/2016",
+        endDate: "06/2018",
         description_en: `I completed my Abitur with a GPA of 2.1 at the Evangelisch 
         Stiftischem Gymnasium, which is a technology-oriented secondary school. My advanced modules were Maths and English.`,
         description_de: `Mit einem Notendurchschnitt von 2,1 habe ich mein Abitur an 
