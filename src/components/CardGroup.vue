@@ -22,6 +22,8 @@ div
                   v-card-subtitle.text-center @
                     AnimatedLink(target="_blank"
                       :href="item.link" :linkText="item.institution + ', ' + item.location")
+                    //- display start and end date (and consider active language)
+                    span  ({{item.startDate}} - {{item.endDate == "" ? (isDE ? "today" : "heute") : item.endDate}})
                   v-card-text.mt-7.text-justify 
                     | {{ isDE ? item.description_de : item.description_en }}
 </template>

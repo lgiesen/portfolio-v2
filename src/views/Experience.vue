@@ -122,7 +122,7 @@ export default {
         imageSrc: require("@/assets/workExperience/ERCIS.png"),
         location: "Münster",
         startDate: "2019-10",
-        endDate: "today",
+        endDate: "",
         description_en: `I enthusiastically work as a student assistant for Dr. Chasin 
         at the chair of Information Systems and Information Management
         for IT projects and contribute to scientific research at the European Research 
@@ -141,7 +141,7 @@ export default {
         imageSrc: require("@/assets/workExperience/move-title.png"),
         location: "Münster",
         startDate: "2019-03",
-        endDate: "today",
+        endDate: "",
         description_en: `At move, I developed excellent communication skills and learned 
         how to contribute an innovative perspective to foster productive teamwork. 
         Through intense group work in projects, my work became very goal-orientated, and 
@@ -152,8 +152,8 @@ export default {
         zu zielorientiertem Arbeiten, überzeugendem Zeitmanagement und präziser Projektplanung.`
       },
       {
-        title_en: "Software Development Internship",
-        title_de: "Software Development Praktikum",
+        title_en: "Software Developer",
+        title_de: "Software Developer",
         institution: "zeb",
         link: "https://zeb-consulting.com/en-DE",
         imageSrc: require("@/assets/workExperience/zeb.png"),
@@ -170,33 +170,45 @@ export default {
         (SVM) Ansatzes konnte ich die ML-Algorithmus Genauigkeit von 50% auf 83% erhöhen.`
       },
       {
-        title_en: "Online Payment Internship",
-        title_de: "Online Payment Praktikum",
-        institution: "SEPAone",
-        link: "https://www.sepaone.com/",
-        imageSrc: require("@/assets/workExperience/SEPAone.png"),
-        location: "Gütersloh",
-        startDate: "2018-04",
-        endDate: "2018-05",
-        description_en: `Data Process Management for Customers: Customer support on how to 
-        get started with the online payment process.`,
-        description_de: `Datenprozessmanagement für Kunden: Kundenunterstützung bei der 
-        Einstieg in den Online-Zahlungsprozess.`
-      },
-      {
-        title_en: "Assistant of Insolvency Administrator",
-        title_de: "Insolvenzverwaltung Praktikum",
-        institution: "BRL",
-        link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
-        imageSrc: require("@/assets/workExperience/BRL.png"),
-        location: "Hamburg",
-        startDate: "2016-06",
-        endDate: "2016-07",
-        description_en: `Through the assistance of insolvency administrators and writing insolvency 
-        reports at Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`,
-        description_de: `Durch die Unterstützung von Insolvenzverwaltern und das Schreiben von 
-        Insolvenzberichten bei Boege Rohde Luebbehuesen konnte ich Erfahrungen im Insolvenzverfahren sammeln.`
+        title_en: "Working Student in Data Science",
+        title_de: "Werkstudent in Data Science",
+        institution: "viadee",
+        link: "https://www.viadee.de/",
+        imageSrc: require("@/assets/workExperience/viadee.png"),
+        location: "Münster",
+        startDate: "2020-09",
+        endDate: "",
+        description_en: `Application of Machine Learing in IT-projects. Analysis and visualization of data in a Data Science context.`,
+        description_de: `Anwendung von Machine Learing in IT-Projekten. Analyse und Visualisierung von Daten in einem Data Science-Kontext.`
       }
+      // {
+      //   title_en: "Online Payment Internship",
+      //   title_de: "Online Payment Praktikum",
+      //   institution: "SEPAone",
+      //   link: "https://www.sepaone.com/",
+      //   imageSrc: require("@/assets/workExperience/SEPAone.png"),
+      //   location: "Gütersloh",
+      //   startDate: "2018-04",
+      //   endDate: "2018-05",
+      //   description_en: `Data Process Management for Customers: Customer support on how to
+      //   get started with the online payment process.`,
+      //   description_de: `Datenprozessmanagement für Kunden: Kundenunterstützung bei der
+      //   Einstieg in den Online-Zahlungsprozess.`
+      // },
+      // {
+      //   title_en: "Assistant of Insolvency Administrator",
+      //   title_de: "Insolvenzverwaltung Praktikum",
+      //   institution: "BRL",
+      //   link: "https://www.brl.de/de/disziplinen/sanierung-und-insolvenz",
+      //   imageSrc: require("@/assets/workExperience/BRL.png"),
+      //   location: "Hamburg",
+      //   startDate: "2016-06",
+      //   endDate: "2016-07",
+      //   description_en: `Through the assistance of insolvency administrators and writing insolvency
+      //   reports at Boege Rohde Luebbehuesen, I gained experience in the inisolvency process.`,
+      //   description_de: `Durch die Unterstützung von Insolvenzverwaltern und das Schreiben von
+      //   Insolvenzberichten bei Boege Rohde Luebbehuesen konnte ich Erfahrungen im Insolvenzverfahren sammeln.`
+      // }
     ],
     education: [
       {
