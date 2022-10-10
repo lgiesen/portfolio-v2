@@ -106,10 +106,10 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
 import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
 import BackgroundHighlightLink from "@/components/playground/hyperlinks/BackgroundHighlightLink.vue";
-import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 export default {
   name: "Projects",
   components: {
@@ -142,7 +142,7 @@ export default {
         imgSrc: require("@/assets/projects/unet-no-nums-wide.png"),
         // U-Net von mir oder von dem original publisher - Bild von Predictions (unpatchified am besten)
         img_width: "500px",
-        id: "desc",
+        id: "ba",
         showPreview: false,
         embedLink: "",
         files: [

@@ -66,8 +66,8 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 export default {
   name: "Home",
   components: {
@@ -81,7 +81,7 @@ export default {
         textSrc: "mlbi",
         backgroundImage: require("@/assets/home/bi.jpg"),
         icon: "language-python",
-        aria: "Machine Learning & Business Intelligence"
+        aria: "Machine Learning"
       },
       {
         title: "feTitle",
@@ -89,6 +89,13 @@ export default {
         backgroundImage: require("@/assets/home/frontend.jpg"),
         icon: "vuejs",
         aria: "Front-end Web Development Vue.js"
+      },
+      {
+        title: "itArchitectureTitle",
+        textSrc: "itArchitecture",
+        backgroundImage: require("@/assets/home/itArchitecture.jpg"),
+        icon: "hammer-wrench", // progress-wrench
+        aria: "It Architecture"
       },
       {
         title: "beTitle",
@@ -155,25 +162,18 @@ export default {
           downloadCV: "CV"
         },
         skills: {
-          mlbiTitle: `Machine Learning &\nBusiness Intelligence`,
-          mlbi: `I learned Python by studying online courses and programming along 
-          in my free time. Furthermore, I had the opportunity to apply and enhance 
-          these capabilities in multiple university modules. For instance, in the 
-          advanced course 'Deep Learning with Python' I used 
-            <strong>TensorFlow</strong> and <strong>Keras</strong> for a 
-            <strong>Machine Learning</strong> 
-            <a href="/#/projects#ml_case_study">case study</a>, 
-          which gave me practical insights into how Artificial Intelligence 
-          works and what its current limitations and capabilities are.
-          </br>
-          Additionally, I realized smaller projects, such as a backtracking 
-          algorithm to solve Sudokus and used 
-            <strong>Web Scraping</strong>
-          to predict Bundesliga game results. I also implemented a scalable web scraper 
-          for data extraction from forums at the start-up 
-            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>. 
-          Concluding, I love to work with Python and am thrilled to apply it in various 
-          contexts. Hence, I would be grateful for any Python-related job opportunities.`,
+          mlbiTitle: `Machine Learning`,
+          mlbi: `I acquired the Python basis for Machine Learning in my studies and with online 
+          courses in my spare time. In a Machine Learning 
+            <a href="/#/projects#ml_case_study">case study</a> 
+          and a preparation of a lecture on the introduction to Machine Learning, I was able to 
+          gain insights into how Artificial Intelligence works and its current limitations 
+          and possibilities. I was able to gain some experience in the advanced module "Deep Learning 
+          with Python", where I used TensorFlow, Keras und PyTorch. 
+          Based on this, I wrote my bachelor thesis on semantic segmentation of trees 
+          South Africa using satellite imagery and implemented and trained a deep learning model 
+          (see <a href="/#/projects#ba">here</a>).
+          Since I am fascinated by Machine Learning, I also chose it as a focus in my course of study in Information Systems.`,
 
           feTitle: "Frontend Web\nDevelopment",
           frontend: `I took various online courses in my free time where I learned how to 
@@ -190,6 +190,13 @@ export default {
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
 
+          itArchitectureTitle: "IT Architecture",
+          itArchitecture: `At university, I learned to portray the IT architecture of a company and to 
+          and to analyze it for bottlenecks, for example. I also learned to 
+          create a transformation plan to adapt the IT architecture. I applied this knowledge 
+          in a case study and in a real project at
+          <a href="/#/experience#card-move">move</a>.`,
+
           beTitle: "Backend &\nDatabases",
           backend: `My primary web development focus lies on the frontend. Nevertheless, I am very 
           familiar with setting up and working with a database, e.g., building an Entity-relationship 
@@ -202,7 +209,7 @@ export default {
           project.`,
           // Moreover, I demonstrate how to work with API calls in my <a href="/#/projects">projects</a>.
 
-          officeTitle: "Microsoft Software",
+          officeTitle: "Microsoft Office 365",
           office: `Since year 7 in school, I have been using  
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> almost every day. 
           As a student assistant at the 
@@ -266,25 +273,20 @@ export default {
           downloadCV: "Lebenslauf"
         },
         skills: {
-          mlbiTitle: `Machine Learning &\nBusiness Intelligence`,
-          mlbi: `Python habe ich mir durch das Studium und Online-Kurse in meiner 
-          Freizeit angeeignet. Außerdem habe ich meine Python-Fähigkeiten in mehreren 
-          Uni-Modulen erweitert. Zum Beispiel habe ich im Vertiefungsmodul 
-          "Deep Learning mit Python" 
-            <strong>TensorFlow</strong> und <strong>Keras</strong> für eine 
-            <strong>Machine Learning</strong> 
-            <a href="/#/projects#ml_case_study">Fallstudie</a>, 
-           verwendet, was mir praktische Einblicke in die Funktionsweise von 
-          Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffte.
-          </br>
-          Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
-          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> 
-          zur Vorhersage von Bundesliga-Spielergebnissen. 
-          Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
-            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
-          implementiert. 
-          Abschließend kann man sagen, dass ich gerne mit Python arbeite und es spannend finde, es 
-          in verschiedenen Kontexten anzuwenden. Daher wäre ich für jede Arbeitsmöglichkeit mit Python dankbar.`,
+          mlbiTitle: `Machine Learning`,
+          mlbi: `Die Python-Basis für Machine Learning habe ich mir im Studium und mit Online-Kurse in meiner 
+          Freizeit angeeignet. In einer Machine Learning
+            <a href="/#/projects#ml_case_study">Fallstudie</a> und einem Vorbereitung eines Vortrages 
+          zur Einführung in Machine Learning konnte ich Einblicke in die Funktionsweise von 
+          Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffen. 
+          Erste Erfahrung konnte ich im Vertiefungsmodul "Deep Learning mit Python" sammeln, 
+          wo ich unter anderem mit TensorFlow, Keras und PyTorch gearbeitet habe. Aufbauend darauf habe 
+          ich meine Bachelorarbeit über die semantische Segmentierung von Bäumen in Südafrika anhand 
+          Satellitenbildern geschrieben und ein Deep Learning Modell implementiert und trainiert 
+          (vgl. <a href="/#/projects#ba">hier</a>).
+          Da mich Machine Learning fasziniert, habe ich diesen Fokus auch im Master Information Systems gewählt.`,
+
+          // TODO: Data Science / Analysis (viadee) and Business Intelligence
 
           feTitle: "Frontend Web\nDevelopment",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich 
@@ -300,7 +302,22 @@ export default {
             <a href="/#/experience#card-move">move</a>  
           entwickelt habe. Besonders stolz bin ich auf die 
             <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
-          die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.`,
+          die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.
+          </br>
+          Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
+          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> 
+          zur Vorhersage von Bundesliga-Spielergebnissen. 
+          Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
+            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
+          implementiert.`,
+
+          itArchitectureTitle: "IT Architektur",
+          itArchitecture: `In der Universität habe ich gelernt die IT-Architektur eines Unternehmens 
+          abzubilden und diese auf zum Beispiel Bottlenecks zu analysieren. Außerdem habe ich gelernt 
+          einen Transformationsplan zu erstellen um die IT-Architektur anzupassen. Diese Kenntnisse 
+          konnte ich in einer Case Study und in einem realen Projekt bei 
+            <a href="/#/experience#card-move">move</a>
+          anwenden.`,
 
           beTitle: "Backend &\nDatenbanken",
           backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz 
@@ -314,7 +331,7 @@ export default {
           erworben und angewendet.`,
           // Außerdem zeige ich in meinen <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.
 
-          officeTitle: "Microsoft Software",
+          officeTitle: "Microsoft Office 365",
           office: `Da ich schon seit der 7. Klasse fast täglich mit 
           <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> 
           arbeite und als studentische Hilfskraft am 
