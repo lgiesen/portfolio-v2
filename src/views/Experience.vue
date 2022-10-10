@@ -71,8 +71,8 @@ div
 <script>
 import { mapGetters } from "vuex";
 // import ExperienceCard from "@/components/ExperienceCard.vue";
-import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import CardGroup from "@/components/CardGroup.vue";
+import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import SocialContactSection from "@/components/SocialContactSection.vue";
 
 export default {
@@ -309,7 +309,7 @@ export default {
         experienceHero: {
           title: "Work Experience <br>and Education",
           subtitle:
-            "I love to broaden my horizons by learning and applying my knowledge!"
+            "I want to broaden my horizons by learning new things and facing challenges!"
         },
         // experienceParallax: {
         //   title: "Work Experience and Education",
@@ -323,7 +323,7 @@ export default {
       de: {
         experienceHero: {
           title: "Berufserfahrung <br>und Bildung",
-          subtitle: `Ich liebe es, meinen Horizont zu erweitern indem ich dazu lerne und mein Wissen anzuwende!`
+          subtitle: `Ich möchte meinen Horizont erweitern indem ich Neues lerne und mich Herausforderungen stelle!`
         },
         // experienceParallax: {
         //   title: "Berufserfahrung und Bildung",

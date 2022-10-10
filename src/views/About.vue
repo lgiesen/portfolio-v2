@@ -93,7 +93,7 @@ export default {
         parallaxText: {
           title: "Über Leo",
           subtitle:
-            "Ich liebe es komplexe Probleme zu destrukturieren und das Gelernte anzuwenden!"
+            "Ich liebe es komplexe und abstrakte Probleme runterzubrechen und zu lösen!"
         },
         introHeader: "Was ist für Dich am wichtigsten?",
         friendsAndFamily: `Für mich haben meine Familie und Freunde die höchste Priorität, 
@@ -155,7 +155,8 @@ export default {
       en: {
         parallaxText: {
           title: "About Leo",
-          subtitle: "I love to learn and apply my knowledge!"
+          subtitle:
+            "I love breaking down and solving complex and abstract problems!"
         },
         introHeader: "What is most important to you?",
         friendsAndFamily: `For me, my family and friends are the highest priority, 
