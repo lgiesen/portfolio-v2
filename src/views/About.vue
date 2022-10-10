@@ -63,8 +63,8 @@ div
 
 <script>
 // import Parallax from "@/components/Parallax.vue";
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import Quote from "@/components/Quote.vue";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -101,26 +101,28 @@ export default {
             "Ich liebe es komplexe Probleme zu destrukturieren und das Gelernte anzuwenden!"
         },
         introHeader: "Was ist für Dich am wichtigsten?",
-        friendsAndFamily: `Für mich haben meine Familie, Freunde und meine Karriere 
-        die höchste Priorität, denn ohne ein tolles soziales Leben als Fundament 
-        kann man leicht ausbrennen und den Blick für das Wesentliche im Leben 
+        friendsAndFamily: `Für mich haben meine Familie und Freunde die höchste Priorität, 
+        denn ohne ein tolles soziales Leben als Fundament kann man leicht unausgeglichen sein, 
+        ausbrennen und den Blick für das Wesentliche im Leben 
         verlieren.
-        So hege ich mit meiner Familie und meinen Freunden tolle Erinnerungen 
-        an faszinierende Ausflüge und tolle Partys, z. B. unsere jährlichen 
-        Skiausflüge oder Karneval mit einer Gruppe von Freunden und meiner 
+        Deswegen versuche ich mich so oft es geht mit meiner Familie und meinen Freunden tolle Erinnerungen 
+        an zum Beispiel faszinierende Ausflüge und tolle Partys zu kreiren. Dazu gehören z. B. unsere jährlichen 
+        Skiausflüge, Wochenendtrips oder Karneval mit einer Gruppe von Freunden und meiner 
         Familie in Köln.`,
         career: `
         <p>
           Neben meinem Privatleben investiere ich viel Energie in meine Arbeit und Karriere 
-          da ich eine unglaubliche Leidenschaft für verschiedene Geschäfts- und IT-Bereiche habe. Zum Beispiel, 
-          hatte ich die Möglichkeit, mir ein breites Skillset durch zwei fruchtbare Consulting 
-          Projekten bei 
-            <a href="https://move-ev.de/" target="_blank"> @move e. V.</a> 
-          zum Thema Web-Konzeptionierung zu erwerben. Weitere Einblicke in diese und 
-          andere Projekte finden Sie auf dem Blog (derzeit im Aufbau) und in der 
-            <a href="/projects">Projekt-</a> 
-          bzw. 
+          da ich eine Leidenschaft für verschiedene IT-Themen habe. Deswegen studiere ich 
+          Information Systems (M. Sc.) in Münster und habe zwei Nebenjobs mit IT-Fokus. 
+          Die Jobs sind am Lehrstuhl für Wirtschaftsinformatik und Informationsmanagement als studentische Hilfskraft
+          und als Werkstudent bei viadee in der Forschung und Entwicklung im Data Science Bereich.
+          Zudem konnte ich mein Skillset durch Consulting-Projekte bei 
+            <a href="https://move-ev.de/" target="_blank">move e. V.</a> 
+          erweitern. Außerdem habe ich weitere Projekte abgeschlossen in meiner Freizeit oder in der Universiät. 
+          Weitere Einblicke in diese und 
+          andere Projekte können in meiner
             <a href="/experience">Erfahrungsübersicht</a>.
+          gefunden werden.
         </p>`,
         sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, 
         denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein 
@@ -173,25 +175,23 @@ export default {
           subtitle: "I love to learn and apply my knowledge!"
         },
         introHeader: "What is most important to you?",
-        friendsAndFamily: `For me, my family, friends and my career have the highest 
-        priority, because, without a great social life as a foundation, you can easily 
-        burn out and lose sight of what is important in life.
-        For instance, I cherish great memories with my family and friends from 
-        fascinating trips and amazing parties, e.g. our yearly skiing trips or 
-        Carnival with a group of friends and my family in Cologne.`,
+        friendsAndFamily: `For me, my family and friends are the highest priority, 
+        because without a great social life as a foundation, it's easy to become unbalanced, 
+        burn out and lose sight of what's important in life. 
+        That is why I try to make great memories with my family and friends as often as possible. 
+        These include our annual ski trips, weekend getaways, or carnival with a group of friends and my family in Cologne.`,
         career: `
         <p>
-          Besides my private life, I spend a lot of energy on my work and career 
-          as I am incredibly passionate about various business and IT fields. For example, 
-          I had the opportunity to acquire a wide-range skillset from two fruitful consulting 
-          projects 
-            <a href="https://move-ev.de/" target="_blank"> @move e. V.</a> 
-          concerning web conceptualisation. Further insights into these and 
-          other projects can be found on the blog (currently in development) and in the 
-            <a href="/projects">project</a> 
-          or 
-            <a href="/experience">work experience</a>
-          overview.
+          Besides my private life I invest a lot of energy in my work and career because 
+          I have a passion for different IT topics. That's why I study Information Systems (M. Sc.) 
+          in Münster and have two part-time jobs with IT focus. The jobs are at the Chair of 
+          Information Systems and Information Management as a student assistant and 
+          as a working student at viadee in research and development in the Data Science area. 
+          In addition, I was able to expand my skillset through consulting projects at 
+            <a href="https://move-ev.de/" target="_blank">move e. V.</a>. 
+          I also completed other projects in my spare time or at the university. 
+          More insights into these and other projects can be found in my 
+          <a href="/experience">experience overview</a>. 
         </p>`,
         sport: `
         <p>
