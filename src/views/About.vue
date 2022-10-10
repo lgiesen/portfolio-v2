@@ -34,22 +34,17 @@ div
           //- sport
           v-row.justify-center
             v-col.col-11.col-md-6(order-md="2")
-              v-img(alt="FC Gütersloh Team" src="@/assets/about/FCG.jpg" :max-width="imageWidth")
+              v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
             v-col.col-11.col-md-6(order-md="1")
               p(v-html="$t('sport')")
-          v-row.justify-center
-            v-col.col-11.col-md-6
-              v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
-            v-col.col-11.col-md-6
-              p(v-html="$t('tennisAndSkiing')")
           //- travel
           v-row.justify-center
             v-col.col-11.col-md-6(order-md="2")
-              v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
-            v-col.col-11.col-md-6(order-md="1")
               p(v-html="$t('travel')")
               p {{ $t("quote") }}
               Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
+            v-col.col-11.col-md-6(order-md="1")
+              v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
@@ -121,43 +116,31 @@ export default {
           erweitern. Außerdem habe ich weitere Projekte abgeschlossen in meiner Freizeit oder in der Universiät. 
           Weitere Einblicke in diese und 
           andere Projekte können in meiner
-            <a href="/experience">Erfahrungsübersicht</a>.
+            <a href="/experience">Erfahrungsübersicht</a>
           gefunden werden.
         </p>`,
         sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, 
         denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein 
-        Laufen zu verbessern, da ich im Alter von 16 Jahren einen Halbmarathon gelaufen bin und ich mich damit begnüge, etwa 
-        4 min/km auf meiner üblichen Strecke rund um den Aasee und die Promenade in Münster zu laufen<span class="hidden-md-and-up">
-            (sehen Sie sich meinen Fortschritt 
-            <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">hier</a>
-            an)</span>. 
-        Als Ausblick würde ich gerne einen 
-        Marathon absolvieren, wenn ich genügend Zeit finde, mich darauf vorzubereiten. 
-        Früher habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Regionalliga beweisen. 
-        Es ist jedoch schwierig für mich, die Zeit zu finden, um mich auf einem hohen Niveau 
-        hohem Niveau zu spielen. Trotzdem ist es mein Lieblingssport und ich liebe es, ihn zu spielen, egal 
-        ob entspannt mit Familie und Freunden oder wettkampfmäßig in einer Fußballmannschaft`,
-        tennisAndSkiing: `
-        <p>
-          Außerdem spiele ich gerne Tennis mit Freunden, weil es mir leichter fällt, eine 
-          eine starke Bindung zu Menschen aufzubauen, während ich Sport treibe. 
-          Außerdem liebe ich das unglaubliche Gefühl beim Skifahren wegen des schnellen Gleitens im Schnee 
-          und die tolle Aussicht, während man sich schnell aber elegant den Berg hinunter bewegt. Dieses Gefühl gipfelt 
-          wenn man in einer sportlichen und dynamischen Gruppe abseits der Piste fährt, wo es keine oder nur wenige 
-          Spuren der vorherigen Skifahrer gibt. Denn man spürt, wie man den weichen Schnee formt, der auch 
-          die Sonnenstrahlen reflektiert.
+        Laufen zu verbessern. Z. B. bin ich mit 16 Jahren einen Halbmarathon gelaufen und laufe knapp unter 
+        4 min/km auf meiner Strecke von 6-8 km um den Aasee und ein paar Felder in Münster zu laufen 
+        <span>
+          (Mein Fortschritt ist in 
+            <a href="https://www.strava.com/athletes/17923080" target="_blank">Strava</a>
+          dokumentiert)</span>. 
+        Zur Schulzeit habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Regionalliga beweisen. 
+        Aktuell spiele ich nur entspannt mit Freunden. Dafür mache ich Tennis, Home-Workouts und Beach- und Hallenvolleyball aktiver.
+        </br>
+        Ein anderer Sport, der mir viel Spaß macht ist das Skifahren, weil ich das unglaubliche Gefühl liebe,
+          wenn man schnell durch den Schnee gleitet und die tolle Aussicht genießen kann.
+          Es macht auch Spaß Touren im Gelände mit Aufsteigen zu machen und dann durch unberührten Schnee zu fahren.
+          
           Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach 
-            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech in Österreich</a>. 
-          Gelegentlich habe ich auch die Gelegenheit zum Skifahren in 
-            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil, Schweiz</a> 
-          mit der Hochschule
-            (<a href="https://www.uni-muenster.de/Hochschulsport/" target="_blank">HSP</a>) zu fahren, was 
-          immer ein ereignisreiches und spannendes Erlebnis ist, 
-          denn man lernt neue gleichgesinnte Snowboarder und Skifahrer kennen, lebt, feiert und fährt mit ihnen. 
-          Es wäre toll, in den Bergen Fallschirmspringen zu gehen, mit einer tollen Aussicht 
-          denn das könnte ein ähnliches Gefühl von Adrenalin gepaart mit Freiheit und Lebenslust auslösen 
-          für das Leben. Daher freue ich mich sehr darauf, das eines Tages zu tun!
-        </p>`,
+            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech</a>
+          (Österreich). 
+          Jedes Jahr fahre ich ebenfalls mit dem Hoschulsport nach  
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> 
+          (Schweiz-Frankreich), was immer ein ereignisreiches und spannendes Erlebnis ist, denn man lernt viele coole Leute kennen.
+        `,
         travel: `
         <p>
           Außerdem möchte ich gerne neue Orte erkunden und verschiedene Kulturen kennenlernen, z.B. 
@@ -208,27 +191,16 @@ export default {
           However, it is difficult for me to find the time to commit properly to playing at a 
           high level. Nevertheless, it is my favourite sport and I love playing it, regardless 
           if it is relaxed with family or friends or competitive in a football team.
-        </p>`,
-        tennisAndSkiing: `
-        <p>
-          Additionally, I enjoy playing Tennis with friends because I find it easier to create a 
-          strong bond with people while doing sports. 
-          Moreover, I love the incredible feeling of skiing because of the swift glide in the snow 
-          and the great view while you move fast but elegantly down a mountain. This feeling peaks 
-          when you ski off-slope in a sporty and dynamic group, where there are no or only a few 
-          tracks of previous skiers. Because you can feel how you shape the soft snow, which also 
-          reflects the sun rays.
-          That is why I go on a yearly skiing trip with my family to
-            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech, Austria</a>.
-          Occasionally, I also have the opportunity to ski in 
-            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil, Switzerland</a>
-          with the university 
-            (<a href="https://www.uni-muenster.de/Hochschulsport/" target="_blank">HSP</a>), which is 
-          always an eventful and thrilling experience, 
-          because you get to know, live, party and ski with new like-minded snowboarders and skiers. 
-          It would be awesome to go skydiving and parachuting in the mountains with a great view 
-          because that might spark a similar feeling of adrenalin combined with freedom and lust 
-          for life. Consequently, I am thrilled to do that one day!
+          </br>
+          Another sport that I enjoy a lot is skiing because I love the incredible feeling of gliding 
+          fast through the snow and enjoying the great views. It's also fun to do tours in the 
+          backcountry with ascents and then ski through untouched snow. That's why every year I go 
+          skiing with my family to 
+            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech</a>
+          (Austria). Every year I also go to 
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> 
+          (Switzerland-France) with Hoschulsport, which is always an eventful and exciting experience 
+          because you get to meet a lot of cool people. 
         </p>`,
         travel: `
         <p>
