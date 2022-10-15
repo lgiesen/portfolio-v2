@@ -137,8 +137,7 @@ export default {
         // Bachelor Thesis
         translationKey: "BA",
         year: "2022",
-        link:
-          "https://github.com/lgiesen/DL-Semantic-Segmentation-of-Tree-Stock-in-South-Africa-Using-Satellite-Images",
+        link: "",
         imgSrc: require("@/assets/projects/unet-no-nums-wide.png"),
         // U-Net von mir oder von dem original publisher - Bild von Predictions (unpatchified am besten)
         img_width: "500px",
