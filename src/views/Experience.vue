@@ -13,27 +13,27 @@ div
               p.subheading {{ $t("experienceHero.subtitle") }}
               //- Overview of employers and education
               //- div.center-items.mt-12
-                //- Tablet and desktop version
-                v-row.align-center.hidden-sm-and-down
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[0]")
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[1]")
-                    ExperienceCard(:associationsSrc="associations[2]")
-                    ExperienceCard(:associationsSrc="associations[3]")
-                  v-col
-                    ExperienceCard(:associationsSrc="associations[4]")
-                //- Mobile Version
-                div.hidden-md-and-up
-                  div.align-center.d-flex.flex-wrap.justify-space-around
-                    ExperienceCard(v-for="(association, index) in associations" 
-                      :key="association.title" :associationsSrc="associations[index]")
-    //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
-  
+              //- Tablet and desktop version
+              //- v-row.align-center.hidden-sm-and-down
+              //-   v-col
+              //-     ExperienceCard(:associationsSrc="associations[0]")
+              //-   v-col
+              //-     ExperienceCard(:associationsSrc="associations[1]")
+              //-     ExperienceCard(:associationsSrc="associations[2]")
+              //-     ExperienceCard(:associationsSrc="associations[3]")
+              //-   v-col
+              //-     ExperienceCard(:associationsSrc="associations[4]")
+              //- Mobile Version
+              //- div.hidden-md-and-up
+              //-   div.align-center.d-flex.flex-wrap.justify-space-around
+              //-     ExperienceCard(v-for="(association, index) in associations" 
+              //-       :key="association.title" :associationsSrc="associations[index]")
+              //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
+
   //- ParallaxDivider(:sectionTitle="$t('experienceParallax.title')" 
   //-   :sectionSubtitle="$t('experienceParallax.subtitle')"
   //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
-  
+
   //- no section here because it limits the background's width
   article
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
@@ -47,7 +47,7 @@ div
       //- div.center-items
       //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
       //-     @click="$router.push('/contact')") {{ $t("contact") }}
-    
+
   SocialContactSection.mt-12
 
   //- Recommendation
@@ -115,6 +115,36 @@ export default {
     */
     employment: [
       {
+        title_en: "Software Developer",
+        title_de: "Software Developer",
+        institution: "zeb",
+        link: "https://zeb-consulting.com/en-DE",
+        imageSrc: require("@/assets/workExperience/zeb.png"),
+        location: "Münster",
+        startDate: "08/2021",
+        endDate: "12/2021",
+        description_en: `During my software development internship at zeb, I worked on a Machine 
+        Learning (ML) project where I gained experience with Natural Language Processing (NLP). 
+        By selecting and implementing an alternative Support Vector Machine (SVM) approach, I 
+        was able to increase the accuracy of the ML algorithm from 50% to 83%.`,
+        description_de: `Im Software Development Praktikum bei zeb habe ich an einem Machine 
+        Learning (ML) Projekt gearbeitet, wo ich Erfahrung mit Natural Language Processing (NLP) 
+        gemacht habe. Durch die Auswahl und Implementation eines alternativen Support Vector Machine 
+        (SVM) Ansatzes konnte ich die ML-Algorithmus Genauigkeit von 50% auf 83% erhöhen.`
+      },
+      {
+        title_en: "Working Student in Data Science",
+        title_de: "Werkstudent in Data Science",
+        institution: "viadee",
+        link: "https://www.viadee.de/",
+        imageSrc: require("@/assets/workExperience/viadee.png"),
+        location: "Münster",
+        startDate: "09/2022",
+        endDate: "",
+        description_en: `Application of Machine Learing in IT-projects. Analysis and visualization of data in a Data Science context.`,
+        description_de: `Anwendung von Machine Learing in IT-Projekten. Analyse und Visualisierung von Daten in einem Data Science-Kontext.`
+      },
+      {
         title_en: "Student Assistant",
         title_de: "Studentische Hilfskraft",
         institution: "ERCIS / WWU",
@@ -122,7 +152,7 @@ export default {
         imageSrc: require("@/assets/workExperience/ERCIS.png"),
         location: "Münster",
         startDate: "10/2019",
-        endDate: "",
+        endDate: "03/2023",
         description_en: `I enthusiastically work as a student assistant for Dr. Chasin 
         at the chair of Information Systems and Information Management
         for IT projects and contribute to scientific research at the European Research 
@@ -150,36 +180,6 @@ export default {
         gelernt, eine innovative Perspektive einzubringen, um produktive Teamarbeit zu fördern. 
         Durch den Verlauf meiner Projekte mit intensiver Gruppenarbeit erwarb ich die Fähigkeit 
         zu zielorientiertem Arbeiten, überzeugendem Zeitmanagement und präziser Projektplanung.`
-      },
-      {
-        title_en: "Software Developer",
-        title_de: "Software Developer",
-        institution: "zeb",
-        link: "https://zeb-consulting.com/en-DE",
-        imageSrc: require("@/assets/workExperience/zeb.png"),
-        location: "Münster",
-        startDate: "08/2021",
-        endDate: "12/2021",
-        description_en: `During my software development internship at zeb, I worked on a Machine 
-        Learning (ML) project where I gained experience with Natural Language Processing (NLP). 
-        By selecting and implementing an alternative Support Vector Machine (SVM) approach, I 
-        was able to increase the accuracy of the ML algorithm from 50% to 83%.`,
-        description_de: `Im Software Development Praktikum bei zeb habe ich an einem Machine 
-        Learning (ML) Projekt gearbeitet, wo ich Erfahrung mit Natural Language Processing (NLP) 
-        gemacht habe. Durch die Auswahl und Implementation eines alternativen Support Vector Machine 
-        (SVM) Ansatzes konnte ich die ML-Algorithmus Genauigkeit von 50% auf 83% erhöhen.`
-      },
-      {
-        title_en: "Working Student in Data Science",
-        title_de: "Werkstudent in Data Science",
-        institution: "viadee",
-        link: "https://www.viadee.de/",
-        imageSrc: require("@/assets/workExperience/viadee.png"),
-        location: "Münster",
-        startDate: "09/2020",
-        endDate: "",
-        description_en: `Application of Machine Learing in IT-projects. Analysis and visualization of data in a Data Science context.`,
-        description_de: `Anwendung von Machine Learing in IT-Projekten. Analyse und Visualisierung von Daten in einem Data Science-Kontext.`
       }
       // {
       //   title_en: "Online Payment Internship",
