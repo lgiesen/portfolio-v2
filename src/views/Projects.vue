@@ -19,7 +19,7 @@ div
   //- Share Insights, Best Practices, Learnings
   //- Add what tools I have worked with, which positions I fulfilled
   //- What skills I learned and applied
-  
+
   //- Projects
   article#scroll
     section
@@ -41,10 +41,9 @@ div
                   v-icon(small) mdi-open-in-new
                   | {{ $t('projects.links.website') }}
                   //- AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
-                
+
                 //- file(s)
                 span(v-for="(file, index) in project.files")
-                  //- p {{ "dsj" + file.translationID }}
                   v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.files.length > 0" :href="project.files[index].link" target="_blank")
                     v-icon(small) mdi-file-document-outline
                     | {{ $t('projects.' + project.translationKey + '.files.' + file.translationID) }}
@@ -54,12 +53,12 @@ div
                     //- AnimatedLink(:href="project.files[index].link"
                     //-   :linkText="$t('projects.' + project.files[index].title)"
                     //-   target="_blank")
-                    
+
               //- Icon of project
               v-img.ma-7.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
               //- Project description
               p.text-justify(v-html="$t('projects.' + project.translationKey + '.desc')")
-              
+
               //- Show preview of website, but exclude elements, which do not have an embedLink
               div.text-center(v-if="project.embedLink != ''")
                 //- toggle preview button
@@ -70,7 +69,7 @@ div
                 //- actual preview (embed of other website)
                 v-card.pa-0.my-10(v-show="project.showPreview")
                   embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
-  
+
   //- Bibliography
   section#bibliography
     v-container.grey--text.px-5.text-justify
@@ -120,6 +119,23 @@ export default {
   },
   data: () => ({
     projects: [
+      {
+        // Recommender System Data Integration
+        translationKey: "DImensaToday",
+        year: "2023",
+        link: "https://github.com/MensaToday/mensa-today",
+        imgSrc: require("@/assets/projects/mensaToday.png"),
+        img_width: "80px",
+        id: "DImensaToday",
+        showPreview: false,
+        embedLink: "",
+        files: [
+          {
+            translationID: "mensaToday_poster",
+            link: "projects/MensaToday/MensaToday_Poster.svg"
+          }
+        ]
+      },
       {
         // Internship at zeb: NLP, ML
         translationKey: "NLP",
@@ -250,6 +266,16 @@ export default {
             hide: "Hide Preview",
             show: "Show Preview"
           },
+          DImensaToday: {
+            title: "Münster Mensa Dish Recommender System",
+            desc: `The University of Münster (Westfälische Wilhelms-Universität Münster) is a distributed 
+            across the city with various canteens and bistros that serve different ranges of food which 
+            change weekly. As a student who eats at those places frequently, you have to look through all 
+            dishes of every canteen to find a meal that serves your needs. The idea this recommender system 
+            is to suggest mensa meals based on various different factors, such as your eating habits, 
+            location (based on semester schedule), weather and many more.`,
+            files: { mensaToday_poster: "Poster" }
+          },
           NLP: {
             title: "Language Analysis with Machine Learning (NLP with SVM)",
             desc: `<p style="text-align:center;">
@@ -355,6 +381,16 @@ export default {
           preview: {
             hide: "Vorschau verbergen",
             show: "Vorschau anzeigen"
+          },
+          DImensaToday: {
+            title: "Münster Mensa Dish Recommender System",
+            desc: `Die Westfälische Wilhelms-Universität Münster ist über das gesamte Stadtgebiet verteilt und verfügt 
+            über verschiedene Mensen und Bistros, die ein wöchentlich wechselndes Angebot an Speisen haben. Als Student, 
+            der häufig in diesen Mensen isst, muss man alle Gerichte der einzelnen Mensen durchsehen, um eine Mahlzeit zu 
+            finden, die den eigenen Bedürfnissen entspricht. Die Idee dieses Empfehlungssystems ist es, Mensa-Gerichte 
+            auf der Grundlage verschiedener Faktoren wie Essgewohnheiten, Standort (basierend auf dem Semesterplan), 
+            Wetter und vielem mehr vorzuschlagen.`,
+            files: { mensaToday_poster: "Poster" }
           },
           NLP: {
             title: "Sprachanalyse mit Machine Learning (NLP mit SVM)",
