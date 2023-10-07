@@ -15,7 +15,8 @@ div
             ScrollHero.mt-16.pt-16
           v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
             v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
-              v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
+              //- v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
+              v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen-nature.jpg" max-width="90vw")
   //- About me texts alternating with corresponding images
   article
     section#scroll
@@ -25,26 +26,26 @@ div
           //- friends and family
           v-row.justify-center
             v-col.col-11.col-md-6
-              v-img(alt="Leo Giesen Familie" src="@/assets/about/Familie_Aegina.jpg" :max-width="imageWidth")
+              v-img(alt="Leo Giesen Familie" src="@/assets/about/standesamt-familie.jpeg" :max-width="imageWidth")
             v-col.col-11.col-md-6
               p {{ $t("friendsAndFamily") }}
               //- career
               p(v-html="$t('career')")
             //- TODO Link Erfahrungsbericht & Projekt does not work
-          //- sport
-          v-row.justify-center
-            v-col.col-11.col-md-6(order-md="2")
-              v-img(alt="Ski fahren mit HSP" src="@/assets/about/Ski_HSP.jpg" :max-width="imageWidth")
-            v-col.col-11.col-md-6(order-md="1")
-              p(v-html="$t('sport')")
-          //- travel
-          v-row.justify-center
-            v-col.col-11.col-md-6(order-md="2")
-              p(v-html="$t('travel')")
-              p {{ $t("quote") }}
-              Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
-            v-col.col-11.col-md-6(order-md="1")
-              v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+            //- sport
+            v-row.justify-center
+              v-col.col-11.col-md-6(order-md="2")
+                v-img(alt="Ski fahren mit HSP" src="@/assets/about/ski-aufsteigen.jpeg" :max-width="imageWidth" max-height="400px")
+              v-col.col-11.col-md-6(order-md="1")
+                p(v-html="$t('sport')")
+            //- travel
+            v-row.justify-center
+              v-col.col-11.col-md-6(order-md="2")
+                p(v-html="$t('travel')")
+                p {{ $t("quote") }}
+                Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
+              v-col.col-11.col-md-6(order-md="1")
+                v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}

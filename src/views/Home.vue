@@ -2,13 +2,13 @@
 div
   //- Hero Area
   //- section
-    //- https://github.com/johndatserakis/vue-video-section
-    //- Video by Michal Marek from Pexels
-    //- vue-video-section(
+  //- https://github.com/johndatserakis/vue-video-section
+  //- Video by Michal Marek from Pexels
+  //- vue-video-section(
 
-    //-   :mp4Source="require('../assets/background/video/coast.mp4')"
-    //-   :posterSource="require('../assets/background/nature.jpg')")
-    //- v-container(slot="overlay-content")
+  //-   :mp4Source="require('../assets/background/video/coast.mp4')"
+  //-   :posterSource="require('../assets/background/nature.jpg')")
+  //- v-container(slot="overlay-content")
   section.fullwidth
     div
       HeroBackgroundGradientGroup.p-absolute
@@ -22,7 +22,7 @@ div
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card
-              v-img(alt="Leo Giesen Profil" src="@/assets/profile/Leo Giesen Profile.jpg" max-height="60vh")
+              v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen.jpeg" max-height="60vh")
     //- Intro card text
     //- Create another section to create overlap with hero area 
     //- while still maintaining the max-width of all sections
@@ -30,10 +30,6 @@ div
       v-container#scroll
         v-card.pa-4
           v-row
-            //- v-col.col-12.col-md-6.center-items
-              //- should be replaced with an animated SVG
-              v-card
-                v-skeleton-loader(type="card" width="300")
             v-col
               //- with other column: .col-12.col-md-6.pr-4
               v-card-title.justify-center {{ $t("homeIntro.title") }}
@@ -421,6 +417,7 @@ $secondary: var(--v-secondary-base);
 // }
 .animated-gradient-box {
   position: relative;
+
   &::after {
     --border-width: 3px;
     content: "";
@@ -454,6 +451,7 @@ $secondary: var(--v-secondary-base);
     // );
   }
 }
+
 .animated-gradient-box.in:after {
   animation: gradient-animation 4s ease-in-out infinite;
   // With enter-animation:
@@ -466,13 +464,16 @@ $secondary: var(--v-secondary-base);
   0% {
     background-position: 15% 0%;
   }
+
   50% {
     background-position: 85% 100%;
   }
+
   100% {
     background-position: 15% 0%;
   }
 }
+
 // You could also animate the polygon (this is not as desired at the moment)
 // Hence, it is not in production
 // @keyframes frame-enter {

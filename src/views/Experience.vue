@@ -115,6 +115,19 @@ export default {
     */
     employment: [
       {
+        title_en: "1. Chairman for Human Resources, Quality Management and IT",
+        title_de:
+          "Vorstandsvorsitzender für Personal, Qualitätsmanagement und IT",
+        institution: "move e. V.",
+        link: "https://move-ev.de/",
+        imageSrc: require("@/assets/workExperience/move-title.png"),
+        location: "Münster",
+        startDate: "08/2023",
+        endDate: "",
+        description_en: `Through unwavering dedication and a relentless pursuit of knowledge, I honed my leadership skills to become the inaugural chairman overseeing Human Resources, Quality Management, and IT within our student consultancy. Early on, I recognized the power of effective communication and empathy in fostering a collaborative environment. Delving into diverse projects, I cultivated a keen eye for quality and a methodical approach to problem-solving. Embracing the rapid evolution of technology, I immersed myself in IT solutions, ensuring our consultancy operated seamlessly. This journey has not only shaped me into a leader but also instilled a deep sense of responsibility to empower and inspire others in their professional journeys.`,
+        description_de: `Durch unerschütterliches Engagement und unermüdliches Streben nach Wissen habe ich meine Führungsqualitäten verfeinert und wurde zum ersten Vorsitzenden, der für die Bereiche Personalwesen, Qualitätsmanagement und IT in unserer studentischen Unternehmensberatung zuständig ist. Schon früh erkannte ich, wie wichtig effektive Kommunikation und Einfühlungsvermögen für die Förderung eines kollaborativen Umfelds sind. Indem ich mich in verschiedene Projekte einarbeitete, entwickelte ich ein scharfes Auge für Qualität und einen methodischen Ansatz zur Problemlösung. Mit der rasanten Entwicklung der Technologie beschäftigte ich mich eingehend mit IT-Lösungen und sorgte dafür, dass unser Beratungsunternehmen reibungslos funktioniert. Dieser Weg hat mich nicht nur zu einer Führungspersönlichkeit gemacht, sondern mir auch ein tiefes Verantwortungsgefühl dafür vermittelt, andere auf ihrem beruflichen Weg zu unterstützen und zu inspirieren.`
+      },
+      {
         title_en: "Software Developer",
         title_de: "Software Developer",
         institution: "zeb",
@@ -140,7 +153,7 @@ export default {
         imageSrc: require("@/assets/workExperience/viadee.png"),
         location: "Münster",
         startDate: "09/2022",
-        endDate: "",
+        endDate: "08/2023",
         description_en: `Application of Machine Learing in IT-projects. Analysis and visualization of data in a Data Science context.`,
         description_de: `Anwendung von Machine Learing in IT-Projekten. Analyse und Visualisierung von Daten in einem Data Science-Kontext.`
       },
