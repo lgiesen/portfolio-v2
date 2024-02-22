@@ -31,19 +31,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
   },
-  // {
-  //   path: "/blog",
-  //   name: "BlogHome",
-  //   component: () =>
-  //     import(/* webpackChunkName: "blogHome" */ "../views/blog/BlogHome.vue"),
-  //   children: [
-  //     {
-  //       path: "testpost",
-  //       name: "TestPost",
-  //       component: () => import("@/views/blog/posts/TestPost.vue")
-  //     }
-  //   ]
-  // },
+  {
+    path: "/links",
+    name: "Links",
+    component: () =>
+      import(/* webpackChunkName: "links" */ "../views/Links.vue")
+  },
   {
     path: "/sandbox",
     name: "Sandbox",
