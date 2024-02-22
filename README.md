@@ -7,7 +7,7 @@ This project is deployed at [leogiesen.de](https://leogiesen.de) and on [Netlify
 ## Project Setup
 
 1. [VS Code](https://code.visualstudio.com "VS Code") is the recommended code editor
-2. [Node.js](https://nodejs.org/en/download/ "Node 14.15.1")
+2. [Node.js](https://nodejs.org/en/download/ "Node")
 3. [Vue.js](https://v3.vuejs.org/guide/installation.html#cli): `npm install -g @vue/cli #Install Command Line Interface`
 
 Check your versions:
@@ -38,7 +38,7 @@ Subsequently, the dist directory contents have to be copied into the portfolio-v
 ### SEO (Search Engine Optimization)
 
 - Keep visitors on your website (dwell time) by providing excellent content (!) (define important keywords, which people search to get to your website)
-- Improve loading speed (cf. Improve Performance)
+- Improve loading speed (see Improve Performance)
 - Optimize your HTML
   - Use alt attributes in images so that the search engine knows what you display
   - Use aria tags for more complicated displayed content, e.g., sliders
