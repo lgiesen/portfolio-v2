@@ -13,8 +13,8 @@ This project is deployed at [leogiesen.de](https://leogiesen.de) and on [Netlify
 Check your versions:
 
 ```
-   node --version              # v16.14.2
-   npm --version               # 8.5.0
+   node --version              # v21.6.2
+   npm --version               # 10.2.4
    vue --version               # @vue/cli 5.0.8
 ```
 
