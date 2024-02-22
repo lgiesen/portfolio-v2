@@ -1,6 +1,6 @@
 <template lang="pug">
 v-btn(icon @click="toggleTheme") 
-    v-icon mdi-brightness-6
+  v-icon mdi-theme-light-dark
 </template>
 
 <script>
