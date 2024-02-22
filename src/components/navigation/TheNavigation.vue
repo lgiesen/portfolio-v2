@@ -132,7 +132,7 @@ export default {
   (-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))
 ) {
   .appBar {
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-backdrop-filter: blur(2em);
     backdrop-filter: blur(2em);
   }
