@@ -15,7 +15,7 @@ Check your versions:
 ```
    node --version              # v16.14.2
    npm --version               # 8.5.0
-   vue --version               # @vue/cli 4.5.11
+   vue --version               # @vue/cli 5.0.8
 ```
 
 ### Serve/Start Front-end - Compiles and hot-reloads for development
