@@ -14,7 +14,7 @@
     "emailjs-com": "^2.6.4",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-i18n": "^8.22.3",
     "vue-router": "^3.2.0",
     "vue-video-section": "^1.0.2",
@@ -41,7 +41,7 @@
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-i18n": "^2.3.2",
     "vue-cli-plugin-vuetify": "~2.2.2",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "vuetify-loader": "^1.7.0",
     "webpack": "^5.90.3"
   }
