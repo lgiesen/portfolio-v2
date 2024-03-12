@@ -16,7 +16,7 @@ div
   //- no section here because it limits the background's width
   article
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
-      section
+      section#scroll
         //- CV: work experience
         CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
         //- Education
