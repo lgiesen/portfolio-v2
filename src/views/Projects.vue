@@ -404,11 +404,6 @@ The tool simplifies the application of title case to texts and entire bibliograp
             desc: `
             WatchTrainer played a significant role in the advancement of wearable sports technology, introducing a sports platform that utilizes the capabilities of devices like the Apple Watch. In this innovative project, I was responsible for leading the frontend development with Vue.js, aiming to provide an intuitive and seamless user experience. This project highlighted my ability to craft engaging digital solutions that blend smoothly with the latest technology.`
           }
-          // portfolioV1: {
-          //   title: "Web Development: Portfolio v1",
-          //   desc: `I created the first version of my portfolio website in 2019
-          //   with HTML5, CSS3, JavaScript and Bootstrap to understand front-end web development.`
-          // }
         }
       },
       de: {
@@ -545,11 +540,6 @@ Das Werkzeug ermöglicht eine einfache Anwendung der Titel-Kapitalisierung auf T
               "Sportler Stärken: Frontend-Innovation für eine Wearable-Sportplattform",
             desc: `WatchTrainer spielte eine bedeutende Rolle in der Weiterentwicklung tragbarer Sporttechnologien und bot eine auf dem Austausch basierende Sportplattform, die die Möglichkeiten von Geräten wie der Apple Watch nutzt. In diesem innovativen Projekt war ich für die Leitung der Frontend-Entwicklung mit Vue.js verantwortlich, um eine intuitive und nahtlose Benutzererfahrung zu sicherstellen. Diese Erfahrung hebt meine Fähigkeit hervor, ansprechende digitale Lösungen zu entwickeln, die sich reibungslos in die neueste Technologie einfügen.`
           }
-          // portfolioV1: {
-          //   title: "Web Development: Portfolio v1",
-          //   desc: `Die erste Version meiner Portfolio-Website habe ich 2019 mit
-          //   HTML5, CSS3, JavaScript und Bootstrap erstellt, um die Front-End-Webentwicklung zu verstehen.`
-          // }
         }
       }
     }
