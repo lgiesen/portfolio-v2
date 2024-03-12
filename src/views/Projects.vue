@@ -28,7 +28,7 @@ div
                 | {{ $t('projects.' + project.translationKey + '.title') }}
               //- Links to repository and/or website
               div.mt-5
-                span {{project.year}}
+                span(v-if="project.year") {{project.year}}
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != null" :href="project.link" target="_blank") 
                   v-icon.mr-2(small) mdi-code-tags
                   | {{ $t('projects.links.repository') }}
@@ -231,6 +231,33 @@ export default {
         translationKey: "goc",
         files: []
       },
+      // portfolio website
+      {
+        year: null,
+        link: null,
+        imgSrc: require("@/assets/logo/light/logo.svg"),
+        img_width: "100px",
+        translationKey: "portfolioWebDevelopment",
+        files: []
+      },
+      // move Web-Konzeption und -Implementierung Kanzlei
+      {
+        year: "2020-2021",
+        link: null,
+        imgSrc: "",
+        img_width: "100px",
+        translationKey: "lawFirmWebDevelopment",
+        files: []
+      },
+      // move Entwicklung eines eBusiness einschließlich Online Branding
+      {
+        year: "2019-2020",
+        link: null,
+        imgSrc: "",
+        img_width: "100px",
+        translationKey: "eBusinessWebDevelopment",
+        files: []
+      },
       // research: WatchTrainer
       {
         year: "2019-2020",
@@ -397,6 +424,18 @@ export default {
             desc: `In the pursuit of academic rigor and coherence, the capitalization guidelines tool emerges as a pivotal innovation, offering a standardized approach to title capitalization within the realm of academic writing. This project is designed to enhance the clarity and uniformity of titles across scholarly publications by adhering to APA style title case capitalization. It is a testament to the importance of presenting work in a manner that is both accessible and memorable to readers.
               The tool simplifies the application of title case to texts and entire bibliographies, significantly boosting efficiency in academic research and presentations. Through the integration of existing code, modified and optimized for this purpose, this project not only showcases my ability to understand and adapt the work of fellow programmers but also highlights my competency in collaborative development. Written in Rust and Python, the implementation facilitates the work of scholars, thereby enriching the academic community's ability to communicate research findings effectively.`
           },
+          lawFirmWebDevelopment: {
+            title: "Enhancing Digital Presence: Web Development for a Law Firm",
+            desc: `As part of a team, I contributed to the implementation of a website aimed at creating online brand awareness for the consultancy services of a law firm. The website was developed using WordPress, incorporating multiple plugins and customizations to ensure both functionality and visual appeal. My close collaboration with the customer, taking their preferences into account through multiple feedback loops, resulted in a customer-centric solution. This project showcases my skills in implementation, communication, and teamwork, highlighting my value as a team member capable of successfully executing sophisticated digital projects.`
+          },
+          portfolioWebDevelopment: {
+            title: "My Digital Showcase: Portfolio Website with Vue.js",
+            desc: `Since 2021, I have been maintaining my portfolio website, implemented using Vue.js 2. This project serves not only as a digital showcase of my work but also highlights my creative approach and capabilities in the web development domain. Opting for Vue.js 2 for its development demonstrates my proficiency with modern JavaScript frameworks and my ability to create engaging and user-friendly web applications. The ongoing maintenance and updating of the site reflect my commitment to quality work and pursuit of technical excellence. This project effectively showcases how I leverage innovative technologies to produce creative solutions that are both aesthetically pleasing and functional.`
+          },
+          eBusinessWebDevelopment: {
+            title: "Development of an eBusiness Including Online Branding",
+            desc: `As a key member of the project team, I contributed significantly to the development of an online video shop, focusing on modern design, innovative content creation, and explanatory product videos. The platform was developed using WordPress, along with various plugins and customizations, to ensure both visual appeal and content richness. Through close teamwork and continuous coordination with the customer, their preferences were effectively integrated into the project, showcasing my skills in implementation, communication, and customer-centricity. This project highlights my ability to develop and implement innovative digital solutions within a team context.`
+          },
           watchtrainer: {
             title:
               "Empowering Athletes: Frontend Innovation for Wearable Sports Platform",
@@ -540,8 +579,20 @@ export default {
             title:
               "Förderung der Akademischen Exzellenz: Das Tool zur Titel-Kapitalisierung",
             desc: `Mit dem Ziel, wissenschaftliche Präzision und Konsistenz zu fördern, stellt das Titel-Kapitalisierungs-Werkzeug eine außerordentliche Innovation dar. Es bietet einen standardisierten Ansatz für die Kapitalisierung von Titeln im akademischen Schreiben, um Klarheit und Einheitlichkeit in wissenschaftlichen Publikationen zu gewährleisten. Dieses Projekt dient der Verbesserung der Zugänglichkeit und Prägnanz von Titeln, was deren Verständlichkeit und Einprägsamkeit für Leser erhöht.
-
-Das Werkzeug ermöglicht eine einfache Anwendung der Titel-Kapitalisierung auf Texte und gesamte Bibliografien, was die Effizienz in der akademischen Forschung und bei Präsentationen erheblich steigert. Durch die Integration und Optimierung bestehender Programmierarbeit illustriert dieses Projekt meine Fähigkeit, den Code anderer zu verstehen, anzupassen und effektiv im Team zu arbeiten. Die Umsetzung in Rust und Python erleichtert die wissenschaftliche Arbeit und steigert deren Effizienz um ein Vielfaches.`
+              Das Werkzeug ermöglicht eine einfache Anwendung der Titel-Kapitalisierung auf Texte und gesamte Bibliografien, was die Effizienz in der akademischen Forschung und bei Präsentationen erheblich steigert. Durch die Integration und Optimierung bestehender Programmierarbeit illustriert dieses Projekt meine Fähigkeit, den Code anderer zu verstehen, anzupassen und effektiv im Team zu arbeiten. Die Umsetzung in Rust und Python erleichtert die wissenschaftliche Arbeit und steigert deren Effizienz um ein Vielfaches.`
+          },
+          lawFirmWebDevelopment: {
+            title:
+              "Digitale Präsenz stärken: Web-Konzeption für eine Anwaltskanzlei",
+            desc: `Im Rahmen eines Teams trug ich zur Implementierung einer Website bei, die das Ziel verfolgte, Online-Markenbewusstsein für die Beratungstätigkeit einer Anwaltskanzlei zu schaffen. Die Entwicklung erfolgte mittels WordPress, wobei zahlreiche Plugins und Anpassungen zum Einsatz kamen, um die Website nicht nur funktional, sondern auch visuell ansprechend zu gestalten. Durch die enge Zusammenarbeit mit dem Kunden und die Berücksichtigung seiner Wünsche in mehreren Feedbackschleifen, konnte eine kundenorientierte Lösung realisiert werden. Dieses Projekt demonstriert meine Fähigkeiten in der Implementierung, Kommunikation und Teamarbeit und unterstreicht meine Rolle als wertvolles Teammitglied, das in der Lage ist, anspruchsvolle digitale Projekte erfolgreich umzusetzen.`
+          },
+          portfolioWebDevelopment: {
+            title: "Mein Digitales Schaufenster: Portfolio-Website mit Vue.js",
+            desc: `Seit 2021 betreue ich meine eigene Portfolio-Website, die mit Vue.js 2 implementiert wurde. Dieses Projekt dient nicht nur als digitales Schaufenster meiner bisherigen Arbeiten, sondern unterstreicht auch meinen kreativen Ansatz und meine Fähigkeiten im Bereich der Webentwicklung. Die Wahl von Vue.js 2 für die Umsetzung zeigt meine Kompetenz im Umgang mit modernen JavaScript-Frameworks und meine Fähigkeit, ansprechende sowie benutzerfreundliche Webanwendungen zu entwickeln. Die kontinuierliche Wartung und Aktualisierung der Website spiegeln mein Engagement für qualitativ hochwertige Arbeit und das Streben nach technischer Exzellenz wider. Dieses Projekt demonstriert effektiv, wie ich innovative Technologien einsetze, um kreative Lösungen zu schaffen, die sowohl ästhetisch als auch funktional überzeugen.`
+          },
+          eBusinessWebDevelopment: {
+            title: "Entwicklung eines eBusiness einschließlich Online Branding",
+            desc: `Als Teil des Projektteams trug ich maßgeblich zur Entwicklung eines Online-Video-Shops bei, der sich durch modernes Design, kreative Content-Erstellung und integrierte erklärende Produktvideos auszeichnet. Die Plattform wurde mit WordPress und einer Reihe von Plugins und Anpassungen realisiert, um nicht nur optisch, sondern auch inhaltlich zu überzeugen. Durch die enge Zusammenarbeit im Team und die kontinuierliche Abstimmung mit dem Kunden wurden dessen Wünsche effektiv in das Projekt integriert, was meine Kompetenzen in den Bereichen Implementierung, Kommunikation und Kundenorientierung unter Beweis stellt. Dieses Projekt verdeutlicht meine Fähigkeit, innovative digitale Lösungen im Teamkontext zu entwickeln und umzusetzen.`
           },
           watchtrainer: {
             title:
