@@ -59,7 +59,9 @@ To publish the changes, the "dist" directory contents are to be copied and pushe
 
   - [Google Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
 
-   <img src="https://moz.imgix.net/learn/guides/Mozlows-01-outline.svg?auto=format&ch=Width&fit=max&q=50&s=e088165a17e355b8186964266ef71ca5" width="500px">
+   <img src="SEO.svg" width="500px"> 
+   
+   (see [Moz](https://moz.com/beginners-guide-to-seo))
 
 ### Improve Performance
 
