@@ -11,28 +11,7 @@ div
             v-col.white--text
               h1.display-3.font-weight-thin.mb-12.text-break(v-html="$t('experienceHero.title')")
               p.subheading {{ $t("experienceHero.subtitle") }}
-              //- Overview of employers and education
-              //- div.center-items.mt-12
-              //- Tablet and desktop version
-              //- v-row.align-center.hidden-sm-and-down
-              //-   v-col
-              //-     ExperienceCard(:associationsSrc="associations[0]")
-              //-   v-col
-              //-     ExperienceCard(:associationsSrc="associations[1]")
-              //-     ExperienceCard(:associationsSrc="associations[2]")
-              //-     ExperienceCard(:associationsSrc="associations[3]")
-              //-   v-col
-              //-     ExperienceCard(:associationsSrc="associations[4]")
-              //- Mobile Version
-              //- div.hidden-md-and-up
-              //-   div.align-center.d-flex.flex-wrap.justify-space-around
-              //-     ExperienceCard(v-for="(association, index) in associations" 
-              //-       :key="association.title" :associationsSrc="associations[index]")
-              //- v-parallax(src="@/assets/background/Aasee.jpg" height="800" )
-
-  //- ParallaxDivider(:sectionTitle="$t('experienceParallax.title')" 
-  //-   :sectionSubtitle="$t('experienceParallax.subtitle')"
-  //-   imgSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
+              ScrollHero.mt-16.pt-16
 
   //- no section here because it limits the background's width
   article
@@ -42,11 +21,6 @@ div
         CardGroup#experience(:sectionTitle="$t('workExperience')" :iterableObject="employment")
         //- Education
         CardGroup#education(:sectionTitle="$t('education')" :iterableObject="education")
-
-      //- Contact Me Button:
-      //- div.center-items
-      //-   v-btn.pa-7.gradient-btn.round.ma-4.ma-md-10(rounded
-      //-     @click="$router.push('/contact')") {{ $t("contact") }}
 
   SocialContactSection.mt-12
 
@@ -69,19 +43,17 @@ div
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-// import ExperienceCard from "@/components/ExperienceCard.vue";
 import CardGroup from "@/components/CardGroup.vue";
-import ParallaxDivider from "@/components/ParallaxDivider.vue";
 import SocialContactSection from "@/components/SocialContactSection.vue";
+import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Experience",
   components: {
-    // ExperienceCard,
-    ParallaxDivider,
     CardGroup,
-    SocialContactSection
+    SocialContactSection,
+    ScrollHero
   },
   data: () => ({
     /*
