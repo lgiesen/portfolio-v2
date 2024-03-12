@@ -120,35 +120,16 @@ export default {
             <a href="/experience">Erfahrungsübersicht</a>
           gefunden werden.
         </p>`,
-        sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, 
-        denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein 
-        Laufen zu verbessern. Z. B. bin ich mit 16 Jahren einen Halbmarathon gelaufen und laufe knapp unter 
-        4 min/km auf meiner Strecke von 6-8 km um den Aasee und ein paar Felder in Münster zu laufen 
-        <span>
-          (Mein Fortschritt ist in 
-            <a href="https://www.strava.com/athletes/17923080" target="_blank">Strava</a>
-          dokumentiert)</span>. 
-        Zur Schulzeit habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Regionalliga beweisen. 
-        Aktuell spiele ich nur entspannt mit Freunden. Dafür mache ich Tennis, Home-Workouts und Beach- und Hallenvolleyball aktiver.
-        </br>
-        Ein anderer Sport, der mir viel Spaß macht ist das Skifahren, weil ich das unglaubliche Gefühl liebe,
-          wenn man schnell durch den Schnee gleitet und die tolle Aussicht genießen kann.
-          Es macht auch Spaß Touren im Gelände mit Aufsteigen zu machen und dann durch unberührten Schnee zu fahren.
-          
-          Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach 
-            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech</a>
-          (Österreich). 
-          Jedes Jahr fahre ich ebenfalls mit dem Hoschulsport nach  
-            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> 
-          (Schweiz-Frankreich), was immer ein ereignisreiches und spannendes Erlebnis ist, denn man lernt viele coole Leute kennen.
-        `,
+        sport: `Neben der Arbeit und meinem Privatleben bin ich auch sportlich sehr ambitioniert, denn ich möchte auf verschiedene Weise an meine Grenzen gehen: Zum Beispiel versuche ich, mein Laufen zu verbessern. Außerdem bin ich mit 16 Jahren einen Halbmarathon gelaufen und laufe knapp unter 4 min/km auf meiner Strecke von 10 km. Innerhalb der letzten Jahre habe ich mich auf einen Halbmarathon in unter 1h 30 min gesteigert (siehe <a href="https://www.strava.com/athletes/17923080" target="_blank">Strava</a>). Zur Schulzeit habe ich ein Jahrzehnt lang Fußball gespielt und konnte mich in der Bezirksliga beweisen. Aktuell spiele ich nur entspannt mit Freunden. Dafür mache ich Tennis, Home-Workouts und Beach- und Hallenvolleyball aktiver.
+          </br>
+          Mein Lieblings-Sport ist das Skifahren, weil ich das unglaubliche Gefühl liebe, wenn man schnell durch den Schnee gleitet und die tolle Aussicht genießen kann. Es macht auch Spaß Touren im Gelände mit Aufsteigen zu machen und dann durch unberührten Schnee zu fahren.
+          Deshalb fahre ich jedes Jahr mit meiner Familie zum Skifahren nach <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Lech</a> (Österreich), mit Freunden nach <a href="https://www.bergfex.com/soelden/" target="_blank">Sölden</a> oder mit dem Hoschulsport nach  
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> (Schweiz-Frankreich), was immer ein ereignisreiches und spannendes Erlebnis ist, denn man lernt viele coole Leute kennen.`,
         travel: `
-        <p>
           Außerdem möchte ich gerne neue Orte erkunden und verschiedene Kulturen kennenlernen, z.B. 
           Asien und Süd- oder Mittelamerika. Konkret würde ich gerne nach Japan und Argentinien reisen, 
-          Chile oder Nicaragua. Außerdem könnte ich mir vorstellen, für längere Zeit in Kanada zu bleiben und dort zu arbeiten, da 
-          ich tolle Landschaften mag und es nach allem, was ich gehört habe, viel zu bieten hat.
-        </p>
+          Chile oder Nicaragua. Außerdem würde ich gerne Kanada besuchen, weil 
+          ich tolle Landschaften mag und nach dem, was ich gehört habe, hat es viel zu bieten.
         `,
         quote:
           "Zum Schluss möchte ich mit einem Zitat abschließen, das meine Lebenseinstellung auf den Punkt bringt:"
@@ -166,7 +147,6 @@ export default {
         That is why I try to make great memories with my family and friends as often as possible. 
         These include our annual ski trips, weekend getaways, or carnival with a group of friends and my family in Cologne.`,
         career: `
-        <p>
           Besides my private life I invest a lot of energy in my work and career because 
           I have a passion for different IT topics. That's why I study Information Systems (M. Sc.) 
           in Münster and have two part-time jobs with IT focus. The jobs are at the Chair of 
@@ -176,41 +156,19 @@ export default {
             <a href="https://move-ev.de/" target="_blank">move e. V.</a>. 
           I also completed other projects in my spare time or at the university. 
           More insights into these and other projects can be found in my 
-          <a href="/experience">experience overview</a>. 
-        </p>`,
+          <a href="/experience">experience overview</a>.`,
         sport: `
-        <p>
-          Apart from work and my private life, I am also very ambitious about sports, 
-          because I want to push my limits in various ways: For example, I try to improve my 
-          running as I have run a half-marathon at the age of 16 and I am content to run about 
-          4 min/km on my usual route around the Aasee and Promenade in Münster<span class="hidden-md-and-up">
-              (check out my progress 
-              <a href="https://www.runtastic.com/user/68B0X1VDRZ87HHRR" target="_blank">here</a>
-              )</span>. 
-          As an outlook, I would like to complete a 
-          marathon in the near future, if I find sufficient time to prepare for it. 
-          I used to play football for a decade and managed to prove myself in the regional league. 
-          However, it is difficult for me to find the time to commit properly to playing at a 
-          high level. Nevertheless, it is my favourite sport and I love playing it, regardless 
-          if it is relaxed with family or friends or competitive in a football team.
-          </br>
-          Another sport that I enjoy a lot is skiing because I love the incredible feeling of gliding 
-          fast through the snow and enjoying the great views. It's also fun to do tours in the 
-          backcountry with ascents and then ski through untouched snow. That's why every year I go 
-          skiing with my family to 
-            <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Warth/Lech</a>
-          (Austria). Every year I also go to 
-            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> 
-          (Switzerland-France) with Hoschulsport, which is always an eventful and exciting experience 
-          because you get to meet a lot of cool people. 
-        </p>`,
+        "In addition to work and my private life, I am also very ambitious in sports, as I want to push my limits in various ways: For example, I try to improve my running. Moreover, I ran a half marathon at the age of 16 and run just under 4 min/km on my 10 km route. Over the last few years, I have improved to running a half marathon in under 1h 30 min (see <a href="https://www.strava.com/athletes/17923080" target="_blank">Strava</a>). During my school years, I played football for a decade and was able to prove myself in the district league. Currently, I only play casually with friends. Instead, I am more active in tennis, home workouts, and beach and indoor volleyball.
+        </br>
+        My favorite sport is skiing because I love the incredible feeling of gliding quickly through the snow and enjoying the great views. It is also fun to do off-piste tours with ascents and then ski through untouched snow.
+        "Therefore, I go skiing every year with my family to <a href="https://www.bergfex.com/lech-zuers-arlberg/" target="_blank">Lech</a> (Austria), with friends to <a href="https://www.bergfex.com/soelden/" target="_blank">Sölden</a>, or with the university sports to  
+            <a href="https://www.bergfex.com/portes-du-soleil/" target="_blank">Portes du Soleil</a> (Switzerland-France), which is always an eventful and exciting experience because you get to meet many cool people.
+        `,
         travel: `
-        <p>
           What is more, I would like to explore new places and get to know different cultures, e.g. 
           Asia and South or Central America. Specifically, I would like to travel to Japan and Argentina, 
-          Chile or Nicaragua. Additionally, I could imagine staying a long time in Canada and working there as 
-          I enjoy great landscapes and from what I have heard, it has a lot to offer.
-        </p>`,
+          Chile or Nicaragua. Additionally, I would like to visit Canada because 
+          I enjoy great landscapes and from what I have heard, it has a lot to offer.`,
         quote:
           "Lastly, I'd like to conclude with a quote, which sums up my life attitude:"
       }

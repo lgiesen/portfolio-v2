@@ -27,25 +27,25 @@ div
         div(v-for="project in projects" :id="project.id")
           v-row.justify-center
             v-col.col-11.col-md-7.text-center
-              h2.display-2.font-weight-thin.mb-0(style="word-break: break-word;")
+              h2.display-1.font-weight-thin.mb-0(style="word-break: break-word;")
                 | {{ $t('projects.' + project.translationKey + '.title') }}
               //- Links to repository and/or website
               div.mt-5
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != ''" :href="project.link" target="_blank") 
-                  v-icon(small) mdi-code-tags
+                  v-icon.mr-2(small) mdi-code-tags
                   | {{ $t('projects.links.repository') }}
                   //- AnimatedLink(:href="project.link" :linkText="$t('projects.links.repository')" target="_blank" prepend-icon="mdi-link-variant")
 
                 //- website
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.embedLink != ''" :href="project.embedLink" target="_blank") 
-                  v-icon(small) mdi-open-in-new
+                  v-icon.mr-2(small) mdi-open-in-new
                   | {{ $t('projects.links.website') }}
                   //- AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
 
                 //- file(s)
                 span(v-for="(file, index) in project.files")
                   v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.files.length > 0" :href="project.files[index].link" target="_blank")
-                    v-icon(small) mdi-file-document-outline
+                    v-icon.mr-2(small) {{ fileIcon(project.files[index].translationID) }}
                     | {{ $t('projects.' + project.translationKey + '.files.' + file.translationID) }}
 
                     //- "$t('projects.links.' + project.id)"
@@ -54,7 +54,7 @@ div
                     //-   :linkText="$t('projects.' + project.files[index].title)"
                     //-   target="_blank")
 
-              //- Icon of project
+              //- Icon or image of project
               v-img.ma-7.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
               //- Project description
               p.text-justify(v-html="$t('projects.' + project.translationKey + '.desc')")
@@ -76,32 +76,13 @@ div
       h2.mb-5 {{ this.$store.getters.isDE ? "Literaturverzeichnis" : "Bibliography" }}
       p [RFB15] Olaf Ronneberger, Philipp Fischer, and Thomas Brox. “U-Net: Convolutional Networks for Biomedical Image 
         | Segmentation”. In: Proceedings of the International Conference on Medical Image Computing and Computer-Assisted 
-        | Intervention. Cham, DE: Springer, 2015, pp. 234– 241.
+        | Intervention. Cham, DE: Springer, 2015, pp. 234–241.
       p [SLEa] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
         a(href="https://www.pivoty.de/" target="_blank") https://www.pivoty.de/
         | , accessed June 29, 2021).
       p [SLEb] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “Pivoty” LinkedIn. (
         a(href="https://www.linkedin.com/company/pivoty/" target="_blank") https://www.linkedin.com/company/pivoty/
         | , accessed June 30, 2021).
-
-    //- section
-      v-container
-        v-row.justify-center
-          v-col.col-11.col-md-7
-            h2.display-3.font-weight-thin.mb-0.text-center
-              AnimatedLink(href="https://github.com/lgiesen/portfolio-v1" linkText="Portfolio v1" target="_blank")
-            v-img.ma-10.mx-auto(src="@/assets/projects/portfolioV1Logo.png" width="80px")
-            p.text-justify {{ $t("projects.portfolioV1")}}
-            div.text-center
-              v-btn.gradient-btn.pa-6.ma-8(rounded
-                @click="showPreviews.portfolioV1 = !showPreviews.portfolioV1") Show/Hide Preview {{ showPreviews.portfolioV1 }}
-            v-card.pa-0.my-10(v-show="showPreviews.portfolioV1")
-              embed(src="https://lgiesen.github.io/portfolio-v1/" width="100%" height="500px")
-  //- section
-    h1.display-3.font-weight-thin.mb-0#watchtrainer watchtrainer
-    v-img.ma-10(src="@/assets/projects/watchtrianer_logo.svg" width="80px")
-    p This project is not live yet, though a draft of the homepage can be observed here: 
-      AnimatedLink(href="https://watchtrainer.arz.berlin/" linkText="Visit Homepage" target="_blank")
 </template>
 
 <script>
@@ -125,7 +106,7 @@ export default {
         year: "2023",
         link: "https://github.com/MensaToday/mensa-today",
         imgSrc: require("@/assets/projects/mensaToday.png"),
-        img_width: "80px",
+        img_width: "120px",
         id: "DImensaToday",
         showPreview: false,
         embedLink: "",
@@ -133,30 +114,37 @@ export default {
           {
             translationID: "mensaToday_poster",
             link: "projects/MensaToday/MensaToday_Poster.svg"
+          },
+          {
+            translationID: "mensaToday_demo",
+            link: "projects/MensaToday/MensaToday-Demo-2023-02-23.mp4"
+          },
+          {
+            translationID: "mensaToday_documentation",
+            link: "projects/MensaToday/MensaToday_documentation.pdf"
           }
         ]
       },
       {
-        // Internship at zeb: NLP, ML
-        translationKey: "NLP",
-        year: "2021",
+        // Master Project Seminar
+        translationKey: "AutomationOfDocumentChecks",
+        year: "2023",
         link: "",
-        imgSrc: require("@/assets/projects/svm.jpg"),
-        img_width: "250px",
-        id: "NLP",
+        imgSrc: require("@/assets/projects/SpringboardLogo.jpeg"),
+        img_width: "150px",
+        id: "AutomationOfDocumentChecks",
         showPreview: false,
         embedLink: "",
         files: []
-        // TODO: Präsentation updaten und hochladen -> vorher Ti Fragen
       },
       {
         // Bachelor Thesis
         translationKey: "BA",
         year: "2022",
         link: "",
-        imgSrc: require("@/assets/projects/unet-no-nums-wide.png"),
+        imgSrc: require("@/assets/projects/unet-no-nums-wide.jpeg"),
         // U-Net von mir oder von dem original publisher - Bild von Predictions (unpatchified am besten)
-        img_width: "500px",
+        img_width: "",
         id: "ba",
         showPreview: false,
         embedLink: "",
@@ -169,12 +157,30 @@ export default {
         ]
       },
       {
+        // DA II Case Study
+        translationKey: "ForestHeight",
+        year: "2023",
+        link: "https://github.com/lgiesen/forest_height",
+        imgSrc: require("@/assets/projects/forest-height.png"),
+        img_width: "100px",
+        id: "forest_height",
+        showPreview: false,
+        embedLink: "",
+        files: [
+          {
+            translationID: "poster_overview",
+            link:
+              "https://github.com/lgiesen/forest_height/blob/main/group-6-poster.pdf"
+          }
+        ]
+      },
+      {
         // VM DL Case Study
         translationKey: "DLCaseStudy",
         year: "2021",
         link: "",
         imgSrc: require("@/assets/projects/ml_case_study.png"),
-        img_width: "500px",
+        img_width: "",
         id: "ml_case_study",
         showPreview: false,
         embedLink: "",
@@ -189,17 +195,68 @@ export default {
             link: "projects/ML/ML_Case_Study_LULC_Poster.pdf"
           },
           {
-            translationID: "transfer_learning",
+            translationID: "transfer_learning_presentation",
             link: "projects/ML/Transfer_Learning_Presentation.pdf"
           }
         ]
+      },
+      {
+        // Internship at zeb: NLP, ML
+        translationKey: "NLP",
+        year: "2021",
+        link: "",
+        imgSrc: require("@/assets/projects/svm.jpg"),
+        img_width: "250px",
+        id: "NLP",
+        showPreview: false,
+        embedLink: "",
+        files: []
+      },
+      {
+        // seminar urban analytics
+        year: "2024",
+        link:
+          "https://github.com/lgiesen/twitter-sentiment-analysis-politicians",
+        imgSrc: require("@/assets/projects/UA_SemanticSegmentation-trump-cities-normalized_tweet_count.png"),
+        img_width: "",
+        translationKey: "UASentimentAnalysis",
+        id: "ua_sentiment_analysis",
+        showPreview: false,
+        embedLink: "",
+        files: [
+          {
+            translationID: "seminar_thesis",
+            link:
+              "projects/UASentimentAnalysis/UA__Awareness_Level_and_Popularity_of_Presidents__A_Location_Based_Sentiment_Analysis_of_Donald_Trump_and_Boris_Johnson.pdf"
+          },
+          {
+            translationID: "final_presentation",
+            link: "projects/UASentimentAnalysis/UA-final-presentation.pdf"
+          },
+          {
+            translationID: "genAI_reflection_report",
+            link: "projects/UASentimentAnalysis/UA___Reflection_Report.pdf"
+          }
+        ]
+      },
+      {
+        // title case free time project
+        year: "2024",
+        link: "https://github.com/lgiesen/title-case",
+        imgSrc: require("@/assets/projects/title-case.png"),
+        img_width: "170px",
+        translationKey: "TitleCase",
+        id: "title_case",
+        showPreview: false,
+        embedLink: "",
+        files: []
       },
       {
         // pivoty
         year: "2021",
         link: "",
         imgSrc: require("@/assets/projects/pivoty-logo.png"),
-        img_width: "80px",
+        img_width: "100px",
         translationKey: "forum_web_scraper",
         id: "forum_web_scraper",
         showPreview: false,
@@ -229,22 +286,35 @@ export default {
         showPreview: false,
         embedLink: "",
         files: []
-      },
-      {
-        title: "Portfolio v1",
-        year: "2019",
-        link: "https://github.com/lgiesen/portfolio-v1",
-        imgSrc: require("@/assets/projects/portfolioV1Logo.png"),
-        img_width: "80px",
-        translationKey: "portfolioV1",
-        id: "",
-        showPreview: false,
-        embedLink: "https://lgiesen.github.io/portfolio-v1/",
-        files: []
       }
+      // removed project of original portfolio
+      // {
+      //   title: "Portfolio v1",
+      //   year: "2019",
+      //   link: "https://github.com/lgiesen/portfolio-v1",
+      //   imgSrc: require("@/assets/projects/portfolioV1Logo.jpeg"),
+      //   img_width: "80px",
+      //   translationKey: "portfolioV1",
+      //   id: "",
+      //   showPreview: false,
+      //   embedLink: "https://lgiesen.github.io/portfolio-v1/",
+      //   files: []
+      // }
     ]
   }),
   methods: {
+    fileIcon(translationKey) {
+      translationKey = translationKey.toLowerCase();
+      if (translationKey.includes("presentation")) return "mdi-presentation";
+      else if (translationKey.includes("poster")) return "mdi-image";
+      else if (translationKey.includes("demo")) return "mdi-movie-roll";
+      else if (translationKey.includes("documentation")) return "mdi-wrench";
+      else if (translationKey.includes("thesis"))
+        return "mdi-text-box-multiple";
+      else {
+        return "mdi-file-document-outline";
+      }
+    },
     scrollBibliography() {
       this.$vuetify.goTo("#bibliography");
     }
@@ -267,17 +337,33 @@ export default {
             show: "Show Preview"
           },
           DImensaToday: {
-            title: "Münster Mensa Dish Recommender System",
-            desc: `The University of Münster (Westfälische Wilhelms-Universität Münster) is a distributed 
+            title:
+              "Smart Dining at the University of Münster: A Personalized Mensa Meal Recommender System",
+            desc: `The University of Münster is a distributed 
             across the city with various canteens and bistros that serve different ranges of food which 
             change weekly. As a student who eats at those places frequently, you have to look through all 
             dishes of every canteen to find a meal that serves your needs. The idea this recommender system 
             is to suggest mensa meals based on various different factors, such as your eating habits, 
-            location (based on semester schedule), weather and many more.`,
-            files: { mensaToday_poster: "Poster" }
+            location (based on semester schedule), weather and many more.
+            This project was awarded the highest possible score for a grade of 1.0, which exceeded the professors' expectations in terms of performance. This reflects my ability to work in a team, develop innovative solutions, and ensure high-quality implementation. For instance, the professors positively highlighted the integration of a variety of data sources, the use of a state-of-the-art technology stack, and the development of a production-ready user interface.`,
+            files: {
+              mensaToday_poster: "Poster",
+              mensaToday_demo: "Demo",
+              mensaToday_documentation: "Documentation"
+            }
+          },
+          AutomationOfDocumentChecks: {
+            title: "Automation of Document Checks with AI",
+            desc: `As part of the market area conversion, around five million gas appliances will 
+            be converted from L-gas to H-gas by 2030, as H-gas has more calories and therefore requires less 
+            volume than L-gas. The project with Springboard successfully facilitated the proof of work of the conversion. 
+            Using several machine learning models, the type plates can be automatically recorded and evaluated 
+            in batches and in parallel. Classification (InceptionResNetV2), Object Detection (Mask R-CNN), 
+            Perspective Correction and Optical Character Recognition were used for this. In addition, cases 
+            of suspected fraud and upload errors were detected using duplicate detection (perceptual hashing).`
           },
           NLP: {
-            title: "Language Analysis with Machine Learning (NLP with SVM)",
+            title: "Language Analysis with Machine Learning",
             desc: `<p style="text-align:center;">
               (<a href="#bibliography">The MathWorks 2021</a>)
             </p>
@@ -288,45 +374,50 @@ export default {
             files: {}
           },
           DLCaseStudy: {
-            title: "Semantic Segmentation - Land Usage and Land Coverage",
-            desc: `In this case study, a supervised deep learning algorithm is 
-            implemented with the objective of semantically segmenting a landscape into ten 
-            predefined land usage and coverage classes. This is achieved by sliding window 
-            approach with a three-dimensional convolutional neural network resulting in an 
-            accuracy of 73%. At the hand of seven steps of machine learning projects, the 
-            functionality and characteristics of the algorithm are outlined and how it may 
-            be improved upon.`,
+            title:
+              "Advancements in Land Use Classification: A Deep Learning Approach",
+            desc: `In a joint effort, we developed a deep learning approach that semantically segments satellite images into ten classes of land use and coverage. This was implemented using a 3D CNN and a sliding window approach, achieving an accuracy of 73%. The project enabled us to apply deep learning concepts in a practical setting. Despite limitations that prevented the use of U-Net architectures, we explored data augmentation and utilized TensorFlow for model training. The seminar also introduced transfer learning, highlighting its potential to enhance model performance, although our unique requirements posed challenges. This case study not only demonstrates our proficiency in applying machine learning techniques but also emphasizes our ability to navigate and solve complex data challenges, making us valuable contributors to environmental monitoring and data-driven projects.`,
             files: {
               seminar_thesis: "Seminar Thesis",
-              poster_overview: "Poster Overview",
-              transfer_learning: "Transfer Learning Presentation"
+              poster_overview: "Poster",
+              transfer_learning_presentation: "Transfer Learning Presentation"
             }
           },
           BA: {
-            title: "Semantic Segmentation of Satellite Images",
-            desc: `<p style="text-align:center;"> (adapted from
-              <a href="#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)
-            </p>
-              A significant proportion of Africa’s drylands trees and shrubs (subsequently 
-              collectively referred to as trees) grow in an isolated manner without canopy closure. 
-              Nevertheless, these non-forest trees crucially contribute to the biodiversity and ecosystem 
-              because they store carbon, offer food resources, and shelter to humans and animals. Therefore, 
-              single trees are detected by a deep learning approach utilizing the U-Net architecture, 
-              which enables an analysis of the tree stock development in South Africa.
-              The number of trees also provides an estimate of the dryland’s biomass. Thus, the 
-              idea is to visualize these results on a website devoted to sustainability. These 
-              results can be used to create awareness concerning the fostering of sustainability by 
-              publishing the insights on an information system. For instance, a website could highlight 
-              land degradation, desertification, deforestation or reforestation, which may be derived 
-              from monitoring the tree count.`,
+            title:
+              "Advancing Environmental Monitoring: Tree Segmentation in South Africa with Deep Learning",
+            desc: `<p style="text-align:center;" > (adapted from <a href = "#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)</p>
+              This project represents a significant step forward in environmental monitoring in South Africa's drylands. Utilizing deep learning with the U-Net architecture, we have devised a method to accurately detect individual trees and shrubs from satellite images. These non-forest trees, growing isolated without canopy closure, are vital for biodiversity, carbon storage, and providing resources to both humans and animals. By assessing tree numbers, we gain insights into the biomass of these areas, which is essential for sustainability initiatives. The project showcases an effective approach to environmental analysis, demonstrating my expertise in machine learning and programming. The findings aim to be shared on a sustainability-focused website, to increase awareness on critical issues such as land degradation, deforestation, and reforestation.`,
             files: {
               BAThesis: "Bachelor Thesis"
             }
           },
+          ForestHeight: {
+            title:
+              "Elevating Environmental Insights: Forest Height Analysis Using Machine Learning",
+            desc: `The primary goal of this case study was to estimate and map the height of forests across Germany. Leveraging advanced machine learning techniques, including a Convolutional Neural Network (CNN) and NN, this project aimed to tackle the complex regression task using satellite imagery.
+              The Federal Ministry for the Environment in Germany is seeking to find the height of every forest in Germany. Given the sparse nature of labels within satellite images, this project required innovative approaches to successfully perform the regression task.
+              Throughout this case study, I employed various machine learning approaches (boosted trees, decision trees, random forest) to address these challenges, showcasing my deep expertise in both machine learning and programming. This project not only highlights my ability to navigate complex data challenges but also underscores my commitment to contributing valuable insights to environmental conservation efforts.
+              This initiative demonstrates my capacity to think critically, solve problems innovatively, and adapt to technical challenges, making me an invaluable asset to any team.`,
+            files: {
+              poster_overview: "Poster"
+            }
+          },
+          UASentimentAnalysis: {
+            title:
+              "Geographical Insights into Political Sentiment: Analyzing Donald Trump and Boris Johnson through Social Media",
+            desc: `In this seminar thesis, titled "Popularity and Controversy: A Location-Based Event and Sentiment Analysis of Donald Trump and Boris Johnson", I explored the influence of geographic location on public perceptions of these political figures from 2018 to 2022, using Twitter/X posts from cities like Los Angeles, New York City, Birmingham, and London. The analysis employed advanced machine learning techniques, including sentiment scoring with VADER and event analysis, to gauge public sentiment and attention towards these leaders. Throughout this project, I extensively utilized generative AI to streamline numerous tasks efficiently, such as literature research, programming, and the synthesis of findings. This work demonstrates my ability to apply cutting-edge AI and data analysis techniques in academic research, showcasing skills that are invaluable in today's data-driven decision-making processes.`,
+            files: {
+              final_presentation: "Presentation",
+              seminar_thesis: "Seminar Thesis",
+              genAI_reflection_report: "Generative AI"
+            }
+          },
           forum_web_scraper: {
-            title: "Scalable Forum Web Scraper",
-            desc: `The Information Systems specialization module ‘Principles 
-            of Entrepreneurship’ was supplemented by the project group work with the startup 
+            title:
+              "Uncovering Hidden Gems: Gaining Innovation Potential From Discussion Forums",
+            desc: `The Information Systems specialization module 'Principles 
+            of Entrepreneurship' was supplemented by the project group work with the startup 
             pivoty. The basic business process idea of the start-up is that extracted information 
             from discussion forums (using web scraping) is used to derive hidden innovation 
             potentials with an AI analysis. In the project, I have built 
@@ -348,23 +439,27 @@ export default {
               (<a href="#bibliography">Schäper et al. 2021b</a>).`
           },
           goc: {
-            title: "Web-Based Application",
-            desc: `We created a web-based simulation platform called Game of Competences for public administrations with Vue.js and Flask. 
-            It was a lot of fun for me as I was able to lead the front-end team and teach them front-end skills with Vue.js 2. 
-            The overall grade of 1.3 also underlined the project's success. 
-            Unfortunatly, I am not allowed to share the project results of the project seminar in further detail.`
+            title:
+              "Shaping Tomorrow's Leaders: A Web-Based Simulation for Public Administration",
+            desc: `We've significantly improved how public administration personnel engage with training using 'Game of Competences,' a web-based simulation platform developed with Vue.js and Flask. Leading the frontend team, I guided and trained my colleagues in advanced frontend techniques using Vue.js 2. This project was not only highly rewarding but also achieved considerable success, marked by an overall grade of 1.3.`
+          },
+          TitleCase: {
+            title: "Streamlining Academic Excellence: The Capitalization Tool",
+            desc: `In the pursuit of academic rigor and coherence, the capitalization guidelines tool emerges as a pivotal innovation, offering a standardized approach to title capitalization within the realm of academic writing. This project is designed to enhance the clarity and uniformity of titles across scholarly publications by adhering to APA style title case capitalization. It is a testament to the importance of presenting work in a manner that is both accessible and memorable to readers.
+
+The tool simplifies the application of title case to texts and entire bibliographies, significantly boosting efficiency in academic research and presentations. Through the integration of existing code, modified and optimized for this purpose, this project not only showcases my ability to understand and adapt the work of fellow programmers but also highlights my competency in collaborative development. Written in Rust and Python, the implementation facilitates the work of scholars, thereby enriching the academic community's ability to communicate research findings effectively.`
           },
           watchtrainer: {
-            title: "Web Development: watchTrainer",
-            desc: `WatchTrainer is a sharing-based sports platform for the future of 
-            wearable devices like the AppleWatch. After a fundamental implementation of the backend 
-            and frontend, I am no longer working on this research project.`
-          },
-          portfolioV1: {
-            title: "Web Development: Portfolio v1",
-            desc: `I created the first version of my portfolio website in 2019 
-            with HTML5, CSS3, JavaScript and Bootstrap to understand front-end web development.`
+            title:
+              "Empowering Athletes: Frontend Innovation for Wearable Sports Platform",
+            desc: `
+            WatchTrainer played a significant role in the advancement of wearable sports technology, introducing a sports platform that utilizes the capabilities of devices like the Apple Watch. In this innovative project, I was responsible for leading the frontend development with Vue.js, aiming to provide an intuitive and seamless user experience. This project highlighted my ability to craft engaging digital solutions that blend smoothly with the latest technology.`
           }
+          // portfolioV1: {
+          //   title: "Web Development: Portfolio v1",
+          //   desc: `I created the first version of my portfolio website in 2019
+          //   with HTML5, CSS3, JavaScript and Bootstrap to understand front-end web development.`
+          // }
         }
       },
       de: {
@@ -383,17 +478,33 @@ export default {
             show: "Vorschau anzeigen"
           },
           DImensaToday: {
-            title: "Münster Mensa Dish Recommender System",
-            desc: `Die Westfälische Wilhelms-Universität Münster ist über das gesamte Stadtgebiet verteilt und verfügt 
+            title:
+              "Intelligentes Speisen an der Universität Münster: Ein personalisiertes Mensa-Empfehlungssystem",
+            desc: `Die Universität Münster ist über das gesamte Stadtgebiet verteilt und verfügt 
             über verschiedene Mensen und Bistros, die ein wöchentlich wechselndes Angebot an Speisen haben. Als Student, 
             der häufig in diesen Mensen isst, muss man alle Gerichte der einzelnen Mensen durchsehen, um eine Mahlzeit zu 
             finden, die den eigenen Bedürfnissen entspricht. Die Idee dieses Empfehlungssystems ist es, Mensa-Gerichte 
             auf der Grundlage verschiedener Faktoren wie Essgewohnheiten, Standort (basierend auf dem Semesterplan), 
-            Wetter und vielem mehr vorzuschlagen.`,
-            files: { mensaToday_poster: "Poster" }
+            Wetter und vielem mehr vorzuschlagen.
+            Dieses Projekt wurde mit der höchstmöglichen Punktzahl für die Note 1,0 bewertet, was hinsichtlich der Leistungsfähigkeit die Erwartungen der Professoren übertroffen hat. Dies spiegelt meine Fähigkeit wider, im Team zu arbeiten, innovative Lösungen zu entwickeln und eine hohe Qualität in der Umsetzung zu gewährleisten. Die Professoren haben beispielsweise positiv hervorgehoben, dass eine Vielzahl von Datenquellen integriert wurden, ein state-of-the-art Technologie-Stack genutzt wurde und eine produktionsreife Benutzeroberfläche entwickelt wurde.`,
+            files: {
+              mensaToday_poster: "Poster",
+              mensaToday_demo: "Demo",
+              mensaToday_documentation: "Documentation"
+            }
+          },
+          AutomationOfDocumentChecks: {
+            title: "Automatisierung von Dokumentenprüfung mit AI",
+            desc: `Im Rahmen der Marktrahmenumstellung werden bis 2030 etwa fünf Millionen Gasgeräte von L- auf 
+            H-Gas umgerüstet werden, da H-Gas mehr Kalorien hat und somit weniger Volumen als L-Gas benötigt. 
+            Das Projekts mit Springboard hat den Proof of Work der Umrüstung erfolgreich erleichtert. Durch mehrere 
+            Machine Learning Modelle, können die Typenschilder batchweise und parallel automatisiert erfasst und 
+            ausgewertet werden. Dafür wurde Klassifikation (InceptionResNetV2), Object Detection (Mask R-CNN), 
+            Perspective Correction und Optical Character Recognition genutzt. Außerdem wurden Fälle mit Betrugsverdacht 
+            und Fehler bei dem Upload mithilfe von Duplicate Detection (Perceptual Hashing) erkannt.`
           },
           NLP: {
-            title: "Sprachanalyse mit Machine Learning (NLP mit SVM)",
+            title: "Sprachanalyse mit Machine Learning",
             desc: `
               <p style="text-align:center;">
                 (<a href="#bibliography">The MathWorks 2021</a>)
@@ -404,56 +515,59 @@ export default {
               von 50% auf 83% erhöhen.`,
             files: {}
           },
+          ForestHeight: {
+            title:
+              "Förderung der Umweltüberwachung: Baumsegmentierung in Südafrika mittels Deep Learning",
+            desc: `Dieses Projekt leistet einen wichtigen Beitrag zur Umweltüberwachung in den Trockengebieten Südafrikas. Durch den Einsatz von Deep Learning und der U-Net-Architektur wurde eine Methode zur genauen Detektion von einzelnen Bäumen und Sträuchern aus Satellitenbildern entwickelt. Diese isoliert wachsenden Nicht-Wald-Bäume sind entscheidend für die Biodiversität, die Kohlenstoffspeicherung und die Versorgung von Menschen und Tieren. Die Ermittlung der Baumzahl ermöglicht Einblicke in die Biomasse der Regionen, was für Nachhaltigkeitsbestrebungen unerlässlich ist. Das Projekt präsentiert einen effektiven Ansatz zur Umweltanalyse und unterstreicht meine Fachkenntnisse im Machine Learning und in der Programmierung. Die Ergebnisse sollen auf einer auf Nachhaltigkeit ausgerichteten Website geteilt werden, um das Bewusstsein für wichtige Themen wie Landdegradation, Entwaldung und Aufforstung zu schärfen.`,
+            files: {
+              poster_overview: "Poster"
+            }
+          },
           DLCaseStudy: {
-            title: "Semantische Segmentierung - Landnutzung",
-            desc: `In dieser Fallstudie habe ich mit einem Kommolitonen einen supervised 
-            Deep-Learning-Algorithmus implementiert, der eine Landschaft semantisch in zehn vordefinierte 
-            Landnutzungs- und Flächenklassen segmentiert. Dabei wird eine Genauigkeit von 73% durch einen Sliding-Window 
-            mit einem 3D CNN erreicht. In den sieben Schritten des Machine Learnings werden die 
-            Funktionalität und die Eigenschaften des Algorithmus erklärt und zum Schluss wird ein Ausblick gegeben wie  
-            Verbesserungspotential ausgenutzt werden kann.`,
+            title:
+              "Fortschritte in der Klassifizierung von Landnutzung: Ein Deep-Learning-Ansatz",
+            desc: `In gemeinsamer Anstrengung, entwickelten wir einen Deep Learning Ansatz, der Satellitenbilder in zehn Klassen der Landnutzung und -bedeckung semantisch segmentiert. Dies wird mit einem 3D CNN und Sliding-Window-Ansatz umgesetzt, der eine Genauigkeit von 73% erreicht. Das Projekt ermöglichte uns, Deep-Learning-Konzepte praktisch anzuwenden. Trotz Einschränkungen, die die Verwendung von U-Net-Architekturen verhinderten, erforschten wir Datenanreicherung und nutzten TensorFlow für das Training des Modells. Das Seminar führte auch Transer Learning ein und hob dessen Potenzial zur Leistungssteigerung des Modells hervor, obwohl unsere einzigartigen Anforderungen Herausforderungen darstellten. Diese Fallstudie zeigt nicht nur unsere Geschicklichkeit im Anwenden von Machine-Learning-Techniken, sondern betont auch unsere Fähigkeit, komplexe Datenherausforderungen zu navigieren und zu lösen, was uns zu wertvollen Mitgliedern in Umweltüberwachungs- und datengesteuerten Projekten macht.`,
             files: {
               seminar_thesis: "Seminararbeit",
-              poster_overview: "Poster Überblick",
-              transfer_learning: "Transfer Learning Präsentation"
+              poster_overview: "Poster",
+              transfer_learning_presentation: "Transfer Learning Präsentation"
             }
           },
           BA: {
-            title: "Semantische Segmentierung von Satellitenbildern",
+            title:
+              "Umweltmonitoring-Innovation: Deep Learning zur Baumsegmentierung in Südafrika",
             desc: `<p style="text-align:center;"> (angepasst von
               <a href="#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)
               </p>
-              Ein großer Teil der Bäume und Sträucher in Afrikas Trockengebieten (im Folgenden 
-              im Folgenden als Bäume bezeichnet) wächst isoliert und ohne Kronenschluss. 
-              Dennoch leisten diese einzelstehenden Bäume einen entscheidenden Beitrag zur 
-              biologischen Vielfalt und zum Ökosystem denn sie speichern Kohlenstoff, bieten 
-              Nahrungsressourcen und Schutz für Menschen und Tiere. Deshalb, 
-              werden einzelne Bäume durch einen Deep-Learning-Ansatz unter Verwendung der 
-              U-Net-Architektur segmentiert, was eine Analyse der Entwicklung des Baumbestands 
-              in Südafrika ermöglicht. Die Anzahl der Bäume liefert auch eine Schätzung der 
-              Biomasse des Trockengebiets. Daher ist die Idee, diese Ergebnisse auf einer Website 
-              zu visualisieren, die der Nachhaltigkeit gewidmet ist. Diese Ergebnisse können genutzt 
-              werden, um ein Bewusstsein für die Förderung der Nachhaltigkeit zu schaffen, indem 
-              die Erkenntnisse in einem Informationssystem veröffentlicht werden. 
-              Eine Website könnte zum Beispiel Bodenverschlechterung, Wüstenbildung, Entwaldung 
-              oder Wiederaufforstung hervorheben, die sich aus der Überwachung der Baumzahl ableiten lässt.`,
+              Dieses Projekt hat den Weg geebnet, um unser Verständnis und die Überwachung der Umwelt in den Trockengebieten Südafrikas zu transformieren. Durch die Nutzung der Leistungsfähigkeit des Deep Learnings mittels der U-Net-Architektur haben wir eine Methode entwickelt, um einzelne Bäume und Sträucher präzise aus Satellitenbildern zu detektieren. Trotz der spärlichen Vegetation in Trockengebieten spielen diese Nicht-Wald-Bäume eine entscheidende Rolle bei der Aufrechterhaltung der Biodiversität, der Speicherung von Kohlenstoff sowie der Bereitstellung von Unterschlupf und Nahrung für Menschen und Tiere. Durch die genaue Schätzung der Baumzahl können wir wertvolle Einblicke in die Biomasse dieser Regionen gewinnen, was einen signifikanten Beitrag zu Nachhaltigkeitsbemühungen leistet. Das Projekt demonstriert nicht nur einen innovativen Ansatz zur Umweltüberwachung, sondern auch meine Kompetenz im Umgang mit komplexen Herausforderungen im Machine Learning und in der Programmierung. Das ultimative Ziel ist es, diese Erkenntnisse auf einer dedizierten Website zu nutzen, um das Bewusstsein zu schärfen und Nachhaltigkeit zu fördern, mit einem Fokus auf Themen wie Landdegradation, Entwaldung und Aufforstung.`,
             files: {
               BAThesis: "Bachelorarbeit"
             }
           },
+          UASentimentAnalysis: {
+            title:
+              "Geographische Einblicke in Politische Stimmungen: Analyse von Donald Trump und Boris Johnson durch Soziale Medien",
+            desc: `In dieser Seminararbeit mit dem Titel "Popularity and Controversy: Eine standortbezogene Ereignis- und Stimmungsanalyse von Donald Trump und Boris Johnson" untersuchte ich den Einfluss geografischer Standorte auf die öffentliche Wahrnehmung dieser politischen Persönlichkeiten von 2018 bis 2022, unter Verwendung von Twitter/X-Beiträgen aus Städten wie Los Angeles, New York City, Birmingham und London. Die Analyse nutzte fortschrittliche Machine Learning Methoden, einschließlich Stimmungsbewertung mit VADER und Ereignisanalyse, um die öffentliche Stimmung und Aufmerksamkeit gegenüber diesen Staatsoberhäuptern zu messen. Im Laufe dieses Projekts setzte ich umfangreich generative AI ein, um zahlreiche Aufgaben effizient zu optimieren, wie Literaturrecherche, Programmierung und die Zusammenfassung der Ergebnisse. Diese Arbeit demonstriert meine Fähigkeit, modernste AI- und Datenanalysetechniken in der akademischen Forschung anzuwenden und unterstreicht Fähigkeiten, die im heutigen datengetriebenen Entscheidungsprozess von unschätzbarem Wert sind.`,
+            files: {
+              final_presentation: "Präsentation",
+              seminar_thesis: "Seminararbeit",
+              genAI_reflection_report: "Generative AI"
+            }
+          },
           forum_web_scraper: {
-            title: "Skalierbarer Foren Web Scraper",
+            title:
+              "Verborgene Schätze Aufdecken: Innovationspotenziale aus Diskussionsforen Gewinnen",
             desc: `Das Vertiefungsmodul Principles of Entrepreneurship wurde durch 
             die Projektgruppenarbeit mit dem Startup pivoty ergänzt. Die grundlegende 
             Geschäftsprozess-Idee von pivoty ist, dass extrahierte Informationen (mittels Web 
-            Scraping) aus Diskussionsforen genutzt werden, um mit einer KI-Analyse versteckte 
+            Scraping) aus Diskussionsforen genutzt werden, um mit einer AI-Analyse versteckte 
             Innovationspotenziale abzuleiten. In dem Projekt habe ich mit zwei anderen Projektmitgliedern 
             einen skalierbaren Web Scraper mit Scrapy gebaut, sodass dieser auf so viele Foren wie möglich angewendet werden kann. 
             Hierbei wurde sich an der Struktur von den am weit verbreitensten Forenframeworks orientiert, um knapp 90% 
             aller deutschsprachigen Diskussionsforen abzudecken. 
             <br/>
             <br/>
-            pivoty ist in Münster ansässig und entwickelt "eine KI-basierte Analysesoftware, die 
+            pivoty ist in Münster ansässig und entwickelt "eine AI-basierte Analysesoftware, die 
             Innovationspotenziale" 
               (<a href="#bibliography">Schäper et al. 2021a</a>)
             für Unternehmen "durch die Analyse von unvoreingenommenen Customer Insights" 
@@ -466,23 +580,27 @@ export default {
             (<a href="#bibliography">Schäper et al. 2021b</a>).`
           },
           goc: {
-            title: "Webbasierte Applikation",
-            desc: `Wir haben eine webbasierte Simulationsplattform namens Game of Competences für öffentliche Verwaltungen mit Vue.js und Flask implementiert. 
-            Das Projekt hat mir viel Spaß gemacht, da ich das Frontend-Team leiten und ihnen Frontend-Kenntnisse mit Vue.js 2 vermitteln konnte. 
-            Auch die Gesamtnote von 1,3 unterstreicht den Erfolg des Projekts. 
-            Leider darf ich die Projektergebnisse des Projektseminars nicht im Detail veröffentlichen.`
+            title:
+              "Förderung der Führungskräfte von Morgen: Eine Webbasierte Simulation für die Öffentliche Verwaltung",
+            desc: `Wir haben die Fortbildung für das Personal im öffentlichen Dienst durch 'Game of Competences', eine webbasierte Simulationsplattform entwickelt mit Vue.js und Flask, erheblich verbessert. Als Leiter des Frontend-Teams hatte ich die Gelegenheit, meine Kollegen in fortgeschrittenen Frontend-Techniken mit Vue.js 2 zu schulen und weiterzubilden. Dieses Projekt war nicht nur außerordentlich bereichernd, sondern erreichte auch einen beachtlichen Erfolg, gekennzeichnet durch eine Gesamtnote von 1,3.`
+          },
+          TitleCase: {
+            title:
+              "Förderung der Akademischen Exzellenz: Das Tool zur Titel-Kapitalisierung",
+            desc: `Mit dem Ziel, wissenschaftliche Präzision und Konsistenz zu fördern, stellt das Titel-Kapitalisierungs-Werkzeug eine außerordentliche Innovation dar. Es bietet einen standardisierten Ansatz für die Kapitalisierung von Titeln im akademischen Schreiben, um Klarheit und Einheitlichkeit in wissenschaftlichen Publikationen zu gewährleisten. Dieses Projekt dient der Verbesserung der Zugänglichkeit und Prägnanz von Titeln, was deren Verständlichkeit und Einprägsamkeit für Leser erhöht.
+
+Das Werkzeug ermöglicht eine einfache Anwendung der Titel-Kapitalisierung auf Texte und gesamte Bibliografien, was die Effizienz in der akademischen Forschung und bei Präsentationen erheblich steigert. Durch die Integration und Optimierung bestehender Programmierarbeit illustriert dieses Projekt meine Fähigkeit, den Code anderer zu verstehen, anzupassen und effektiv im Team zu arbeiten. Die Umsetzung in Rust und Python erleichtert die wissenschaftliche Arbeit und steigert deren Effizienz um ein Vielfaches.`
           },
           watchtrainer: {
-            title: "Web Development: watchTrainer",
-            desc: `WatchTrainer ist eine auf Sharing basierende Sportplattform für die Zukunft von 
-            Wearable Devices wie der AppleWatch. Nach einer fundamentalen Umsetzung des Backends und 
-            Frontends, arbeite ich nicht weiter an diesem Forschungsprojekt.`
-          },
-          portfolioV1: {
-            title: "Web Development: Portfolio v1",
-            desc: `Die erste Version meiner Portfolio-Website habe ich 2019 mit 
-            HTML5, CSS3, JavaScript und Bootstrap erstellt, um die Front-End-Webentwicklung zu verstehen.`
+            title:
+              "Sportler Stärken: Frontend-Innovation für eine Wearable-Sportplattform",
+            desc: `WatchTrainer spielte eine bedeutende Rolle in der Weiterentwicklung tragbarer Sporttechnologien und bot eine auf dem Austausch basierende Sportplattform, die die Möglichkeiten von Geräten wie der Apple Watch nutzt. In diesem innovativen Projekt war ich für die Leitung der Frontend-Entwicklung mit Vue.js verantwortlich, um eine intuitive und nahtlose Benutzererfahrung zu sicherstellen. Diese Erfahrung hebt meine Fähigkeit hervor, ansprechende digitale Lösungen zu entwickeln, die sich reibungslos in die neueste Technologie einfügen.`
           }
+          // portfolioV1: {
+          //   title: "Web Development: Portfolio v1",
+          //   desc: `Die erste Version meiner Portfolio-Website habe ich 2019 mit
+          //   HTML5, CSS3, JavaScript und Bootstrap erstellt, um die Front-End-Webentwicklung zu verstehen.`
+          // }
         }
       }
     }
