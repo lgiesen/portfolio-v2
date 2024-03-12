@@ -1,13 +1,7 @@
 <template lang="pug">
 //- Set the width, so that the svg does not scale to its 900x600 size
-v-btn.pa-0(text icon @click="switchLanguage()")
-  v-icon mdi-translate
-  //- alternatively use language image
-  //- v-img(:src="switchLanguageSrc" width="10")
-  //- Alternative select option
-  //- select.text-uppercase(v-model="$i18n.locale")
-  //-   option(v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang"
-  //-     ) {{ lang }}
+v-btn.pa-0(text icon @click="switchLanguage();")
+  | {{ languageSwitchBtn }}
 </template>
 
 <script>
@@ -21,18 +15,19 @@ export default {
       if (!this.$i18n.locale || this.$i18n.locale == "en")
         this.$i18n.locale = "de";
       else if (this.$i18n.locale == "de") this.$i18n.locale = "en";
+      // Emit an event to notify the parent component (TheNavigation.vue)
+      this.$emit("language-changed");
     }
   },
   computed: {
     // Which image to display
-    // switchLanguageSrc() {
-    //   if (!this.$i18n.locale || this.$i18n.locale == "de") {
-    //     this.$i18n.locale == "de";
-    //     return require("@/assets/locales/English.svg");
-    //   } else return require("@/assets/locales/German.svg");
-    // }
+    languageSwitchBtn() {
+      // one could also use images: require("@/assets/locales/English.svg") and require("@/assets/locales/German.svg")
+      if (!this.$i18n.locale || this.$i18n.locale == "de") {
+        this.$i18n.locale == "de";
+        return "DE";
+      } else return "EN";
+    }
   }
 };
 </script>
-
-<style scoped></style>
