@@ -2,7 +2,6 @@ import Vuetify from "@/plugins/vuetify";
 import Vue from "vue";
 import Vuex from "vuex";
 import i18n from "../i18n";
-import auth from "./modules/auth.js";
 
 Vue.use(Vuex);
 
@@ -12,14 +11,13 @@ export default new Vuex.Store({
     isDE() {
       if (i18n.locale == "de") return true;
       else return false;
-    }
+    },
   },
   mutations: {
     ToggleShowContactDialog(state) {
       state.showContactDialog = !state.showContactDialog;
-    }
+    },
   },
-  actions: {},
   getters: {
     isDE() {
       if (i18n.locale == "de") return true;
@@ -33,7 +31,7 @@ export default new Vuex.Store({
       else if (Vuetify.framework.theme.dark) return "dark";
       else return "light";
     },
-    GetShowContactDialog: state => state.showContactDialog,
+    GetShowContactDialog: (state) => state.showContactDialog,
     isMobile() {
       return Vuetify.framework.breakpoint.mobile;
       // in local components, you could use:
@@ -42,9 +40,6 @@ export default new Vuex.Store({
     ResponsiveFontSize() {
       if (Vuetify.framework.breakpoint.smAndDown) return "display-1";
       else return "display-2";
-    }
+    },
   },
-  modules: {
-    auth
-  }
 });
