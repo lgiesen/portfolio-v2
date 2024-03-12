@@ -21,7 +21,7 @@ div
   article#scroll
     section
       v-container
-        div(v-for="project in projects" :id="project.id")
+        div(v-for="project in projects" :id="project.translationKey")
           v-row.justify-center
             v-col.col-11.col-md-7.text-center
               h2.display-1.font-weight-thin.mb-0(style="word-break: break-word;")
@@ -29,16 +29,11 @@ div
               //- Links to repository and/or website
               div.mt-5
                 span {{project.year}}
-                v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != ''" :href="project.link" target="_blank") 
+                v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != null" :href="project.link" target="_blank") 
                   v-icon.mr-2(small) mdi-code-tags
                   | {{ $t('projects.links.repository') }}
 
-                //- website
-                v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.embedLink != ''" :href="project.embedLink" target="_blank") 
-                  v-icon.mr-2(small) mdi-open-in-new
-                  | {{ $t('projects.links.website') }}
-
-                //- file(s)
+                //- files
                 span(v-for="(file, index) in project.files")
                   v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.files.length > 0" :href="project.files[index].link" target="_blank")
                     v-icon.mr-2(small) {{ fileIcon(project.files[index].translationID) }}
@@ -56,10 +51,10 @@ div
       p [RFB15] Olaf Ronneberger, Philipp Fischer, and Thomas Brox. “U-Net: Convolutional Networks for Biomedical Image 
         | Segmentation”. In: Proceedings of the International Conference on Medical Image Computing and Computer-Assisted 
         | Intervention. Cham, DE: Springer, 2015, pp. 234–241.
-      p [SLEa] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “Pivoty - Simplifying Innovation.” (
+      p [SLEa] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021a. “pivoty - Simplifying Innovation.” (
         a(href="https://www.pivoty.de/" target="_blank") https://www.pivoty.de/
         | , accessed June 29, 2021).
-      p [SLEb] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “Pivoty” LinkedIn. (
+      p [SLEb] Schäper, D. T., Lauterjung, J., and Everding, J. S. 2021b. “pivoty” LinkedIn. (
         a(href="https://www.linkedin.com/company/pivoty/" target="_blank") https://www.linkedin.com/company/pivoty/
         | , accessed June 30, 2021).
 </template>
@@ -73,15 +68,13 @@ export default {
   },
   data: () => ({
     projects: [
+      // MensaToday Recommender System Data Integration
       {
-        // Recommender System Data Integration
         translationKey: "DImensaToday",
         year: "2023",
         link: "https://github.com/MensaToday/mensa-today",
         imgSrc: require("@/assets/projects/mensaToday.png"),
         img_width: "120px",
-        id: "DImensaToday",
-        showPreview: false,
         files: [
           {
             translationID: "mensaToday_poster",
@@ -97,27 +90,23 @@ export default {
           }
         ]
       },
+      // Master Project Seminar
       {
-        // Master Project Seminar
         translationKey: "AutomationOfDocumentChecks",
         year: "2023",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/SpringboardLogo.jpeg"),
         img_width: "150px",
-        id: "AutomationOfDocumentChecks",
-        showPreview: false,
         files: []
       },
+      // Bachelor Thesis
       {
-        // Bachelor Thesis
         translationKey: "BA",
         year: "2022",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/unet-no-nums-wide.jpeg"),
         // U-Net von mir oder von dem original publisher - Bild von Predictions (unpatchified am besten)
         img_width: "",
-        id: "ba",
-        showPreview: false,
         files: [
           {
             translationID: "BAThesis",
@@ -126,15 +115,13 @@ export default {
           }
         ]
       },
+      // DA II Case Study: Forest Height
       {
-        // DA II Case Study
         translationKey: "ForestHeight",
         year: "2023",
         link: "https://github.com/lgiesen/forest_height",
         imgSrc: require("@/assets/projects/forest-height.png"),
         img_width: "100px",
-        id: "forest_height",
-        showPreview: false,
         files: [
           {
             translationID: "poster_overview",
@@ -143,15 +130,13 @@ export default {
           }
         ]
       },
+      // VM DL Case Study: Land Usage
       {
-        // VM DL Case Study
         translationKey: "DLCaseStudy",
         year: "2021",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/ml_case_study.png"),
         img_width: "",
-        id: "ml_case_study",
-        showPreview: false,
         files: [
           {
             translationID: "seminar_thesis",
@@ -168,27 +153,23 @@ export default {
           }
         ]
       },
+      // Internship at zeb: NLP, ML
       {
-        // Internship at zeb: NLP, ML
         translationKey: "NLP",
         year: "2021",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/svm.jpg"),
         img_width: "250px",
-        id: "NLP",
-        showPreview: false,
         files: []
       },
+      // Seminar Urban Analytics
       {
-        // seminar urban analytics
         year: "2024",
         link:
           "https://github.com/lgiesen/twitter-sentiment-analysis-politicians",
         imgSrc: require("@/assets/projects/UA_SemanticSegmentation-trump-cities-normalized_tweet_count.png"),
         img_width: "",
         translationKey: "UASentimentAnalysis",
-        id: "ua_sentiment_analysis",
-        showPreview: false,
         files: [
           {
             translationID: "seminar_thesis",
@@ -205,48 +186,58 @@ export default {
           }
         ]
       },
+      // IT Architecture
       {
-        // title case free time project
+        year: "2022",
+        link: null,
+        imgSrc: null,
+        img_width: "",
+        translationKey: "ITArchitecture",
+        files: []
+      },
+      // Digital Workflow
+      {
+        year: "2023",
+        link: null,
+        imgSrc: null,
+        img_width: "",
+        translationKey: "DigitalCollaboration",
+        files: []
+      },
+      // Title Case Free Time Project
+      {
         year: "2024",
         link: "https://github.com/lgiesen/title-case",
         imgSrc: require("@/assets/projects/title-case.png"),
         img_width: "170px",
         translationKey: "TitleCase",
-        id: "title_case",
-        showPreview: false,
         files: []
       },
+      // pivoty: Scalable Web Scraper
       {
-        // pivoty
         year: "2021",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/pivoty-logo.png"),
         img_width: "100px",
         translationKey: "forum_web_scraper",
-        id: "forum_web_scraper",
-        showPreview: false,
         files: []
       },
+      // Bachelor PS: Game of Competences web application
       {
-        // Game of Competences
         year: "2020-2021",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/GoC.svg"),
         img_width: "80px",
         translationKey: "goc",
-        id: "goc",
-        showPreview: false,
         files: []
       },
+      // research: WatchTrainer
       {
-        // watchTrainer
         year: "2019-2020",
-        link: "",
+        link: null,
         imgSrc: require("@/assets/projects/watchtrianer_logo.svg"),
         img_width: "80px",
         translationKey: "watchtrainer",
-        id: "watchtrainer",
-        showPreview: false,
         files: []
       }
     ]
@@ -392,11 +383,19 @@ export default {
               "Shaping Tomorrow's Leaders: A Web-Based Simulation for Public Administration",
             desc: `We've significantly improved how public administration personnel engage with training using 'Game of Competences,' a web-based simulation platform developed with Vue.js and Flask. Leading the frontend team, I guided and trained my colleagues in advanced frontend techniques using Vue.js 2. This project was not only highly rewarding but also achieved considerable success, marked by an overall grade of 1.3.`
           },
+          ITArchitecture: {
+            title: "Enhancing Efficiency by Optimizing IT-Architecture",
+            desc: `In this project, the IT infrastructure of a company in the public transportation sector was thoroughly analyzed and optimized using the TOGAF framework and ArchiMate modeling language. By identifying and addressing efficiency issues in the existing IT structure, especially regarding drive access, calendar management, decision-making, and video conferencing software, I demonstrated my skills in IT infrastructure and transformation. The project included developing a detailed transformation plan and implementing Microsoft 365 as a central platform for improved collaboration and communication. My role as project leader and the successful execution of this complex initiative highlight my proficiency in managing IT projects, understanding modern IT architectures, and my ability to devise innovative solutions to technical challenges.`
+          },
+          DigitalCollaboration: {
+            title:
+              "Digital Workflow Optimization: A Guide to Efficient Collaboration",
+            desc: `In this follow-up project to the one above, we continued to optimize the digital workflows of a leading company in the public transportation sector, where I once again took on the role of project lead. This underscores the customer's confidence in my capabilities and satisfaction with the preceding project. Through effective application of feedback loops and the implementation of innovative solutions such as Shared Folders over Remote Desktop and enhanced use of Microsoft Forms in Teams meetings, we significantly improved internal communication and process efficiency. Utilizing an IT-supported workflow to manage email distribution lists and optimizing the attendance plan and desk sharing showcases my ability to navigate complex challenges and deliver high-quality solutions that exceed customer expectations.`
+          },
           TitleCase: {
             title: "Streamlining Academic Excellence: The Capitalization Tool",
             desc: `In the pursuit of academic rigor and coherence, the capitalization guidelines tool emerges as a pivotal innovation, offering a standardized approach to title capitalization within the realm of academic writing. This project is designed to enhance the clarity and uniformity of titles across scholarly publications by adhering to APA style title case capitalization. It is a testament to the importance of presenting work in a manner that is both accessible and memorable to readers.
-
-The tool simplifies the application of title case to texts and entire bibliographies, significantly boosting efficiency in academic research and presentations. Through the integration of existing code, modified and optimized for this purpose, this project not only showcases my ability to understand and adapt the work of fellow programmers but also highlights my competency in collaborative development. Written in Rust and Python, the implementation facilitates the work of scholars, thereby enriching the academic community's ability to communicate research findings effectively.`
+              The tool simplifies the application of title case to texts and entire bibliographies, significantly boosting efficiency in academic research and presentations. Through the integration of existing code, modified and optimized for this purpose, this project not only showcases my ability to understand and adapt the work of fellow programmers but also highlights my competency in collaborative development. Written in Rust and Python, the implementation facilitates the work of scholars, thereby enriching the academic community's ability to communicate research findings effectively.`
           },
           watchtrainer: {
             title:
@@ -497,6 +496,15 @@ The tool simplifies the application of title case to texts and entire bibliograp
               seminar_thesis: "Seminararbeit",
               genAI_reflection_report: "Generative AI"
             }
+          },
+          ITArchitecture: {
+            title: "Effizienzsteigerung durch Optimierung der IT-Architektur",
+            desc: `In diesem Projekt wurde die IT-Infrastruktur eines Unternehmens aus dem öffentlichen Nahverkehrssektor unter Verwendung des TOGAF-Frameworks und der ArchiMate-Modellierungssprache umfassend analysiert und optimiert. Durch die Identifizierung und Behebung von Effizienzproblemen in der bestehenden IT-Infrastruktur, insbesondere im Hinblick auf den Zugriff auf Laufwerke, Kalenderverwaltung, Beschlussfassung und Videokonferenz-Software, konnte ich meine Fähigkeiten im Bereich der IT-Infrastruktur und -Transformation unter Beweis stellen. Das Projekt umfasste die Entwicklung eines detaillierten Transformationsplans und die Implementierung von Microsoft 365 als zentrale Plattform für eine verbesserte Zusammenarbeit und Kommunikation. Meine Rolle als Projektleiter und die erfolgreiche Durchführung dieses komplexen Vorhabens unterstreichen meine Kompetenz in der Leitung von IT-Projekten, mein Verständnis für moderne IT-Architekturen und meine Fähigkeit, innovative Lösungen für technische Herausforderungen zu entwickeln.`
+          },
+          DigitalCollaboration: {
+            title:
+              "Optimierung Digitaler Arbeitsprozesse: Ein Leitfaden für Effiziente Zusammenarbeit",
+            desc: `In diesem Folgeprojekt haben wir die digitalen Arbeitsabläufe eines führenden Unternehmens im öffentlichen Nahverkehrssektor weiter optimiert, wobei ich erneut die Rolle des Projektleiters übernahm. Dies unterstreicht das Vertrauen des Kunden in meine Fähigkeiten und die Zufriedenheit mit dem vorangegangenen Projekt. Durch die effektive Anwendung von Feedback-Schleifen und die Implementierung innovativer Lösungen wie Shared Folder über Remote Desktop und verbesserte Nutzung von Microsoft Forms in Teams-Meetings, konnten wir die interne Kommunikation und Prozesseffizienz signifikant steigern. Die Verwendung eines IT-gestützten Workflows zur Verwaltung von E-Mail-Verteilern und die Optimierung des Anwesenheitsplans und Desk Sharings zeigen meine Fähigkeit, komplexe Herausforderungen zu navigieren und qualitativ hochwertige Lösungen zu liefern, die über die Kundenerwartungen hinausgehen.`
           },
           forum_web_scraper: {
             title:
