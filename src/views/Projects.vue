@@ -7,13 +7,10 @@ div
       section.mb-0 
         v-container
           v-row.pa-md-12.d-flex.text-center
-            v-col.col-12.col-md-6(order-md="2")
+            v-col
               h1.display-3.font-weight-thin.mb-12 {{ $t("intro.title") }}
               p.subheading {{ $t("intro.subtitle") }}
               ScrollHero.mt-16.pt-16
-            v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
-              v-card(width="400px" elevation="50" max-width="80vw")
-                v-img(alt="Leo Giesen Profil" src="@/assets/profile/Glatthorn_Aufstieg.jpg")
 
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
@@ -31,16 +28,15 @@ div
                 | {{ $t('projects.' + project.translationKey + '.title') }}
               //- Links to repository and/or website
               div.mt-5
+                span {{project.year}}
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != ''" :href="project.link" target="_blank") 
                   v-icon.mr-2(small) mdi-code-tags
                   | {{ $t('projects.links.repository') }}
-                  //- AnimatedLink(:href="project.link" :linkText="$t('projects.links.repository')" target="_blank" prepend-icon="mdi-link-variant")
 
                 //- website
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.embedLink != ''" :href="project.embedLink" target="_blank") 
                   v-icon.mr-2(small) mdi-open-in-new
                   | {{ $t('projects.links.website') }}
-                  //- AnimatedLink(:href="project.embedLink" :linkText="$t('projects.links.website')" target="_blank")
 
                 //- file(s)
                 span(v-for="(file, index) in project.files")
@@ -48,27 +44,10 @@ div
                     v-icon.mr-2(small) {{ fileIcon(project.files[index].translationID) }}
                     | {{ $t('projects.' + project.translationKey + '.files.' + file.translationID) }}
 
-                    //- "$t('projects.links.' + project.id)"
-                    //- + project.files[index].title) }}
-                    //- AnimatedLink(:href="project.files[index].link"
-                    //-   :linkText="$t('projects.' + project.files[index].title)"
-                    //-   target="_blank")
-
               //- Icon or image of project
               v-img.ma-7.mx-auto(:src="project.imgSrc" :width="project.img_width" max-width="80vw")
               //- Project description
               p.text-justify(v-html="$t('projects.' + project.translationKey + '.desc')")
-
-              //- Show preview of website, but exclude elements, which do not have an embedLink
-              div.text-center(v-if="project.embedLink != ''")
-                //- toggle preview button
-                v-btn.gradient-btn.pa-6.ma-8(rounded
-                  @click="project.showPreview = !project.showPreview") 
-                  span(v-show="!project.showPreview") {{ $t("projects.preview.show")}}
-                  span(v-show="project.showPreview") {{ $t("projects.preview.hide")}}
-                //- actual preview (embed of other website)
-                v-card.pa-0.my-10(v-show="project.showPreview")
-                  embed.mb-n2(:src="project.embedLink" width="100%" height="500px")
 
   //- Bibliography
   section#bibliography
@@ -86,17 +65,11 @@ div
 </template>
 
 <script>
-import HeroBackgroundGradientGroup from "@/assets/background/HeroBackgroundGradientGroup.vue";
-import AnimatedLink from "@/components/playground/hyperlinks/AnimatedLink.vue";
-import BackgroundHighlightLink from "@/components/playground/hyperlinks/BackgroundHighlightLink.vue";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 export default {
   name: "Projects",
   components: {
-    ScrollHero,
-    AnimatedLink,
-    BackgroundHighlightLink,
-    HeroBackgroundGradientGroup
+    ScrollHero
   },
   data: () => ({
     projects: [
@@ -109,7 +82,6 @@ export default {
         img_width: "120px",
         id: "DImensaToday",
         showPreview: false,
-        embedLink: "",
         files: [
           {
             translationID: "mensaToday_poster",
@@ -134,7 +106,6 @@ export default {
         img_width: "150px",
         id: "AutomationOfDocumentChecks",
         showPreview: false,
-        embedLink: "",
         files: []
       },
       {
@@ -147,7 +118,6 @@ export default {
         img_width: "",
         id: "ba",
         showPreview: false,
-        embedLink: "",
         files: [
           {
             translationID: "BAThesis",
@@ -165,7 +135,6 @@ export default {
         img_width: "100px",
         id: "forest_height",
         showPreview: false,
-        embedLink: "",
         files: [
           {
             translationID: "poster_overview",
@@ -183,7 +152,6 @@ export default {
         img_width: "",
         id: "ml_case_study",
         showPreview: false,
-        embedLink: "",
         files: [
           {
             translationID: "seminar_thesis",
@@ -209,7 +177,6 @@ export default {
         img_width: "250px",
         id: "NLP",
         showPreview: false,
-        embedLink: "",
         files: []
       },
       {
@@ -222,7 +189,6 @@ export default {
         translationKey: "UASentimentAnalysis",
         id: "ua_sentiment_analysis",
         showPreview: false,
-        embedLink: "",
         files: [
           {
             translationID: "seminar_thesis",
@@ -248,7 +214,6 @@ export default {
         translationKey: "TitleCase",
         id: "title_case",
         showPreview: false,
-        embedLink: "",
         files: []
       },
       {
@@ -260,7 +225,6 @@ export default {
         translationKey: "forum_web_scraper",
         id: "forum_web_scraper",
         showPreview: false,
-        embedLink: "",
         files: []
       },
       {
@@ -272,7 +236,6 @@ export default {
         translationKey: "goc",
         id: "goc",
         showPreview: false,
-        embedLink: "",
         files: []
       },
       {
@@ -284,22 +247,8 @@ export default {
         translationKey: "watchtrainer",
         id: "watchtrainer",
         showPreview: false,
-        embedLink: "",
         files: []
       }
-      // removed project of original portfolio
-      // {
-      //   title: "Portfolio v1",
-      //   year: "2019",
-      //   link: "https://github.com/lgiesen/portfolio-v1",
-      //   imgSrc: require("@/assets/projects/portfolioV1Logo.jpeg"),
-      //   img_width: "80px",
-      //   translationKey: "portfolioV1",
-      //   id: "",
-      //   showPreview: false,
-      //   embedLink: "https://lgiesen.github.io/portfolio-v1/",
-      //   files: []
-      // }
     ]
   }),
   methods: {
