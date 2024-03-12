@@ -305,7 +305,7 @@ export default {
           },
           DImensaToday: {
             title:
-              "Smart Dining at the University of Münster: A Personalized Mensa Meal Recommender System",
+              "Smart Dining in Münster: A Personalized Mensa Meal Recommender System",
             desc: `The University of Münster is a distributed 
             across the city with various canteens and bistros that serve different ranges of food which 
             change weekly. As a student who eats at those places frequently, you have to look through all 
@@ -462,7 +462,7 @@ export default {
           },
           DImensaToday: {
             title:
-              "Intelligentes Speisen an der Universität Münster: Ein personalisiertes Mensa-Empfehlungssystem",
+              "Intelligentes Speisen in Münster: Ein personalisiertes Mensa-Empfehlungssystem",
             desc: `Die Universität Münster ist über das gesamte Stadtgebiet verteilt und verfügt 
             über verschiedene Mensen und Bistros, die ein wöchentlich wechselndes Angebot an Speisen haben. Als Student, 
             der häufig in diesen Mensen isst, muss man alle Gerichte der einzelnen Mensen durchsehen, um eine Mahlzeit zu 
