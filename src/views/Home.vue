@@ -36,7 +36,7 @@ div
               v-card-text.center-items.text-justify {{ $t("homeIntro.text") }}
                 v-btn.gradient-btn.pa-6.ma-8.mt-12(rounded
                   :href="'/CV/CV-Leo-Giesen-' + this.$i18n.locale.toUpperCase() +'.pdf'")
-                  v-icon mdi-download
+                  v-icon mdi-account-tie
                   | {{ $t("homeIntro.downloadCV") }}
   article
     section
@@ -428,13 +428,11 @@ $secondary: var(--v-secondary-base);
     bottom: 0;
     background: linear-gradient(120deg, $secondary, $primary, $secondary);
     background-size: 300% 300%;
-    clip-path: polygon(
-      0 100%,
-      0 calc(100% - var(--border-width)),
-      100% calc(100% - var(--border-width)),
-      100% 100%,
-      0 100%
-    );
+    clip-path: polygon(0 100%,
+        0 calc(100% - var(--border-width)),
+        100% calc(100% - var(--border-width)),
+        100% 100%,
+        0 100%);
     // 0 100%,
     // 0 calc(100% - 3px),
     // 100% calc(100% - 3px),
@@ -504,5 +502,4 @@ $secondary: var(--v-secondary-base);
 //       0 100%
 //     );
 //   }
-// }
-</style>
+// }</style>
