@@ -354,7 +354,7 @@ export default {
             title:
               "Advancing Environmental Monitoring: Tree Segmentation in South Africa with Deep Learning",
             desc: `<p style="text-align:center;" > (adapted from <a href = "#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)</p>
-              This project represents a significant step forward in environmental monitoring in South Africa's drylands. Utilizing deep learning with the U-Net architecture, I have devised a method to accurately detect individual trees and shrubs from satellite images. These non-forest trees, growing isolated without canopy closure, are vital for biodiversity, carbon storage, and providing resources to both humans and animals. The project showcases an effective approach to environmental analysis, demonstrating my expertise in machine learning and programming. The findings aim to be shared on a sustainability-focused website, to increase awareness on critical issues such as land degradation, deforestation, and reforestation.`,
+            This project represents a significant step forward in environmental monitoring in South Africa's drylands. Utilizing deep learning with the U-Net architecture, we have devised a method to accurately detect individual trees and shrubs from satellite images. These non-forest trees, growing isolated without canopy closure, are vital for biodiversity, carbon storage, and providing resources to both humans and animals. By assessing tree numbers, we gain insights into the biomass of these areas, which is essential for sustainability initiatives. The project showcases an effective approach to environmental analysis, demonstrating my expertise in machine learning and programming. The findings aim to be shared on a sustainability-focused website, to increase awareness on critical issues such as land degradation, deforestation, and reforestation.`,
             files: {
               BAThesis: "Bachelor Thesis"
             }
@@ -362,10 +362,11 @@ export default {
           ForestHeight: {
             title:
               "Elevating Environmental Insights: Forest Height Analysis Using Machine Learning",
-            desc: `The primary goal of this case study was to estimate and map the height of forests across Germany. Leveraging advanced machine learning techniques, including a Convolutional Neural Network (CNN) and NN, this project aimed to tackle the complex regression task using satellite imagery.
-              The Federal Ministry for the Environment in Germany is seeking to find the height of every forest in Germany. Given the sparse nature of labels within satellite images, this project required innovative approaches to successfully perform the regression task.
-              Throughout this case study, I employed various machine learning approaches (boosted trees, decision trees, random forest) to address these challenges, showcasing my deep expertise in both machine learning and programming. This project not only highlights my ability to navigate complex data challenges but also underscores my commitment to contributing valuable insights to environmental conservation efforts.
-              This initiative demonstrates my capacity to think critically, solve problems innovatively, and adapt to technical challenges, making me an invaluable asset to any team.`,
+            desc: `
+            The Federal Ministry for the Environment is interested in the height of German forests. Given the sparse nature of labels within satellite images, this project required innovative approaches to successfully complete this regression task.
+            In this case study, I employed various machine learning strategies to meet these challenges, which underscores my profound expertise in both machine learning and programming. This project not only highlights my ability to navigate complex data tasks but also underscores my commitment to making valuable contributions to environmental protection efforts.
+            This initiative proves my capacity for critical thinking, innovative problem-solving, and adapting to technical challenges, making me an invaluable member of any team.
+            `,
             files: {
               poster_overview: "Poster"
             }
@@ -500,7 +501,9 @@ export default {
           ForestHeight: {
             title:
               "Förderung der Umweltüberwachung: Baumsegmentierung in Südafrika mittels Deep Learning",
-            desc: `Dieses Projekt leistet einen wichtigen Beitrag zur Umweltüberwachung in den Trockengebieten Südafrikas. Durch den Einsatz von Deep Learning und der U-Net-Architektur wurde eine Methode zur genauen Detektion von einzelnen Bäumen und Sträuchern aus Satellitenbildern entwickelt. Diese isoliert wachsenden Nicht-Wald-Bäume sind entscheidend für die Biodiversität, die Kohlenstoffspeicherung und die Versorgung von Menschen und Tieren. Die Ermittlung der Baumzahl ermöglicht Einblicke in die Biomasse der Regionen, was für Nachhaltigkeitsbestrebungen unerlässlich ist. Das Projekt präsentiert einen effektiven Ansatz zur Umweltanalyse und unterstreicht meine Fachkenntnisse im Machine Learning und in der Programmierung. Die Ergebnisse sollen auf einer auf Nachhaltigkeit ausgerichteten Website geteilt werden, um das Bewusstsein für wichtige Themen wie Landdegradation, Entwaldung und Aufforstung zu schärfen.`,
+            desc: `Das Bundesministerium für Umwelt ist an der Höhe von den deutschen Wäldern. Angesichts der spärlichen Natur der Labels innerhalb der Satellitenbilder erforderte dieses Projekt innovative Ansätze, um diese Regressionsaufgabe erfolgreich durchzuführen.
+            In dieser Fallstudie setzte ich verschiedene Strategien des maschinellen Lernens ein, um diesen Herausforderungen zu begegnen, was meine tiefgreifende Expertise sowohl im maschinellen Lernen als auch in der Programmierung unterstreicht. Dieses Projekt hebt nicht nur meine Fähigkeit hervor, komplexe Datenaufgaben zu navigieren, sondern unterstreicht auch mein Engagement für wertvolle Beiträge zu Umweltschutzanstrengungen.
+            Diese Initiative beweist meine Fähigkeit zu kritischem Denken, innovativer Problemlösung und Anpassung an technische Herausforderungen, was mich zu einem unschätzbaren Mitglied jedes Teams macht.`,
             files: {
               poster_overview: "Poster"
             }
@@ -521,7 +524,7 @@ export default {
             desc: `<p style="text-align:center;"> (angepasst von
               <a href="#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)
               </p>
-              Dieses Projekt hat den Weg geebnet, um unser Verständnis und die Überwachung der Umwelt in den Trockengebieten Südafrikas zu transformieren. Durch die Nutzung der Leistungsfähigkeit des Deep Learnings mittels der U-Net-Architektur habe ich eine Methode entwickelt, um einzelne Bäume und Sträucher präzise aus Satellitenbildern zu detektieren. Trotz der spärlichen Vegetation in Trockengebieten spielen diese Nicht-Wald-Bäume eine entscheidende Rolle bei der Aufrechterhaltung der Biodiversität, der Speicherung von Kohlenstoff sowie der Bereitstellung von Unterschlupf und Nahrung für Menschen und Tiere. Durch die genaue Schätzung der Baumzahl konnte ich wertvolle Einblicke in die Biomasse dieser Regionen gewinnen, was einen signifikanten Beitrag zu Nachhaltigkeitsbemühungen leistet. Das Projekt demonstriert nicht nur einen innovativen Ansatz zur Umweltüberwachung, sondern auch meine Kompetenz im Umgang mit komplexen Herausforderungen im Machine Learning und in der Programmierung. Das ultimative Ziel ist es, diese Erkenntnisse auf einer dedizierten Website zu nutzen, um das Bewusstsein zu schärfen und Nachhaltigkeit zu fördern, mit einem Fokus auf Themen wie Landdegradation, Entwaldung und Aufforstung.`,
+              Dieses Projekt leistet einen wichtigen Beitrag zur Umweltüberwachung in den Trockengebieten Südafrikas. Durch den Einsatz von Deep Learning und der U-Net-Architektur wurde eine Methode zur genauen Detektion von einzelnen Bäumen und Sträuchern aus Satellitenbildern entwickelt. Diese isoliert wachsenden Nicht-Wald-Bäume sind entscheidend für die Biodiversität, die Kohlenstoffspeicherung und die Versorgung von Menschen und Tieren. Die Ermittlung der Baumzahl ermöglicht Einblicke in die Biomasse der Regionen, was für Nachhaltigkeitsbestrebungen unerlässlich ist. Das Projekt präsentiert einen effektiven Ansatz zur Umweltanalyse und unterstreicht meine Fachkenntnisse im Machine Learning und in der Programmierung. Die Ergebnisse sollen auf einer auf Nachhaltigkeit ausgerichteten Website geteilt werden, um das Bewusstsein für wichtige Themen wie Landdegradation, Entwaldung und Aufforstung zu schärfen.`,
             files: {
               BAThesis: "Bachelorarbeit"
             }
