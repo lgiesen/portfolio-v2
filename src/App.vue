@@ -1,9 +1,9 @@
 <template lang="pug">
-  v-app#app
-    TheNavigation#scroll-target
-    v-main
-      router-view
-    TheFooter
+v-app#app
+  TheNavigation#scroll-target
+  v-main
+    router-view
+  TheFooter
 </template>
 
 <script>
@@ -27,36 +27,14 @@ export default {
       if (isDarkThemeActive == "true") this.$vuetify.theme.dark = true;
       else this.$vuetify.theme.dark = true;
     }
-    // --
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
   },
 
   methods: {
-    // ...mapActions([
-    //   "increment", // map `this.increment()` to `this.$store.dispatch('increment')`
-    //   "incrementBy" // map `this.incrementBy(amount)` to `this.$store.dispatch('incrementBy', amount)`
-    // ]),
-    // ...mapActions({
-    //   add: "increment" // map `this.add()` to `this.$store.dispatch('increment')`
-    // })
     onResize() {
       this.$store.state.isMobile = window.innerWidth < 600;
     }
-  },
-  computed: {
-    // ...mapGetters(["getterName"])
-    // state() {
-    //   return this.$store.state.varName;
-    // }
-    // or
-    // ...mapState({
-    //   varNameLocal: state => state.varName,
-    //   varNameAlias: "varName", // = state => state.count
-    //   stateComputed(state) {
-    //     return state.varName + this.localVar;
-    //   }
-    // })
   }
 };
 </script>
