@@ -90,7 +90,7 @@ export default {
         title: "itArchitectureTitle",
         textSrc: "itArchitecture",
         backgroundImage: require("@/assets/home/itArchitecture.jpg"),
-        icon: "hammer-wrench", // progress-wrench
+        icon: "lan-connect", // progress-wrench
         aria: "It Architecture"
       },
       {
@@ -125,7 +125,7 @@ export default {
         title: "otherTitle",
         textSrc: "other",
         backgroundImage: require("@/assets/home/desk.jpg"),
-        icon: "language-java",
+        icon: "star",
         aria: "Other"
       }
       // {
@@ -186,7 +186,7 @@ export default {
             <a href="/#/projects#goc">web-based simulation platform</a> 
           built in the project seminar Game of Competences.`,
 
-          itArchitectureTitle: "IT Architecture",
+          itArchitectureTitle: "IT-Architecture",
           itArchitecture: `At university, I learned to portray the IT architecture of a company and to 
           and to analyze it for bottlenecks, for example. I also learned to 
           create a transformation plan to adapt the IT architecture. I applied this knowledge 
@@ -307,7 +307,7 @@ export default {
             <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
           implementiert.`,
 
-          itArchitectureTitle: "IT Architektur",
+          itArchitectureTitle: "IT-Architektur",
           itArchitecture: `In der Universität habe ich gelernt die IT-Architektur eines Unternehmens 
           abzubilden und diese auf zum Beispiel Bottlenecks zu analysieren. Außerdem habe ich gelernt 
           einen Transformationsplan zu erstellen um die IT-Architektur anzupassen. Diese Kenntnisse 
