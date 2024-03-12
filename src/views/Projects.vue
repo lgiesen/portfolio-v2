@@ -27,7 +27,7 @@ div
               h2.display-1.font-weight-thin.mb-0(style="word-break: break-word;")
                 | {{ $t('projects.' + project.translationKey + '.title') }}
               //- Links to repository and/or website
-              div.mt-5
+              div.mt-5(:id="project.translationKey")
                 span(v-if="project.year") {{project.year}}
                 v-btn.text-capitalize.text-caption.ma-2(text outlined v-if="project.link != null" :href="project.link" target="_blank") 
                   v-icon.mr-2(small) mdi-code-tags
@@ -354,7 +354,7 @@ export default {
             title:
               "Advancing Environmental Monitoring: Tree Segmentation in South Africa with Deep Learning",
             desc: `<p style="text-align:center;" > (adapted from <a href = "#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)</p>
-              This project represents a significant step forward in environmental monitoring in South Africa's drylands. Utilizing deep learning with the U-Net architecture, we have devised a method to accurately detect individual trees and shrubs from satellite images. These non-forest trees, growing isolated without canopy closure, are vital for biodiversity, carbon storage, and providing resources to both humans and animals. By assessing tree numbers, we gain insights into the biomass of these areas, which is essential for sustainability initiatives. The project showcases an effective approach to environmental analysis, demonstrating my expertise in machine learning and programming. The findings aim to be shared on a sustainability-focused website, to increase awareness on critical issues such as land degradation, deforestation, and reforestation.`,
+              This project represents a significant step forward in environmental monitoring in South Africa's drylands. Utilizing deep learning with the U-Net architecture, I have devised a method to accurately detect individual trees and shrubs from satellite images. These non-forest trees, growing isolated without canopy closure, are vital for biodiversity, carbon storage, and providing resources to both humans and animals. The project showcases an effective approach to environmental analysis, demonstrating my expertise in machine learning and programming. The findings aim to be shared on a sustainability-focused website, to increase awareness on critical issues such as land degradation, deforestation, and reforestation.`,
             files: {
               BAThesis: "Bachelor Thesis"
             }
@@ -521,7 +521,7 @@ export default {
             desc: `<p style="text-align:center;"> (angepasst von
               <a href="#bibliography">Ronneberger, Fischer, and Brox [RFB15]</a>)
               </p>
-              Dieses Projekt hat den Weg geebnet, um unser Verständnis und die Überwachung der Umwelt in den Trockengebieten Südafrikas zu transformieren. Durch die Nutzung der Leistungsfähigkeit des Deep Learnings mittels der U-Net-Architektur haben wir eine Methode entwickelt, um einzelne Bäume und Sträucher präzise aus Satellitenbildern zu detektieren. Trotz der spärlichen Vegetation in Trockengebieten spielen diese Nicht-Wald-Bäume eine entscheidende Rolle bei der Aufrechterhaltung der Biodiversität, der Speicherung von Kohlenstoff sowie der Bereitstellung von Unterschlupf und Nahrung für Menschen und Tiere. Durch die genaue Schätzung der Baumzahl können wir wertvolle Einblicke in die Biomasse dieser Regionen gewinnen, was einen signifikanten Beitrag zu Nachhaltigkeitsbemühungen leistet. Das Projekt demonstriert nicht nur einen innovativen Ansatz zur Umweltüberwachung, sondern auch meine Kompetenz im Umgang mit komplexen Herausforderungen im Machine Learning und in der Programmierung. Das ultimative Ziel ist es, diese Erkenntnisse auf einer dedizierten Website zu nutzen, um das Bewusstsein zu schärfen und Nachhaltigkeit zu fördern, mit einem Fokus auf Themen wie Landdegradation, Entwaldung und Aufforstung.`,
+              Dieses Projekt hat den Weg geebnet, um unser Verständnis und die Überwachung der Umwelt in den Trockengebieten Südafrikas zu transformieren. Durch die Nutzung der Leistungsfähigkeit des Deep Learnings mittels der U-Net-Architektur habe ich eine Methode entwickelt, um einzelne Bäume und Sträucher präzise aus Satellitenbildern zu detektieren. Trotz der spärlichen Vegetation in Trockengebieten spielen diese Nicht-Wald-Bäume eine entscheidende Rolle bei der Aufrechterhaltung der Biodiversität, der Speicherung von Kohlenstoff sowie der Bereitstellung von Unterschlupf und Nahrung für Menschen und Tiere. Durch die genaue Schätzung der Baumzahl konnte ich wertvolle Einblicke in die Biomasse dieser Regionen gewinnen, was einen signifikanten Beitrag zu Nachhaltigkeitsbemühungen leistet. Das Projekt demonstriert nicht nur einen innovativen Ansatz zur Umweltüberwachung, sondern auch meine Kompetenz im Umgang mit komplexen Herausforderungen im Machine Learning und in der Programmierung. Das ultimative Ziel ist es, diese Erkenntnisse auf einer dedizierten Website zu nutzen, um das Bewusstsein zu schärfen und Nachhaltigkeit zu fördern, mit einem Fokus auf Themen wie Landdegradation, Entwaldung und Aufforstung.`,
             files: {
               BAThesis: "Bachelorarbeit"
             }
