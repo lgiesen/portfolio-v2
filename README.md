@@ -33,13 +33,13 @@ npm run serve
 #or start via User Interface with: vue ui
 ```
 
-### Build for Production - Compiles and minifies for production
+### Build for Production
 
 ```
-npm run build
+npm run build #Compiles and minifies for production
 ```
 
-Subsequently, the dist directory contents have to be copied into the portfolio-v2-dist directory and pushed to the repository to publish the changes because the hosting is based on the portfolio-v2-dist repository. This has to be performed because the hosting plan is unable to build from production by itself.
+To publish the changes, the "dist" directory contents are to be copied and pushed to the [portfolio-v2-dist](https://github.com/lgiesen/portfolio-v2-dist) repository because the hosting is based on it. This must be performed because the hosting plan is unable to build from production by itself.
 
 ## General Advice for Web Projects
 
