@@ -1,8 +1,15 @@
-# Portfolio (v2)
+<!-- [![Website](https://img.shields.io/badge/website-f4511e?style=for-the-badge&logo=About.me&logoColor=white)](https://leogiesen.de/#/) -->
+[![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)](https://v2.vuejs.org/) 
+[![Is Website Up?](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://leogiesen.de/#/) 
+![GitHub version](https://img.shields.io/github/v/release/lgiesen/title-case?color=green&include_prereleases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit) 
+<img align="right" height="72px" src="https://raw.githubusercontent.com/lgiesen/portfolio-v2/c907478f950776fef6cbfbfb9dabe628beded429/src/assets/logo/light/logo.svg"/>
 
-The previous version of my portfolio can be inspected [here](https://github.com/lgiesen/portfolio-v1).
+# Portfolio - Leo Giesen
 
-This project is deployed at [leogiesen.de](https://leogiesen.de).
+
+This project is deployed at [leogiesen.de](https://leogiesen.de/#/).
+The original version of my portfolio can be inspected [here](https://github.com/lgiesen/portfolio-v1), which I created with HTMl5 CSS3 and JavaScript when I was 18.
  <!-- and on [Netlify](https://giesen.netlify.app/): [![Netlify Status](https://api.netlify.com/api/v1/badges/56383890-7eca-4786-9aad-0d4d3cfcc507/deploy-status)](https://app.netlify.com/sites/giesen/deploys) -->
 
 ## Project Setup
@@ -14,8 +21,8 @@ This project is deployed at [leogiesen.de](https://leogiesen.de).
 Check your versions:
 
 ```
-   node --version              # v21.6.2
-   npm --version               # 10.2.4
+   node --version              # v16.14.2
+   npm --version               # 8.5.0
    vue --version               # @vue/cli 5.0.8
 ```
 
