@@ -27,21 +27,21 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
             contain width="40"
             transition="scale-transition"
             :src="themespecificLogoSrc")
-            v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity="1")
-              v-btn(fixed top right icon
-                @click="mobileDialog = false")
-                v-icon mdi-close
+    v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity="1")
+      v-btn(fixed top right icon
+        @click="mobileDialog = false")
+        v-icon mdi-close
 
-              v-tab.ma-8(@click="mobileDialog = false" to="/" )
-                v-icon(color="secondary") mdi-home-outline
-                | {{ isDE ? "Start" : "Home" }}
-              v-tab.ma-8(v-for="view in views" :key="view.to.name" 
-                @click="mobileDialog = false" :to="view.to")
-                v-icon(color="secondary") mdi-{{ view.icon }}
-                |  {{ isDE ? view.tag_de : view.tag_en }}
-              div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
-                LanguageSwitcher(@language-changed="updateSlider")
-                ToggleTheme
+      v-tab.ma-8(@click="mobileDialog = false" to="/" )
+        v-icon(color="secondary") mdi-home-outline
+        | {{ isDE ? "Start" : "Home" }}
+      v-tab.ma-8(v-for="view in views" :key="view.to.name" 
+        @click="mobileDialog = false" :to="view.to")
+        v-icon(color="secondary") mdi-{{ view.icon }}
+        |  {{ isDE ? view.tag_de : view.tag_en }}
+      div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
+        LanguageSwitcher(@language-changed="updateSlider")
+        ToggleTheme
 </template>
 
 <script>
