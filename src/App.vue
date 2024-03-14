@@ -134,7 +134,7 @@ section:not(.fullwidth) {
 // }
 // 2.2 Hero area
 .h-100vh {
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 }
 
 // 2.3 transparenet background (used in nav and home)

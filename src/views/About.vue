@@ -1,22 +1,25 @@
 <template lang="pug">
 div
-  //- Hero Area
-  //- Parallax(:parallaxImage="require('@/assets/about/Aasee.jpg')" 
-  //-   :title="$t('parallaxText.title')" :subtitle="$t('parallaxText.subtitle')")
-  v-img.align-center(src="@/assets/background/Glatthorn.jpg" height="100vh"
-    gradient="to bottom right, rgba(100,115,201,.33), rgba(38,145,66,.5)")
-    //- Another section is necessary to provide the max-width for ultra-wide screens
-    section.mb-0 
-      v-container
-        v-row.pa-md-12.d-flex.text-center
-          v-col.col-12.col-md-6.white--text(order-md="2")
-            h1.display-3.font-weight-thin.mb-12 {{ $t("parallaxText.title") }}
-            p.subheading {{ $t("parallaxText.subtitle") }}
-            ScrollHero.mt-16.pt-16
-          v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
-            v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
-              //- v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
-              v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen-nature.jpg" max-width="90vw")
+  section.fullwidth.mb-0
+    v-parallax.h-100vh(src="@/assets/background/Glatthorn.jpg" )
+      //- Another section is necessary to provide the max-width for ultra-wide screens
+      v-overlay(absolute 
+        color="rgba(38,145,66,.3)")
+        section.mb-0 
+          v-container
+            v-row.pa-md-12.d-flex.text-center
+              v-col.col-12.col-md-6.white--text(order-md="2")
+                h1.display-3.font-weight-thin.mb-12 {{ $t("intro.title") }}
+                br
+                br
+                br
+                p.subheading {{ $t("intro.subtitle") }}
+                ScrollHero.mt-16.pt-16
+              v-col.d-flex.justify-center.col-12.col-md-6(order-md="1")
+                v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
+                  //- v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
+                  v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen-nature.jpg" max-width="90vw")
+
   //- About me texts alternating with corresponding images
   article
     section#scroll
@@ -58,7 +61,6 @@ div
 </template>
 
 <script>
-// import Parallax from "@/components/Parallax.vue";
 import Quote from "@/components/Quote.vue";
 import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import { mapGetters } from "vuex";
@@ -66,7 +68,6 @@ import { mapGetters } from "vuex";
 export default {
   name: "About",
   components: {
-    // Parallax,
     Quote,
     ScrollHero
   },
@@ -91,7 +92,7 @@ export default {
   i18n: {
     messages: {
       de: {
-        parallaxText: {
+        intro: {
           title: "Über Leo",
           subtitle:
             "Ich liebe es komplexe und abstrakte Probleme runterzubrechen und zu lösen!"
@@ -135,7 +136,7 @@ export default {
           "Zum Schluss möchte ich mit einem Zitat abschließen, das meine Lebenseinstellung auf den Punkt bringt:"
       },
       en: {
-        parallaxText: {
+        intro: {
           title: "About Leo",
           subtitle:
             "I love breaking down and solving complex and abstract problems!"

@@ -75,21 +75,21 @@ export default {
       {
         title: "mlbiTitle",
         textSrc: "mlbi",
-        backgroundImage: require("@/assets/home/bi.jpg"),
+        backgroundImage: require("@/assets/home/machine_learning.jpg"),
         icon: "language-python",
         aria: "Machine Learning"
       },
       {
         title: "feTitle",
         textSrc: "frontend",
-        backgroundImage: require("@/assets/home/frontend.jpg"),
+        backgroundImage: require("@/assets/home/web_dev.jpg"),
         icon: "vuejs",
         aria: "Front-end Web Development Vue.js"
       },
       {
         title: "itArchitectureTitle",
         textSrc: "itArchitecture",
-        backgroundImage: require("@/assets/home/itArchitecture.jpg"),
+        backgroundImage: require("@/assets/home/it-architecture.jpg"),
         icon: "lan-connect", // progress-wrench
         aria: "It Architecture"
       },
@@ -103,7 +103,7 @@ export default {
       {
         title: "officeTitle",
         textSrc: "office",
-        backgroundImage: require("@/assets/home/office.jpg"),
+        backgroundImage: require("@/assets/home/microsoft_office_365.jpg"),
         icon: "microsoft-office",
         aria: "Microsoft Office and Microsoft 365"
       },
@@ -143,18 +143,13 @@ export default {
         homeHero: {
           title: "Progress with Passion",
           subtitle:
-            "Fascination for new technologies and their application in business"
+            "Fascination for revolutionizing information technologies and their application in business"
         },
         homeIntro: {
-          title: "I love to learn and apply my knowledge!",
-          text: `I am fascinated by various computer science technologies, such 
-          as machine learning. Thus, this passion for gaining insights from data 
-          drives me to study Information Systems at the University of Münster 
-          with a focus on business intelligence. In internships and real-life 
-          projects at the student consultancy move, I put the acquired theoretical 
-          knowledge from my studies into practice. Furthermore, I work on personal 
-          projects in my free time and work at the chair of Information Systems, 
-          fostering my analytical and conceptual abilities.`,
+          title: "I love to learn and apply my knowledge in dynamic teams!",
+          text: `
+            I am fascinated by information technologies, especially Machine Learning. This passion drives me to study Information Systems at the University of Münster with a focus on Business Intelligence. Through internships and part-time work, I have applied my theoretical knowledge in practice. In personal leisure projects and practical projects at the student consultancy move, I continuously enhance my analytical and conceptual skills. Currently, I aim to further develop my leadership qualities as Chairman of the Board and project manager at move.I am fascinated by information technologies, especially Machine Learning. This passion drives me to study Information Systems at the University of Münster with a focus on Business Intelligence. Through internships and part-time work, I have applied my theoretical knowledge in practice. In personal leisure projects and practical projects at the student consultancy move, I continuously enhance my analytical and conceptual skills. Currently, I aim to further develop my leadership qualities as Chairman of the Board and project manager at move.
+          `,
           downloadCV: "CV"
         },
         skills: {
@@ -254,18 +249,13 @@ export default {
         homeHero: {
           title: "Fortschritt mit Leidenschaft",
           subtitle:
-            "Faszination für neue Technologien und deren Anwendung in der Wirtschaft"
+            "Faszination für revolutionäre Informationstechnologien und deren Anwendung in der Wirtschaft"
         },
         homeIntro: {
-          title: `Ich liebe es, zu lernen und mein Wissen anzuwenden!`,
-          text: `Ich bin fasziniert von Informatik Technologien, wie Machine Learning. 
-          Diese Leidenschaft für die Ableitung von Erkenntnissen aus Daten bewegt mich 
-          Wirtschaftsinformatik an der Universität Münster mit dem Schwerpunkt Business 
-          Intelligence zu studieren. In Praktika und Praxisprojekten bei der 
-          studentischen Unternehmensberatung move wende ich mein theoretisches Wissen 
-          aus dem Studium in der Praxis an. Darüber hinaus setze ich in meiner Freizeit 
-          eigene Projekten um und arbeite am Lehrstuhl für Wirtschaftsinformatik, um 
-          meine analytischen und konzeptionellen Fähigkeiten zu fördern.`,
+          title: `Ich liebe es zu lernen und mein Wissen in dynamischen Teams anzuwenden!`,
+          text: `
+            Ich bin fasziniert von Informations-Technologien, insbesondere Machine Learning. Diese Leidenschaft treibt mich an, Information Systems an der Universität Münster mit Schwerpunkt Business Intelligence zu studieren. Durch Praktika und Werkstudententätigkeiten habe ich mein theoretisches Wissen in die Praxis umgesetzt. In persönlichen und Praxisprojekten bei der studentischen Unternehmensberatung move erweitere ich kontinuierlich meine analytischen und konzeptionellen Fähigkeiten. Derzeit strebe ich an, meine Führungsqualitäten als Vorstandsvorsitzender und Projektleiter bei move weiter auszubauen.Ich bin fasziniert von Informations-Technologien, insb. Machine Learning. Diese Leidenschaft treibt mich an, Information Systems an der Universität Münster mit Schwerpunkt Business Intelligence zu studieren. Durch Praktika und Werkstudententätigkeiten habe ich mein theoretisches Wissen in die Praxis umgesetzt. In persönlichen und Praxisprojekten bei der studentischen Unternehmensberatung move erweitere ich kontinuierlich meine analytischen und konzeptionellen Fähigkeiten. Derzeit strebe ich an, meine Führungsqualitäten als Vorstandsvorsitzender und Projektleiter bei move weiter auszubauen.
+          `,
           downloadCV: "Lebenslauf"
         },
         skills: {
@@ -407,14 +397,6 @@ $secondary: var(--v-secondary-base);
   -webkit-text-fill-color: transparent;
 }
 
-// non-animated border
-// .bottom-border {
-// --border-width: 2px;
-// border-bottom: var(--border-width) solid;
-// border-image-slice: 1;
-// border-image-source: linear-gradient(120deg, $primary, $secondary);
-// border-radius: var(--border-width);
-// }
 .animated-gradient-box {
   position: relative;
 
@@ -471,8 +453,8 @@ $secondary: var(--v-secondary-base);
     background-position: 15% 0%;
   }
 }
-
-// You could also animate the polygon (this is not as desired at the moment)
+</style>
+<!-- // You could also animate the polygon (this is not as desired at the moment)
 // Hence, it is not in production
 // @keyframes frame-enter {
 //   0% {
@@ -502,4 +484,4 @@ $secondary: var(--v-secondary-base);
 //       0 100%
 //     );
 //   }
-// }</style>
+// } -->

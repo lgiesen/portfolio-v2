@@ -1,17 +1,18 @@
 <template lang="pug">
 div
-  //- Hero Area
+  //- Hero area
   section.fullwidth.mb-0
-    v-img.align-center(src="@/assets/background/Aegina_port.jpg" height="100vh"
-      gradient="to bottom right, rgba(37,81,126,.33), rgba(6, 19, 54,.5)")
-      //- Another section is necessary to provide the max-width for ultra-wide screens
-      section.mb-0 
-        v-container
-          v-row.pa-md-12.d-flex.text-center
-            v-col.white--text
-              h1.display-3.font-weight-thin.mb-12.text-break(v-html="$t('experienceHero.title')")
-              p.subheading {{ $t("experienceHero.subtitle") }}
-              ScrollHero.mt-16.pt-16
+    v-parallax.h-100vh(src="@/assets/background/Aegina_port.jpg" )
+      v-overlay(absolute 
+        color="rgba(37,81,126,.5)")
+        //- Another section is necessary to provide the max-width for ultra-wide screens
+        section.mb-0 
+          v-container
+            v-row.pa-md-12.d-flex.text-center
+              v-col
+                h1.display-3.font-weight-thin.mb-12(v-html="$t('intro.title')")
+                p.subheading {{ $t("intro.subtitle") }}
+                ScrollHero.mt-16.pt-16
 
   //- no section here because it limits the background's width
   article
@@ -314,7 +315,7 @@ export default {
   i18n: {
     messages: {
       en: {
-        experienceHero: {
+        intro: {
           title: "Work Experience <br>and Education",
           subtitle:
             "I want to broaden my horizons by learning new things and facing challenges!"
@@ -329,7 +330,7 @@ export default {
         // recommendationsTitle: "Recommendations"
       },
       de: {
-        experienceHero: {
+        intro: {
           title: "Berufserfahrung <br>und Bildung",
           subtitle: `Ich möchte meinen Horizont erweitern indem ich Neues lerne und mich Herausforderungen stelle!`
         },

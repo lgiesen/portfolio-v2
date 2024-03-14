@@ -2,15 +2,17 @@
 div
   //- Hero area
   section.fullwidth.mb-0
-    v-parallax(src="@/assets/background/Aasee.jpg" height="900")
-      //- Another section is necessary to provide the max-width for ultra-wide screens
-      section.mb-0 
-        v-container
-          v-row.pa-md-12.d-flex.text-center
-            v-col
-              h1.display-3.font-weight-thin.mb-12 {{ $t("intro.title") }}
-              p.subheading {{ $t("intro.subtitle") }}
-              ScrollHero.mt-16.pt-16
+    v-parallax.h-100vh(src="@/assets/background/Aasee.jpg" )
+      v-overlay(absolute 
+        color="rgba(225,191,156,.5)")
+        //- Another section is necessary to provide the max-width for ultra-wide screens
+        section.mb-0 
+          v-container
+            v-row.pa-md-12.d-flex.text-center
+              v-col
+                h1.display-3.font-weight-thin.mb-12(v-html="$t('intro.title')")
+                p.subheading {{ $t("intro.subtitle") }}
+                ScrollHero.mt-16.pt-16
 
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
@@ -290,8 +292,8 @@ export default {
     messages: {
       en: {
         intro: {
-          title: "Projects",
-          subtitle: "- get inspired or fascinated by selected IT projects -"
+          title: "Project <br>Experience",
+          subtitle: "Get Inspired by My Projects"
         },
         projects: {
           links: {
@@ -447,8 +449,8 @@ export default {
       },
       de: {
         intro: {
-          title: "Projekte",
-          subtitle: "Meine Erfahrung baut auf diese Beispiel-Projekte"
+          title: "Projekterfahrung",
+          subtitle: "Inspiration durch Projektes"
         },
         projects: {
           links: {
@@ -608,5 +610,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped></style>
