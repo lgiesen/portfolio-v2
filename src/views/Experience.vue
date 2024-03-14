@@ -332,7 +332,7 @@ export default {
       de: {
         intro: {
           title: "Berufserfahrung <br>und Bildung",
-          subtitle: `Ich möchte meinen Horizont erweitern indem ich Neues lerne und mich Herausforderungen stelle!`
+          subtitle: `Ich möchte meinen Horizont erweitern, indem ich Neues lerne und mich Herausforderungen stelle!`
         },
         // experienceParallax: {
         //   title: "Berufserfahrung und Bildung",
