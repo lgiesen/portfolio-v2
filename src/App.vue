@@ -137,6 +137,10 @@ section:not(.fullwidth) {
   min-height: 100vh;
 }
 
+.h-80vh {
+  min-height: 80vh;
+}
+
 // 2.3 transparenet background (used in nav and home)
 .transparent-background {
   background-color: rgba(#fff, 0) !important;

@@ -1,7 +1,8 @@
 <template lang="pug">
 div
   section.fullwidth.mb-0
-    v-parallax.h-100vh(src="@/assets/background/Glatthorn.jpg" )
+    v-parallax.h-100vh(src="@/assets/background/Glatthorn.jpg" 
+      :class="this.$vuetify.breakpoint.name == 'lg' ? 'h-100vh' : 'h-80vh'")
       //- Another section is necessary to provide the max-width for ultra-wide screens
       v-overlay(absolute 
         color="rgba(38,145,66,.3)")

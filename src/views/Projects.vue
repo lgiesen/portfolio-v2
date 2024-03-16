@@ -2,7 +2,8 @@
 div
   //- Hero area
   section.fullwidth.mb-0
-    v-parallax.h-100vh(src="@/assets/background/Aasee.jpg" )
+    v-parallax.h-100vh(src="@/assets/background/Aasee.jpg" 
+      :class="this.$vuetify.breakpoint.name == 'lg' ? 'h-100vh' : 'h-80vh'")
       v-overlay(absolute 
         color="rgba(225,191,156,.5)")
         //- Another section is necessary to provide the max-width for ultra-wide screens

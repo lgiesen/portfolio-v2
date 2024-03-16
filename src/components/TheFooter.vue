@@ -23,10 +23,10 @@ div
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import socialIcons from "@/components/social-icons/SocialIcons.json";
-import programmingIcons from "@/components/social-icons/ProgrammingIcons.json";
 import Icons from "@/components/social-icons/Icons.vue";
+import programmingIcons from "@/components/social-icons/ProgrammingIcons.json";
+import socialIcons from "@/components/social-icons/SocialIcons.json";
+import { mapGetters } from "vuex";
 
 export default {
   name: "TheFooter",
@@ -57,7 +57,7 @@ export default {
       // if the link is internal, the router should be used. Otherwise open a new page
       if (link.includes("mailto"))
         window.location.href = "mailto:contact@leogiesen.de";
-      else this.$router.push("/" + link).catch(() => {});
+      else this.$router.push("/" + link).catch(() => { });
     }
   },
   computed: {
@@ -70,6 +70,7 @@ export default {
   // background: url(../assets/background/light/largeTriangles.svg) center center;
   background: url(../assets/background/light/subtlePrism.svg) center center;
 }
+
 .darkFooterBg {
   // background: url(../assets/background/dark/largeTriangles.svg) center center;
   background: url(../assets/background/dark/subtlePrism.svg) center center;
