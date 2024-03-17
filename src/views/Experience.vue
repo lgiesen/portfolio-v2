@@ -1,19 +1,9 @@
 <template lang="pug">
 div
-  //- Hero area
-  section.fullwidth.mb-0
-    v-parallax(src="@/assets/background/Aegina_port.jpg" 
-      :class="this.$vuetify.breakpoint.name == 'lg' ? 'h-100vh' : 'h-80vh'")
-      v-overlay(absolute color="rgba(37,81,126,.5)")
-        //- Another section is necessary to provide the max-width for ultra-wide screens
-        section.mb-0 
-          v-container
-            v-row.pa-md-12.d-flex.text-center
-              v-col
-                h1.text-break.display-3.font-weight-thin.mb-12(v-html="$t('intro.title')")
-                p.text-break.subheading {{ $t("intro.subtitle") }}
-                ScrollHero.mt-16.pt-16
-
+  Parallax(
+    :parallaxImage="parallaxImagePath"
+    overlayColor="rgba(37,81,126,.5)" 
+    translationKey="experience")
   //- no section here because it limits the background's width
   article
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
@@ -45,8 +35,8 @@ div
 
 <script>
 import CardGroup from "@/components/CardGroup.vue";
+import Parallax from "@/components/Parallax.vue";
 import SocialContactSection from "@/components/SocialContactSection.vue";
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -54,9 +44,10 @@ export default {
   components: {
     CardGroup,
     SocialContactSection,
-    ScrollHero
+    Parallax
   },
   data: () => ({
+    parallaxImagePath: require("@/assets/background/Aegina_port.jpg"),
     /*
     associations: [
       {

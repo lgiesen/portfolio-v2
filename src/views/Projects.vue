@@ -1,21 +1,9 @@
 <template lang="pug">
 div
-  //- Hero area
-  section.fullwidth.mb-0
-    v-parallax.h-100vh(src="@/assets/background/Aasee.jpg" 
-      :class="this.$vuetify.breakpoint.name == 'lg' ? 'h-100vh' : 'h-80vh'")
-      v-overlay(absolute 
-        color="rgba(225,191,156,.5)")
-        //- Another section is necessary to provide the max-width for ultra-wide screens
-        section.mb-0 
-          v-container
-            v-row.pa-md-12.d-flex.text-center
-              v-col
-                h1.display-3.font-weight-thin.mb-12.text-break(v-html="$t('intro.title')")
-                p.subheading {{ $t("intro.subtitle") }}
-                ScrollHero.mt-16.pt-16
-                p {{ this.$vuetify.breakpoint.name }}
-
+  Parallax(
+    :parallaxImage="parallaxImagePath"
+    overlayColor="rgba(225,191,156,.5)" 
+    translationKey="projects")
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
   //- Add what tools I have worked with, which positions I fulfilled
@@ -64,13 +52,14 @@ div
 </template>
 
 <script>
-import ScrollHero from "@/components/scroll/ScrollHero.vue";
+import Parallax from "@/components/Parallax.vue";
 export default {
   name: "Projects",
   components: {
-    ScrollHero
+    Parallax
   },
   data: () => ({
+    parallaxImagePath: require("@/assets/background/Aasee.jpg"),
     projects: [
       // MensaToday Recommender System Data Integration
       {

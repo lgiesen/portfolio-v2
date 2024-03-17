@@ -132,13 +132,15 @@ section:not(.fullwidth) {
 // section {
 //   margin-bottom: 20vh;
 // }
-// 2.2 Hero area
+// 2.2 Hero areaz
 .h-100vh {
   min-height: 100vh;
+  width: 100vw;
 }
 
 .h-80vh {
   min-height: 80vh;
+  width: 100vw;
 }
 
 // 2.3 transparenet background (used in nav and home)
