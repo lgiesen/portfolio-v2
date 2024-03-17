@@ -11,9 +11,10 @@ div
           v-container
             v-row.pa-md-12.d-flex.text-center
               v-col
-                h1.display-3.font-weight-thin.mb-12(v-html="$t('intro.title')")
+                h1.display-3.font-weight-thin.mb-12.text-break(v-html="$t('intro.title')")
                 p.subheading {{ $t("intro.subtitle") }}
                 ScrollHero.mt-16.pt-16
+                p {{ this.$vuetify.breakpoint.name }}
 
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
@@ -450,7 +451,7 @@ export default {
       },
       de: {
         intro: {
-          title: "Projekterfahrung",
+          title: "Projekt-Erfahrung",
           subtitle: "Inspiration durch Projektes"
         },
         projects: {
