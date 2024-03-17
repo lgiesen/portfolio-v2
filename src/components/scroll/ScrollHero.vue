@@ -17,8 +17,28 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 #heroScrollBtn {
   border-color: white;
+  animation: bounce 2s infinite;
 }
 </style>
