@@ -13,7 +13,7 @@ div
                 v-card-title.justify-center 
                     h1.my-1 Leo Giesen
                 v-card-subtitle.mt-1.center-items
-                    h2.font-weight-medium.my-0 Progress with Passion
+                    h2.font-weight-medium.my-0.text-center {{ $t("motto") }}
                 template(v-slot:prepend)
                     v-avatar(color="blue-darken-2")
                         v-icon mdi-alarm
@@ -31,17 +31,27 @@ import socialIcons from "@/components/social-icons/SocialIcons.json";
 import Icons from "@/components/social-icons/Icons.vue";
 
 export default {
-  name: "Links",
-  components: { Icons },
-  data: () => ({
-    socialIcons: socialIcons,
-    programmingIcons: programmingIcons
-  })
+    name: "Links",
+    components: { Icons },
+    data: () => ({
+        socialIcons: socialIcons,
+        programmingIcons: programmingIcons
+    }),
+    i18n: {
+        messages: {
+            en: {
+                motto: "Progress with Passion"
+            },
+            de: {
+                motto: "Fortschritt durch Leidenschaft"
+            }
+        }
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 #footer {
-  display: none;
+    display: none;
 }
 </style>
