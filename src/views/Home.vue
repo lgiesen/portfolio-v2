@@ -153,18 +153,26 @@ export default {
           downloadCV: "CV"
         },
         skills: {
-          mlbiTitle: `Machine Learning`,
-          mlbi: `I acquired the Python basis for Machine Learning in my studies and with online 
-          courses in my spare time. In a Machine Learning 
-            <a href="/#/projects#ml_case_study">case study</a> 
-          and a preparation of a lecture on the introduction to Machine Learning, I was able to 
-          gain insights into how Artificial Intelligence works and its current limitations 
-          and possibilities. I was able to gain some experience in the advanced module "Deep Learning 
-          with Python", where I used TensorFlow, Keras und PyTorch. 
-          Based on this, I wrote my bachelor thesis on semantic segmentation of trees 
-          South Africa using satellite imagery and implemented and trained a deep learning model 
-          (see <a href="/#/projects#ba">here</a>).
-          Since I am fascinated by Machine Learning, I also chose it as a focus in my course of study in Information Systems.`,
+          mlbiTitle: `Artificial Intelligence \n& Machine Learning`,
+          mlbi: `
+          My journey in machine learning started with acquiring the basics of Python during my studies and through online courses in my spare time. 
+          Through a 
+            <a href="/#/projects#DLCaseStudy">case study</a>  
+          in the advanced module "Deep Learning with Python" and the preparation of a lecture on the introduction to machine learning, 
+          I gained insights into how artificial intelligence works, its current limitations, and possibilities. 
+          I deepened my machine learning knowledge in an 
+            <a href="/#/projects#NLP">internship</a>, 
+          another
+            <a href="/#/projects#ForestHeight">case study</a> 
+          about regressing the tree heights in the German Black Forest, and my 
+            <a href="/#/projects#BA">bachelor thesis</a> 
+          on the semantic segmentation of trees in South Africa using satellite imagery. 
+          Moreover, I touched on machine learning in further projects, such as a 
+            <a href="/#/projects#DImensaToday">smart dining recommender system</a> and the 
+            <a href="/#/projects#AutomationOfDocumentChecks">automation of document checks</a>.
+          This fascination led me to choose it as a focus in my Information Systems studies. 
+          The application of these technologies in various projects not only broadened my expertise but also reinforced my passion for developing innovative solutions that address real-world problems and create genuine value.
+          `,
 
           feTitle: "Frontend Web\nDevelopment",
           frontend: `I took various online courses in my free time where I learned how to 
@@ -259,18 +267,26 @@ export default {
           downloadCV: "Lebenslauf"
         },
         skills: {
-          mlbiTitle: `Machine Learning`,
-          mlbi: `Die Python-Basis für Machine Learning habe ich mir im Studium und mit Online-Kurse in meiner 
-          Freizeit angeeignet. In einer Machine Learning
-            <a href="/#/projects#ml_case_study">Fallstudie</a> und einem Vorbereitung eines Vortrages 
-          zur Einführung in Machine Learning konnte ich Einblicke in die Funktionsweise von 
-          Künstlicher Intelligenz und deren aktuelle Grenzen und Möglichkeiten verschaffen. 
-          Erste Erfahrung konnte ich im Vertiefungsmodul "Deep Learning mit Python" sammeln, 
-          wo ich unter anderem mit TensorFlow, Keras und PyTorch gearbeitet habe. Aufbauend darauf habe 
-          ich meine Bachelorarbeit über die semantische Segmentierung von Bäumen in Südafrika anhand 
-          Satellitenbildern geschrieben und ein Deep Learning Modell implementiert und trainiert 
-          (vgl. <a href="/#/projects#ba">hier</a>).
-          Da mich Machine Learning fasziniert, habe ich diesen Fokus auch im Master Information Systems gewählt.`,
+          mlbiTitle: `Artificial Intelligence \n& Machine Learning`,
+          mlbi: `
+          Meine Reise im Bereich Machine Learning begann mit dem Erlernen der Python-Grundlagen während meines Studiums und durch Online-Kurse in meiner Freizeit. 
+          Durch eine 
+            <a href="/#/projects#DLCaseStudy">Fallstudie</a>  
+          im fortgeschrittenen Modul „Deep Learning mit Python“ und die Vorbereitung einer Vorlesung zur Einführung in Machine Learning 
+          erlangte ich Einblicke, wie künstliche Intelligenz funktioniert, ihre aktuellen Grenzen und Möglichkeiten. 
+          Mein Wissen im Bereich Machine Learning vertiefte ich in einem 
+            <a href="/#/projects#NLP">Praktikum</a>, 
+          einer weiteren 
+            <a href="/#/projects#ForestHeight">Fallstudie</a> 
+          über die Regression der Baumhöhen im Schwarzwald, und meiner 
+            <a href="/#/projects#BA">Bachelorarbeit</a> 
+          zur semantischen Segmentierung von Bäumen in Südafrika mit Satellitenbildern. 
+          Darüber hinaus befasste ich mich in weiteren Projekten mit Machine Learning, wie einem 
+            <a href="/#/projects#DImensaToday">intelligenten Empfehlungssystem für die Mensa</a> und der 
+            <a href="/#/projects#AutomationOfDocumentChecks">Automatisierung von Dokumentenprüfungen</a>.
+          Aufgrund von dieser Faszination für Machine Learning habe ich es auch als Schwerpunkt in meinem Studium gewählt.
+          Die Anwendung dieser Technologien in verschiedenen Projekten erweiterte nicht nur mein Fachwissen, sondern verstärkte auch meine Leidenschaft für die Entwicklung innovativer Lösungen, die reale Probleme adressieren und echten Mehrwert schaffen.
+          `,
 
           // TODO: Data Science / Analysis (viadee) and Business Intelligence
 
