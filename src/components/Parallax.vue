@@ -18,7 +18,6 @@ section.mb-0
                 ScrollHero.mt-16.pt-16
               v-col.d-flex.justify-center.col-12.col-md-6(v-if="translationKey == 'about'" order-md="1")
                 v-card.pa-0(elevation="50" max-width="400px" max-height="400px")
-                  //- v-img(alt="Leo Giesen Profil" src="@/assets/about/Snow-Profile.jpg" max-width="90vw")
                   v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen-nature.jpg" max-width="90vw")
 </template>
 
@@ -32,7 +31,7 @@ export default {
   },
   computed: {
     parallaxHeight() {
-      // Return 'h-100vh' for 'sm' and 'lg' breakpoints, 'h-80vh' for others
+      // Full height for phones (xs) and Laptops (lg). 80% vh for xs handy ipad (sm) and wide screen (xl)
       return ["xs", "lg"].includes(this.$vuetify.breakpoint.name)
         ? "h-100vh"
         : "h-80vh";
