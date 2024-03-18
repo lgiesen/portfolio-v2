@@ -1,14 +1,5 @@
 <template lang="pug">
 div
-  //- Hero Area
-  //- section
-  //- https://github.com/johndatserakis/vue-video-section
-  //- Video by Michal Marek from Pexels
-  //- vue-video-section(
-
-  //-   :mp4Source="require('../assets/background/video/coast.mp4')"
-  //-   :posterSource="require('../assets/background/nature.webp')")
-  //- v-container(slot="overlay-content")
   section.fullwidth
     div
       HeroBackgroundGradientGroup.p-absolute
@@ -43,8 +34,7 @@ div
       h2.display-1 Skills
       v-container
         v-row.d-flex.flex-wrap.justify-space-between
-          //- skillCardGroup holds the title and where to find the corresponding text
-          //- of the skill card in i18n 
+          //- skillCardGroup holds the title and where to find the corresponding text of the skill card in i18n 
           v-col.col-12.col-md-6(v-for="card in skillCardGroup" :key="card.title")
             v-card(height="100%" tile max-width="94vw")
               div.animated-gradient-box.in
@@ -53,7 +43,7 @@ div
                   //- single line requires .justify-center and multiline .text-center
                   v-card-title.justify-center.text-center
                     pre
-                      h2.gradient-text(width="94vw" max-width="94vw") {{ $t("skills." + card.title) }}
+                      h2.gradient-text(width="94vw" max-width="94vw" min-height="400") {{ $t("skills." + card.title) }}
               v-col.seperatorIcon.py-0
                 v-btn(elevation="15" fab color="background")
                   v-icon(color="primary") mdi-{{ card.icon }}
@@ -77,7 +67,14 @@ export default {
         textSrc: "mlbi",
         backgroundImage: require("@/assets/home/machine_learning.webp"),
         icon: "language-python",
-        aria: "Machine Learning"
+        aria: "Machine Learning and Artificial Intelligence"
+      },
+      {
+        title: "dataScienceTitle",
+        textSrc: "dataScienceText",
+        backgroundImage: require("@/assets/home/data-science.webp"),
+        icon: "database-search",
+        aria: "Data Science and Data Analysis"
       },
       {
         title: "feTitle",
@@ -173,7 +170,22 @@ export default {
           This fascination led me to choose it as a focus in my Information Systems studies. 
           The application of these technologies in various projects not only broadened my expertise but also reinforced my passion for developing innovative solutions that address real-world problems and create genuine value.
           `,
-
+          dataScienceTitle: `Data Science\n& Data Analysis`,
+          dataScienceText: `
+          During my tenure as a Data Scientist at the IT consultancy 
+            <a href="/#/experience#card-viadee">viadee</a>, 
+          I gained invaluable experience in data science and data analysis. 
+          My work focused on improving target business processes in Industry 4.0, 
+          utilizing BPMN 2.0, Machine Learning, Data Analytics, Process Mining, and research. 
+          These activities allowed me to deepen my theoretical knowledge and practical implementation of machine learning models and data analysis techniques. 
+          Participating in a Microsoft PowerBI workshop expanded my capabilities in visual data analysis, 
+          enabling me to effectively interpret and visualize complex datasets. 
+          A notable related project is the 
+            <a href="/#/projects#UASentimentAnalysis">analysis</a> 
+          of political sentiment towards Donald Trump and Boris Johnson through social media, 
+          where I employed advanced data analysis methods to gain geographical insights into public opinion. 
+          These experiences highlight my ability to apply data science and analysis to obtain meaningful insights and support strategic decisions.
+          `,
           feTitle: "Frontend Web\nDevelopment",
           frontend: `I took various online courses in my free time where I learned how to 
           program a website with 
@@ -206,7 +218,6 @@ export default {
             <a href="/#/projects#watchtrainer">watchTrainer</a> and 
             <a href="/#/projects#goc">Game of Competences</a> 
           project.`,
-          // Moreover, I demonstrate how to work with API calls in my <a href="/#/projects">projects</a>.
 
           officeTitle: "Microsoft Office 365",
           office: `Since year 7 in school, I have been using  
@@ -287,9 +298,19 @@ export default {
           Aufgrund von dieser Faszination für Machine Learning habe ich es auch als Schwerpunkt in meinem Studium gewählt.
           Die Anwendung dieser Technologien in verschiedenen Projekten erweiterte nicht nur mein Fachwissen, sondern verstärkte auch meine Leidenschaft für die Entwicklung innovativer Lösungen, die reale Probleme adressieren und echten Mehrwert schaffen.
           `,
-
-          // TODO: Data Science / Analysis (viadee) and Business Intelligence
-
+          dataScienceTitle: `Data Science\n& Data Analysis`,
+          dataScienceText: `
+          In meiner Zeit als Data Scientist bei der IT-Beratung 
+            <a href="/#/experience#card-viadee">viadee</a> 
+          habe ich wertvolle Erfahrungen im Bereich Data Science und Datenanalyse gesammelt.
+          Meine Arbeit konzentrierte sich auf die Verbesserung von Geschäftsprozessen in der Industrie 4.0, unter Einsatz von BPMN 2.0, Machine Learning, Datenanalytik, Process Mining und Forschung.
+          Diese Tätigkeiten ermöglichten es mir, meine theoretischen Kenntnisse und die praktische Umsetzung von Machine Learning-Modellen sowie Datenanalysemethoden zu vertiefen.
+          Durch die Teilnahme an einem Microsoft PowerBI-Workshop erweiterte ich meine Fähigkeiten in der visuellen Datenanalyse, was mir ermöglichte, komplexe Datensätze effektiv zu interpretieren und zu visualisieren.
+          Ein markantes Projekt in diesem Kontext war die 
+            <a href="/#/projects#UASentimentAnalysis">Analyse</a> 
+          der politischen Stimmung zu Donald Trump und Boris Johnson durch soziale Medien, wo ich mittels fortschrittlicher Datenanalysemethoden geografische Einblicke in die öffentliche Meinung gewann.
+          Diese Erfahrungen unterstreichen meine Fähigkeit, Datenwissenschaft und -analyse anzuwenden, um fundierte Einblicke zu gewinnen und strategische Entscheidungen zu unterstützen.
+          `,
           feTitle: "Frontend Web\nDevelopment",
           frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich 
           lernte, wie man eine Website mit 
@@ -470,34 +491,3 @@ $secondary: var(--v-secondary-base);
   }
 }
 </style>
-<!-- // You could also animate the polygon (this is not as desired at the moment)
-// Hence, it is not in production
-// @keyframes frame-enter {
-//   0% {
-//     clip-path: polygon(
-//       0 100%,
-//       0 calc(100% - 3px),
-//       3px calc(100% - 3px),
-//       3px 100%,
-//       0 100%
-//     );
-//   }
-//   // 50% {
-//   //   clip-path: polygon(
-//   //     0 100%,
-//   //     0 calc(100% - 3px),
-//   //     50% calc(100% - 3px),
-//   //     50% 100%,
-//   //     0 100%
-//   //   );
-//   // }
-//   100% {
-//     -webkit-clip-path: polygon(
-//       0 100%,
-//       0 calc(100% - 3px),
-//       100% calc(100% - 3px),
-//       100% 100%,
-//       0 100%
-//     );
-//   }
-// } -->
