@@ -3,7 +3,9 @@ div
   Parallax(
     :parallaxImage="parallaxImagePath"
     overlayColor="rgba(37,81,126,.5)" 
-    translationKey="experience")
+    translationKey="experience"
+    :smallImgPath="smallImgPath"
+    imgAlt="Leo Giesen Presentation")
   //- no section here because it limits the background's width
   article
     v-img(:src="require('@/assets/background/' + ActiveTheme + '/rectangle.svg')")
@@ -48,6 +50,7 @@ export default {
   },
   data: () => ({
     parallaxImagePath: require("@/assets/background/Aegina_port.jpg"),
+    smallImgPath: require("@/assets/workExperience/kongress-presentation.jpeg"),
     /*
     associations: [
       {

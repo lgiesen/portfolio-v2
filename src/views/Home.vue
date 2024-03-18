@@ -22,7 +22,7 @@ div
             ScrollHero
           v-col.col-12.col-md-6.col-lg-4
             v-card
-              v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen.jpeg" max-height="60vh")
+              v-img(alt="Leo Giesen Profil" src="@/assets/profile/leo-giesen.webp" max-height="60vh")
     //- Intro card text
     //- Create another section to create overlap with hero area 
     //- while still maintaining the max-width of all sections

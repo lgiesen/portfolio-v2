@@ -3,7 +3,9 @@ div
   Parallax(
     :parallaxImage="parallaxImagePath"
     overlayColor="rgba(38,145,66,.3)" 
-    translationKey="about")
+    translationKey="about"
+    :smallImgPath="smallImgPath"
+    imgAlt="Leo Giesen Profil")
 
   //- About me texts alternating with corresponding images
   article
@@ -57,6 +59,7 @@ export default {
   },
   data: () => ({
     parallaxImagePath: require("@/assets/background/Glatthorn.jpg"),
+    smallImgPath: require("@/assets/profile/leo-giesen-nature.jpg"),
     quotes: [
       {
         quoteText:
