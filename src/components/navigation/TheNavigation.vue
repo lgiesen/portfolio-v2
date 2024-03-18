@@ -13,8 +13,8 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to"
         :class="dontShowAtTopComputed ? '' : 'white--text'") 
         | {{ isDE ? view.tag_de : view.tag_en }}
-    LanguageSwitcher(@language-changed="updateSlider")
-    ToggleTheme.mr-5
+    LanguageSwitcher.white--text(@language-changed="updateSlider")
+    ToggleTheme.mr-5.white--text
 
   //- Mobile navigation
   div.hidden-md-and-up
@@ -40,8 +40,8 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
         v-icon(color="secondary") mdi-{{ view.icon }}
         |  {{ isDE ? view.tag_de : view.tag_en }}
       div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
-        LanguageSwitcher(@language-changed="updateSlider")
-        ToggleTheme
+        LanguageSwitcher.white--text(@language-changed="updateSlider")
+        ToggleTheme.white--text
 </template>
 
 <script>
