@@ -11,10 +11,10 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
           transition="scale-transition"
           :src="themespecificLogoSrc")
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to"
-        :class="dontShowAtTopComputed ? '' : 'white--text'") 
+        :class="dontShowAtTopComputed") 
         | {{ isDE ? view.tag_de : view.tag_en }}
-    LanguageSwitcher.white--text(@language-changed="updateSlider")
-    ToggleTheme.mr-5.white--text
+    LanguageSwitcher(@language-changed="updateSlider" :class="dontShowAtTopComputed") )
+    ToggleTheme.mr-5(:class="dontShowAtTopComputed")
 
   //- Mobile navigation
   div.hidden-md-and-up
@@ -40,8 +40,8 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
         v-icon(color="secondary") mdi-{{ view.icon }}
         |  {{ isDE ? view.tag_de : view.tag_en }}
       div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
-        LanguageSwitcher.white--text(@language-changed="updateSlider")
-        ToggleTheme.white--text
+        LanguageSwitcher(@language-changed="updateSlider" :class="dontShowAtTopComputed")
+        ToggleTheme(:class="dontShowAtTopComputed")
 </template>
 
 <script>
@@ -97,7 +97,9 @@ export default {
       else return require("@/assets/logo/light/logo.svg");
     },
     dontShowAtTopComputed() {
-      return this.dontShowAtTop;
+      if (this.dontShowAtTop) {
+        return "";
+      } else return "white--text";
     }
   }
 };
