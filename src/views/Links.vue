@@ -7,7 +7,7 @@ div
         v-container
             v-card.mx-auto(width='350px' max-width='100vw')
                 v-img(
-                    src="@/assets/profile/leo-giesen.jpeg"
+                    src="@/assets/profile/leo-giesen.webp"
                     height="350px"
                     cover)
                 v-card-title.justify-center 
