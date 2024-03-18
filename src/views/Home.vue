@@ -13,7 +13,7 @@ div
     div
       HeroBackgroundGradientGroup.p-absolute
       v-container.text-center
-        v-row.pa-md-12.pb-md-0.align-center.justify-center.h-100vh(fill-height fluid)
+        v-row.pa-md-12.pb-md-0.align-center.justify-center.h-100vh-less(fill-height fluid)
           v-col.col-12.col-md-6
             //- The v-card makes the title visible, because the SVG background was more prominent
             v-card.white--text.transparent-background(outlined)

@@ -133,6 +133,10 @@ section:not(.fullwidth) {
 //   margin-bottom: 20vh;
 // }
 // 2.2 Hero areaz
+.h-100vh-less {
+  min-height: calc(100vh - 60px);
+}
+
 .h-100vh {
   min-height: 100vh;
   width: 100vw;
