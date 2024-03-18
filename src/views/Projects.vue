@@ -2,7 +2,7 @@
 div
   Parallax(
     :parallaxImage="parallaxImagePath"
-    overlayColor="rgba(225,191,156,.5)" 
+    overlayColor="rgba(225,191,156,0)" 
     translationKey="projects")
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
@@ -59,7 +59,7 @@ export default {
     Parallax
   },
   data: () => ({
-    parallaxImagePath: require("@/assets/background/Aasee.webp"),
+    parallaxImagePath: require("@/assets/background/field.jpg"),
     projects: [
       // MensaToday Recommender System Data Integration
       {
