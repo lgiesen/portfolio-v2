@@ -170,7 +170,7 @@ export default {
           This fascination led me to choose it as a focus in my Information Systems studies. 
           The application of these technologies in various projects not only broadened my expertise but also reinforced my passion for developing innovative solutions that address real-world problems and create genuine value.
           `,
-          dataScienceTitle: `Data Science\n& Data Analysis`,
+          dataScienceTitle: `Data Science &\nData Analysis`,
           dataScienceText: `
           During my tenure as a Data Scientist at the IT consultancy 
             <a href="/#/experience#card-viadee">viadee</a>, 
@@ -292,7 +292,7 @@ export default {
           Die Anwendung dieser Technologien in verschiedenen Projekten erweiterte nicht nur mein Fachwissen, sondern verstärkte auch meine Leidenschaft für die Entwicklung innovativer Lösungen, die reale Probleme adressieren und echten Mehrwert schaffen.
           `,
 
-          dataScienceTitle: `Data Science\n& Data Analysis`,
+          dataScienceTitle: `Data Science &\nData Analysis`,
           dataScienceText: `
           In meiner Zeit als Data Scientist bei der IT-Beratung 
             <a href="/#/experience#card-viadee">viadee</a> 
