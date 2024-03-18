@@ -15,7 +15,7 @@ div
         //- friends and family
         v-row.justify-center
           v-col.col-11.col-md-6
-            v-img(alt="Leo Giesen Familie" src="@/assets/about/standesamt-familie.jpeg" :max-width="imageWidth")
+            v-img(alt="Leo Giesen Familie" src="@/assets/about/standesamt-familie.webp" :max-width="imageWidth")
           v-col.col-11.col-md-6
             p {{ $t("friendsAndFamily") }}
             //- career
@@ -24,7 +24,7 @@ div
           //- sport
         v-row.justify-center
           v-col.col-11.col-md-6(order-md="2")
-            v-img(alt="Ski fahren mit HSP" src="@/assets/about/ski-aufsteigen.jpeg" :max-width="imageWidth" max-height="400px")
+            v-img(alt="Ski fahren mit HSP" src="@/assets/about/ski-aufsteigen.webp" :max-width="imageWidth" max-height="400px")
           v-col.col-11.col-md-6(order-md="1")
             p(v-html="$t('sport')")
         //- travel
@@ -34,7 +34,7 @@ div
             p {{ $t("quote") }}
             Quote(:quoteText="this.quotes[0].quoteText" :quoteAuthor="this.quotes[0].quoteAuthor")
           v-col.col-11.col-md-6(order-md="1")
-            v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.jpg" :max-width="imageWidth")
+            v-img(alt="Reisen Japan Landschaft" src="@/assets/about/Fujiyoshida, Japan.webp" :max-width="imageWidth")
   section
     v-container.grey--text.px-5.text-justify
       h2.mb-5 {{ isDE ? "Literaturverzeichnis" : "Bibliography" }}
@@ -58,8 +58,8 @@ export default {
     Parallax
   },
   data: () => ({
-    parallaxImagePath: require("@/assets/background/Glatthorn.jpg"),
-    smallImgPath: require("@/assets/profile/leo-giesen-nature.jpg"),
+    parallaxImagePath: require("@/assets/background/Glatthorn.webp"),
+    smallImgPath: require("@/assets/profile/leo-giesen-nature.webp"),
     quotes: [
       {
         quoteText:

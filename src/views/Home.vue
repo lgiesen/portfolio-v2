@@ -7,7 +7,7 @@ div
   //- vue-video-section(
 
   //-   :mp4Source="require('../assets/background/video/coast.mp4')"
-  //-   :posterSource="require('../assets/background/nature.jpg')")
+  //-   :posterSource="require('../assets/background/nature.webp')")
   //- v-container(slot="overlay-content")
   section.fullwidth
     div
@@ -75,63 +75,63 @@ export default {
       {
         title: "mlbiTitle",
         textSrc: "mlbi",
-        backgroundImage: require("@/assets/home/machine_learning.jpg"),
+        backgroundImage: require("@/assets/home/machine_learning.webp"),
         icon: "language-python",
         aria: "Machine Learning"
       },
       {
         title: "feTitle",
         textSrc: "frontend",
-        backgroundImage: require("@/assets/home/web_dev.jpg"),
+        backgroundImage: require("@/assets/home/web_dev.webp"),
         icon: "vuejs",
         aria: "Front-end Web Development Vue.js"
       },
       {
         title: "itArchitectureTitle",
         textSrc: "itArchitecture",
-        backgroundImage: require("@/assets/home/it-architecture.jpg"),
+        backgroundImage: require("@/assets/home/it-architecture.webp"),
         icon: "lan-connect", // progress-wrench
         aria: "It Architecture"
       },
       {
         title: "beTitle",
         textSrc: "backend",
-        backgroundImage: require("@/assets/home/backend.jpg"),
+        backgroundImage: require("@/assets/home/backend.webp"),
         icon: "database", //api
         aria: "API and backend Web Development"
       },
       {
         title: "officeTitle",
         textSrc: "office",
-        backgroundImage: require("@/assets/home/microsoft_office_365.jpg"),
+        backgroundImage: require("@/assets/home/microsoft_office_365.webp"),
         icon: "microsoft-office",
         aria: "Microsoft Office and Microsoft 365"
       },
       // {
       //   title: "pmTitle",
       //   textSrc: "processManagement",
-      //   backgroundImage: require("@/assets/home/process.jpg"),
+      //   backgroundImage: require("@/assets/home/process.webp"),
       //   icon: "arrow-decision",
       //   aria: "Process Management"
       // },
       {
         title: "sdevTitle",
         textSrc: "softwareDev",
-        backgroundImage: require("@/assets/home/software_development.jpg"),
+        backgroundImage: require("@/assets/home/software_development.webp"),
         icon: "language-java",
         aria: "Software Development"
       },
       {
         title: "otherTitle",
         textSrc: "other",
-        backgroundImage: require("@/assets/home/desk.jpg"),
+        backgroundImage: require("@/assets/home/desk.webp"),
         icon: "star",
         aria: "Other"
       }
       // {
       //   title: "Soft Skills",
       //   textSrc: "softSkills",
-      //   backgroundImage: require("@/assets/home/office.jpg"),
+      //   backgroundImage: require("@/assets/home/office.webp"),
       //   icon: "account-group",
       //   aria: ""
       // }

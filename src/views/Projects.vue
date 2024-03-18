@@ -59,7 +59,7 @@ export default {
     Parallax
   },
   data: () => ({
-    parallaxImagePath: require("@/assets/background/Aasee.jpg"),
+    parallaxImagePath: require("@/assets/background/Aasee.webp"),
     projects: [
       // MensaToday Recommender System Data Integration
       {

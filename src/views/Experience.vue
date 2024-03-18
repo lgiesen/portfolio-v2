@@ -49,8 +49,8 @@ export default {
     Parallax
   },
   data: () => ({
-    parallaxImagePath: require("@/assets/background/Aegina_port.jpg"),
-    smallImgPath: require("@/assets/workExperience/kongress-presentation.jpeg"),
+    parallaxImagePath: require("@/assets/background/Aegina_port.webp"),
+    smallImgPath: require("@/assets/workExperience/kongress-presentation.webp"),
     /*
     associations: [
       {
