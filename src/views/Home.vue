@@ -84,18 +84,18 @@ export default {
         aria: "Front-end Web Development Vue.js"
       },
       {
-        title: "itArchitectureTitle",
-        textSrc: "itArchitecture",
-        backgroundImage: require("@/assets/home/it-architecture.webp"),
-        icon: "lan-connect", // progress-wrench
-        aria: "It Architecture"
-      },
-      {
         title: "beTitle",
         textSrc: "backend",
         backgroundImage: require("@/assets/home/backend.webp"),
         icon: "database", //api
         aria: "API and backend Web Development"
+      },
+      {
+        title: "itArchitectureTitle",
+        textSrc: "itArchitecture",
+        backgroundImage: require("@/assets/home/it-architecture.webp"),
+        icon: "lan-connect", // progress-wrench
+        aria: "It Architecture"
       },
       {
         title: "officeTitle",
@@ -187,19 +187,23 @@ export default {
           These experiences highlight my ability to apply data science and analysis to obtain meaningful insights and support strategic decisions.
           `,
           feTitle: "Frontend Web\nDevelopment",
-          frontend: `I took various online courses in my free time where I learned how to 
-          program a website with 
-            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
-            <strong>CSS3</strong>, and prototype with <strong>Figma</strong>. 
-          I was able to apply my web dev skills in numerous projects, e.g., the 
-            <a href="/#/projects#watchtrainer">watchTrainer</a>
-          project, which is the corresponding website to a fitness app for the apple watch. 
-          Additional projects comprise my previous and this portfolio page, two WordPress 
-          websites, which I single-handedly developed in consultancy projects at 
-            <a href="/#/experience#card-move">move</a>. 
-          However, I am most proud of my project team's complex 
-            <a href="/#/projects#goc">web-based simulation platform</a> 
-          built in the project seminar Game of Competences.`,
+          frontend: `
+          My web development skills comprise from webscraping, frontend to backend development, utilized in a myriad of projects.
+          I have developed the <strong>frontend</strong> of multiple websites, including a <a href="/#/projects#goc">web-based simulation platform</a> and the notable project of a <a href="/#/projects#DImensaToday">smart dining recommender system</a>. 
+          My own <a href="/#/projects#portfolioWebDevelopment">portfolio website</a> and the frontend for the <a href="/#/projects#AutomationOfDocumentChecks">automation of document checks</a> project were independently executed by me.
+          Additionally, I worked on the frontend of <a href="/#/projects#watchtrainer">watchTrainer</a>.
+          These projects were programmed using the Vue.js framework, and I am also comfortable with CMS like WordPress, achieving customer-focused results in projects, as seen in the <a href="/#/projects#eBusinessWebDevelopment">development of an eBusiness</a> and <a href="/#/projects#lawFirmWebDevelopment">law firm website</a>.
+          `,
+
+          beTitle: "Backend &\nDatabases",
+          backend: `
+          Primarily, I communicated with the backend via REST or GraphQL API calls.
+          I have some experience with it and <strong>databases</strong>, e.g., building an Entity-Relationship Model (ERM) and retrieving data in SQL.
+          These skills were acquired and applied at university and in projects like <a href="/#/projects#watchtrainer">watchTrainer</a> and <a href="/#/projects#goc">Game of Competences</a>. 
+          I extracted data from websites in multiple projects.
+          For example, I built a <a href="/#/projects#forum_web_scraper">scalable web scraper</a> for discussion forums to identify innovation potential.
+          Additionally, I applied <strong>webscraping</strong> at <a href="/#/experience#card-move">move</a> in an internal competition to determine the winner of Bundesliga matches with high certainty.
+          `,
 
           itArchitectureTitle: "IT-Architecture",
           itArchitecture: `At university, I learned to portray the IT architecture of a company and to 
@@ -207,17 +211,6 @@ export default {
           create a transformation plan to adapt the IT architecture. I applied this knowledge 
           in a case study and in a real project at
           <a href="/#/experience#card-move">move</a>.`,
-
-          beTitle: "Backend &\nDatabases",
-          backend: `My primary web development focus lies on the frontend. Nevertheless, I am very 
-          familiar with setting up and working with a database, e.g., building an Entity-relationship 
-          Model (<strong>ERM</strong>), 
-            <strong>SQL</strong>, and implemented 
-            <strong>API calls</strong> 
-          with a REST API and GraphQL. I acquired and applied these skills at university and in the 
-            <a href="/#/projects#watchtrainer">watchTrainer</a> and 
-            <a href="/#/projects#goc">Game of Competences</a> 
-          project.`,
 
           officeTitle: "Microsoft Office 365",
           office: `Since year 7 in school, I have been using  
@@ -298,6 +291,7 @@ export default {
           Aufgrund von dieser Faszination für Machine Learning habe ich es auch als Schwerpunkt in meinem Studium gewählt.
           Die Anwendung dieser Technologien in verschiedenen Projekten erweiterte nicht nur mein Fachwissen, sondern verstärkte auch meine Leidenschaft für die Entwicklung innovativer Lösungen, die reale Probleme adressieren und echten Mehrwert schaffen.
           `,
+
           dataScienceTitle: `Data Science\n& Data Analysis`,
           dataScienceText: `
           In meiner Zeit als Data Scientist bei der IT-Beratung 
@@ -311,28 +305,21 @@ export default {
           der politischen Stimmung zu Donald Trump und Boris Johnson durch soziale Medien, wo ich mittels fortschrittlicher Datenanalysemethoden geografische Einblicke in die öffentliche Meinung gewann.
           Diese Erfahrungen unterstreichen meine Fähigkeit, Datenwissenschaft und -analyse anzuwenden, um fundierte Einblicke zu gewinnen und strategische Entscheidungen zu unterstützen.
           `,
-          feTitle: "Frontend Web\nDevelopment",
-          frontend: `In meiner Freizeit belegte ich verschiedene Online-Kurse, in denen ich 
-          lernte, wie man eine Website mit 
-            <strong>Vue.js</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, 
-            <strong>CSS3</strong> und Prototypen mit <strong>Figma</strong>
-          programmiert. Meine Web Development-Kenntnisse konnte ich in zahlreichen 
-          Projekten anwenden, z. B. im Projekt 
-            <a href="/#/projects#watchtrainer">watchTrainer</a>,
-          das die Website zu einer Fitness-App für die Apple Watch ist. Weitere Projekte 
-          sind meine bisherige und diese Portfolio Webseite, zwei WordPress-Websiten, 
-          die ich in Beratungsprojekten bei 
-            <a href="/#/experience#card-move">move</a>  
-          entwickelt habe. Besonders stolz bin ich auf die 
-            <a href="/#/projects#goc">webbasierte Simulationsplattform</a>, 
-          die mein Projektteam im Rahmen des Projektseminars Game of Competences implementiert hat.
-          </br>
-          Außerdem realisierte ich kleinere Projekte, wie z.B. einen Backtracking-Algorithmus 
-          zur Lösung von Sudokus und nutzte <strong>Web Scraping</strong> 
-          zur Vorhersage von Bundesliga-Spielergebnissen. 
-          Außerdem habe ich einen skalierbaren Web Scraper zur Datenextraktion aus Foren beim Start-up 
-            <a href="https://www.pivoty.de/" target="_blank">pivoty</a>
-          implementiert.`,
+
+          feTitle: "Web\nDevelopment",
+          frontend: `
+          In meinem Portfolio erstrecken sich die Webentwicklungskompetenzen vom Frontend über Webscraping bis hin zu Backend und Datenbanken, zum Einsatz gekommen in einer Vielzahl von Projekten.
+          Ich habe das <strong>Frontend</strong> mehrerer Websites entwickelt, einschließlich einer <a href="/#/projects#goc">webbasierten Simulationsplattform</a> und einem bemerkenswerten <a href="/#/projects#DImensaToday">intelligenten Mensa-Empfehlungssystem</a>. 
+          Auch meine eigene <a href="/#/projects#portfolioWebDevelopment">Portfolio-Website</a> sowie das Frontend für das Projekt <a href="/#/projects#AutomationOfDocumentChecks">zur Automatisierung von Dokumentenprüfungen</a> stammen aus meiner Hand.
+          Darüber hinaus war ich beim Frontend von <a href="/#/projects#watchtrainer">watchTrainer</a> maßgeblich beteiligt.
+          Diese Projekte wurden mit Vue.js realisiert. Ebenso sicher bewege ich mich im Umgang mit CMS wie WordPress, was in Projekten wie der <a href="/#/projects#eBusinessWebDevelopment">Entwicklung eines eBusiness</a> und der <a href="/#/projects#lawFirmWebDevelopment">Webentwicklung für eine Anwaltskanzlei</a> zum Ausdruck kommt, die ich eigenständig umgesetzt habe. 
+          `,
+
+          beTitle: "Backend &\nDatenbanken",
+          backend: `
+          Für die Kommunikation mit dem Backend nutzte ich vorrangig REST oder GraphQL API-Aufrufe und sammelte Erfahrungen mit <strong>Datenbanken</strong>, beispielsweise beim Erstellen von Entity-Relationship-Modellen (ERM) und beim Umgang mit SQL. Diese Fähigkeiten kamen sowohl in universitären Projekten als auch in Arbeiten wie <a href="/#/projects#watchtrainer">watchTrainer</a> und <a href="/#/projects#goc">Game of Competences</a> zur Anwendung.
+          Beim <strong>Webscraping</strong> konnte ich in mehreren Projekten wertvolle Daten von Websites extrahieren. So entwickelte ich beispielsweise für Diskussionsforen einen <a href="/#/projects#forum_web_scraper">skalierbaren Web-Scraper</a>, um Innovationspotenziale zu erkennen. Zusätzlich setzte ich Webscraping bei <a href="/#/experience#card-move">move</a> in einem internen Wettbewerb ein, um mit hoher Sicherheit den Gewinner von Bundesliga-Spielen vorherzusagen.
+          `,
 
           itArchitectureTitle: "IT-Architektur",
           itArchitecture: `In der Universität habe ich gelernt die IT-Architektur eines Unternehmens 
@@ -341,18 +328,6 @@ export default {
           konnte ich in einer Case Study und in einem realen Projekt bei 
             <a href="/#/experience#card-move">move</a>
           anwenden.`,
-
-          beTitle: "Backend &\nDatenbanken",
-          backend: `Mein primärer Fokus in der Webentwicklung liegt auf dem Frontend. Nichtsdestotrotz 
-          bin ich sehr vertraut mit dem Aufbau und der Arbeit mit einer Datenbank, z.B. dem Aufbau 
-          eines Entity-Relationship-Modells (<strong>ERM</strong>), 
-            <strong>SQL</strong> und der Implementierung von 
-            <strong>API Calls</strong> mit einer REST-API und GraphQL. 
-          Diese Fähigkeiten habe ich an der Universität und im Projekt 
-            <a href="/#/projects#watchtrainer">watchTrainer</a> und der 
-            <a href="/#/projects#goc">webbasierte Simulationsplattform</a>
-          erworben und angewendet.`,
-          // Außerdem zeige ich in meinen <a href="/#/projects">Projekten</a>, wie man mit API-Aufrufen arbeitet.
 
           officeTitle: "Microsoft Office 365",
           office: `Da ich schon seit der 7. Klasse fast täglich mit 

@@ -85,7 +85,7 @@ export default {
         title_en: "1. Chairman for Human Resources, Quality Management and IT",
         title_de:
           "Vorstandsvorsitzender für Personal, Qualitätsmanagement und IT",
-        institution: "move",
+        institution: "move ",
         link: "https://move-ev.de/",
         imageSrc: require("@/assets/workExperience/move-title.png"),
         location: "Münster",
