@@ -3,7 +3,9 @@ div
   Parallax(
     :parallaxImage="parallaxImagePath"
     overlayColor="rgba(225,191,156,0)" 
-    translationKey="projects")
+    translationKey="projects"
+    imgAlt="Leo Giesen Projects"
+    )
   //- Ideas to include:
   //- Share Insights, Best Practices, Learnings
   //- Add what tools I have worked with, which positions I fulfilled
@@ -59,7 +61,8 @@ export default {
     Parallax
   },
   data: () => ({
-    parallaxImagePath: require("@/assets/background/field.jpg"),
+    parallaxImagePath: require("@/assets/background/Aasee.webp"),
+    smallImgPath: require("@/assets/profile/leo-giesen-nature.webp"),
     projects: [
       // MensaToday Recommender System Data Integration
       {
