@@ -16,9 +16,8 @@ section.mb-0
                   v-html="$t('parallaxText.' + translationKey + '.subtitle')")
                 ScrollHero.mt-16.pt-16
               v-col.center-items.col-12.col-md-6(v-if="smallImgPath" order-md="1")
-                v-card.pa-0(elevation="50" max-width="500" max-height="700")
-                  v-img(:alt="imgAlt" :src="smallImgPath" 
-                    height="100%" max-width="90vw")
+                v-img(:alt="imgAlt" :src="smallImgPath" 
+                  height="500" width="100%" contain)
 </template>
 
 <script>
