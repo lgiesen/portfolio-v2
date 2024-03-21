@@ -206,11 +206,18 @@ export default {
           `,
 
           itArchitectureTitle: "IT-Architecture",
-          itArchitecture: `At university, I learned to portray the IT architecture of a company and to 
-          and to analyze it for bottlenecks, for example. I also learned to 
-          create a transformation plan to adapt the IT architecture. I applied this knowledge 
-          in a case study and in a real project at
-          <a href="/#/experience#card-move">move</a>.`,
+          itArchitecture: `
+          In the Enterprise Architecture Management module, I honed my skills in modeling the structure of organizations with an IT focus using ArchiMate.
+          This foundation allowed me to conduct a detailed case study and leverage the TOGAF Framework by The Open Group.
+          A significant project at 
+            <a href="/#/experience#card-move">move</a> 
+          involved analyzing and 
+          <a href="/#/projects#ITArchitecture">optimizing the IT infrastructure</a> 
+          of a public transportation company, employing TOGAF and ArchiMate to address efficiency bottlenecks in areas such as drive access, calendar management, decision-making, and video conferencing.
+          Developing a comprehensive transformation plan, I spearheaded the integration of Microsoft 365 to enhance collaboration and communication, paving the way for cloud transition.
+          The customer was so pleased with the project performance that the company commissioned another consulting project with me as a project lead.
+          Leading this project, I demonstrated my adeptness in IT project management, mastery of modern IT architectures, and the innovation of solutions for complex technical issues.
+          `,
 
           officeTitle: "Microsoft Office 365",
           office: `Since year 7 in school, I have been using  
@@ -322,12 +329,18 @@ export default {
           `,
 
           itArchitectureTitle: "IT-Architektur",
-          itArchitecture: `In der Universität habe ich gelernt die IT-Architektur eines Unternehmens 
-          abzubilden und diese auf zum Beispiel Bottlenecks zu analysieren. Außerdem habe ich gelernt 
-          einen Transformationsplan zu erstellen um die IT-Architektur anzupassen. Diese Kenntnisse 
-          konnte ich in einer Case Study und in einem realen Projekt bei 
-            <a href="/#/experience#card-move">move</a>
-          anwenden.`,
+          itArchitecture: `
+          Im Modul für Enterprise Architekturmanagement spezialisierte ich mich auf die Modellierung der (IT)-Unternehmensstruktur mit ArchiMate. 
+          Diese Grundlage ermöglichte es mir, eine detaillierte Fallstudie durchzuführen und das TOGAF-Framework von The Open Group zu nutzen. 
+          Ein bedeutendes Projekt bei 
+            <a href="/#/experience#card-move">move</a> 
+          umfasste die Analyse und 
+            <a href="/#/projects#ITArchitecture">Optimierung der IT-Infrastruktur</a> 
+          eines Unternehmens im öffentlichen Verkehrsbereich, unter Einsatz von TOGAF und ArchiMate, um Effizienzengpässe in Bereichen wie Laufwerkzugriff, Kalendermanagement, Entscheidungsfindung und Videokonferenzen zu beheben. 
+          Mit der Entwicklung eines umfassenden Transformationsplans führte ich die Integration von Microsoft 365 durch, um die Zusammenarbeit und Kommunikation zu verbessern und den Weg für den Übergang in die Cloud zu ebnen. 
+          Der Kunde war mit der Leistung des Projekts so zufrieden, dass das Unternehmen mich für ein weiteres Beratungsprojekt als Projektleiter beauftragte. 
+          Die Leitung dieses Projekts unterstrich meine Geschicklichkeit im IT-Projektmanagement, meine Beherrschung moderner IT-Architekturen und die Innovation von Lösungen für komplexe technische Herausforderungen.
+          `,
 
           officeTitle: "Microsoft Office 365",
           office: `Da ich schon seit der 7. Klasse fast täglich mit 
