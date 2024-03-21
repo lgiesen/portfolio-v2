@@ -178,7 +178,9 @@ export default {
           My work focused on improving target business processes in Industry 4.0, 
           utilizing BPMN 2.0, Machine Learning, Data Analytics, Process Mining, and research. 
           These activities allowed me to deepen my theoretical knowledge and practical implementation of machine learning models and data analysis techniques. 
-          Participating in a Microsoft PowerBI workshop expanded my capabilities in visual data analysis, 
+          Participating in a Microsoft PowerBI workshop from the 
+            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a>
+          expanded my capabilities in visual data analysis, 
           enabling me to effectively interpret and visualize complex datasets. 
           A notable related project is the 
             <a href="/#/projects#UASentimentAnalysis">analysis</a> 
@@ -220,19 +222,14 @@ export default {
           `,
 
           officeTitle: "Microsoft Office 365",
-          office: `Since year 7 in school, I have been using  
-          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> almost every day. 
-          As a student assistant at the 
-            <a href="/#/experience#experience">Information Systems' chair</a> 
-          at the University of Münster, I prepared many lectures in PowerPoint. Further, I created various presentations 
-          as a consultant at 
-            <a href="/#/experience#card-move">move</a>, which enhanced my presentation abilities. 
-          </br> 
-          Lastly, in my work in the IT department at move, I worked with 
-            <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> with connections to 
-            <strong>SharePoint</strong> databases. Moreover, I gained a brief overview of Business Intelligence 
-          in a Microsoft <strong>Power BI</strong> workshop from the 
-            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a>.`,
+          office: `
+          Since seventh grade, I've been using <strong>Microsoft PowerPoint</strong>, <strong>Word</strong>, and <strong>Excel</strong> almost daily, honing my skills further while preparing lectures in PowerPoint as a student assistant at the <a href="/#/experience#experience">Chair of Information Systems</a> at the University of Münster.
+          My expertise with Microsoft Office deepened through creating various presentations at <a href="/#/experience#card-move">move</a> and attending workshops like BCG and BCG Platinion, enhancing my presentation skills.
+          I've dedicated considerable time to the fast generation and optimization of presentations in university projects and at move, including correcting presentations for several candidate projects.
+          Moreover, I've earned PowerPoint and Excel certifications at the University of Münster, which only scratch the surface of my abilities.
+          I enjoy using ThinkCell, and I'm proficient with Efficient Elements and macros.
+          Recently, I've worked in the IT department at move, utilizing <strong>Microsoft PowerApps</strong> and <strong>Flows</strong> integrated with <strong>SharePoint</strong> databases, showcasing my versatility and capability to leverage Microsoft Office 365's full suite to streamline processes and enhance productivity.
+          `,
 
           otherTitle: "Other Skills",
           other: `
@@ -306,7 +303,9 @@ export default {
           habe ich wertvolle Erfahrungen im Bereich Data Science und Datenanalyse gesammelt.
           Meine Arbeit konzentrierte sich auf die Verbesserung von Geschäftsprozessen in der Industrie 4.0, unter Einsatz von BPMN 2.0, Machine Learning, Datenanalytik, Process Mining und Forschung.
           Diese Tätigkeiten ermöglichten es mir, meine theoretischen Kenntnisse und die praktische Umsetzung von Machine Learning-Modellen sowie Datenanalysemethoden zu vertiefen.
-          Durch die Teilnahme an einem Microsoft PowerBI-Workshop erweiterte ich meine Fähigkeiten in der visuellen Datenanalyse, was mir ermöglichte, komplexe Datensätze effektiv zu interpretieren und zu visualisieren.
+          Durch die Teilnahme an einem Microsoft PowerBI-Workshop bei dem 
+            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a>
+          erweiterte ich meine Fähigkeiten in der visuellen Datenanalyse, was mir ermöglichte, komplexe Datensätze effektiv zu interpretieren und zu visualisieren.
           Ein markantes Projekt in diesem Kontext war die 
             <a href="/#/projects#UASentimentAnalysis">Analyse</a> 
           der politischen Stimmung zu Donald Trump und Boris Johnson durch soziale Medien, wo ich mittels fortschrittlicher Datenanalysemethoden geografische Einblicke in die öffentliche Meinung gewann.
@@ -343,21 +342,14 @@ export default {
           `,
 
           officeTitle: "Microsoft Office 365",
-          office: `Da ich schon seit der 7. Klasse fast täglich mit 
-          <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong> 
-          arbeite und als studentische Hilfskraft am 
-            <a href="/#/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> 
-          an der Universität Münster viele Vorlesungen in PowerPoint vorbereitet habe, 
-          kenne ich mich besonders gut mit Microsoft Office aus. Außerdem habe ich bei 
-            <a href="/#/experience#card-move">move</a> 
-          als Berater verschiedene Präsentationen erstellt und z.B. einen BCG-Workshop besucht, 
-          was meine Präsentationsfähigkeiten förderte. 
-          </br>
-          Zuletzt habe ich bei move in der IT-Abteilung mit 
-            <strong>Microsoft PowerApps</strong> und <strong>Flows</strong> mit Anbindung an 
-            <strong>SharePoint</strong>-Datenbanken gearbeitet. Außerdem habe ich einen kurzen 
-            Überblick über Business Intelligence in einem Microsoft <strong>Power BI</strong> Workshop von des 
-            <a href="https://bdsu.de/unternehmen/" target="_blank">BDSU</a> bekommen.`,
+          office: `
+          Seit der siebten Klasse arbeite ich nahezu täglich mit <strong>Microsoft PowerPoint</strong>, <strong>Word</strong> und <strong>Excel</strong>, was ich als studentische Hilfskraft am <a href="/#/experience#experience">Lehrstuhl für Wirtschaftsinformatik</a> an der Universität Münster durch die Vorbereitung von PowerPoint-Vorlesungen weiter vertiefte.
+          Meine Expertise in Microsoft Office wurde durch die Erstellung verschiedener Präsentationen bei <a href="/#/experience#card-move">move</a> und die Teilnahme an Workshops wie BCG und BCG Platinion weiter gefördert, was meine Präsentationsfähigkeiten erheblich verbesserte.
+          In Uni-Projekten und bei move verbrachte ich viel Zeit mit der schnellen Erstellung und Optimierung von Präsentationen, unter anderem durch die Korrektur von Präsentationen für mehrere Anwärterprojekte.
+          Zudem habe ich an der Universität Münster Zertifikate für PowerPoint und Excel erworben, die jedoch meine Fähigkeiten nur ansatzweise widerspiegeln.
+          Ich setze gerne ThinkCell ein und beherrsche Efficient Elements sowie Makros.
+          Zuletzt arbeitete ich bei move in der IT-Abteilung mit <strong>Microsoft PowerApps</strong> und <strong>Flows</strong>, verbunden mit <strong>SharePoint</strong>-Datenbanken, was meine Fähigkeit unterstreicht, das volle Potenzial von Microsoft Office 365 zu nutzen, um Prozesse zu optimieren und die Produktivität zu steigern.
+            `,
 
           // pmTitle: "Prozess Management",
           // processManagement: `PM`,
