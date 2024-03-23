@@ -4,12 +4,11 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
   v-app-bar.appBar.hidden-sm-and-down(outlined elevation="0"
     :class="!this.dontShowAtTop ? 'transparent-background' : ''")
     //- transparent-background class is defined in @/App.vue
+    v-img.shrink.mr-2(alt="Leo Giesen Logo"
+      contain width="40"
+      transition="scale-transition"
+      :src="themespecificLogoSrc")
     v-tabs(align-with-title ref="tabs")
-      v-tab(to="/") 
-        v-img.shrink.mr-2(alt="Leo Giesen Logo"
-          contain width="40"
-          transition="scale-transition"
-          :src="themespecificLogoSrc")
       v-tab(v-for="view in views" :key="view.to.name" :to="view.to"
         :class="dontShowAtTopComputed") 
         | {{ isDE ? view.tag_de : view.tag_en }}
@@ -57,6 +56,12 @@ export default {
   },
   data: () => ({
     views: [
+      {
+        tag_en: "Home",
+        tag_de: "Start",
+        to: { name: "Home" },
+        icon: "home-outline"
+      },
       {
         tag_en: "About",
         tag_de: "Über Mich",
