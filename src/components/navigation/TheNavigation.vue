@@ -15,30 +15,32 @@ div(style="position: fixed; z-index: 99; width: 100vw;" v-scroll="onScroll")
     LanguageSwitcher(@language-changed="updateSlider" :class="dontShowAtTopComputed") )
     ToggleTheme.mr-5(:class="dontShowAtTopComputed")
 
-  //- Mobile navigation
+  //- mobile navigation
   div.hidden-md-and-up
+    //- app bar to open the navigation overlay
     v-app-bar.appBar(outlined elevation="0")
-      v-app-bar-nav-icon(@click.stop="mobileDialog = !mobileDialog")
       v-spacer
-      div.d-flex
-        a(href="/")
-          v-img.shrink.mr-2(alt="Leo Giesen Logo"
-            contain width="40"
-            transition="scale-transition"
-            :src="themespecificLogoSrc")
+      v-app-bar-nav-icon.justify-end.mr-1(@click.stop="mobileDialog = !mobileDialog")
+    //- navigation overlay
     v-overlay.appBar(v-if="mobileDialog" transition="dialog-top-transition" opacity="1")
+      .d-flex.justify-center.mb-12
+        v-img.shrink.mr-2(alt="Leo Giesen Logo"
+          contain width="70"
+          transition="scale-transition"
+          :src="themespecificLogoSrc")
+
+      v-divider
+
       v-btn(fixed top right icon
         @click="mobileDialog = false")
         v-icon mdi-close
 
-      v-tab.ma-8(@click="mobileDialog = false" to="/" )
-        v-icon(color="secondary") mdi-home-outline
-        | {{ isDE ? "Start" : "Home" }}
       v-tab.ma-8(v-for="view in views" :key="view.to.name" 
         @click="mobileDialog = false" :to="view.to")
         v-icon(color="secondary") mdi-{{ view.icon }}
         |  {{ isDE ? view.tag_de : view.tag_en }}
-      div.d-flex.flex-wrap.justify-space-around(@click="mobileDialog = false")
+      v-divider
+      .d-flex.flex-wrap.justify-space-around.mt-12(@click="mobileDialog = false")
         LanguageSwitcher(@language-changed="updateSlider" :class="dontShowAtTopComputed")
         ToggleTheme(:class="dontShowAtTopComputed")
 </template>
