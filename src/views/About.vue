@@ -59,7 +59,7 @@ export default {
   },
   data: () => ({
     parallaxImagePath: require("@/assets/background/Glatthorn.webp"),
-    smallImgPath: require("@/assets/profile/leo-giesen-nature.webp"),
+    smallImgPath: require("@/assets/profile/leo-giesen.webp"),
     quotes: [
       {
         quoteText:
